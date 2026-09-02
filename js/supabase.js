@@ -100,68 +100,84 @@ async function syncFromSupabase() {
       }
     }
 
-    // 3. Cargar Recetas con Comentarios
-    const { data: recipes, error: errR } = await supabaseClient.from('recipes').select('*').order('created_at', { ascending: false });
-    if (!errR && recipes) {
-      // Cargar comentarios
-      const { data: comments } = await supabaseClient.from('recipe_comments').select('*').order('created_at', { ascending: true });
-      const { data: replies } = await supabaseClient.from('recipe_replies').select('*').order('created_at', { ascending: true });
+    // 3. Cargar Recetas de Usuarios y Comentarios de Supabase
+    const { data: userCustomRecipes } = await supabaseClient.from('recipes').select('*').neq('author_id', 'user-anon');
+    const { data: comments } = await supabaseClient.from('recipe_comments').select('*').order('created_at', { ascending: true });
+    const { data: replies } = await supabaseClient.from('recipe_replies').select('*').order('created_at', { ascending: true });
 
-      const commentsMap = {};
-      (comments || []).forEach(c => {
-        commentsMap[c.id] = {
-          id: c.id,
-          userId: c.user_id,
-          userName: c.user_name,
-          userAvatar: c.user_avatar,
-          text: c.text,
-          date: new Date(c.created_at).toLocaleDateString('es-AR'),
-          replies: []
-        };
+    const commentsMap = {};
+    (comments || []).forEach(c => {
+      commentsMap[c.id] = {
+        id: c.id,
+        userId: c.user_id,
+        userName: c.user_name,
+        userAvatar: c.user_avatar,
+        text: c.text,
+        date: new Date(c.created_at).toLocaleDateString('es-AR'),
+        replies: []
+      };
+    });
+
+    (replies || []).forEach(rep => {
+      if (commentsMap[rep.comment_id]) {
+        commentsMap[rep.comment_id].replies.push({
+          id: rep.id,
+          userId: rep.user_id,
+          userName: rep.user_name,
+          userAvatar: rep.user_avatar,
+          isAuthor: rep.is_author,
+          text: rep.text,
+          date: new Date(rep.created_at).toLocaleDateString('es-AR')
+        });
+      }
+    });
+
+    // Construir mapa con el catálogo maestro completo de 3.914 recetas
+    const baseRecipes = (typeof DEFAULT_KITCHEN_DATA !== 'undefined' && Array.isArray(DEFAULT_KITCHEN_DATA.recipes))
+      ? JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes))
+      : (Array.isArray(appState.recipes) ? appState.recipes : []);
+
+    const recipeMap = new Map();
+    baseRecipes.forEach(br => {
+      const rComments = (comments || [])
+        .filter(c => c.recipe_id === br.id)
+        .map(c => commentsMap[c.id])
+        .filter(Boolean);
+      br.comments = rComments;
+      recipeMap.set(br.id, br);
+    });
+
+    // Agregar recetas personalizadas creadas por usuarios
+    (userCustomRecipes || []).forEach(ur => {
+      const rComments = (comments || [])
+        .filter(c => c.recipe_id === ur.id)
+        .map(c => commentsMap[c.id])
+        .filter(Boolean);
+
+      recipeMap.set(ur.id, {
+        id: ur.id,
+        title: ur.title,
+        authorId: ur.author_id,
+        authorName: ur.author_name,
+        authorAvatar: ur.author_avatar || '👨‍🍳',
+        isPrivate: ur.is_private === true,
+        category: ur.category,
+        time: ur.time,
+        portions: ur.portions,
+        difficulty: ur.difficulty || 'Media',
+        rating: ur.rating || 5,
+        image: ur.image,
+        description: ur.description,
+        pairing: ur.pairing || '',
+        chefTip: ur.chef_tip || '',
+        ingredients: ur.ingredients || [],
+        steps: ur.steps || [],
+        comments: rComments
       });
+    });
 
-      (replies || []).forEach(rep => {
-        if (commentsMap[rep.comment_id]) {
-          commentsMap[rep.comment_id].replies.push({
-            id: rep.id,
-            userId: rep.user_id,
-            userName: rep.user_name,
-            userAvatar: rep.user_avatar,
-            isAuthor: rep.is_author,
-            text: rep.text,
-            date: new Date(rep.created_at).toLocaleDateString('es-AR')
-          });
-        }
-      });
-
-      appState.recipes = recipes.map(r => {
-        const rComments = (comments || [])
-          .filter(c => c.recipe_id === r.id)
-          .map(c => commentsMap[c.id])
-          .filter(Boolean);
-
-        return {
-          id: r.id,
-          title: r.title,
-          authorId: r.author_id,
-          authorName: r.author_name,
-          authorAvatar: r.author_avatar,
-          isPrivate: r.is_private,
-          category: r.category,
-          time: r.time,
-          portions: r.portions,
-          difficulty: r.difficulty,
-          rating: r.rating,
-          image: r.image,
-          description: r.description,
-          pairing: r.pairing,
-          chefTip: r.chef_tip,
-          ingredients: r.ingredients || [],
-          steps: r.steps || [],
-          comments: rComments
-        };
-      });
-    }
+    appState.recipes = Array.from(recipeMap.values());
+    if (typeof renderRecipesView === 'function') renderRecipesView(false);
 
     // 4. Cargar Alacenas por Usuario
     const { data: pantries, error: errP } = await supabaseClient.from('user_pantries').select('*, master_ingredients(*)');
