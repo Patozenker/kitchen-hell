@@ -100,8 +100,23 @@ async function syncFromSupabase() {
       }
     }
 
-    // 3. Cargar Recetas de Usuarios y Comentarios de Supabase
-    const { data: userCustomRecipes } = await supabaseClient.from('recipes').select('*').neq('author_id', 'user-anon');
+    // 3. Cargar Recetas de Supabase en bloques continuos de 500 (Sin límite de tamaño)
+    let remoteRecipes = [];
+    let fromIdx = 0;
+    const CHUNK_SIZE = 500;
+
+    while (true) {
+      const { data: chunk, error: errChunk } = await supabaseClient
+        .from('recipes')
+        .select('*')
+        .range(fromIdx, fromIdx + CHUNK_SIZE - 1);
+
+      if (errChunk || !chunk || chunk.length === 0) break;
+      remoteRecipes.push(...chunk);
+      if (chunk.length < CHUNK_SIZE) break; // Fin de registros
+      fromIdx += CHUNK_SIZE;
+    }
+
     const { data: comments } = await supabaseClient.from('recipe_comments').select('*').order('created_at', { ascending: true });
     const { data: replies } = await supabaseClient.from('recipe_replies').select('*').order('created_at', { ascending: true });
 
@@ -132,7 +147,6 @@ async function syncFromSupabase() {
       }
     });
 
-    // Construir mapa con el catálogo maestro completo de 3.914 recetas
     const baseRecipes = (typeof DEFAULT_KITCHEN_DATA !== 'undefined' && Array.isArray(DEFAULT_KITCHEN_DATA.recipes))
       ? JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes))
       : (Array.isArray(appState.recipes) ? appState.recipes : []);
@@ -147,33 +161,39 @@ async function syncFromSupabase() {
       recipeMap.set(br.id, br);
     });
 
-    // Agregar recetas personalizadas creadas por usuarios
-    (userCustomRecipes || []).forEach(ur => {
+    // Fusionar recetas remotas descargadas de Supabase (bloques de 500)
+    remoteRecipes.forEach(ur => {
       const rComments = (comments || [])
         .filter(c => c.recipe_id === ur.id)
         .map(c => commentsMap[c.id])
         .filter(Boolean);
 
-      recipeMap.set(ur.id, {
-        id: ur.id,
-        title: ur.title,
-        authorId: ur.author_id,
-        authorName: ur.author_name,
-        authorAvatar: ur.author_avatar || '👨‍🍳',
-        isPrivate: ur.is_private === true,
-        category: ur.category,
-        time: ur.time,
-        portions: ur.portions,
-        difficulty: ur.difficulty || 'Media',
-        rating: ur.rating || 5,
-        image: ur.image,
-        description: ur.description,
-        pairing: ur.pairing || '',
-        chefTip: ur.chef_tip || '',
-        ingredients: ur.ingredients || [],
-        steps: ur.steps || [],
-        comments: rComments
-      });
+      const existing = recipeMap.get(ur.id);
+      if (existing) {
+        existing.comments = rComments;
+        if (ur.rating) existing.rating = ur.rating;
+      } else {
+        recipeMap.set(ur.id, {
+          id: ur.id,
+          title: ur.title,
+          authorId: ur.author_id,
+          authorName: ur.author_name,
+          authorAvatar: ur.author_avatar || '👨‍🍳',
+          isPrivate: ur.is_private === true,
+          category: ur.category,
+          time: ur.time,
+          portions: ur.portions,
+          difficulty: ur.difficulty || 'Media',
+          rating: ur.rating || 5,
+          image: ur.image,
+          description: ur.description,
+          pairing: ur.pairing || '',
+          chefTip: ur.chef_tip || '',
+          ingredients: ur.ingredients || [],
+          steps: ur.steps || [],
+          comments: rComments
+        });
+      }
     });
 
     appState.recipes = Array.from(recipeMap.values());

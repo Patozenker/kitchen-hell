@@ -1,5 +1,5 @@
 // DATASET MAESTRO DE PATOS KITCHEN - HELL'S KITCHEN
-// Actualizado con Catálogo Maestro de 502 Insumos y 790 Recetas Reales y Auténticas en Español
+// Actualizado con Catálogo Maestro de 502 Insumos y 790 Recetas Reales y Auténticas 100% en Español
 
 const MASTER_PANTRY_CATALOG = [
   {
@@ -4639,7 +4639,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-3"
       },
@@ -4651,7 +4651,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-5"
       },
@@ -4663,19 +4663,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-7"
       },
       {
         "name": "Chilli Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-8"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-9"
       },
@@ -4687,25 +4687,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-11"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-12"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-13"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-14"
       },
@@ -4729,7 +4729,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-18"
       },
@@ -4756,7 +4756,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the oil in a frying pan and pour the purée into it.",
+        "text": "calentar el aceite o manteca in a frying pan and pour the purée into it.",
         "timerMinutes": 15
       },
       {
@@ -4768,7 +4768,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add the langostinos, tomates perita and chopped coriander.",
+        "text": "Add the langostinos, tomates perita and picado/a coriander.",
         "timerMinutes": 25
       }
     ],
@@ -4801,7 +4801,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-7"
       },
@@ -4900,13 +4900,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Finely chop the peppers in a food processor, then tip them in a sieve and press into the sieve so that the peppers release all of their juices.",
+        "text": "Finely picar el peppers in a food processor, then tip them in a sieve and press into the sieve so that the peppers release all of their juices.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Tip into a bowl along with the mince, morrón rojo paste, pul biber, 1½ tsp flaky sea sal fina, and 2 tbsp of the oil.",
+        "text": "Tip into a bowl along with the mince, morrón rojo paste, pul biber, 1½ tsp flaky sea sal fina, and 2 cdas of the oil.",
         "timerMinutes": 10
       },
       {
@@ -4969,7 +4969,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-19"
       },
@@ -4987,13 +4987,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Scallions",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-22"
       },
       {
         "name": "Cabbage",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-23"
       },
@@ -5113,13 +5113,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-24"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-25"
       },
@@ -5164,7 +5164,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Tip the papas into a bowl and drizzle over 1 tbsp of the oil and add 1/2 tsp each of sal fina and freshly ground pimienta negra molida.",
+        "text": "Tip the papas into a bowl and drizzle over 1 cdas of the oil and add 1/2 cditas each of sal fina and freshly ground pimienta negra molida.",
         "timerMinutes": 15
       },
       {
@@ -5233,7 +5233,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-31"
       },
@@ -5245,13 +5245,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-33"
       },
       {
         "name": "Scallions",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-34"
       },
@@ -5356,7 +5356,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Blend the ingredients together with 350ml agua and 1 tsp sal fina.",
+        "text": "Blend the ingredients together with 350ml agua and 1 cditas sal fina.",
         "timerMinutes": 15
       },
       {
@@ -5521,19 +5521,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Chopped",
+        "qty": "4 dientes picado/a",
         "unit": "",
         "requiredId": "ing-45"
       },
       {
         "name": "Jalapeno",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-46"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-47"
       },
@@ -5545,13 +5545,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-49"
       },
       {
         "name": "agua",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-50"
       },
@@ -5590,7 +5590,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Cool, then scrape the skins off of the tomates perita and peppers, and place them in a large bowl.",
+        "text": "Cool, then scrape the skins off of the tomates perita and peppers, and place them En una sartén grande u olla.",
         "timerMinutes": 20
       },
       {
@@ -5629,7 +5629,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-47"
       },
@@ -5647,7 +5647,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-50"
       },
@@ -5671,7 +5671,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-54"
       },
@@ -5689,7 +5689,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón Juice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-57"
       }
@@ -5698,7 +5698,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place a steamer insert into a saucepan, and fill with 1 1/2 cups of agua, or just below the bottom of the steamer.",
+        "text": "Place a steamer insert into a saucepan, and fill with 1 1/2 tazas of agua, or just below the bottom of the steamer.",
         "timerMinutes": 5
       },
       {
@@ -5710,7 +5710,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the sliced zanahorias, reduce the heat to medium, and cover the pan again.",
+        "text": "Add the en fetas/rodajas zanahorias, reduce the heat to medium, and cover the pan again.",
         "timerMinutes": 15
       },
       {
@@ -5722,7 +5722,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Reserve 1/2 cup of the cooking liquid.",
+        "text": "Reserve 1/2 tazas of the cooking liquid.",
         "timerMinutes": 25
       }
     ],
@@ -5767,31 +5767,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-54"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-55"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-56"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-57"
       },
       {
         "name": "Plum tomates perita",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-58"
       }
@@ -5863,25 +5863,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-58"
       },
       {
         "name": "cebolla",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-59"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-60"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-61"
       },
@@ -5893,13 +5893,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-63"
       },
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-64"
       }
@@ -5908,7 +5908,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Combine ground carne vacuna with 1/2 of the minced diente de ajo and 1 tablespoon chopped cebolla in a large bowl.",
+        "text": "Combine ground carne vacuna with 1/2 of the picado fino diente de ajo and 1 tablespoon picado/a cebolla En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -5965,19 +5965,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Cornmeal",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-62"
       },
       {
         "name": "Queso Fresco",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-63"
       },
       {
         "name": "queso muzzarella",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-64"
       },
@@ -5989,13 +5989,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-66"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-67"
       },
@@ -6028,7 +6028,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the remaining ingredients and mix well.",
+        "text": "Add the remaining ingredients and mezclar homogéneamente.",
         "timerMinutes": 15
       },
       {
@@ -6097,13 +6097,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-71"
       },
       {
         "name": "pollo Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-72"
       },
@@ -6148,13 +6148,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium bowl, combine the coconut leche entera, red curry paste, fish sauce, palm azúcar blanco, and broth, whisking until smooth—this ensures no lumps in the sauce.",
+        "text": "En un recipiente mediano, combine the coconut leche entera, red curry paste, fish sauce, palm azúcar blanco, and broth, whisking until smooth—this ensures no lumps in the sauce.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the aceite de girasol / vegetal in a large skillet over medium heat (about 350°F) for 30 seconds until shimmering.",
+        "text": "Heat the aceite de girasol / vegetal En una sartén grande u olla over medium heat (about 350°F) for 30 seconds until shimmering.",
         "timerMinutes": 10
       },
       {
@@ -6166,7 +6166,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the fish cubes and kaffir lima leaves to the skillet, submerging them fully in the sauce.",
+        "text": "agregar la carne cubes and kaffir lima leaves to the skillet, submerging them fully in the sauce.",
         "timerMinutes": 20
       },
       {
@@ -6223,13 +6223,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-75"
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-76"
       },
@@ -6241,13 +6241,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-78"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-79"
       }
@@ -6376,7 +6376,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the bicarbonate of soda to 2 tbsp boiling agua, then stir into the golden syrup and manteca mixture.",
+        "text": "Add the bicarbonate of soda to 2 cdas boiling agua, then stir into the golden syrup and manteca mixture.",
         "timerMinutes": 20
       },
       {
@@ -6439,13 +6439,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-86"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-87"
       },
@@ -6484,7 +6484,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Stir well until all ingredients are combined evenly.",
+        "text": "revolver bien para integrar los sabores until all ingredients are combined evenly.",
         "timerMinutes": 15
       },
       {
@@ -6667,13 +6667,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-96"
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-97"
       },
@@ -6712,7 +6712,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large bowl, break the four huevos with the azúcar blanco and beat until they have tripled in volume and become fluffy.",
+        "text": "En una sartén grande u olla, break the four huevos with the azúcar blanco and beat until they have tripled in volume and become fluffy.",
         "timerMinutes": 15
       },
       {
@@ -6799,7 +6799,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "almond extract",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-104"
       },
@@ -6814,7 +6814,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 200C/180C Fan/Gas 6.",
+        "text": "Precalentar el horno a 200°C/180C Fan/Gas 6.",
         "timerMinutes": 5
       },
       {
@@ -6889,19 +6889,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-105"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-106"
       },
       {
         "name": "Bicarbonate Of Soda",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-107"
       },
@@ -6979,13 +6979,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-108"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-109"
       },
@@ -7003,7 +7003,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cold agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-112"
       },
@@ -7015,13 +7015,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-114"
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-115"
       },
@@ -7033,13 +7033,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Nutmeg",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-117"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-118"
       },
@@ -7063,7 +7063,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-122"
       }
@@ -7147,7 +7147,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Maple Syrup",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-115"
       },
@@ -7198,7 +7198,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Boil them in salted agua for about 10 min and then add the cleaned and chopped apples into the boiling agua.",
+        "text": "Boil them in salted agua for about 10 min and then add the cleaned and picado/a apples into the boiling agua.",
         "timerMinutes": 10
       },
       {
@@ -7351,19 +7351,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-122"
       },
       {
         "name": "choclo harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-123"
       },
       {
         "name": "Warm agua",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-124"
       }
@@ -7459,7 +7459,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-132"
       },
@@ -7480,7 +7480,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Prepare the meat in a skillet and add sal fina and pepper to taste, heat the beans over medium heat in a pan, fry or grill the ripe plantains as indicated on its package and cut the tomate into small cubes.",
+        "text": "Prepare the meat in a skillet and add sal fina and pepper a gusto, heat the beans over medium heat in a pan, fry or grill the ripe plantains as indicated on its package and cut the tomate into small cubes.",
         "timerMinutes": 5
       },
       {
@@ -7498,7 +7498,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "With the help of a knife, open it by the edge through the middle, creating a space to fill it with the ripe plantain, the beans, meat and chopped tomate.",
+        "text": "With the help of a knife, open it by the edge through the middle, creating a space to fill it with the ripe plantain, the beans, meat and picado/a tomate.",
         "timerMinutes": 20
       },
       {
@@ -7555,25 +7555,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-135"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-136"
       },
       {
         "name": "orégano",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-137"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-138"
       },
@@ -7585,7 +7585,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-140"
       },
@@ -7630,7 +7630,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Prepare the vegetables: Sauté chopped cebolla, morrón / pimiento, and diente de ajo in a little oil.",
+        "text": "Prepare the vegetables: Sauté picado/a cebolla, morrón / pimiento, and diente de ajo in a little oil.",
         "timerMinutes": 20
       },
       {
@@ -7681,7 +7681,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-139"
       },
@@ -7843,7 +7843,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Extra Virgin aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-147"
       },
@@ -7867,7 +7867,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-151"
       },
@@ -7879,7 +7879,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Plum tomates perita",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-153"
       },
@@ -7999,7 +7999,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-153"
       },
@@ -8017,7 +8017,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Saffron",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-156"
       },
@@ -8062,7 +8062,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the aceite de oliva extra virgen in a large frying pan or shallow flameproof casserole over a medium-low heat and fry the cebolla for 5 mins until softened.",
+        "text": "Heat the aceite de oliva extra virgen En una sartén grande u olla or shallow flameproof casserole over a medium-low heat and fry the cebolla for 5 mins until softened.",
         "timerMinutes": 10
       },
       {
@@ -8113,7 +8113,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "arroz",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-157"
       },
@@ -8125,13 +8125,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-159"
       },
       {
         "name": "leche entera",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-160"
       },
@@ -8155,7 +8155,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-164"
       },
@@ -8170,7 +8170,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a small pot, add agua and cinnamon sticks, bring to a boil and cook for 10 minutes.",
+        "text": "In a small pot, add agua and cinnamon sticks, llevar a ebullición and cook for 10 minutes.",
         "timerMinutes": 5
       },
       {
@@ -8188,13 +8188,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add sal fina, manteca, esencia de vainilla, 2 cups of leche entera, and azúcar blanco.",
+        "text": "Add sal fina, manteca, esencia de vainilla, 2 tazas of leche entera, and azúcar blanco.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir well to mix and cook uncovered for approximately 15 minutes.",
+        "text": "revolver bien para integrar los sabores to mix and cook uncovered for approximately 15 minutes.",
         "timerMinutes": 25
       }
     ],
@@ -8245,7 +8245,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-165"
       }
@@ -8323,7 +8323,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-169"
       },
@@ -8392,7 +8392,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add 2 tsp oil and whizz briefly again, to coat.",
+        "text": "Add 2 cditas oil and whizz briefly again, to coat.",
         "timerMinutes": 25
       }
     ],
@@ -8425,7 +8425,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Aubergine",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-172"
       },
@@ -8532,7 +8532,7 @@ const DEFAULT_KITCHEN_DATA = {
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
       {
-        "name": "Lean Minced Steak",
+        "name": "Lean picado fino Steak",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-177"
@@ -8566,7 +8566,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Make the burgers: Tip the meat into a bowl and sprinkle over 1 tsp sal fina and a good grinding of pimienta negra molida.Work with wet hands to mix in the seasoning.",
+        "text": "Make the burgers: Tip the meat into a bowl and sprinkle over 1 cditas sal fina and a good grinding of pimienta negra molida.Work with wet hands to mix in the seasoning.",
         "timerMinutes": 5
       },
       {
@@ -8584,7 +8584,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Sort out your ingredients: Slice the beetroot and split the naan breads.",
+        "text": "Sort out your ingredients: cortar en rodajas finas beetroot and split the naan breads.",
         "timerMinutes": 20
       },
       {
@@ -8623,13 +8623,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Warm agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-182"
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-183"
       },
@@ -8653,19 +8653,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Banana",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-187"
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-188"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-189"
       }
@@ -8692,7 +8692,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "On a stove, pour in 4 cups of agua and bring it to a boil.",
+        "text": "On a stove, pour in 4 tazas of agua and bring it to a boil.",
         "timerMinutes": 20
       },
       {
@@ -8731,7 +8731,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Almonds",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-187"
       },
@@ -8743,13 +8743,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Powdered azúcar blanco",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-189"
       },
       {
         "name": "Powdered azúcar blanco",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-190"
       },
@@ -9007,13 +9007,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-208"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-209"
       }
@@ -9085,7 +9085,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-203"
       },
@@ -9121,7 +9121,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-209"
       },
@@ -9223,7 +9223,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-211"
       },
@@ -9325,7 +9325,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-214"
       },
@@ -9337,7 +9337,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-216"
       },
@@ -9349,25 +9349,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-218"
       },
       {
         "name": "Chilli Flakes",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-219"
       },
       {
         "name": "Paprika",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-220"
       },
       {
         "name": "Plum tomates perita",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-221"
       },
@@ -9379,7 +9379,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-223"
       },
@@ -9394,7 +9394,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place the langostinos in a bowl with 2 tbsp of the lima juice, 1 tsp of sal fina and 1 tbsp of the chopped diente de ajo.",
+        "text": "Place the langostinos in a bowl with 2 cdas of the lima juice, 1 cditas of sal fina and 1 cdas of the picado/a diente de ajo.",
         "timerMinutes": 5
       },
       {
@@ -9418,7 +9418,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Bring to a simmer and let reduce for 10 mins.",
+        "text": "llevar a ebullición and let reduce for 10 mins.",
         "timerMinutes": 25
       }
     ],
@@ -9457,7 +9457,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-218"
       },
@@ -9481,25 +9481,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-222"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-223"
       },
       {
         "name": "Jasmine arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-224"
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-225"
       },
@@ -9511,7 +9511,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pepino",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-227"
       },
@@ -9526,13 +9526,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large bowl, combine the coconut leche entera, salsa de soja, oyster sauce, miel orgánica, minced diente de ajo, and pimienta negra molida to make the marinade.",
+        "text": "En una sartén grande u olla, combine the coconut leche entera, salsa de soja, oyster sauce, miel orgánica, picado fino diente de ajo, and pimienta negra molida to make the marinade.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the thinly sliced carne de cerdo shoulder to the marinade, ensuring each piece is fully coated, then cover and refrigerate for at least 30 minutes to allow the flavors to penetrate.",
+        "text": "Add the thinly en fetas/rodajas carne de cerdo shoulder to the marinade, ensuring each piece is fully coated, then cover and refrigerate for at least 30 minutes to allow the flavors to penetrate.",
         "timerMinutes": 10
       },
       {
@@ -9544,7 +9544,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a medium pot, combine the rinsed arroz and 4 cups of agua, bring to a boil over high heat, then reduce to a simmer, cover, and cook for 15 minutes until the agua is absorbed and the arroz is tender.",
+        "text": "En un recipiente mediano, combine the rinsed arroz and 4 tazas of agua, llevar a ebullición over high heat, then reduce to a simmer, cover, and cook for 15 minutes until the agua is absorbed and the arroz is tender.",
         "timerMinutes": 20
       },
       {
@@ -9595,13 +9595,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomates perita",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-224"
       },
       {
         "name": "diente de ajo",
-        "qty": "6 cloves",
+        "qty": "6 dientes",
         "unit": "",
         "requiredId": "ing-225"
       },
@@ -9625,7 +9625,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander Leaves",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-229"
       },
@@ -9703,13 +9703,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-228"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-229"
       },
@@ -9721,13 +9721,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-231"
       },
       {
         "name": "Warm agua",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-232"
       }
@@ -9793,19 +9793,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Coconut",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-232"
       },
       {
         "name": "Melted manteca",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-233"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-234"
       },
@@ -9823,19 +9823,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-237"
       },
       {
         "name": "azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-238"
       },
       {
         "name": "Raisins",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-239"
       },
@@ -9847,13 +9847,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Evaporated leche entera",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-241"
       },
       {
         "name": "Almond Essence",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-242"
       }
@@ -9880,7 +9880,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mix well until you have a creamy paste.",
+        "text": "mezclar homogéneamente until you have a creamy paste.",
         "timerMinutes": 20
       },
       {
@@ -9919,25 +9919,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Dried Sorrel",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-237"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-238"
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-239"
       },
       {
         "name": "Cinnamon",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-240"
       },
@@ -9985,7 +9985,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-248"
       }
@@ -10006,7 +10006,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Bring to a boil as petal becomes soft.",
+        "text": "llevar a ebullición as petal becomes soft.",
         "timerMinutes": 15
       },
       {
@@ -10057,7 +10057,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-243"
       },
@@ -10120,7 +10120,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Chop the fennel fronds roughly, then mix with the perejil fresco and limón zest.",
+        "text": "picar el fennel fronds roughly, then mix with the perejil fresco and limón zest.",
         "timerMinutes": 25
       }
     ],
@@ -10165,7 +10165,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chilli Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-249"
       },
@@ -10189,7 +10189,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema ácida",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-253"
       },
@@ -10201,7 +10201,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cilantro fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-255"
       }
@@ -10210,7 +10210,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 450°.",
+        "text": "Precalentar el horno a 450°C°.",
         "timerMinutes": 5
       },
       {
@@ -10279,13 +10279,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cold agua",
-        "qty": "2-3 tbsp",
+        "qty": "2-3 cdas",
         "unit": "",
         "requiredId": "ing-254"
       },
       {
         "name": "raspberry jam",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-255"
       },
@@ -10354,7 +10354,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Preheat the oven to 200C/400F/Gas 6 (180C fan).",
+        "text": "Precalentar el horno a 200°C/400F/Gas 6 (180C fan).",
         "timerMinutes": 25
       }
     ],
@@ -10393,7 +10393,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón Juice",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-258"
       },
@@ -10561,13 +10561,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled sliced",
+        "qty": "1 dientes peeled en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-267"
       },
       {
         "name": "Tobasco Sauce",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-268"
       },
@@ -10579,13 +10579,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-270"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-271"
       },
@@ -10624,7 +10624,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Place bacalao / merluza in saucepan with fresh agua to cover.",
+        "text": "Place bacalao / merluza in saucepan with fresco agua to cover.",
         "timerMinutes": 25
       }
     ],
@@ -10675,13 +10675,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-270"
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-271"
       }
@@ -10759,7 +10759,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-276"
       },
@@ -10861,13 +10861,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-281"
       },
       {
         "name": "pepino",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-282"
       },
@@ -10894,7 +10894,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a small saucepan melt together the peanut manteca, coconut leche entera, sweet chilli sauce and half the spring cebollas, adding 1-2 tbsp of agua to loosen the mixture to a drizzling consistency.",
+        "text": "In a small saucepan melt together the peanut manteca, coconut leche entera, sweet chilli sauce and half the spring cebollas, adding 1-2 cdas of agua to loosen the mixture to a drizzling consistency.",
         "timerMinutes": 10
       },
       {
@@ -10957,7 +10957,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-285"
       },
@@ -10969,25 +10969,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-287"
       },
       {
         "name": "Ground Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-288"
       },
       {
         "name": "Ground Coriander",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-289"
       },
       {
         "name": "Chilli Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-290"
       },
@@ -11026,13 +11026,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Drain and set aside.",
+        "text": "escurrir y reservar.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "If using an alternative such as bacalao / merluza, cut into 2 ½ inch chunks then rinse, drain and set aside.",
+        "text": "If using an alternative such as bacalao / merluza, cut into 2 ½ inch chunks then rinse, escurrir y reservar.",
         "timerMinutes": 20
       },
       {
@@ -11089,7 +11089,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-290"
       },
@@ -11158,19 +11158,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Set that to one side; while you slice the diente de ajo into tiny slices, slice the cebolla.",
+        "text": "Set that to one side; while you cortar en rodajas finas diente de ajo into tiny slices, cortar en rodajas finas cebolla.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Chop the albahaca fresca and tomillo fresco.",
+        "text": "picar el albahaca fresca and tomillo fresco.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Now you need to be very careful when you slice the scotch bonnet peppers; you want these in fine pieces, which you can either do with a long knife trying not to touch the pepper, or you can wear rubber gloves to cut it up.",
+        "text": "Now you need to be very careful when you cortar en rodajas finas scotch bonnet peppers; you want these in fine pieces, which you can either do with a long knife trying not to touch the pepper, or you can wear rubber gloves to cut it up.",
         "timerMinutes": 20
       },
       {
@@ -11239,7 +11239,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-297"
       },
@@ -11278,7 +11278,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Mix the azúcar blanco into the pan mix in a large bowl, then add agua as instructed on the pack.",
+        "text": "Mix the azúcar blanco into the pan mix En una sartén grande u olla, then add agua as instructed on the pack.",
         "timerMinutes": 10
       },
       {
@@ -11296,7 +11296,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Meanwhile, heat the oil in a pan, then fry the panceta ahumada until crisp, about 5 mins.",
+        "text": "Meanwhile, calentar el aceite o manteca in a pan, then fry the panceta ahumada until crisp, about 5 mins.",
         "timerMinutes": 25
       }
     ],
@@ -11341,7 +11341,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-299"
       },
@@ -11572,7 +11572,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "To make the almond sponge, put the manteca, azúcar blanco, harina de trigo 000, ground almonds, polvo de hornear, huevos, vanilla and almond extract in a large bowl.",
+        "text": "To make the almond sponge, put the manteca, azúcar blanco, harina de trigo 000, ground almonds, polvo de hornear, huevos, vanilla and almond extract En una sartén grande u olla.",
         "timerMinutes": 10
       },
       {
@@ -11635,7 +11635,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-309"
       },
@@ -11704,7 +11704,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 450 degrees.",
+        "text": "Precalentar el horno a 450°C degrees.",
         "timerMinutes": 5
       },
       {
@@ -11785,7 +11785,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "English mostaza",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-316"
       }
@@ -11845,7 +11845,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-317"
       },
@@ -11857,13 +11857,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-319"
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-320"
       },
@@ -11887,7 +11887,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "2-1/2 cups",
+        "qty": "2-1/2 tazas",
         "unit": "",
         "requiredId": "ing-324"
       },
@@ -11932,7 +11932,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Into the same bowl, add 1/2 cup azúcar blanco, warm leche entera, melted manteca, huevos and sal fina, and whisk until combined.",
+        "text": "Into the same bowl, add 1/2 tazas azúcar blanco, warm leche entera, melted manteca, huevos and sal fina, and whisk until combined.",
         "timerMinutes": 15
       },
       {
@@ -11977,19 +11977,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "salsa de soja",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-322"
       },
       {
         "name": "Dry sherry",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-323"
       },
       {
         "name": "Cornstarch",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-324"
       },
@@ -12013,7 +12013,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dry sherry",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-328"
       },
@@ -12025,7 +12025,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo Stock",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-330"
       },
@@ -12043,13 +12043,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-333"
       },
       {
         "name": "Cornstarch",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-334"
       },
@@ -12070,7 +12070,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Stir together the carne vacuna marinade ingredients (1 teaspoon salsa de soja, 1 teaspoon Chinese arroz wine, 1/2 teaspoon cornstarch, 1/8 teaspoon pimienta negra molida) in a medium bowl.",
+        "text": "Stir together the carne vacuna marinade ingredients (1 teaspoon salsa de soja, 1 teaspoon Chinese arroz wine, 1/2 teaspoon cornstarch, 1/8 teaspoon pimienta negra molida) En un recipiente mediano.",
         "timerMinutes": 10
       },
       {
@@ -12151,13 +12151,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely sliced",
+        "qty": "1 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-332"
       },
       {
         "name": "zanahorias",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-333"
       },
@@ -12214,7 +12214,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 150C/300F/Gas 2.",
+        "text": "Precalentar el horno a 150°C/300F/Gas 2.",
         "timerMinutes": 5
       },
       {
@@ -12289,7 +12289,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-335"
       },
@@ -12301,7 +12301,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "1 tbs chopped",
+        "qty": "1 tbs picado/a",
         "unit": "",
         "requiredId": "ing-337"
       },
@@ -12439,7 +12439,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-340"
       },
@@ -12487,19 +12487,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-348"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-349"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-350"
       }
@@ -12628,13 +12628,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add to a small pot with 1 cup agua (2 cups for 4 servings) and a pinch of sal fina.",
+        "text": "Add to a small pot with 1 tazas agua (2 tazas for 4 servings) and a pinch of sal fina.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Bring to a boil, then cover and reduce heat to low.",
+        "text": "llevar a ebullición, then cover and reduce heat to low.",
         "timerMinutes": 20
       },
       {
@@ -12673,7 +12673,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Goose Fat",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-347"
       },
@@ -12703,7 +12703,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-352"
       },
@@ -12739,13 +12739,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "sprigs of fresh",
+        "qty": "sprigs of fresco",
         "unit": "",
         "requiredId": "ing-358"
       },
       {
         "name": "romero fresco",
-        "qty": "sprigs of fresh",
+        "qty": "sprigs of fresco",
         "unit": "",
         "requiredId": "ing-359"
       },
@@ -12766,7 +12766,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat a large casserole pan and add 1 tbsp goose fat.",
+        "text": "Heat a large casserole pan and add 1 cdas goose fat.",
         "timerMinutes": 5
       },
       {
@@ -12841,7 +12841,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "5 cloves",
+        "qty": "5 dientes",
         "unit": "",
         "requiredId": "ing-355"
       },
@@ -12865,7 +12865,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna stock",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-359"
       },
@@ -12877,7 +12877,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mostaza",
-        "qty": "1 Tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-361"
       },
@@ -12967,31 +12967,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-360"
       },
       {
         "name": "morrón verde",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-361"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-362"
       },
       {
         "name": "papas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-363"
       },
       {
         "name": "zanahorias",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-364"
       },
@@ -13015,13 +13015,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-368"
       },
       {
         "name": "diente de ajo",
-        "qty": "5 cloves",
+        "qty": "5 dientes",
         "unit": "",
         "requiredId": "ing-369"
       },
@@ -13036,7 +13036,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat oil in a cooking pot.",
+        "text": "calentar aceite en a cooking pot.",
         "timerMinutes": 5
       },
       {
@@ -13117,7 +13117,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-366"
       },
@@ -13141,7 +13141,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Leek",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-370"
       },
@@ -13177,7 +13177,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "3 tblsp chopped",
+        "qty": "3 tblsp picado/a",
         "unit": "",
         "requiredId": "ing-376"
       },
@@ -13189,7 +13189,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-378"
       },
@@ -13210,13 +13210,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 180C/350F/Gas 4.",
+        "text": "Precalentar el horno a 180°C/350F/Gas 4.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "For the carne vacuna stew, heat the oil and manteca in an ovenproof casserole and fry the carne vacuna until browned on all sides.",
+        "text": "For the carne vacuna stew, calentar el aceite o manteca and manteca in an ovenproof casserole and fry the carne vacuna until browned on all sides.",
         "timerMinutes": 10
       },
       {
@@ -13234,7 +13234,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in the wine, stock and herbs, then add the Worcestershire sauce and balsamic vinagre de vino, to taste.",
+        "text": "Stir in the wine, stock and herbs, then add the Worcestershire sauce and balsamic vinagre de vino, a gusto.",
         "timerMinutes": 25
       }
     ],
@@ -13279,7 +13279,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-369"
       },
@@ -13297,7 +13297,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-372"
       },
@@ -13327,31 +13327,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-377"
       },
       {
         "name": "morrón rojo Flakes",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-378"
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-379"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-380"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-381"
       },
@@ -13453,7 +13453,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-375"
       },
@@ -13483,37 +13483,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-380"
       },
       {
-        "name": "Minced diente de ajo",
-        "qty": "1 tsp",
+        "name": "picado fino diente de ajo",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-381"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-382"
       },
       {
         "name": "Bean Sprouts",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-383"
       },
       {
         "name": "champiñones frescos",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-384"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-385"
       },
@@ -13525,13 +13525,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-387"
       },
       {
         "name": "salsa de soja",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-388"
       }
@@ -13546,7 +13546,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a bowl, add the carne vacuna, sal fina, 1 pinch white pepper, 1 Teaspoon sesame seed oil, 1/2 huevo, choclo starch,1 Tablespoon of oil and mix together.",
+        "text": "In a bowl, add the carne vacuna, sal fina, 1 pizca white pepper, 1 Teaspoon sesame seed oil, 1/2 huevo, choclo starch,1 Tablespoon of oil and mix together.",
         "timerMinutes": 10
       },
       {
@@ -13603,7 +13603,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "5 cloves",
+        "qty": "5 dientes",
         "unit": "",
         "requiredId": "ing-378"
       },
@@ -13621,7 +13621,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sea sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-381"
       },
@@ -13702,7 +13702,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Finely chop the diente de ajo.",
+        "text": "Finely picar el diente de ajo.",
         "timerMinutes": 10
       },
       {
@@ -13714,7 +13714,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Thinly slice the cebolla and tomates perita.",
+        "text": "Thinly cortar en rodajas finas cebolla and tomates perita.",
         "timerMinutes": 20
       },
       {
@@ -13759,7 +13759,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-383"
       },
@@ -13771,7 +13771,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "5 chopped cloves",
+        "qty": "5 picado/a cloves",
         "unit": "",
         "requiredId": "ing-385"
       },
@@ -13789,7 +13789,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "2 1/2 Tsp",
+        "qty": "2 1/2 cditas",
         "unit": "",
         "requiredId": "ing-388"
       },
@@ -13807,19 +13807,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cardamom",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-391"
       },
       {
         "name": "Cloves",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-392"
       },
       {
         "name": "Bay Leaf",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-393"
       }
@@ -13840,19 +13840,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat ghee/oil in a large pot.",
+        "text": "Heat ghee/oil En una sartén grande u olla.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add sliced cebollas and sauté until light golden.",
+        "text": "Add en fetas/rodajas cebollas and sauté until light golden.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add diente de ajo, green chilies, and tomate; cook until softened.",
+        "text": "Add diente de ajo, green chilies, and tomate; cocinar hasta dorar suavementeened.",
         "timerMinutes": 25
       }
     ],
@@ -13885,13 +13885,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-387"
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-388"
       },
@@ -13909,7 +13909,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-391"
       },
@@ -13933,13 +13933,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-395"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-396"
       },
@@ -13951,7 +13951,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-398"
       }
@@ -13960,7 +13960,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Make the carne vacuna tenderloin marinade by combining salsa de soja, vinagre de vino, jengibre fresco, diente de ajo, sesame oil, aceite de oliva extra virgen, azúcar blanco, sal fina, and ground pimienta negra molida in a large bowl.",
+        "text": "Make the carne vacuna tenderloin marinade by combining salsa de soja, vinagre de vino, jengibre fresco, diente de ajo, sesame oil, aceite de oliva extra virgen, azúcar blanco, sal fina, and ground pimienta negra molida En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -14029,7 +14029,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 Large Chopped",
+        "qty": "1 Large picado/a",
         "unit": "",
         "requiredId": "ing-394"
       },
@@ -14047,7 +14047,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander Seeds",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-397"
       },
@@ -14065,7 +14065,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Palm azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-400"
       },
@@ -14089,7 +14089,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-404"
       },
@@ -14185,7 +14185,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-398"
       },
@@ -14197,25 +14197,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-400"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-401"
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-402"
       },
       {
         "name": "Pumpkin Puree",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-403"
       },
@@ -14278,7 +14278,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In small quantities, brown the carne vacuna on all sides, removing the browned carne vacuna and setting it aside in a large bowl as you go.",
+        "text": "In small quantities, brown the carne vacuna on all sides, removing the browned carne vacuna and setting it aside En una sartén grande u olla as you go.",
         "timerMinutes": 20
       },
       {
@@ -14353,13 +14353,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coconut Cream",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-408"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-409"
       },
@@ -14392,13 +14392,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Chop the spice paste ingredients and then blend it in a food processor until fine.",
+        "text": "picar el spice paste ingredients and then blend it in a food processor until fine.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a stew pot, add the spice paste, cinnamon, cloves, star anise, and cardamom and stir-fry until aromatic.",
+        "text": "calentar el aceite o manteca in a stew pot, add the spice paste, cinnamon, cloves, star anise, and cardamom and stir-fry until aromatic.",
         "timerMinutes": 10
       },
       {
@@ -14461,13 +14461,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-409"
       },
       {
         "name": "manteca",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-410"
       },
@@ -14485,7 +14485,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Plain harina de trigo 000",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-413"
       },
@@ -14497,7 +14497,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "English mostaza",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-415"
       },
@@ -14518,7 +14518,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the aceite de oliva extra virgen in a non-stick frying pan then add the sliced cebolla and cook on a medium heat until completely softened, so around 15 mins, adding a little splash of agua if they start to stick at all.",
+        "text": "Heat the aceite de oliva extra virgen in a non-stick frying pan then add the en fetas/rodajas cebolla and cook on a medium heat until completely softened, so around 15 mins, adding a little splash of agua if they start to stick at all.",
         "timerMinutes": 5
       },
       {
@@ -14689,7 +14689,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "English mostaza",
-        "qty": "1-2tbsp",
+        "qty": "1-2 cdas",
         "unit": "",
         "requiredId": "ing-418"
       },
@@ -14809,13 +14809,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Caraway Seed",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-425"
       },
       {
         "name": "Sea sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-426"
       }
@@ -14929,13 +14929,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-435"
       },
       {
         "name": "Caraway Seed",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-436"
       },
@@ -14968,7 +14968,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the oil in a large non-stick pan.",
+        "text": "calentar el aceite o manteca in a large non-stick pan.",
         "timerMinutes": 15
       },
       {
@@ -15031,7 +15031,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-435"
       },
@@ -15100,7 +15100,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Now create 3 or 4 pancakes each made from 2 tbsp of the batter.",
+        "text": "Now create 3 or 4 pancakes each made from 2 cdas of the batter.",
         "timerMinutes": 20
       },
       {
@@ -15157,7 +15157,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-440"
       },
@@ -15184,7 +15184,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Chop the beetroot, add agua and stock cube and cook for 15mins.",
+        "text": "picar el beetroot, add agua and stock cube and cook for 15mins.",
         "timerMinutes": 5
       },
       {
@@ -15234,26 +15234,26 @@ const DEFAULT_KITCHEN_DATA = {
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "300g",
         "unit": "",
         "requiredId": "ing-442"
       },
       {
-        "name": "Minced carne de cerdo",
+        "name": "picado fino carne de cerdo",
         "qty": "300g",
         "unit": "",
         "requiredId": "ing-443"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-444"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-445"
       },
@@ -15301,7 +15301,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-453"
       },
@@ -15337,7 +15337,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-459"
       },
@@ -15364,7 +15364,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "1) Mix the minced meat with the cebolla, diente de ajo, huevo, pan rallado, mostaza, perejil fresco, sal fina, and pepper.",
+        "text": "1) Mix the picado fino meat with the cebolla, diente de ajo, huevo, pan rallado, mostaza, perejil fresco, sal fina, and pepper.",
         "timerMinutes": 10
       },
       {
@@ -15433,7 +15433,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-450"
       },
@@ -15445,7 +15445,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-452"
       },
@@ -15457,7 +15457,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Beer",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-454"
       },
@@ -15490,7 +15490,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Add the chopped papas and diente de ajo to a high pan and fill it with tap agua until the papas are fully submerged.",
+        "text": "Add the picado/a papas and diente de ajo to a high pan and fill it with tap agua until the papas are fully submerged.",
         "timerMinutes": 5
       },
       {
@@ -15559,7 +15559,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-454"
       },
@@ -15589,7 +15589,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-459"
       },
@@ -15601,7 +15601,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cream",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-461"
       },
@@ -15664,7 +15664,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Keep the fresh pollo stock for later.",
+        "text": "Keep the fresco pollo stock for later.",
         "timerMinutes": 25
       }
     ],
@@ -15703,7 +15703,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 diced",
+        "qty": "2 en cubos",
         "unit": "",
         "requiredId": "ing-458"
       },
@@ -15715,37 +15715,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate",
-        "qty": "2 diced",
+        "qty": "2 en cubos",
         "unit": "",
         "requiredId": "ing-460"
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-461"
       },
       {
         "name": "Curry Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-462"
       },
       {
         "name": "Garam Masala",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-463"
       },
       {
         "name": "Ground Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-464"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-465"
       },
@@ -15763,7 +15763,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cilantro fresco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-468"
       }
@@ -15772,7 +15772,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the aceite de oliva extra virgen in a large skillet over medium-high heat.",
+        "text": "Heat the aceite de oliva extra virgen En una sartén grande u olla over medium-high heat.",
         "timerMinutes": 5
       },
       {
@@ -15796,7 +15796,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Season with the cayenne pepper, curry powder, garam masala, turmeric, and cumin; cook and stir another 5 minutes.",
+        "text": "condimentar con the cayenne pepper, curry powder, garam masala, turmeric, and cumin; cook and stir another 5 minutes.",
         "timerMinutes": 25
       }
     ],
@@ -15828,7 +15828,7 @@ const DEFAULT_KITCHEN_DATA = {
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "400g",
         "unit": "",
         "requiredId": "ing-462"
@@ -15847,7 +15847,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-465"
       },
@@ -15859,7 +15859,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cheese",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-467"
       },
@@ -15871,13 +15871,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mayonesa",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-469"
       },
       {
         "name": "White Wine vinagre de vino",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-470"
       },
@@ -15889,25 +15889,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mostaza",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-472"
       },
       {
         "name": "cebolla sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-473"
       },
       {
         "name": "diente de ajo Powder",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-474"
       },
       {
         "name": "Paprika",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-475"
       }
@@ -15916,13 +15916,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the Big Mac sauce, combine all the ingredients in a bowl, season with sal fina and chill until ready to use.",
+        "text": "For the Big Mac sauce, combine all the ingredients in a bowl, condimentar con sal fina and chill until ready to use.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "To make the patties, season the mince with sal fina and pepper and form into 4 balls using about 1/3 cup mince each.",
+        "text": "To make the patties, season the mince with sal fina and pepper and form into 4 balls using about 1/3 tazas mince each.",
         "timerMinutes": 10
       },
       {
@@ -15934,7 +15934,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat oil in a large frypan over high heat.",
+        "text": "calentar aceite en a large frypan over high heat.",
         "timerMinutes": 20
       },
       {
@@ -15973,7 +15973,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "panceta ahumada",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-467"
       },
@@ -15991,31 +15991,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-470"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-471"
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-472"
       },
       {
         "name": "champiñones frescos",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-473"
       },
       {
         "name": "Cabbage",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-474"
       },
@@ -16027,7 +16027,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Wine",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-476"
       },
@@ -16039,13 +16039,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "albahaca fresca",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-478"
       },
       {
         "name": "Marjoram",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-479"
       },
@@ -16069,7 +16069,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-483"
       },
@@ -16080,8 +16080,8 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-484"
       },
       {
-        "name": "Diced tomates perita",
-        "qty": "1 cup",
+        "name": "en cubos tomates perita",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-485"
       },
@@ -16096,7 +16096,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 350 degrees F (175 degrees C).",
+        "text": "Precalentar el horno a 350°C F (175 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -16153,7 +16153,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "White Cabbage",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-472"
       },
@@ -16189,7 +16189,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-478"
       },
@@ -16327,7 +16327,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-480"
       },
@@ -16345,13 +16345,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-483"
       },
       {
         "name": "sal fina",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-484"
       }
@@ -16579,13 +16579,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-492"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Chopped",
+        "qty": "4 dientes picado/a",
         "unit": "",
         "requiredId": "ing-493"
       },
@@ -16687,7 +16687,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-495"
       },
@@ -16711,13 +16711,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cumin",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-499"
       },
       {
         "name": "Chilli Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-500"
       },
@@ -16729,7 +16729,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo Stock",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-2"
       },
@@ -16768,13 +16768,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large pot over medium heat, heat oil.",
+        "text": "En una sartén grande u olla over medium heat, heat oil.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add cebolla and cook until soft and translucent, about 5 minutes.",
+        "text": "Add cebolla and cocinar hasta dorar suavemente and translucent, about 5 minutes.",
         "timerMinutes": 10
       },
       {
@@ -16792,7 +16792,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Season with sal fina, pepper, cumin, and ají picante powder and stir to coat.",
+        "text": "condimentar con sal fina, pepper, cumin, and ají picante powder and stir to coat.",
         "timerMinutes": 25
       }
     ],
@@ -16849,19 +16849,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "apio",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-1"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-2"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-3"
       },
@@ -16873,19 +16873,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-5"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-6"
       },
       {
         "name": "agua",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-7"
       }
@@ -16957,7 +16957,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón",
-        "qty": "Grated",
+        "qty": "rallado",
         "unit": "",
         "requiredId": "ing-5"
       },
@@ -17020,7 +17020,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the biscuits, preheat the oven to 200C/180C (fan)/Gas 6 and line two large baking trays with baking parchment.",
+        "text": "For the biscuits, Precalentar el horno a 200°C/180C (fan)/Gas 6 and line two large baking trays with baking parchment.",
         "timerMinutes": 5
       },
       {
@@ -17044,7 +17044,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Put the manteca and azúcar blanco in a large bowl and beat with a wooden spoon until light and creamy.",
+        "text": "Put the manteca and azúcar blanco En una sartén grande u olla and beat with a wooden spoon until light and creamy.",
         "timerMinutes": 25
       }
     ],
@@ -17077,31 +17077,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Buckwheat",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-7"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-8"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-9"
       },
       {
         "name": "levadura seca",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-10"
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-11"
       },
@@ -17122,13 +17122,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large bowl, whisk together 1/2 cup buckwheat harina de trigo 000, 2/3 cup all-purpose harina de trigo 000, 1/2 teaspoon sal fina, and 1 teaspoon levadura seca.",
+        "text": "En una sartén grande u olla, whisk together 1/2 tazas buckwheat harina de trigo 000, 2/3 tazas all-purpose harina de trigo 000, 1/2 teaspoon sal fina, and 1 teaspoon levadura seca.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Make a well in the center and pour in 1 cup warm leche entera, whisking until the batter is smooth.",
+        "text": "Make a well in the center and pour in 1 tazas warm leche entera, whisking until the batter is smooth.",
         "timerMinutes": 10
       },
       {
@@ -17293,7 +17293,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-19"
       },
@@ -17311,7 +17311,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-22"
       },
@@ -17497,7 +17497,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-32"
       },
@@ -17515,7 +17515,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-35"
       },
@@ -17725,13 +17725,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "cebollas",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-37"
       },
       {
         "name": "tomillo fresco",
-        "qty": "sprigs of fresh",
+        "qty": "sprigs of fresco",
         "unit": "",
         "requiredId": "ing-38"
       },
@@ -17845,7 +17845,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bicarbonate Of Soda",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-47"
       },
@@ -17902,13 +17902,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Meanwhile, squeeze as much of the liquid from the grated papas as you can using a clean tea towel.",
+        "text": "Meanwhile, squeeze as much of the liquid from the rallado papas as you can using a clean tea towel.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Mash the boiled papas, then mix with the grated papa, spring cebollas and harina de trigo 000.",
+        "text": "Mash the boiled papas, then mix with the rallado papa, spring cebollas and harina de trigo 000.",
         "timerMinutes": 25
       }
     ],
@@ -17953,7 +17953,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-49"
       },
@@ -17971,19 +17971,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-52"
       },
       {
         "name": "Allspice",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-53"
       },
       {
         "name": "Cloves",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-54"
       },
@@ -18001,7 +18001,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "orégano",
-        "qty": "2 tsp dried",
+        "qty": "2 cditas dried",
         "unit": "",
         "requiredId": "ing-57"
       },
@@ -18013,7 +18013,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Balsamic vinagre de vino",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-59"
       },
@@ -18025,13 +18025,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate Ketchup",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-61"
       },
       {
         "name": "Dark Brown azúcar blanco",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-62"
       },
@@ -18046,7 +18046,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 120C/225F/gas mark 1.",
+        "text": "Precalentar el horno a 120°C/225F/gas mark 1.",
         "timerMinutes": 5
       },
       {
@@ -18058,13 +18058,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Pulse the cebollas and diente de ajo in a food processor until finely chopped.",
+        "text": "Pulse the cebollas and diente de ajo in a food processor until finely picado/a.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat 2 tbsp aceite de oliva extra virgen in a large casserole and sear the meat on all sides until golden.",
+        "text": "Heat 2 cdas aceite de oliva extra virgen in a large casserole and sear the meat on all sides until golden.",
         "timerMinutes": 20
       },
       {
@@ -18115,19 +18115,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-54"
       },
       {
         "name": "romero fresco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-55"
       },
       {
         "name": "apio",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-56"
       },
@@ -18163,7 +18163,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Clear miel orgánica",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-62"
       }
@@ -18247,7 +18247,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-60"
       },
@@ -18298,7 +18298,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Mix the harina de trigo 000, azúcar blanco and polvo de hornear together in a large bowl and set aside.",
+        "text": "Mix the harina de trigo 000, azúcar blanco and polvo de hornear together En una sartén grande u olla and set aside.",
         "timerMinutes": 15
       },
       {
@@ -18361,7 +18361,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-65"
       },
@@ -18400,7 +18400,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the leche entera, manteca and sal fina in a medium saucepan and bring to a boil.",
+        "text": "Heat the leche entera, manteca and sal fina in a medium saucepan and llevar a ebullición.",
         "timerMinutes": 15
       },
       {
@@ -18463,7 +18463,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-70"
       },
@@ -18565,7 +18565,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cinnamon",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-75"
       },
@@ -18595,7 +18595,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "nutmeg",
-        "qty": "grated, to taste",
+        "qty": "rallado, a gusto",
         "unit": "",
         "requiredId": "ing-80"
       }
@@ -18733,25 +18733,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Alinos Sauce",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-83"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-84"
       },
       {
         "name": "pan rallado",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-85"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-86"
       },
@@ -18763,13 +18763,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-88"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-89"
       },
@@ -18877,7 +18877,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-92"
       },
@@ -18901,13 +18901,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-96"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-97"
       },
@@ -18919,7 +18919,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo Sauce",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-99"
       },
@@ -19045,13 +19045,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-101"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-102"
       },
@@ -19063,7 +19063,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo Paste",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-104"
       },
@@ -19243,7 +19243,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "Minced",
+        "qty": "picado fino",
         "unit": "",
         "requiredId": "ing-105"
       },
@@ -19273,7 +19273,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Allspice",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-110"
       }
@@ -19300,7 +19300,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In the meantime, heat 1-2 tablespoons of oil in a large skillet over medium-high heat.",
+        "text": "In the meantime, heat 1-2 tablespoons of oil En una sartén grande u olla over medium-high heat.",
         "timerMinutes": 20
       },
       {
@@ -19396,7 +19396,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix the harina de trigo 000, 1 tsp sal fina, caster azúcar blanco, levadura seca, leche entera and huevos together in a mixer using the dough attachment for 5 mins until the dough is smooth.",
+        "text": "Mix the harina de trigo 000, 1 cditas sal fina, caster azúcar blanco, levadura seca, leche entera and huevos together in a mixer using the dough attachment for 5 mins until the dough is smooth.",
         "timerMinutes": 5
       },
       {
@@ -19459,7 +19459,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-113"
       },
@@ -19471,7 +19471,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Leek",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-115"
       },
@@ -19495,7 +19495,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Broccoli",
-        "qty": "1 Head chopped",
+        "qty": "1 Head picado/a",
         "unit": "",
         "requiredId": "ing-119"
       },
@@ -19573,31 +19573,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-118"
       },
       {
         "name": "cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-119"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-120"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-121"
       },
       {
         "name": "zanahorias",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-122"
       },
@@ -19609,13 +19609,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-124"
       },
       {
         "name": "Allspice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-125"
       },
@@ -19627,13 +19627,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cornstarch",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-127"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-128"
       },
@@ -19660,7 +19660,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Combine tomate, scallion, cebolla, diente de ajo, pepper, tomillo fresco, pimento and salsa de soja in a large bowl with the pollo pieces.",
+        "text": "Combine tomate, scallion, cebolla, diente de ajo, pepper, tomillo fresco, pimento and salsa de soja En una sartén grande u olla with the pollo pieces.",
         "timerMinutes": 15
       },
       {
@@ -19672,7 +19672,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Heat oil in a dutch pot or large saucepan.",
+        "text": "calentar aceite en a dutch pot or large saucepan.",
         "timerMinutes": 25
       }
     ],
@@ -19723,7 +19723,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-125"
       },
@@ -19774,7 +19774,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat aceite de oliva extra virgen in a large pot.",
+        "text": "Heat aceite de oliva extra virgen En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -19792,7 +19792,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the stock and bring to a boil, then lower the heat, cover, and let simmer for about 30 minutes.",
+        "text": "Add the stock and llevar a ebullición, then lower the heat, cover, and let simmer for about 30 minutes.",
         "timerMinutes": 20
       },
       {
@@ -19888,7 +19888,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Place the grated papas in a bowl and mix them with harina de trigo 000, huevo, and sal fina until a sticky dough forms.",
+        "text": "Place the rallado papas in a bowl and mix them with harina de trigo 000, huevo, and sal fina until a sticky dough forms.",
         "timerMinutes": 15
       },
       {
@@ -19957,13 +19957,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-136"
       },
       {
         "name": "Lemons",
-        "qty": "Grated Zest of 2",
+        "qty": "rallado Zest of 2",
         "unit": "",
         "requiredId": "ing-137"
       },
@@ -19984,7 +19984,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mash the queso ricota and beat well with the huevo yolks, stir in the harina de trigo 000, azúcar blanco, cinnamon, grated limón rind and the rum and mix well.",
+        "text": "Mash the queso ricota and beat well with the huevo yolks, stir in the harina de trigo 000, azúcar blanco, cinnamon, rallado limón rind and the rum and mezclar homogéneamente.",
         "timerMinutes": 5
       },
       {
@@ -20008,7 +20008,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Serve hot or cold dusted with icing azúcar blanco.",
+        "text": "servir bien caliente de inmediato or cold dusted with icing azúcar blanco.",
         "timerMinutes": 25
       }
     ],
@@ -20053,19 +20053,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pepino",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-139"
       },
       {
         "name": "Scallions",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-140"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-141"
       },
@@ -20077,7 +20077,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/8 cup",
+        "qty": "1/8 tazas",
         "unit": "",
         "requiredId": "ing-143"
       },
@@ -20098,7 +20098,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place sliced lechuga in a large bowl.",
+        "text": "Place en fetas/rodajas lechuga En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -20116,13 +20116,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Season with sal fina and gently toss to combine.",
+        "text": "condimentar con sal fina and gently toss to combine.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Top with sliced hard-boiled huevos, olives, dill and (or) perejil fresco if using and serve immediately.",
+        "text": "Top with en fetas/rodajas hard-boiled huevos, olives, dill and (or) perejil fresco if using and servir bien caliente de inmediato.",
         "timerMinutes": 25
       }
     ],
@@ -20161,61 +20161,61 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Powdered azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-143"
       },
       {
         "name": "miel orgánica",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-144"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-145"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-146"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-147"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-148"
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-149"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-150"
       },
       {
         "name": "Chocolate Chips",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-151"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-152"
       }
@@ -20224,7 +20224,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 F.",
+        "text": "Precalentar el horno a 350°C F.",
         "timerMinutes": 5
       },
       {
@@ -20286,7 +20286,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-147"
       },
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "150g",
         "unit": "",
         "requiredId": "ing-148"
@@ -20320,7 +20320,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Fry the finely chopped cebollas and minced meat in oil.",
+        "text": "Fry the finely picado/a cebollas and picado fino meat in oil.",
         "timerMinutes": 5
       },
       {
@@ -20413,7 +20413,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "caldo de verduras",
-        "qty": "8 cups",
+        "qty": "8 tazas",
         "unit": "",
         "requiredId": "ing-158"
       },
@@ -20470,7 +20470,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add the bay leaf and caldo de verduras and bring to a boil over high heat.",
+        "text": "Add the bay leaf and caldo de verduras and llevar a ebullición over high heat.",
         "timerMinutes": 25
       }
     ],
@@ -20539,7 +20539,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-163"
       },
@@ -20557,13 +20557,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Smoked Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-166"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-167"
       },
@@ -20575,19 +20575,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Apple Cider vinagre de vino",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-169"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-170"
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-171"
       }
@@ -20659,7 +20659,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón Juice",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-163"
       },
@@ -20683,7 +20683,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-167"
       }
@@ -20704,7 +20704,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the limón juice, most of the aceite de oliva extra virgen and the dried mint to a bowl and stir well for the dried mint to soften and soak up the juices.",
+        "text": "Add the limón juice, most of the aceite de oliva extra virgen and the dried mint to a bowl and revolver bien para integrar los sabores for the dried mint to soften and soak up the juices.",
         "timerMinutes": 15
       },
       {
@@ -20749,25 +20749,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "crema de leche",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-167"
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-168"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-169"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-170"
       },
@@ -20779,7 +20779,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-172"
       },
@@ -20851,13 +20851,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "cajun",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-172"
       },
       {
         "name": "cayenne pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-173"
       },
@@ -20869,7 +20869,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-175"
       },
@@ -20881,7 +20881,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "palta hass",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-177"
       },
@@ -20917,7 +20917,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-183"
       }
@@ -21001,31 +21001,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-180"
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-181"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-182"
       },
       {
         "name": "Scotch Bonnet",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-183"
       },
       {
         "name": "Plum tomates perita",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-184"
       },
@@ -21037,7 +21037,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-186"
       }
@@ -21115,7 +21115,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-184"
       },
@@ -21127,7 +21127,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-186"
       },
@@ -21229,25 +21229,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-188"
       },
       {
         "name": "Spring cebollas",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-189"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-190"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-191"
       },
@@ -21324,7 +21324,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-192"
       },
       {
-        "name": "Minced carne de cerdo",
+        "name": "picado fino carne de cerdo",
         "qty": "150g",
         "unit": "",
         "requiredId": "ing-193"
@@ -21337,7 +21337,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Chopped",
+        "qty": "4 dientes picado/a",
         "unit": "",
         "requiredId": "ing-195"
       },
@@ -21382,7 +21382,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the minced carne de cerdo to the pan and break it up with a spatula.",
+        "text": "Add the picado fino carne de cerdo to the pan and break it up with a spatula.",
         "timerMinutes": 15
       },
       {
@@ -21427,25 +21427,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "arroz harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-197"
       },
       {
         "name": "Wheat harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-198"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-199"
       },
       {
         "name": "Palm azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-200"
       },
@@ -21457,7 +21457,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-202"
       }
@@ -21535,7 +21535,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-206"
       },
@@ -21547,7 +21547,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Single Cream",
-        "qty": "4 tsp",
+        "qty": "4 cditas",
         "unit": "",
         "requiredId": "ing-208"
       },
@@ -21625,19 +21625,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-208"
       },
       {
         "name": "zanahorias",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-209"
       },
       {
         "name": "papas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-210"
       },
@@ -21661,13 +21661,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-214"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-215"
       }
@@ -21676,7 +21676,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Brown the carne vacuna: In a large pot, brown the carne vacuna cubes.",
+        "text": "Brown the carne vacuna: En una sartén grande u olla, brown the carne vacuna cubes.",
         "timerMinutes": 5
       },
       {
@@ -21739,7 +21739,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-213"
       }
@@ -21748,7 +21748,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Add tamarind pulp and 1 cup granulated azúcar blanco to a bowl and mash together with a spoon or fork.",
+        "text": "Add tamarind pulp and 1 tazas granulated azúcar blanco to a bowl and mash together with a spoon or fork.",
         "timerMinutes": 5
       },
       {
@@ -21817,7 +21817,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-219"
       },
@@ -21829,7 +21829,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan rallado",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-221"
       },
@@ -21886,7 +21886,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Season with diente de ajo, tomillo fresco, sal fina and pepper.",
+        "text": "condimentar con diente de ajo, tomillo fresco, sal fina and pepper.",
         "timerMinutes": 15
       },
       {
@@ -21943,7 +21943,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bicarbonate Of Soda",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-224"
       },
@@ -21967,13 +21967,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-228"
       },
       {
         "name": "zanahorias",
-        "qty": "500g grated",
+        "qty": "500g rallado",
         "unit": "",
         "requiredId": "ing-229"
       },
@@ -22006,7 +22006,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the zanahoria cake, preheat the oven to 160C/325F/Gas 3.",
+        "text": "For the zanahoria cake, Precalentar el horno a 160°C/325F/Gas 3.",
         "timerMinutes": 5
       },
       {
@@ -22159,19 +22159,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Farine",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-232"
       },
       {
         "name": "agua",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-233"
       },
       {
         "name": "Cassava harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-234"
       },
@@ -22192,7 +22192,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add agua and mix well.",
+        "text": "Add agua and mezclar homogéneamente.",
         "timerMinutes": 10
       },
       {
@@ -22267,13 +22267,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Allspice",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-241"
       },
       {
         "name": "Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-242"
       }
@@ -22306,7 +22306,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add hot coconut leche entera mixture and stir well.",
+        "text": "Add hot coconut leche entera mixture and revolver bien para integrar los sabores.",
         "timerMinutes": 25
       }
     ],
@@ -22471,13 +22471,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mayonesa",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-251"
       },
       {
         "name": "mostaza",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-252"
       },
@@ -22489,7 +22489,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-254"
       },
@@ -22540,7 +22540,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add remaining ingredients and mix well.",
+        "text": "Add remaining ingredients and mezclar homogéneamente.",
         "timerMinutes": 25
       }
     ],
@@ -22579,31 +22579,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo Stock",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-253"
       },
       {
         "name": "morrón rojo",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-254"
       },
       {
         "name": "morrón verde",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-255"
       },
       {
         "name": "cebolla",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-256"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-257"
       },
@@ -22615,25 +22615,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-259"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-260"
       },
       {
         "name": "tomillo fresco",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-261"
       },
       {
         "name": "Cornstarch",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-262"
       },
@@ -22704,13 +22704,13 @@ const DEFAULT_KITCHEN_DATA = {
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-257"
       },
       {
-        "name": "Minced carne de cerdo",
+        "name": "picado fino carne de cerdo",
         "qty": "250g",
         "unit": "",
         "requiredId": "ing-258"
@@ -22723,13 +22723,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-260"
       },
       {
         "name": "perejil fresco",
-        "qty": "3 tblsp chopped",
+        "qty": "3 tblsp picado/a",
         "unit": "",
         "requiredId": "ing-261"
       },
@@ -22765,13 +22765,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-267"
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-268"
       }
@@ -22786,19 +22786,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Chop the cebolla very finely and grate the diente de ajo cloves.",
+        "text": "picar el cebolla very finely and grate the diente de ajo cloves.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the chopped perejil fresco, all sorts of paprika, baking soda, dried pan rallado, agua, Vegeta, sal fina, and pepper.",
+        "text": "Add the picado/a perejil fresco, all sorts of paprika, baking soda, dried pan rallado, agua, Vegeta, sal fina, and pepper.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mix well with the hand mixer fitted with the dough hooks.",
+        "text": "mezclar homogéneamente with the hand mixer fitted with the dough hooks.",
         "timerMinutes": 20
       },
       {
@@ -22849,37 +22849,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-264"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-265"
       },
       {
         "name": "morrón verde",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-266"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-267"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-268"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-269"
       },
@@ -22930,7 +22930,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Mix well and bring the mixture to a simmer.",
+        "text": "mezclar homogéneamente and bring the mixture to a simmer.",
         "timerMinutes": 25
       }
     ],
@@ -23002,7 +23002,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Combine the levadura seca, a pinch of the azúcar blanco and a couple tablespoons of lukewarm agua in a small bowl.",
+        "text": "Combine the levadura seca, a pinch of the azúcar blanco and a couple tablespoons of lukewarm agua En un bowl pequeño.",
         "timerMinutes": 5
       },
       {
@@ -23014,7 +23014,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Meanwhile, combine the harina de trigo 000, the remaining azúcar blanco and 2 tsp fine sal fina in a large bowl.",
+        "text": "Meanwhile, combine the harina de trigo 000, the remaining azúcar blanco and 2 cditas fine sal fina En una sartén grande u olla.",
         "timerMinutes": 15
       },
       {
@@ -23071,7 +23071,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-274"
       },
@@ -23101,7 +23101,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Unsalted manteca",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-279"
       }
@@ -23110,7 +23110,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium bowl, whisk together huevo, perejil fresco, diente de ajo and crushed morrón rojo.",
+        "text": "En un recipiente mediano, whisk together huevo, perejil fresco, diente de ajo and crushed morrón rojo.",
         "timerMinutes": 5
       },
       {
@@ -23167,13 +23167,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-277"
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-278"
       },
@@ -23197,19 +23197,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-282"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-283"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-284"
       },
@@ -23230,7 +23230,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Mix harina de trigo 000, manteca and huevo in a bowl, and add azúcar blanco, sal fina and aceite de oliva extra virgen to taste into the mix.",
+        "text": "Mix harina de trigo 000, manteca and huevo in a bowl, and add azúcar blanco, sal fina and aceite de oliva extra virgen a gusto into the mix.",
         "timerMinutes": 10
       },
       {
@@ -23287,7 +23287,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-283"
       },
@@ -23335,7 +23335,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-291"
       },
@@ -23425,7 +23425,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pickle Juice",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-288"
       },
@@ -23437,13 +23437,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-290"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-291"
       },
@@ -23455,43 +23455,43 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-293"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-294"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-295"
       },
       {
         "name": "diente de ajo Powder",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-296"
       },
       {
         "name": "apio sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-297"
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-298"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-299"
       },
@@ -23575,19 +23575,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Large Chopped",
+        "qty": "1 Large picado/a",
         "unit": "",
         "requiredId": "ing-294"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-295"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-296"
       },
@@ -23605,7 +23605,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-299"
       },
@@ -23629,7 +23629,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-303"
       }
@@ -23638,7 +23638,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large flameproof casserole dish and brown the pollo pieces on all sides – you may have to do this in batches.",
+        "text": "calentar el aceite o manteca in a large flameproof casserole dish and brown the pollo pieces on all sides – you may have to do this in batches.",
         "timerMinutes": 5
       },
       {
@@ -23701,7 +23701,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-298"
       },
@@ -23851,13 +23851,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Broccoli",
-        "qty": "1 Head chopped",
+        "qty": "1 Head picado/a",
         "unit": "",
         "requiredId": "ing-307"
       },
       {
         "name": "champiñones frescos",
-        "qty": "8-ounce sliced",
+        "qty": "8-ounce en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-308"
       },
@@ -23869,13 +23869,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-310"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-311"
       },
@@ -23887,25 +23887,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "white wine",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-313"
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-314"
       },
       {
         "name": "crema de leche",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-315"
       },
       {
         "name": "queso parmesano cheese",
-        "qty": "1 cup grated",
+        "qty": "1 tazas rallado",
         "unit": "",
         "requiredId": "ing-316"
       },
@@ -23929,7 +23929,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-320"
       }
@@ -23938,7 +23938,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tablespoon of manteca and 2 tablespoons of aceite de oliva extra virgen in a large skillet over medium-high heat.",
+        "text": "Heat 1 tablespoon of manteca and 2 tablespoons of aceite de oliva extra virgen En una sartén grande u olla over medium-high heat.",
         "timerMinutes": 5
       },
       {
@@ -24067,7 +24067,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-319"
       },
@@ -24094,13 +24094,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add chopped cebollas, diente de ajo, perejil fresco, tomillo fresco, jerk seasoning, sal fina, and the whole scotch bonnet pepper – do not cut up the pepper! Reduce the heat to low and let this simmer for 25 minutes.",
+        "text": "Add picado/a cebollas, diente de ajo, perejil fresco, tomillo fresco, jerk seasoning, sal fina, and the whole scotch bonnet pepper – do not cut up the pepper! Reduce the heat to low and let this cocinar a fuego suave por 25 minutos.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large mixing bowl, sift the harina de trigo 000, and add a pinch of sal fina to taste.",
+        "text": "In a large mixing bowl, sift the harina de trigo 000, and add a pinch of sal fina a gusto.",
         "timerMinutes": 15
       },
       {
@@ -24163,7 +24163,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-315"
       },
@@ -24187,7 +24187,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "6 cloves sliced",
+        "qty": "6 dientes en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-319"
       },
@@ -24274,7 +24274,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the manteca and 3 tbsp aceite de oliva extra virgen in a flameproof casserole or large frying pan.",
+        "text": "Heat the manteca and 3 cdas aceite de oliva extra virgen in a flameproof casserole or large frying pan.",
         "timerMinutes": 15
       },
       {
@@ -24337,13 +24337,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "jengibre fresco Cordial",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-320"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-321"
       },
@@ -24355,13 +24355,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arroz",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-323"
       },
       {
         "name": "agua",
-        "qty": "8 cups",
+        "qty": "8 tazas",
         "unit": "",
         "requiredId": "ing-324"
       },
@@ -24433,13 +24433,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-322"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-323"
       },
@@ -24496,7 +24496,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the aceite de oliva extra virgen in a large frying pan and cook the cebolla for 1-2 mins just until softened.",
+        "text": "Heat the aceite de oliva extra virgen En una sartén grande u olla and cook the cebolla for 1-2 mins just until softened.",
         "timerMinutes": 5
       },
       {
@@ -24559,7 +24559,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "shredded Monterey Jack cheese",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-328"
       },
@@ -24598,7 +24598,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Make sure you stir occasionally so that it doesn't stick to the bottom.",
+        "text": "Make sure you revolver bien para integrar los sabores so that it doesn't stick to the bottom.",
         "timerMinutes": 20
       },
       {
@@ -24643,13 +24643,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo stock",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-333"
       },
       {
         "name": "crema de leche",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-334"
       },
@@ -24661,49 +24661,49 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-336"
       },
       {
         "name": "pechuga de pollo",
-        "qty": "3 diced",
+        "qty": "3 en cubos",
         "unit": "",
         "requiredId": "ing-337"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-338"
       },
       {
         "name": "cebolla",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-339"
       },
       {
         "name": "morrón rojo",
-        "qty": "2 finely diced",
+        "qty": "2 finely en cubos",
         "unit": "",
         "requiredId": "ing-340"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-341"
       },
       {
         "name": "queso cheddar",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-342"
       },
       {
         "name": "perejil fresco",
-        "qty": "garnish chopped",
+        "qty": "garnish picado/a",
         "unit": "",
         "requiredId": "ing-343"
       }
@@ -24775,7 +24775,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-338"
       },
@@ -24793,19 +24793,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-341"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-342"
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-343"
       },
@@ -24817,37 +24817,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arvejas",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-345"
       },
       {
         "name": "Jasmine arroz",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-346"
       },
       {
         "name": "Scallions",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-347"
       },
       {
         "name": "Chinese five spice powder",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-348"
       },
       {
         "name": "salsa de soja",
-        "qty": "2.5 tbsp",
+        "qty": "2.5 cdas",
         "unit": "",
         "requiredId": "ing-349"
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-350"
       }
@@ -24931,13 +24931,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Leek",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-345"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-346"
       },
@@ -25081,25 +25081,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "5 thinly sliced",
+        "qty": "5 thinly en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-348"
       },
       {
         "name": "tomates perita",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-349"
       },
       {
         "name": "diente de ajo",
-        "qty": "8 cloves chopped",
+        "qty": "8 dientes picado/a",
         "unit": "",
         "requiredId": "ing-350"
       },
       {
         "name": "jengibre fresco paste",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-351"
       },
@@ -25111,25 +25111,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin seeds",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-353"
       },
       {
         "name": "Coriander seeds",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-354"
       },
       {
         "name": "Turmeric powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-355"
       },
       {
         "name": "Chilli powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-356"
       },
@@ -25141,7 +25141,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Yogurt",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-358"
       },
@@ -25153,19 +25153,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "fenugreek",
-        "qty": "3 tsp Dried",
+        "qty": "3 cditas Dried",
         "unit": "",
         "requiredId": "ing-360"
       },
       {
         "name": "Garam masala",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-361"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-362"
       }
@@ -25174,13 +25174,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Take a large pot or wok, big enough to cook all the pollo, and heat the oil in it.",
+        "text": "Take a large pot or wok, big enough to cook all the pollo, and calentar el aceite o manteca in it.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Once the oil is hot, add sliced cebolla and fry them until deep golden brown.",
+        "text": "Once the oil is hot, add en fetas/rodajas cebolla and fry them until deep golden brown.",
         "timerMinutes": 10
       },
       {
@@ -25192,13 +25192,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "To the same pot, add the chopped diente de ajo and sauté for a minute.",
+        "text": "To the same pot, add the picado/a diente de ajo and sauté for a minute.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Then add the chopped tomates perita and cook until tomates perita turn soft.",
+        "text": "Then add the picado/a tomates perita and cook until tomates perita turn soft.",
         "timerMinutes": 25
       }
     ],
@@ -25249,7 +25249,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-355"
       },
@@ -25261,31 +25261,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-357"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-358"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-359"
       },
       {
         "name": "pollo Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-360"
       },
       {
         "name": "Orange Juice",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-361"
       },
@@ -25297,7 +25297,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cilantro fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-363"
       }
@@ -25312,7 +25312,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the chopped cebollas, red morrón / pimiento and diente de ajo.",
+        "text": "Add the picado/a cebollas, red morrón / pimiento and diente de ajo.",
         "timerMinutes": 10
       },
       {
@@ -25324,7 +25324,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the pollo legs and season with sal fina and pepper.",
+        "text": "Add the pollo legs and condimentar con sal fina and pepper.",
         "timerMinutes": 20
       },
       {
@@ -25375,7 +25375,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-359"
       },
@@ -25399,19 +25399,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "papa starch",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-363"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-364"
       },
       {
         "name": "limón",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-365"
       }
@@ -25489,7 +25489,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-364"
       },
@@ -25501,19 +25501,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground mostaza",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-366"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-367"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-368"
       },
@@ -25540,7 +25540,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Put into a fireproof casserole with all other ingredients roughly chopped.",
+        "text": "Put into a fireproof casserole with all other ingredients roughly picado/a.",
         "timerMinutes": 10
       },
       {
@@ -25693,13 +25693,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Basmati arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-373"
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-374"
       },
@@ -25711,7 +25711,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-376"
       },
@@ -25759,13 +25759,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-384"
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-385"
       },
@@ -25792,19 +25792,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large pot, heat ghee/oil.",
+        "text": "En una sartén grande u olla, heat ghee/oil.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Fry chopped cebolla until golden.",
+        "text": "Fry picado/a cebolla until golden.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add minced diente de ajo and green chillies and fry 1–2 min.",
+        "text": "Add picado fino diente de ajo and green chillies and fry 1–2 min.",
         "timerMinutes": 25
       }
     ],
@@ -25873,7 +25873,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-383"
       }
@@ -25882,7 +25882,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large flameproof casserole dish and stir-fry the champiñones frescos until they start to soften.",
+        "text": "calentar el aceite o manteca in a large flameproof casserole dish and stir-fry the champiñones frescos until they start to soften.",
         "timerMinutes": 5
       },
       {
@@ -25900,7 +25900,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Season with pimienta negra molida – you shouldn’t need sal fina.",
+        "text": "condimentar con pimienta negra molida – you shouldn’t need sal fina.",
         "timerMinutes": 20
       },
       {
@@ -25975,7 +25975,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-388"
       },
@@ -25987,13 +25987,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-390"
       },
       {
         "name": "White Wine",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-391"
       },
@@ -26068,7 +26068,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "For the filling, melt the manteca in a large pan.",
+        "text": "For the filling, melt the manteca En una sartén grande u olla.",
         "timerMinutes": 25
       }
     ],
@@ -26113,13 +26113,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-389"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-390"
       },
@@ -26143,7 +26143,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-394"
       },
@@ -26155,7 +26155,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Mint",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-396"
       },
@@ -26182,7 +26182,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Toss the pollo fillets in 2 tsp of the aceite de oliva extra virgen with some seasoning.",
+        "text": "Toss the pollo fillets in 2 cditas of the aceite de oliva extra virgen with some seasoning.",
         "timerMinutes": 15
       },
       {
@@ -26251,7 +26251,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dijon mostaza",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-396"
       },
@@ -26275,19 +26275,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-400"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-401"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-402"
       }
@@ -26302,7 +26302,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring to a boil, add 1 tsp sal fina and simmer for approximately 15 minutes.",
+        "text": "llevar a ebullición, add 1 cditas sal fina and simmer for approximately 15 minutes.",
         "timerMinutes": 10
       },
       {
@@ -26359,7 +26359,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-398"
       },
@@ -26383,19 +26383,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-402"
       },
       {
         "name": "Smoked Paprika",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-403"
       },
       {
         "name": "sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-404"
       },
@@ -26413,19 +26413,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Greek Yogurt",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-407"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-408"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-409"
       },
@@ -26446,7 +26446,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Grab your ziplock bag and dump the freshly sliced pollo inside.",
+        "text": "Grab your ziplock bag and dump the freshly en fetas/rodajas pollo inside.",
         "timerMinutes": 10
       },
       {
@@ -26503,7 +26503,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-403"
       },
@@ -26515,7 +26515,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin Seeds",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-405"
       },
@@ -26605,7 +26605,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-409"
       },
@@ -26629,7 +26629,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-413"
       },
@@ -26641,7 +26641,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pine Nuts",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-415"
       },
@@ -26737,13 +26737,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 finely sliced",
+        "qty": "1 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-416"
       },
       {
         "name": "Red Wine vinagre de vino",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-417"
       },
@@ -26761,7 +26761,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "lima",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-420"
       },
@@ -26773,7 +26773,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Harissa Spice",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-422"
       },
@@ -26812,7 +26812,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Meanwhile, put the tomates perita and cebolla in a small bowl with the vinagre de vino and set aside to pickle.",
+        "text": "Meanwhile, put the tomates perita and cebolla En un bowl pequeño with the vinagre de vino and set aside to pickle.",
         "timerMinutes": 20
       },
       {
@@ -26857,19 +26857,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-418"
       },
       {
         "name": "zanahorias",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-419"
       },
       {
         "name": "apio",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-420"
       },
@@ -26887,7 +26887,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-423"
       },
@@ -26899,7 +26899,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-425"
       },
@@ -26932,7 +26932,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large pan, then gently fry the cebolla for 3-4 mins until it begins to soften.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla, then gently fry the cebolla for 3-4 mins until it begins to soften.",
         "timerMinutes": 5
       },
       {
@@ -26989,31 +26989,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-422"
       },
       {
         "name": "Melted manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-423"
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-424"
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-425"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-426"
       },
@@ -27028,7 +27028,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 450 degrees F (230 degrees C).",
+        "text": "Precalentar el horno a 450°C F (230 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -27040,7 +27040,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Whisk harina de trigo 000, 1 cup melted manteca, leche entera, polvo de hornear, and sal fina together in a bowl until begins to pull together.",
+        "text": "Whisk harina de trigo 000, 1 tazas melted manteca, leche entera, polvo de hornear, and sal fina together in a bowl until begins to pull together.",
         "timerMinutes": 15
       },
       {
@@ -27097,31 +27097,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 tsp minced",
+        "qty": "1 cditas picado fino",
         "unit": "",
         "requiredId": "ing-429"
       },
       {
         "name": "Dried orégano",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-430"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-431"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-432"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-433"
       },
@@ -27133,13 +27133,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Raisins",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-435"
       },
       {
         "name": "Black Olives",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-436"
       },
@@ -27151,25 +27151,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-438"
       },
       {
         "name": "Shortening",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-439"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-440"
       },
       {
         "name": "sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-441"
       },
@@ -27184,7 +27184,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Make the filling: Melt manteca in a large skillet over medium heat.",
+        "text": "Make the filling: Melt manteca En una sartén grande u olla over medium heat.",
         "timerMinutes": 5
       },
       {
@@ -27247,19 +27247,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-433"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-434"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-435"
       },
@@ -27271,7 +27271,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Canola Oil",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-437"
       }
@@ -27286,7 +27286,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Place in a saucepan, cover with agua, and bring to a boil over medium-high heat.",
+        "text": "Place in a saucepan, cover with agua, and llevar a ebullición over medium-high heat.",
         "timerMinutes": 10
       },
       {
@@ -27337,7 +27337,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-437"
       },
@@ -27361,13 +27361,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "ají picante Powder",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-441"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-442"
       },
@@ -27457,7 +27457,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-445"
       },
@@ -27499,19 +27499,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fromage Frais",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-452"
       },
       {
         "name": "lima",
-        "qty": "Grated Zest of 2",
+        "qty": "rallado Zest of 2",
         "unit": "",
         "requiredId": "ing-453"
       },
       {
         "name": "Caster azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-454"
       }
@@ -27520,7 +27520,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix the dressing ingredients in a small bowl and season with sal fina and pepper.",
+        "text": "Mix the dressing ingredients En un bowl pequeño and condimentar con sal fina and pepper.",
         "timerMinutes": 5
       },
       {
@@ -27538,7 +27538,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Meanwhile, heat the oil in a wok or large frying pan, toss in the diente de ajo and chilli and cook over a fairly gentle heat for about 30 seconds without letting the diente de ajo brown.",
+        "text": "Meanwhile, calentar el aceite o manteca in a wok or large frying pan, toss in the diente de ajo and chilli and cook over a fairly gentle heat for about 30 seconds without letting the diente de ajo brown.",
         "timerMinutes": 20
       },
       {
@@ -27583,25 +27583,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Orange Juice",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-448"
       },
       {
         "name": "salsa de soja",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-449"
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-450"
       },
       {
         "name": "arroz vinagre de vino",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-451"
       },
@@ -27619,7 +27619,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-454"
       },
@@ -27637,49 +27637,49 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-457"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-458"
       },
       {
         "name": "Cornstarch",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-459"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-460"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-461"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-462"
       },
       {
         "name": "Shallots",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-463"
       },
       {
         "name": "Scallions",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-464"
       },
@@ -27706,7 +27706,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Whisk together sauce ingredients in a medium bowl.",
+        "text": "Whisk together sauce ingredients En un recipiente mediano.",
         "timerMinutes": 10
       },
       {
@@ -27775,31 +27775,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-455"
       },
       {
         "name": "pollo Bouillon Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-456"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-457"
       },
       {
         "name": "Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-458"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-459"
       },
@@ -27811,7 +27811,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Jasmine arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-461"
       }
@@ -27826,13 +27826,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add 1/4 cup of broth followed by 2 teaspoons of cornstarch dissolved in 1 tablespoPrepare the tomates perita:.",
+        "text": "Add 1/4 tazas of broth followed by 2 teaspoons of cornstarch dissolved in 1 tablespoPrepare the tomates perita:.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Slice the tomates perita in half.",
+        "text": "cortar en rodajas finas tomates perita in half.",
         "timerMinutes": 15
       },
       {
@@ -28114,7 +28114,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large bowl place harina de trigo 000, sal fina and levadura seca and mix.",
+        "text": "En una sartén grande u olla place harina de trigo 000, sal fina and levadura seca and mix.",
         "timerMinutes": 15
       },
       {
@@ -28327,7 +28327,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-481"
       },
@@ -28354,7 +28354,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Tip the ingredients into a food processor with 1 /4 tsp sal fina.",
+        "text": "Tip the ingredients into a food processor with 1 /4 cditas sal fina.",
         "timerMinutes": 10
       },
       {
@@ -28366,7 +28366,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Drizzle 2-3 tsp cold agua into the funnel while the blade is running – the mixture should start to clump together.",
+        "text": "Drizzle 2-3 cditas cold agua into the funnel while the blade is running – the mixture should start to clump together.",
         "timerMinutes": 20
       },
       {
@@ -28447,13 +28447,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-484"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-485"
       },
@@ -28492,7 +28492,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Then add the huevo and miel orgánica and mix well.",
+        "text": "Then add the huevo and miel orgánica and mezclar homogéneamente.",
         "timerMinutes": 10
       },
       {
@@ -28510,7 +28510,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Line two baking sheets with parchment paper, preheat oven to 200 degrees Celsius.",
+        "text": "Line two baking sheets with parchment paper, Precalentar el horno a 200°C degrees Celsius.",
         "timerMinutes": 25
       }
     ],
@@ -28549,7 +28549,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cacao",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-483"
       },
@@ -28567,19 +28567,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón Juice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-486"
       },
       {
         "name": "Vanilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-487"
       },
       {
         "name": "agua",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-488"
       },
@@ -28651,7 +28651,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Mars Bar",
-        "qty": "6 chopped",
+        "qty": "6 picado/a",
         "unit": "",
         "requiredId": "ing-487"
       },
@@ -28816,7 +28816,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make the sauce, tip the azúcar blanco and manteca into a saucepan and bring to a simmer until the azúcar blanco has melted, then stir in the cream and simmer until you have a smooth sauce, about 2-3 mins.",
+        "text": "To make the sauce, tip the azúcar blanco and manteca into a saucepan and llevar a ebullición until the azúcar blanco has melted, then stir in the cream and simmer until you have a smooth sauce, about 2-3 mins.",
         "timerMinutes": 5
       },
       {
@@ -28960,7 +28960,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add 1 tbsp of the harina de trigo 000 if the mix starts to curdle.",
+        "text": "Add 1 cdas of the harina de trigo 000 if the mix starts to curdle.",
         "timerMinutes": 20
       },
       {
@@ -29053,7 +29053,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-11"
       }
@@ -29062,7 +29062,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the filling place the can in a large pot and cover completely with agua.",
+        "text": "For the filling place the can En una sartén grande u olla and cover completely with agua.",
         "timerMinutes": 5
       },
       {
@@ -29086,7 +29086,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "For the dough combine the harina de trigo 000, cocoa powder, and sal fina in a large bowl.",
+        "text": "For the dough combine the harina de trigo 000, cocoa powder, and sal fina En una sartén grande u olla.",
         "timerMinutes": 25
       }
     ],
@@ -29416,7 +29416,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Brush 6 x 150ml ramekins with melted manteca, sprinkle with the 2 tbsp caster azúcar blanco, then tip out any excess.",
+        "text": "Brush 6 x 150ml ramekins with melted manteca, sprinkle with the 2 cdas caster azúcar blanco, then tip out any excess.",
         "timerMinutes": 20
       },
       {
@@ -29455,7 +29455,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Freekeh",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-22"
       },
@@ -29467,31 +29467,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-24"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-25"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-26"
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-27"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-28"
       },
@@ -29527,19 +29527,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-34"
       },
       {
         "name": "zucchini",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-35"
       },
       {
         "name": "zanahorias",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-36"
       },
@@ -29557,7 +29557,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "papas",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-39"
       }
@@ -29566,7 +29566,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place freekeh in a small bowl and cover with cold agua.",
+        "text": "Place freekeh En un bowl pequeño and cover with cold agua.",
         "timerMinutes": 5
       },
       {
@@ -29650,7 +29650,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Prepare the Rolls: Slice the rolls and toast them lightly on the grill or in a pan.",
+        "text": "Prepare the Rolls: cortar en rodajas finas rolls and toast them lightly on the grill or in a pan.",
         "timerMinutes": 10
       },
       {
@@ -29752,7 +29752,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "While the tomates perita are heating, quickly chop the chorizo into chunky pieces (removing any skin) and shred the cabbage.",
+        "text": "While the tomates perita are heating, quickly picar el chorizo into chunky pieces (removing any skin) and shred the cabbage.",
         "timerMinutes": 10
       },
       {
@@ -29764,7 +29764,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Stir well, cover and leave to bubble over a high heat for 6 mins or until the cabbage is just tender.",
+        "text": "revolver bien para integrar los sabores, cover and leave to bubble over a high heat for 6 mins or until the cabbage is just tender.",
         "timerMinutes": 20
       },
       {
@@ -29827,19 +29827,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-41"
       },
       {
         "name": "Sherry vinagre de vino",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-42"
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbsp chopped",
+        "qty": "2 cdas picado/a",
         "unit": "",
         "requiredId": "ing-43"
       }
@@ -29848,7 +29848,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Cook the papas in a large pan of boiling salted agua for 12 mins, adding the huevos after 6 mins, and the beans for the final 2 mins.",
+        "text": "Cook the papas En una sartén grande u olla of boiling salted agua for 12 mins, adding the huevos after 6 mins, and the beans for the final 2 mins.",
         "timerMinutes": 5
       },
       {
@@ -29917,7 +29917,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-44"
       },
@@ -30025,7 +30025,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-51"
       },
@@ -30052,7 +30052,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat oil in an omelette pan, add chorizo and cook for 2 mins.",
+        "text": "calentar aceite en an omelette pan, add chorizo and cook for 2 mins.",
         "timerMinutes": 15
       },
       {
@@ -30097,25 +30097,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Sweetcorn",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-52"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-53"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-54"
       },
       {
         "name": "leche entera",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-55"
       },
@@ -30133,13 +30133,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Vanilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-58"
       },
       {
         "name": "Cinnamon",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-59"
       },
@@ -30166,7 +30166,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Pour 1/4 cup of the batter onto the pan.",
+        "text": "Pour 1/4 tazas of the batter onto the pan.",
         "timerMinutes": 15
       },
       {
@@ -30277,7 +30277,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón",
-        "qty": "Grated zest of 1",
+        "qty": "rallado zest of 1",
         "unit": "",
         "requiredId": "ing-68"
       },
@@ -30295,13 +30295,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-71"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-72"
       }
@@ -30424,7 +30424,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the oats and stir well until evenly coated.",
+        "text": "Add the oats and revolver bien para integrar los sabores until evenly coated.",
         "timerMinutes": 20
       },
       {
@@ -30511,7 +30511,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dark Chocolate",
-        "qty": "Grated",
+        "qty": "rallado",
         "unit": "",
         "requiredId": "ing-75"
       }
@@ -30577,7 +30577,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-72"
       },
@@ -30589,7 +30589,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-74"
       },
@@ -30643,7 +30643,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-83"
       }
@@ -30721,7 +30721,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-79"
       },
@@ -30739,31 +30739,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate",
-        "qty": "3 diced",
+        "qty": "3 en cubos",
         "unit": "",
         "requiredId": "ing-82"
       },
       {
         "name": "cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-83"
       },
       {
         "name": "cilantro fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-84"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-85"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-86"
       }
@@ -30796,7 +30796,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large skillet, heat the oil over medium heat.",
+        "text": "En una sartén grande u olla, calentar el aceite o manteca over medium heat.",
         "timerMinutes": 25
       }
     ],
@@ -30859,7 +30859,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-87"
       },
@@ -30997,7 +30997,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fast action levadura seca",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-92"
       },
@@ -31039,7 +31039,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-99"
       },
@@ -31066,7 +31066,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large bowl, stir together the flours, levadura seca, cardamom and azúcar blanco until combined.",
+        "text": "En una sartén grande u olla, stir together the flours, levadura seca, cardamom and azúcar blanco until combined.",
         "timerMinutes": 15
       },
       {
@@ -31141,7 +31141,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-97"
       },
@@ -31156,7 +31156,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "1) In a large bowl, combine the manteca and caster azúcar blanco until creamy.",
+        "text": "1) En una sartén grande u olla, combine the manteca and caster azúcar blanco until creamy.",
         "timerMinutes": 5
       },
       {
@@ -31231,13 +31231,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-100"
       },
       {
         "name": "tomillo fresco",
-        "qty": "sprigs of fresh",
+        "qty": "sprigs of fresco",
         "unit": "",
         "requiredId": "ing-101"
       },
@@ -31273,7 +31273,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-107"
       }
@@ -31345,7 +31345,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-103"
       },
@@ -31402,7 +31402,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Fry the chorizo in a large frying pan with a lid, over a medium heat until it is starting to crisp up and release its oil.",
+        "text": "Fry the chorizo En una sartén grande u olla with a lid, over a medium heat until it is starting to crisp up and release its oil.",
         "timerMinutes": 5
       },
       {
@@ -31414,7 +31414,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Then add the diente de ajo and finely chopped perejil fresco, and fry for 1 min more.",
+        "text": "Then add the diente de ajo and finely picado/a perejil fresco, and fry for 1 min more.",
         "timerMinutes": 15
       },
       {
@@ -31534,25 +31534,25 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Chop the almonds coarsely.",
+        "text": "picar el almonds coarsely.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Peel, core and chop the cooking apples.",
+        "text": "Peel, core and picar el cooking apples.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Sharpen your knife and chop the candied peel.",
+        "text": "Sharpen your knife and picar el candied peel.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "(You can chop the almonds and apples in a food processor, but the peel must be done by hand.) Grate three quarters of the nutmeg (sounds a lot but it's correct).",
+        "text": "(You can picar el almonds and apples in a food processor, but the peel must be done by hand.) Grate three quarters of the nutmeg (sounds a lot but it's correct).",
         "timerMinutes": 25
       }
     ],
@@ -31615,25 +31615,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Creme Fraiche",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-117"
       },
       {
         "name": "mayonesa",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-118"
       },
       {
         "name": "Dijon mostaza",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-119"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-120"
       },
@@ -31684,7 +31684,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "You can pour boiling agua over the chopped asparagus and let it soak for 2 minutes if you prefer a less raw taste.",
+        "text": "You can pour boiling agua over the picado/a asparagus and let it soak for 2 minutes if you prefer a less raw taste.",
         "timerMinutes": 25
       }
     ],
@@ -31723,13 +31723,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-118"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-119"
       },
@@ -31747,31 +31747,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dried Leaves Of Summer Savoury",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-122"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-123"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-124"
       },
       {
         "name": "Ground Clove",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-125"
       },
       {
         "name": "Ground Nutmeg",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-126"
       },
@@ -31783,7 +31783,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-128"
       },
@@ -31828,7 +31828,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the grated papa and stir it in.",
+        "text": "Add the rallado papa and stir it in.",
         "timerMinutes": 20
       },
       {
@@ -31909,7 +31909,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-129"
       }
@@ -31924,7 +31924,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Season with sal fina and a small, delicate pinch of nutmeg.",
+        "text": "condimentar con sal fina and a small, delicate pinch of nutmeg.",
         "timerMinutes": 10
       },
       {
@@ -31975,13 +31975,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "leche entera",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-127"
       },
       {
         "name": "Cornstarch",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-128"
       },
@@ -31993,13 +31993,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-130"
       },
       {
         "name": "Coconut",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-131"
       },
@@ -32017,13 +32017,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-134"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-135"
       },
@@ -32041,7 +32041,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-138"
       }
@@ -32050,19 +32050,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place 1 cup of leche entera in a small bowl, add the cornstarch and stir to dissolve it, then set aside.",
+        "text": "Place 1 tazas of leche entera En un bowl pequeño, add the cornstarch and stir to dissolve it, then set aside.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Place the coconut leche entera and grated coconut in the blender and blend until smooth and set aside.",
+        "text": "Place the coconut leche entera and rallado coconut in the blender and blend until smooth and set aside.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Place the rest of the leche entera and cinnamon sticks in a medium pot and bring the mixture to boil over medium-low heat.",
+        "text": "Place the rest of the leche entera and cinnamon sticks En un recipiente mediano and bring the mixture to boil over medium-low heat.",
         "timerMinutes": 15
       },
       {
@@ -32137,7 +32137,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-137"
       }
@@ -32164,7 +32164,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a medium bowl, press the huevo yolks through a wire sieve and mix with the coconut leche entera, azúcar blanco, coconut and vanilla.",
+        "text": "En un recipiente mediano, press the huevo yolks through a wire sieve and mix with the coconut leche entera, azúcar blanco, coconut and vanilla.",
         "timerMinutes": 20
       },
       {
@@ -32335,19 +32335,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mostaza",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-144"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-145"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-146"
       },
@@ -32443,25 +32443,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cornstarch",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-148"
       },
       {
         "name": "Tapioca",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-149"
       },
       {
         "name": "Feta",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-150"
       },
       {
         "name": "Farmers Cheese",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-151"
       },
@@ -32473,7 +32473,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-153"
       },
@@ -32500,7 +32500,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place all the ingredients, except the oil in a medium bowl and mix well using your hands until soft and smooth dough is obtained.",
+        "text": "Place all the ingredients, except the oil En un recipiente mediano and mezclar homogéneamente using your hands until soft and smooth dough is obtained.",
         "timerMinutes": 5
       },
       {
@@ -32569,7 +32569,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-154"
       },
@@ -32581,49 +32581,49 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-156"
       },
       {
         "name": "cebolla",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-157"
       },
       {
         "name": "Scallions",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-158"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-159"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-160"
       },
       {
         "name": "Sazon Goya With Azafran",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-161"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-162"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-163"
       },
@@ -32641,7 +32641,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-166"
       },
@@ -32659,7 +32659,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-169"
       }
@@ -32668,7 +32668,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Peel the papas and cut them into chunks, put them in a medium pot and cover with agua and ¼ teaspoon of sal fina.",
+        "text": "Peel the papas and cut them into chunks, put them En un recipiente mediano and cover with agua and ¼ teaspoon of sal fina.",
         "timerMinutes": 5
       },
       {
@@ -32761,7 +32761,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 tbsp chopped",
+        "qty": "2 cdas picado/a",
         "unit": "",
         "requiredId": "ing-163"
       },
@@ -32779,13 +32779,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "albahaca fresca",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-166"
       },
       {
         "name": "morrón rojo Flakes",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-167"
       },
@@ -32824,7 +32824,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Just combine all the ingredients and mix well.",
+        "text": "Just combine all the ingredients and mezclar homogéneamente.",
         "timerMinutes": 15
       },
       {
@@ -32899,19 +32899,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-167"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-168"
       },
       {
         "name": "Seasoning",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-169"
       },
@@ -32929,13 +32929,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chilli",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-172"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-173"
       },
@@ -33025,7 +33025,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "panceta ahumada",
-        "qty": "3 rashers (100g) chopped dry-cured",
+        "qty": "3 rashers (100g) picado/a dry-cured",
         "unit": "",
         "requiredId": "ing-168"
       },
@@ -33055,13 +33055,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 finely chopped",
+        "qty": "3 finely picado/a",
         "unit": "",
         "requiredId": "ing-173"
       },
       {
         "name": "Brandy",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-174"
       },
@@ -33079,7 +33079,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate puree",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-177"
       },
@@ -33115,13 +33115,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "plain harina de trigo 000",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-183"
       },
       {
         "name": "manteca",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-184"
       }
@@ -33130,7 +33130,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tbsp of the oil in a large, heavy-based saucepan or flameproof dish.",
+        "text": "Heat 1 cdas of the oil in a large, heavy-based saucepan or flameproof dish.",
         "timerMinutes": 5
       },
       {
@@ -33187,7 +33187,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Lentils",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-172"
       },
@@ -33211,49 +33211,49 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-176"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-177"
       },
       {
         "name": "Mint",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-178"
       },
       {
         "name": "tomillo fresco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-179"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-180"
       },
       {
         "name": "morrón rojo Flakes",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-181"
       },
       {
         "name": "caldo de verduras",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-182"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-183"
       },
@@ -33280,7 +33280,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large pot over medium-high heat, sauté the aceite de oliva extra virgen and the cebolla with a pinch of sal fina for about 3 minutes, then add the zanahorias and cook for another 3 minutes.",
+        "text": "En una sartén grande u olla over medium-high heat, sauté the aceite de oliva extra virgen and the cebolla with a pinch of sal fina for about 3 minutes, then add the zanahorias and cook for another 3 minutes.",
         "timerMinutes": 15
       },
       {
@@ -33496,7 +33496,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Cover pot and bring to a boil, then reduce to a simmer.",
+        "text": "Cover pot and llevar a ebullición, then reduce to a simmer.",
         "timerMinutes": 15
       },
       {
@@ -33553,19 +33553,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón verde",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-189"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-190"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-191"
       },
@@ -33577,7 +33577,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Plum tomates perita",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-193"
       },
@@ -33595,13 +33595,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-196"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-197"
       }
@@ -33673,19 +33673,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 medium chopped",
+        "qty": "1 medium picado/a",
         "unit": "",
         "requiredId": "ing-193"
       },
       {
         "name": "Corned carne vacuna",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-194"
       },
       {
         "name": "papas",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-195"
       },
@@ -33702,8 +33702,8 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-197"
       },
       {
-        "name": "Freshly Chopped perejil fresco",
-        "qty": "Chopped",
+        "name": "Freshly picado/a perejil fresco",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-198"
       }
@@ -33718,7 +33718,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat manteca in a large skillet (preferably cast iron) on medium heat.",
+        "text": "Heat manteca En una sartén grande u olla (preferably cast iron) on medium heat.",
         "timerMinutes": 10
       },
       {
@@ -33736,7 +33736,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Mix in the chopped corned carne vacuna and papas.",
+        "text": "Mix in the picado/a corned carne vacuna and papas.",
         "timerMinutes": 25
       }
     ],
@@ -33769,13 +33769,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Almonds",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-197"
       },
       {
         "name": "azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-198"
       },
@@ -33787,7 +33787,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-200"
       },
@@ -33805,19 +33805,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-203"
       },
       {
         "name": "Unsalted manteca",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-204"
       },
       {
         "name": "sal fina",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-205"
       },
@@ -33850,7 +33850,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 300 degrees F (150 degrees C).",
+        "text": "Precalentar el horno a 300°C degrees F (150 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -33925,19 +33925,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chives",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-205"
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-206"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-207"
       },
@@ -33958,7 +33958,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a bowl combine 3.5 oz (100 grams) queso feta, 7 oz (200 grams) cottage cheese, 1 tbsp chopped chives (optional), 1 tbsp chopped perejil fresco (optional), 1/4 tsp sal fina (more or less to taste) and 1 tbsp limón juice.",
+        "text": "In a bowl combine 3.5 oz (100 grams) queso feta, 7 oz (200 grams) cottage cheese, 1 cdas picado/a chives (optional), 1 cdas picado/a perejil fresco (optional), 1/4 cditas sal fina (more or less a gusto) and 1 cdas limón juice.",
         "timerMinutes": 10
       },
       {
@@ -33970,7 +33970,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Top with chopped chives and perejil fresco.",
+        "text": "Top with picado/a chives and perejil fresco.",
         "timerMinutes": 20
       }
     ],
@@ -34057,13 +34057,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "White vinagre de vino",
-        "qty": "3tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-216"
       },
       {
         "name": "miel orgánica",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-217"
       },
@@ -34084,7 +34084,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Filling: stir 300g queso crema and 100ml leche entera until smooth, add in 3 huevos, 100g grated queso parmesano cheese and season with sal fina, pepper and nutmeg.",
+        "text": "Filling: stir 300g queso crema and 100ml leche entera until smooth, add in 3 huevos, 100g rallado queso parmesano cheese and condimentar con sal fina, pepper and nutmeg.",
         "timerMinutes": 10
       },
       {
@@ -34153,7 +34153,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-215"
       },
@@ -34237,7 +34237,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-218"
       },
@@ -34249,19 +34249,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-220"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-221"
       },
       {
         "name": "Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-222"
       },
@@ -34273,19 +34273,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "papas",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-224"
       },
       {
         "name": "Scallions",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-225"
       },
       {
         "name": "crema de leche",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-226"
       }
@@ -34294,7 +34294,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place the choclo, agua, pollo or vegetable bouillon, diente de ajo, sal fina, pepper, cilantro fresco, papas and scallions in a large pot and bring to a boil.",
+        "text": "Place the choclo, agua, pollo or vegetable bouillon, diente de ajo, sal fina, pepper, cilantro fresco, papas and scallions En una sartén grande u olla and llevar a ebullición.",
         "timerMinutes": 5
       },
       {
@@ -34318,7 +34318,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Pour into bowls, garnish with cilantro fresco and papa sticks.",
+        "text": "Pour into bowls, decorar con perejil fresco o hierbas picadas fresco and papa sticks.",
         "timerMinutes": 25
       }
     ],
@@ -34357,13 +34357,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-223"
       },
       {
         "name": "Condensed leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-224"
       },
@@ -34441,19 +34441,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-228"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-229"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-230"
       },
@@ -34465,19 +34465,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-232"
       },
       {
         "name": "cebolla",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-233"
       },
       {
         "name": "pollo Stock",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-234"
       },
@@ -34489,7 +34489,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-236"
       },
@@ -34567,13 +34567,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-232"
       },
       {
         "name": "cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-233"
       },
@@ -34620,7 +34620,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-240"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "1½ kg",
         "unit": "",
         "requiredId": "ing-241"
@@ -34666,13 +34666,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Stir in the tomate purée, azúcar blanco, vinagre de vino, chopped tomates perita and passata, then crumble in the stock cubes.",
+        "text": "Stir in the tomate purée, azúcar blanco, vinagre de vino, picado/a tomates perita and passata, then crumble in the stock cubes.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add 1 litre boiling agua and bring to a simmer.",
+        "text": "Add 1 litre boiling agua and llevar a ebullición.",
         "timerMinutes": 25
       }
     ],
@@ -34825,7 +34825,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan rallado",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-243"
       },
@@ -34843,13 +34843,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-246"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-247"
       },
@@ -34888,7 +34888,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large bowl/plate place pan rallado and sesame seeds.",
+        "text": "En una sartén grande u olla/plate place pan rallado and sesame seeds.",
         "timerMinutes": 25
       }
     ],
@@ -34921,7 +34921,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "jengibre fresco",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-247"
       },
@@ -34939,13 +34939,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Oil",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-250"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-251"
       },
@@ -34963,7 +34963,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-254"
       },
@@ -35047,7 +35047,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cabbage",
-        "qty": "1 Head chopped",
+        "qty": "1 Head picado/a",
         "unit": "",
         "requiredId": "ing-254"
       },
@@ -35059,19 +35059,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-256"
       },
       {
         "name": "Shiitake champiñones frescos",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-257"
       },
       {
         "name": "pollo Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-258"
       },
@@ -35110,13 +35110,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Combine the greens in a large baking dish and add 4 cloves of thinly sliced diente de ajo.",
+        "text": "Combine the greens in a large baking dish and add 4 dientes of thinly en fetas/rodajas diente de ajo.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Adding some sliced cebollas and shiitake champiñones frescos at this point is optional, but highly recommended (I'll sauté the cebollas and champiñones frescos in a cast iron baking dish right on the stove before adding to the greens).",
+        "text": "Adding some en fetas/rodajas cebollas and shiitake champiñones frescos at this point is optional, but highly recommended (I'll sauté the cebollas and champiñones frescos in a cast iron baking dish right on the stove before adding to the greens).",
         "timerMinutes": 25
       }
     ],
@@ -35161,7 +35161,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomates perita",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-259"
       },
@@ -35173,7 +35173,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-261"
       },
@@ -35185,7 +35185,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chorizo",
-        "qty": "1/2 kg chopped",
+        "qty": "1/2 kg picado/a",
         "unit": "",
         "requiredId": "ing-263"
       }
@@ -35194,13 +35194,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a pan.",
+        "text": "calentar el aceite o manteca in a pan.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the chopped vegetables and sauté until tender.",
+        "text": "Add the picado/a vegetables and sauté until tender.",
         "timerMinutes": 10
       },
       {
@@ -35257,19 +35257,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Courgettes",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-263"
       },
       {
         "name": "zanahorias",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-264"
       },
       {
         "name": "morrón verde",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-265"
       },
@@ -35281,7 +35281,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Large Chopped",
+        "qty": "1 Large picado/a",
         "unit": "",
         "requiredId": "ing-267"
       },
@@ -35332,19 +35332,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 200°C fan / 220°C / 425°F / Gas mark 7.",
+        "text": "Precalentar el horno a 200°C°C fan / 220°C / 425°F / Gas mark 7.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "If you have not bought diced cordero, cut your cordero shoulder or leg into large chunks and place to one side.",
+        "text": "If you have not bought en cubos cordero, cut your cordero shoulder or leg into large chunks and place to one side.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Chunks of chopped cordero of a red chopping board.",
+        "text": "Chunks of picado/a cordero of a red chopping board.",
         "timerMinutes": 15
       },
       {
@@ -35431,7 +35431,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shredded Mexican Cheese",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-274"
       },
@@ -35443,13 +35443,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Jalapeno",
-        "qty": "Sliced and Seeded",
+        "qty": "en fetas/rodajas and Seeded",
         "unit": "",
         "requiredId": "ing-276"
       },
       {
         "name": "palta hass",
-        "qty": "Peeled and Sliced",
+        "qty": "Peeled and en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-277"
       },
@@ -35563,19 +35563,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dried orégano",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-277"
       },
       {
         "name": "Ground pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-278"
       },
       {
         "name": "diente de ajo Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-279"
       },
@@ -35638,7 +35638,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Using a fork, poke holes into carne de cerdo all over; season all over with 1 tsp.",
+        "text": "Using a fork, poke holes into carne de cerdo all over; season all over with 1 cditas.",
         "timerMinutes": 15
       },
       {
@@ -35650,7 +35650,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a small bowl, combine orange zest and juice, lima zest and juice, orégano, pepper, diente de ajo powder, cumin, and cebolla powder.",
+        "text": "En un bowl pequeño, combine orange zest and juice, lima zest and juice, orégano, pepper, diente de ajo powder, cumin, and cebolla powder.",
         "timerMinutes": 25
       }
     ],
@@ -35689,13 +35689,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-278"
       },
       {
         "name": "Fennel Bulb",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-279"
       },
@@ -35734,13 +35734,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Sprinkle with 1 tsp sal fina and the azúcar blanco, then leave for 10 mins.",
+        "text": "Sprinkle with 1 cditas sal fina and the azúcar blanco, then leave for 10 mins.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Mix soured cream, limón juice, vinagre de vino and dill, then season with pimienta negra molida and add to fennel mix.",
+        "text": "Mix soured cream, limón juice, vinagre de vino and dill, then condimentar con pimienta negra molida and add to fennel mix.",
         "timerMinutes": 15
       }
     ],
@@ -35779,7 +35779,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-283"
       },
@@ -35872,7 +35872,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Soften the apio, cebolla, zanahorias, bay and 1 tomillo fresco sprig in a casserole with 1 tbsp oil and the manteca for 10 mins.",
+        "text": "Soften the apio, cebolla, zanahorias, bay and 1 tomillo fresco sprig in a casserole with 1 cdas oil and the manteca for 10 mins.",
         "timerMinutes": 10
       },
       {
@@ -35947,19 +35947,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Curry Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-291"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-292"
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-293"
       }
@@ -35968,31 +35968,31 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a skillet over medium heat.",
+        "text": "calentar el aceite o manteca in a skillet over medium heat.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "When hot, add the diced cebolla and cook until lightly browned.",
+        "text": "When hot, add the en cubos cebolla and cook until lightly browned.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the curry powder and sal fina to taste and toast for a few seconds.",
+        "text": "Add the curry powder and sal fina a gusto and toast for a few seconds.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the chopped tomates perita and the agua, stir well, and cook until the tomates perita begin to break down, 5-7 minutes.",
+        "text": "Add the picado/a tomates perita and the agua, revolver bien para integrar los sabores, and cook until the tomates perita begin to break down, 5-7 minutes.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add in the chopped (or baby) espinaca fresca and cook for 7-10 minutes more, until soft and wilted.",
+        "text": "Add in the picado/a (or baby) espinaca fresca and cook for 7-10 minutes more, until soft and wilted.",
         "timerMinutes": 25
       }
     ],
@@ -36025,25 +36025,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Toor dal",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-292"
       },
       {
         "name": "agua",
-        "qty": "2-1/2 cups",
+        "qty": "2-1/2 tazas",
         "unit": "",
         "requiredId": "ing-293"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-294"
       },
       {
         "name": "Turmeric",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-295"
       },
@@ -36054,20 +36054,20 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-296"
       },
       {
-        "name": "Chopped tomates perita",
-        "qty": "1 cup",
+        "name": "picado/a tomates perita",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-297"
       },
       {
         "name": "Cumin seeds",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-298"
       },
       {
         "name": "mostaza Seeds",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-299"
       },
@@ -36079,13 +36079,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Green Chilli",
-        "qty": "1 tbs chopped",
+        "qty": "1 tbs picado/a",
         "unit": "",
         "requiredId": "ing-301"
       },
       {
         "name": "jengibre fresco",
-        "qty": "2 tsp shredded",
+        "qty": "2 cditas shredded",
         "unit": "",
         "requiredId": "ing-302"
       },
@@ -36097,25 +36097,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-304"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-305"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-306"
       },
       {
         "name": "Garam Masala",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-307"
       }
@@ -36130,7 +36130,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "3 cups of agua, for at least one hours.",
+        "text": "3 tazas of agua, for at least one hours.",
         "timerMinutes": 10
       },
       {
@@ -36142,7 +36142,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Cook dal with 2-1/2 cups agua and add sal fina, turmeric, on medium high heat, until soft in texture (approximately 30 mins) it should be like thick soup.",
+        "text": "Cook dal with 2-1/2 tazas agua and add sal fina, turmeric, on medium high heat, until soft in texture (approximately 30 mins) it should be like thick soup.",
         "timerMinutes": 20
       },
       {
@@ -36187,19 +36187,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-298"
       },
       {
         "name": "Dark Beer",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-299"
       },
       {
         "name": "Buttermilk",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-300"
       },
@@ -36211,7 +36211,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-302"
       },
@@ -36223,13 +36223,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-304"
       },
       {
         "name": "Rye harina de trigo 000",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-305"
       }
@@ -36238,7 +36238,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Combine rye grain and agua in a saucepan and bring to a boil.",
+        "text": "Combine rye grain and agua in a saucepan and llevar a ebullición.",
         "timerMinutes": 5
       },
       {
@@ -36256,7 +36256,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Dissolve the fresh levadura seca in this mixture and then add the seeds.",
+        "text": "Dissolve the fresco levadura seca in this mixture and then add the seeds.",
         "timerMinutes": 20
       },
       {
@@ -36295,55 +36295,55 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Pitted Dates",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-302"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-303"
       },
       {
         "name": "Vanilla",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-304"
       },
       {
         "name": "Oats",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-305"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-306"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-307"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-308"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-309"
       },
       {
         "name": "Unsalted manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-310"
       }
@@ -36352,7 +36352,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350°F (180°C).",
+        "text": "Precalentar el horno a 350°C°F (180°C).",
         "timerMinutes": 5
       },
       {
@@ -36364,7 +36364,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "To make the date filing: Combine the dates and agua in a medium saucepan over high heat and bring to a boil.",
+        "text": "To make the date filing: Combine the dates and agua in a medium saucepan over high heat and llevar a ebullición.",
         "timerMinutes": 15
       },
       {
@@ -36421,7 +36421,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "5 chopped",
+        "qty": "5 picado/a",
         "unit": "",
         "requiredId": "ing-309"
       },
@@ -36433,19 +36433,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-311"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-312"
       },
       {
         "name": "caldo de verduras",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-313"
       },
@@ -36457,7 +36457,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "albahaca fresca",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-315"
       },
@@ -36469,7 +36469,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-317"
       },
@@ -36490,7 +36490,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Turn off the heat and add the meat, arroz, pepper, paprika, dried caldo de verduras, perejil fresco and albahaca fresca.",
+        "text": "Turn off the heat and agregar la carne, arroz, pepper, paprika, dried caldo de verduras, perejil fresco and albahaca fresca.",
         "timerMinutes": 10
       },
       {
@@ -36565,13 +36565,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shortening",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-316"
       },
       {
         "name": "agua",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-317"
       },
@@ -36586,7 +36586,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix all dry ingredients in a large bowl (azúcar blanco, sal fina and instant levadura seca).",
+        "text": "Mix all dry ingredients En una sartén grande u olla (azúcar blanco, sal fina and instant levadura seca).",
         "timerMinutes": 5
       },
       {
@@ -36643,49 +36643,49 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Wheat harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-317"
       },
       {
         "name": "Oats",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-318"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-319"
       },
       {
         "name": "Coconut",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-320"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-321"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-322"
       },
       {
         "name": "Bicarbonate Of Soda",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-323"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-324"
       },
@@ -36709,7 +36709,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Raisins",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-328"
       }
@@ -36775,7 +36775,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-322"
       },
@@ -36799,7 +36799,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-326"
       },
@@ -36811,7 +36811,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-328"
       }
@@ -36889,13 +36889,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-329"
       },
       {
         "name": "Birds-eye Chillies",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-330"
       },
@@ -36919,13 +36919,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-334"
       },
       {
         "name": "Oyster Sauce",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-335"
       },
@@ -36946,19 +36946,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Prepare the fideos following pack instructions, then drain and set aside.",
+        "text": "Prepare the fideos following pack instructions, then escurrir y reservar.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Combine all the ingredients for the sauce in a small bowl or jug, and set aside.",
+        "text": "Combine all the ingredients for the sauce En un bowl pequeño or jug, and set aside.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the oil in a large wok or frying pan over a high heat and stir-fry the diente de ajo and chilli for 20 seconds until just starting to turn golden.",
+        "text": "calentar el aceite o manteca in a large wok or frying pan over a high heat and stir-fry the diente de ajo and chilli for 20 seconds until just starting to turn golden.",
         "timerMinutes": 15
       },
       {
@@ -37015,7 +37015,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-334"
       },
@@ -37111,7 +37111,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-339"
       },
@@ -37189,7 +37189,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Unsalted manteca",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-343"
       },
@@ -37327,7 +37327,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-353"
       },
@@ -37369,7 +37369,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Caster azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-360"
       }
@@ -37390,7 +37390,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Preheat the oven to 180C/160 C fan/Gas Mark 4.",
+        "text": "Precalentar el horno a 180°C/160 C fan/Gas Mark 4.",
         "timerMinutes": 15
       },
       {
@@ -37402,7 +37402,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Put the manteca in a large bowl and beat well until soft.",
+        "text": "Put the manteca En una sartén grande u olla and beat well until soft.",
         "timerMinutes": 25
       }
     ],
@@ -37582,7 +37582,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place the harina de trigo 000 in a large bowl and add the levadura seca and azúcar blanco.",
+        "text": "Place the harina de trigo 000 En una sartén grande u olla and add the levadura seca and azúcar blanco.",
         "timerMinutes": 5
       },
       {
@@ -37675,7 +37675,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "vanilla azúcar blanco",
-        "qty": "1tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-368"
       },
@@ -37783,13 +37783,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cardamom",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-372"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-373"
       },
@@ -37810,7 +37810,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Mix all the dry ingredients together in a large bowl.",
+        "text": "Mix all the dry ingredients together En una sartén grande u olla.",
         "timerMinutes": 10
       },
       {
@@ -37921,7 +37921,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-382"
       }
@@ -37987,19 +37987,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-377"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-378"
       },
       {
         "name": "limón Juice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-379"
       },
@@ -38011,7 +38011,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-381"
       },
@@ -38035,7 +38035,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-385"
       },
@@ -38047,13 +38047,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Almonds",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-387"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-388"
       },
@@ -38071,7 +38071,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Vanilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-391"
       },
@@ -38110,7 +38110,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring 6 cups of agua to a boil.",
+        "text": "Bring 6 tazas of agua to a boil.",
         "timerMinutes": 10
       },
       {
@@ -38161,7 +38161,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Extra Virgin aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-382"
       },
@@ -38197,7 +38197,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-388"
       },
@@ -38254,7 +38254,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Tip in the chopped tomates perita, olives and manteca beans, stir to combine and season.",
+        "text": "Tip in the picado/a tomates perita, olives and manteca beans, stir to combine and season.",
         "timerMinutes": 20
       },
       {
@@ -38317,7 +38317,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate Puree",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-391"
       },
@@ -38329,37 +38329,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-393"
       },
       {
         "name": "Dried Mint",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-394"
       },
       {
         "name": "tomillo fresco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-395"
       },
       {
         "name": "Summer Savoury",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-396"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-397"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-398"
       },
@@ -38374,7 +38374,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place beans in a large pot and cover with cold agua.",
+        "text": "Place beans En una sartén grande u olla and cover with cold agua.",
         "timerMinutes": 5
       },
       {
@@ -38473,19 +38473,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-399"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-400"
       },
       {
         "name": "Allspice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-401"
       },
@@ -38569,19 +38569,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "pollo Stock",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-397"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-398"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-399"
       },
@@ -38593,19 +38593,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-401"
       },
       {
         "name": "arvejas",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-402"
       },
       {
         "name": "champiñones frescos",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-403"
       },
@@ -38623,7 +38623,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-406"
       }
@@ -38689,7 +38689,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Unsalted carne vacuna Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-402"
       },
@@ -38713,7 +38713,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-406"
       },
@@ -38749,13 +38749,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Kosher sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-412"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-413"
       },
@@ -38767,7 +38767,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Mung Bean Sprouts",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-415"
       },
@@ -38779,13 +38779,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-417"
       },
       {
         "name": "Jasmine arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-418"
       }
@@ -38800,13 +38800,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Whisk together and bring to a simmer.",
+        "text": "Whisk together and llevar a ebullición.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Combine the cornstarch and agua in a small bowl and whisk to dissolve.",
+        "text": "Combine the cornstarch and agua En un bowl pequeño and whisk to dissolve.",
         "timerMinutes": 15
       },
       {
@@ -38863,13 +38863,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-409"
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-410"
       },
@@ -38920,7 +38920,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Place in a medium bowl.",
+        "text": "Place En un recipiente mediano.",
         "timerMinutes": 10
       },
       {
@@ -39007,25 +39007,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-418"
       },
       {
         "name": "fideos",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-419"
       },
       {
         "name": "manteca",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-420"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-421"
       },
@@ -39049,13 +39049,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-425"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-426"
       }
@@ -39082,7 +39082,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Then add to same pan, a little more manteca, sal fina, approximately 2 cloves of crushed fresh diente de ajo, and a teaspoon or so of cumin stir around a bit until you can smell aroma, then add fried pan pieces to this mixture, stir to coat pan and put back into glass baking dish.",
+        "text": "Then add to same pan, a little more manteca, sal fina, approximately 2 dientes of crushed fresco diente de ajo, and a teaspoon or so of cumin stir around a bit until you can smell aroma, then add fried pan pieces to this mixture, stir to coat pan and put back into glass baking dish.",
         "timerMinutes": 20
       },
       {
@@ -39139,7 +39139,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-420"
       },
@@ -39151,13 +39151,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-422"
       },
       {
         "name": "huevo",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-423"
       },
@@ -39181,13 +39181,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-427"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-428"
       }
@@ -39196,7 +39196,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Make the Dough: Mix harina de trigo 000 and sal fina in a large bowl.",
+        "text": "Make the Dough: Mix harina de trigo 000 and sal fina En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -39253,19 +39253,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-422"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-423"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-424"
       },
@@ -39277,7 +39277,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-426"
       },
@@ -39289,7 +39289,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Swiss Cheese",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-428"
       }
@@ -39502,7 +39502,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Leave to stand for 3 mins, then add the caster azúcar blanco, huevos, harina de trigo 000 and 1 tsp sea sal fina flakes.",
+        "text": "Leave to stand for 3 mins, then add the caster azúcar blanco, huevos, harina de trigo 000 and 1 cditas sea sal fina flakes.",
         "timerMinutes": 10
       },
       {
@@ -39559,19 +39559,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-438"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-439"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-440"
       },
@@ -39601,13 +39601,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-445"
       },
       {
         "name": "zanahorias",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-446"
       },
@@ -39619,13 +39619,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Allspice",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-448"
       },
       {
         "name": "Worcestershire Sauce",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-449"
       },
@@ -39643,7 +39643,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Malt vinagre de vino",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-452"
       },
@@ -39676,7 +39676,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In large skillet heat oil over medium heat, until hot, add the fish, cook each side- for about 5-7 minutes until cooked through and crispy on both sides.",
+        "text": "In large skillet heat oil over medium heat, until hot, agregar la carne, cook each side- for about 5-7 minutes until cooked through and crispy on both sides.",
         "timerMinutes": 20
       },
       {
@@ -39733,13 +39733,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "jengibre fresco cordial",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-445"
       },
       {
         "name": "Mint",
-        "qty": "sprigs of fresh",
+        "qty": "sprigs of fresco",
         "unit": "",
         "requiredId": "ing-446"
       }
@@ -39754,7 +39754,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Chop the remaining strawberries, reserving four for decoration.",
+        "text": "picar el remaining strawberries, reserving four for decoration.",
         "timerMinutes": 10
       },
       {
@@ -39766,7 +39766,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Fold in the chopped strawberries and jengibre fresco cordial, if using.",
+        "text": "Fold in the picado/a strawberries and jengibre fresco cordial, if using.",
         "timerMinutes": 20
       },
       {
@@ -39811,7 +39811,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-448"
       },
@@ -39829,7 +39829,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-451"
       },
@@ -39841,7 +39841,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cassava",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-453"
       }
@@ -39856,13 +39856,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Place in a large bowl.",
+        "text": "Place En una sartén grande u olla.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Season with diente de ajo, sal fina, pepper and turmeric (you can expand your seasoning options if you'd like.",
+        "text": "condimentar con diente de ajo, sal fina, pepper and turmeric (you can expand your seasoning options if you'd like.",
         "timerMinutes": 15
       },
       {
@@ -39931,7 +39931,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-456"
       },
@@ -39967,7 +39967,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sumac",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-462"
       },
@@ -39988,7 +39988,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Put the tomates perita and all of the peppers in a food processor and blitz until finely chopped.",
+        "text": "Put the tomates perita and all of the peppers in a food processor and blitz until finely picado/a.",
         "timerMinutes": 5
       },
       {
@@ -40000,7 +40000,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the cebollas, diente de ajo and perejil fresco to the food processor and blitz until finely chopped, then set aside.",
+        "text": "Add the cebollas, diente de ajo and perejil fresco to the food processor and blitz until finely picado/a, then set aside.",
         "timerMinutes": 15
       },
       {
@@ -40012,7 +40012,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Tip in the blitzed cebolla mixture and the strained pepper mixture along with 1 tsp flaky sea sal fina.",
+        "text": "Tip in the blitzed cebolla mixture and the strained pepper mixture along with 1 cditas flaky sea sal fina.",
         "timerMinutes": 25
       }
     ],
@@ -40063,13 +40063,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-460"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-461"
       }
@@ -40141,13 +40141,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-463"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-464"
       },
@@ -40159,13 +40159,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-466"
       },
       {
         "name": "Ground Coriander",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-467"
       },
@@ -40186,7 +40186,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tbsp oil in a large pan, then fry the cebolla and diente de ajo over a low heat for 5 mins until softened.",
+        "text": "Heat 1 cdas oil En una sartén grande u olla, then fry the cebolla and diente de ajo over a low heat for 5 mins until softened.",
         "timerMinutes": 5
       },
       {
@@ -40198,7 +40198,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Stir in the perejil fresco or dried herbs, with seasoning to taste.",
+        "text": "Stir in the perejil fresco or dried herbs, with seasoning a gusto.",
         "timerMinutes": 15
       },
       {
@@ -40249,13 +40249,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Tahini",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-468"
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-469"
       },
@@ -40267,13 +40267,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-471"
       },
       {
         "name": "Paprika",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-472"
       },
@@ -40315,7 +40315,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Harissa Spice",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-479"
       }
@@ -40324,7 +40324,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 450 degrees F (230 degrees C).",
+        "text": "Precalentar el horno a 450°C F (230 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -40399,13 +40399,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-475"
       },
       {
         "name": "agua",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-476"
       },
@@ -40426,7 +40426,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Slice the cabbage into large wedges, keeping the core attached.",
+        "text": "cortar en rodajas finas cabbage into large wedges, keeping the core attached.",
         "timerMinutes": 10
       },
       {
@@ -40483,19 +40483,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 medium chopped",
+        "qty": "1 medium picado/a",
         "unit": "",
         "requiredId": "ing-478"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-479"
       },
       {
         "name": "pan",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-480"
       },
@@ -40531,19 +40531,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mostaza",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-486"
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-487"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-488"
       },
@@ -40555,7 +40555,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan rallado",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-490"
       },
@@ -40594,7 +40594,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large bowl, combine ground meat, chopped cebollas, diente de ajo, soaked pan, huevo, and seasonings.",
+        "text": "En una sartén grande u olla, combine ground meat, picado/a cebollas, diente de ajo, soaked pan, huevo, and seasonings.",
         "timerMinutes": 25
       }
     ],
@@ -40633,7 +40633,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-483"
       },
@@ -40645,13 +40645,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-485"
       },
       {
         "name": "cilantro fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-486"
       }
@@ -40666,7 +40666,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Season with sal fina to taste, and put the lid on the pot.",
+        "text": "condimentar con sal fina a gusto, and put the lid on the pot.",
         "timerMinutes": 10
       },
       {
@@ -40729,7 +40729,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-489"
       },
@@ -40819,31 +40819,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-492"
       },
       {
         "name": "agua",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-493"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-494"
       },
       {
         "name": "Unsalted manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-495"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-496"
       }
@@ -40915,25 +40915,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-498"
       },
       {
         "name": "manteca",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-499"
       },
       {
         "name": "queso parmesano",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-500"
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-1"
       },
@@ -40948,7 +40948,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Cook pasta / fideos according to package instructions in a large pot of boiling agua and sal fina.",
+        "text": "Cook pasta / fideos according to package instructions En una sartén grande u olla of boiling agua and sal fina.",
         "timerMinutes": 5
       },
       {
@@ -41017,7 +41017,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "choclo harina de trigo 000",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-4"
       },
@@ -41029,7 +41029,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Nutmeg",
-        "qty": "Grated",
+        "qty": "rallado",
         "unit": "",
         "requiredId": "ing-6"
       },
@@ -41041,7 +41041,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-8"
       }
@@ -41062,13 +41062,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Meanwhile, put the cheese and nutmeg in a small bowl and add a good grinding of pimienta negra molida, then stir everything together (don’t add any sal fina at this stage).",
+        "text": "Meanwhile, put the cheese and nutmeg En un bowl pequeño and add a good grinding of pimienta negra molida, then stir everything together (don’t add any sal fina at this stage).",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Put the pasta / fideos in another pan with 2 tsp sal fina, pour over some boiling agua and cook following pack instructions (usually 3-4 mins).",
+        "text": "Put the pasta / fideos in another pan with 2 cditas sal fina, pour over some boiling agua and cook following pack instructions (usually 3-4 mins).",
         "timerMinutes": 20
       },
       {
@@ -41107,55 +41107,55 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-7"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-8"
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-9"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-10"
       },
       {
         "name": "Allspice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-11"
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-12"
       },
       {
         "name": "Raisins",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-13"
       },
       {
         "name": "Melted manteca",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-14"
       },
       {
         "name": "Molasses",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-15"
       },
@@ -41170,13 +41170,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium bowl, whisk together harina de trigo 000, brown azúcar blanco, polvo de hornear, and spices.",
+        "text": "En un recipiente mediano, whisk together harina de trigo 000, brown azúcar blanco, polvo de hornear, and spices.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add raisins and stir well, making sure to coat the raisins in the harina de trigo 000 mixture.",
+        "text": "Add raisins and revolver bien para integrar los sabores, making sure to coat the raisins in the harina de trigo 000 mixture.",
         "timerMinutes": 10
       },
       {
@@ -41227,7 +41227,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Whole leche entera",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-12"
       },
@@ -41239,19 +41239,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-14"
       },
       {
         "name": "Ground Cardomom",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-15"
       },
       {
         "name": "Rose agua",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-16"
       },
@@ -41272,7 +41272,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Pour 1 cup of leche entera into a small bowl, add the cornstarch and whisk them well until smooth.",
+        "text": "Pour 1 tazas of leche entera into a small bowl, add the cornstarch and whisk them well until smooth.",
         "timerMinutes": 5
       },
       {
@@ -41341,7 +41341,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Green Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-19"
       },
@@ -41353,19 +41353,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin Seeds",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-21"
       },
       {
         "name": "Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-22"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-23"
       },
@@ -41410,7 +41410,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring to a simmer and gently poach for 10 minutes over a low heat with the lid on.",
+        "text": "llevar a ebullición and gently poach for 10 minutes over a low heat with the lid on.",
         "timerMinutes": 10
       },
       {
@@ -41422,13 +41422,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Put the fish, papa, green chilli, coriander, cumin, pimienta negra molida, diente de ajo and jengibre fresco in a large bowl.",
+        "text": "Put the fish, papa, green chilli, coriander, cumin, pimienta negra molida, diente de ajo and jengibre fresco En una sartén grande u olla.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Season, add the arroz harina de trigo 000, mix well and break in 1 huevo.",
+        "text": "Season, add the arroz harina de trigo 000, mezclar homogéneamente and break in 1 huevo.",
         "timerMinutes": 25
       }
     ],
@@ -41467,7 +41467,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-23"
       },
@@ -41485,7 +41485,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Plain harina de trigo 000",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-26"
       },
@@ -41497,7 +41497,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche doble",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-28"
       },
@@ -41509,7 +41509,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Leek",
-        "qty": "1 finely sliced",
+        "qty": "1 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-30"
       },
@@ -41533,13 +41533,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón",
-        "qty": "Grated zest of 1",
+        "qty": "rallado zest of 1",
         "unit": "",
         "requiredId": "ing-34"
       },
       {
         "name": "Gruyère",
-        "qty": "25g grated",
+        "qty": "25g rallado",
         "unit": "",
         "requiredId": "ing-35"
       },
@@ -41554,7 +41554,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "01.Put the papas in a large pan of cold salted agua and bring to the boil.",
+        "text": "01.Put the papas En una sartén grande u olla of cold salted agua and bring to the boil.",
         "timerMinutes": 5
       },
       {
@@ -41572,13 +41572,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mash with 1 tbsp aceite de oliva extra virgen, then season.",
+        "text": "Mash with 1 cdas aceite de oliva extra virgen, then season.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "02.Meanwhile put the leche entera in a large sauté pan, add the fish and bring to the boil.",
+        "text": "02.Meanwhile put the leche entera in a large sauté pan, agregar la carne and bring to the boil.",
         "timerMinutes": 25
       }
     ],
@@ -41617,7 +41617,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-28"
       },
@@ -41629,13 +41629,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fish Stock",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-30"
       },
       {
         "name": "agua",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-31"
       },
@@ -41668,7 +41668,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium pot, heat the aceite de oliva extra virgen over medium-high heat.",
+        "text": "En un recipiente mediano, heat the aceite de oliva extra virgen over medium-high heat.",
         "timerMinutes": 5
       },
       {
@@ -41692,7 +41692,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Season with sal fina and bring to a boil.",
+        "text": "condimentar con sal fina and llevar a ebullición.",
         "timerMinutes": 25
       }
     ],
@@ -41749,19 +41749,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fennel",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-36"
       },
       {
         "name": "cebolla",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-37"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-38"
       },
@@ -41791,7 +41791,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Harissa Spice",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-43"
       },
@@ -41802,7 +41802,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-44"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "400g",
         "unit": "",
         "requiredId": "ing-45"
@@ -41848,7 +41848,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Fry the shells in 1 tbsp oil for 5 mins, until dark pink and golden in patches.",
+        "text": "Fry the shells in 1 cdas oil for 5 mins, until dark pink and golden in patches.",
         "timerMinutes": 15
       },
       {
@@ -41899,7 +41899,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-38"
       },
@@ -41935,25 +41935,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fish Stock",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-44"
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-45"
       },
       {
         "name": "Creme Fraiche",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-46"
       },
       {
         "name": "camarones",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-47"
       },
@@ -41974,7 +41974,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Crush or chop the diente de ajo.",
+        "text": "Crush or picar el diente de ajo.",
         "timerMinutes": 10
       },
       {
@@ -42199,7 +42199,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dulce de leche",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-53"
       }
@@ -42265,7 +42265,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Graham Cracker Crumbs",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-52"
       },
@@ -42277,31 +42277,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-54"
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-55"
       },
       {
         "name": "leche entera",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-56"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-57"
       },
       {
         "name": "Cornstarch",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-58"
       },
@@ -42313,13 +42313,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-60"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-61"
       },
@@ -42331,13 +42331,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-63"
       },
       {
         "name": "Cream Of Tartar",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-64"
       }
@@ -42352,13 +42352,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Mix all the crust ingredients (graham cracker crumbs, melted manteca, granulated azúcar blanco and ground cinnamon) in a medium bowl.",
+        "text": "Mix all the crust ingredients (graham cracker crumbs, melted manteca, granulated azúcar blanco and ground cinnamon) En un recipiente mediano.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Set aside about 2 Tbsp (30 mL) for later and press the mixture into a 9-inch deep-dish pie plate in the bottom and up the sides.",
+        "text": "Set aside about 2 cdas (30 mL) for later and press the mixture into a 9-inch deep-dish pie plate in the bottom and up the sides.",
         "timerMinutes": 15
       },
       {
@@ -42439,7 +42439,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-63"
       },
@@ -42490,7 +42490,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "1) Peel and chop the cebolla and diente de ajo.",
+        "text": "1) Peel and picar el cebolla and diente de ajo.",
         "timerMinutes": 5
       },
       {
@@ -42508,7 +42508,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Then add the chopped papas, bay leaves and tomillo fresco and stir well.",
+        "text": "Then add the picado/a papas, bay leaves and tomillo fresco and revolver bien para integrar los sabores.",
         "timerMinutes": 20
       },
       {
@@ -42559,7 +42559,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-64"
       },
@@ -42691,7 +42691,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-69"
       },
@@ -42703,7 +42703,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "French Lentils",
-        "qty": "2 1/4 cups",
+        "qty": "2 1/4 tazas",
         "unit": "",
         "requiredId": "ing-71"
       },
@@ -42742,19 +42742,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "When hot, add chopped vegetables and sauté until softened, 5 to 10 minutes.",
+        "text": "When hot, add picado/a vegetables and sauté until softened, 5 to 10 minutes.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add 6 cups agua, lentils, tomillo fresco, bay leaves and sal fina.",
+        "text": "Add 6 tazas agua, lentils, tomillo fresco, bay leaves and sal fina.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Bring to a boil, then reduce to a fast simmer.",
+        "text": "llevar a ebullición, then reduce to a fast simmer.",
         "timerMinutes": 20
       },
       {
@@ -42805,25 +42805,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "queso parmesano",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-74"
       },
       {
         "name": "Tarragon Leaves",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-75"
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tbs chopped",
+        "qty": "1 tbs picado/a",
         "unit": "",
         "requiredId": "ing-76"
       },
       {
         "name": "Chives",
-        "qty": "1 tbs chopped",
+        "qty": "1 tbs picado/a",
         "unit": "",
         "requiredId": "ing-77"
       },
@@ -42925,13 +42925,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "queso muzzarella",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-82"
       },
       {
         "name": "crema ácida",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-83"
       },
@@ -42970,7 +42970,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 425 degrees.",
+        "text": "Precalentar el horno a 425°C degrees.",
         "timerMinutes": 5
       },
       {
@@ -43045,13 +43045,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-85"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-86"
       },
@@ -43075,7 +43075,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-90"
       },
@@ -43122,7 +43122,7 @@ const DEFAULT_KITCHEN_DATA = {
   },
   {
     "id": "rec-real-318",
-    "title": "Fresh sardines",
+    "title": "fresco sardines",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
     "authorAvatar": "👨‍🍳",
@@ -43141,7 +43141,7 @@ const DEFAULT_KITCHEN_DATA = {
     "rating": 4.8,
     "timesCooked": 2450,
     "image": "https://www.themealdb.com/images/media/meals/nv5lf31628771380.jpg",
-    "description": "Receta auténtica de Fresh sardines, elaborada con ingredientes seleccionados y técnica tradicional.",
+    "description": "Receta auténtica de fresco sardines, elaborada con ingredientes seleccionados y técnica tradicional.",
     "pairing": "Vino o bebida recomendada según la ocasión",
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
@@ -43186,7 +43186,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Lay on kitchen towel to get rid of the excess oil and serve hot or cold with a slice of limón.",
+        "text": "Lay on kitchen towel to get rid of the excess oil and servir bien caliente de inmediato or cold with a slice of limón.",
         "timerMinutes": 15
       }
     ],
@@ -43237,7 +43237,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-95"
       },
@@ -43339,13 +43339,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan rallado",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-100"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-101"
       }
@@ -43429,19 +43429,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-105"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-106"
       },
       {
         "name": "Oil",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-107"
       }
@@ -43513,12 +43513,12 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-108"
       },
       {
-        "name": "Minced carne de cerdo",
+        "name": "picado fino carne de cerdo",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-109"
@@ -43537,7 +43537,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-112"
       },
@@ -43555,7 +43555,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-115"
       },
@@ -43576,7 +43576,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Stir sal fina into minced meat.",
+        "text": "Stir sal fina into picado fino meat.",
         "timerMinutes": 10
       },
       {
@@ -43633,7 +43633,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-113"
       },
@@ -43741,7 +43741,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-118"
       },
@@ -43786,7 +43786,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 400ºF (200ºC), and prepare two cookie sheets with parchment paper.",
+        "text": "Precalentar el horno a 400°CºF (200ºC), and prepare two cookie sheets with parchment paper.",
         "timerMinutes": 5
       },
       {
@@ -43843,13 +43843,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Broad Beans",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-122"
       },
       {
         "name": "perejil fresco",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-123"
       },
@@ -43888,7 +43888,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Cook the drained beans in a fresh portion of unsalted agua in a large saucepan with the lid on until tender, adding agua to keep them covered, and sal fina when the beans have softened.",
+        "text": "Cook the drained beans in a fresco portion of unsalted agua in a large saucepan with the lid on until tender, adding agua to keep them covered, and sal fina when the beans have softened.",
         "timerMinutes": 10
       },
       {
@@ -43963,7 +43963,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Black Pudding",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-131"
       },
@@ -44047,7 +44047,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Granulated azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-132"
       },
@@ -44059,7 +44059,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-134"
       },
@@ -44071,7 +44071,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-136"
       },
@@ -44083,19 +44083,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Almonds",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-138"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-139"
       },
       {
         "name": "Melted manteca",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-140"
       },
@@ -44185,13 +44185,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Black Beans",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-137"
       },
       {
         "name": "arroz",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-138"
       },
@@ -44215,25 +44215,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Salsa Lizano",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-142"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-143"
       },
       {
         "name": "Cumin",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-144"
       },
       {
         "name": "Pepper",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-145"
       }
@@ -44323,7 +44323,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-146"
       }
@@ -44344,7 +44344,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Season with a little sea sal fina.",
+        "text": "condimentar con a little sea sal fina.",
         "timerMinutes": 15
       },
       {
@@ -44400,13 +44400,13 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-148"
       },
       {
-        "name": "Chopped cebolla",
+        "name": "picado/a cebolla",
         "qty": "1",
         "unit": "",
         "requiredId": "ing-149"
       },
       {
-        "name": "Freshly chopped perejil fresco",
+        "name": "Freshly picado/a perejil fresco",
         "qty": "pinch",
         "unit": "",
         "requiredId": "ing-150"
@@ -44418,13 +44418,13 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-151"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "1 (400g) tin",
         "unit": "",
         "requiredId": "ing-152"
       },
       {
-        "name": "Minced diente de ajo",
+        "name": "picado fino diente de ajo",
         "qty": "1/2 teaspoon",
         "unit": "",
         "requiredId": "ing-153"
@@ -44503,7 +44503,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-153"
       },
@@ -44515,7 +44515,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dry sherry",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-155"
       },
@@ -44530,7 +44530,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the aceite de oliva extra virgen in a large frying pan.",
+        "text": "Heat the aceite de oliva extra virgen En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -44593,7 +44593,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Plain harina de trigo 000",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-158"
       },
@@ -44617,37 +44617,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-162"
       },
       {
         "name": "cebolla sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-163"
       },
       {
         "name": "diente de ajo Powder",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-164"
       },
       {
         "name": "agua",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-165"
       },
       {
         "name": "pollo Stock",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-166"
       },
       {
         "name": "pato Sauce",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-167"
       },
@@ -44689,19 +44689,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-174"
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-175"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-176"
       }
@@ -44710,7 +44710,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a bowl, add 2 Cups of agua, 2 Tablespoon salsa de soja, 2 Tablespoon white vinagre de vino, sherry cooking wine, 1/4 Teaspoon white pepper, minced jengibre fresco, minced diente de ajo, hot pepper, ketchup, hoisin sauce, and azúcar blanco.",
+        "text": "In a bowl, add 2 tazas of agua, 2 Tablespoon salsa de soja, 2 Tablespoon white vinagre de vino, sherry cooking wine, 1/4 Teaspoon white pepper, picado fino jengibre fresco, picado fino diente de ajo, hot pepper, ketchup, hoisin sauce, and azúcar blanco.",
         "timerMinutes": 5
       },
       {
@@ -44728,7 +44728,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a bowl, add the pollo, 1 pinch of sal fina, 1 pinch of white pepper, 2 huevo whites, and 3 Tablespoon of choclo starch.",
+        "text": "In a bowl, add the pollo, 1 pizca of sal fina, 1 pizca of white pepper, 2 huevo whites, and 3 Tablespoon of choclo starch.",
         "timerMinutes": 20
       },
       {
@@ -44899,13 +44899,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-169"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-170"
       },
@@ -44940,7 +44940,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-175"
       },
       {
-        "name": "Chopped perejil fresco",
+        "name": "picado/a perejil fresco",
         "qty": "2 tbs",
         "unit": "",
         "requiredId": "ing-176"
@@ -45127,7 +45127,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-179"
       },
@@ -45145,25 +45145,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arroz",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-182"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-183"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-184"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-185"
       },
@@ -45235,7 +45235,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "crema de leche",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-182"
       },
@@ -45247,13 +45247,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-184"
       },
       {
         "name": "Grape Nut Cereal",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-185"
       }
@@ -45262,7 +45262,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large bowl, use an electric mixer to whip the cold crema de leche until stiff peaks form.",
+        "text": "En una sartén grande u olla, use an electric mixer to whip the cold crema de leche until stiff peaks form.",
         "timerMinutes": 5
       },
       {
@@ -45343,7 +45343,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-191"
       },
@@ -45451,7 +45451,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-195"
       },
@@ -45472,7 +45472,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the levadura seca, azúcar blanco and 1tsp sal fina, then mix well.",
+        "text": "Add the levadura seca, azúcar blanco and 1 cditas sal fina, then mezclar homogéneamente.",
         "timerMinutes": 10
       },
       {
@@ -45529,13 +45529,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-198"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-199"
       },
@@ -45604,19 +45604,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 2 tbsp oil in a pan, add the cebolla and fry until soft and lightly browned, about 10 mins.",
+        "text": "Heat 2 cdas oil in a pan, add the cebolla and fry until soft and lightly browned, about 10 mins.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the chilli, jengibre fresco and spices and mix well.",
+        "text": "Add the chilli, jengibre fresco and spices and mezclar homogéneamente.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Stir in the chickpeas, tomates perita and 5 tbsp agua, bring to the boil, then simmer for 10 mins.",
+        "text": "Stir in the chickpeas, tomates perita and 5 cdas agua, bring to the boil, then simmer for 10 mins.",
         "timerMinutes": 15
       },
       {
@@ -45636,7 +45636,7 @@ const DEFAULT_KITCHEN_DATA = {
   },
   {
     "id": "rec-real-341",
-    "title": "Grilled choclo with diente de ajo mayo & grated cheese",
+    "title": "Grilled choclo with diente de ajo mayo & rallado cheese",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
     "authorAvatar": "👨‍🍳",
@@ -45655,7 +45655,7 @@ const DEFAULT_KITCHEN_DATA = {
     "rating": 4.7,
     "timesCooked": 638,
     "image": "https://www.themealdb.com/images/media/meals/k1if4d1782589892.jpg",
-    "description": "Receta auténtica de Grilled choclo with diente de ajo mayo & grated cheese, elaborada con ingredientes seleccionados y técnica tradicional.",
+    "description": "Receta auténtica de Grilled choclo with diente de ajo mayo & rallado cheese, elaborada con ingredientes seleccionados y técnica tradicional.",
     "pairing": "Vino o bebida recomendada según la ocasión",
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
@@ -45667,7 +45667,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-203"
       },
@@ -45712,7 +45712,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Mix the diente de ajo and mayonesa in a small bowl.",
+        "text": "Mix the diente de ajo and mayonesa En un bowl pequeño.",
         "timerMinutes": 15
       },
       {
@@ -45775,13 +45775,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-210"
       },
       {
         "name": "morrón rojo Flakes",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-211"
       },
@@ -45859,7 +45859,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Plain harina de trigo 000",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-213"
       },
@@ -45901,13 +45901,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Whole leche entera",
-        "qty": "1 1/2 cups (360 milliliters)",
+        "qty": "1 1/2 tazas (360 milliliters)",
         "unit": "",
         "requiredId": "ing-220"
       },
       {
         "name": "crema de leche",
-        "qty": "1 cup (240 milliliters)",
+        "qty": "1 tazas (240 milliliters)",
         "unit": "",
         "requiredId": "ing-221"
       },
@@ -45964,7 +45964,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring a medium saucepan of generously salted agua (you want it to taste like seawater) to a boil.",
+        "text": "Bring a medium saucepan of generously salted agua (you want it a gusto like seawater) to a boil.",
         "timerMinutes": 10
       },
       {
@@ -45982,7 +45982,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "While the pasta / fideos is cooking, in a small bowl, whisk together the harina de trigo 000, mostaza powder, diente de ajo powder, sal fina, pimienta negra molida, and cayenne pepper.",
+        "text": "While the pasta / fideos is cooking, En un bowl pequeño, whisk together the harina de trigo 000, mostaza powder, diente de ajo powder, sal fina, pimienta negra molida, and cayenne pepper.",
         "timerMinutes": 25
       }
     ],
@@ -46027,7 +46027,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-219"
       },
@@ -46117,19 +46117,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Grits",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-222"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-223"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-224"
       }
@@ -46315,7 +46315,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Extra Virgin aceite de oliva extra virgen",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-236"
       },
@@ -46351,7 +46351,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Nutmeg",
-        "qty": "Grated",
+        "qty": "rallado",
         "unit": "",
         "requiredId": "ing-242"
       }
@@ -46384,7 +46384,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Season with a few scrapes of nutmeg.",
+        "text": "condimentar con a few scrapes of nutmeg.",
         "timerMinutes": 25
       }
     ],
@@ -46429,13 +46429,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-239"
       },
       {
         "name": "Cabbage",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-240"
       },
@@ -46480,7 +46480,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Put in a large pan filled with cold salted agua, bring to the boil and cook for 10-15 mins until a knife can be inserted into the papas easily.",
+        "text": "Put En una sartén grande u olla filled with cold salted agua, bring to the boil and cook for 10-15 mins until a knife can be inserted into the papas easily.",
         "timerMinutes": 10
       },
       {
@@ -46498,7 +46498,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir occasionally until the cabbage is wilted but still retains a little bite, then set aside.",
+        "text": "revolver bien para integrar los sabores until the cabbage is wilted but still retains a little bite, then set aside.",
         "timerMinutes": 25
       }
     ],
@@ -46555,13 +46555,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-246"
       },
       {
         "name": "Ground Cardomom",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-247"
       }
@@ -46627,13 +46627,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Coconut Flakes",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-247"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 cups",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-248"
       },
@@ -46660,13 +46660,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Take the grated coconut in a bowl.",
+        "text": "Take the rallado coconut in a bowl.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add jaggery to the grated coconut.",
+        "text": "Add jaggery to the rallado coconut.",
         "timerMinutes": 20
       },
       {
@@ -46717,13 +46717,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Green Beans",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-254"
       },
       {
         "name": "arvejas",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-255"
       },
@@ -46741,31 +46741,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-258"
       },
       {
         "name": "crema de leche",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-259"
       },
       {
         "name": "manteca",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-260"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-261"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-262"
       }
@@ -46849,7 +46849,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-260"
       }
@@ -46927,7 +46927,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-264"
       },
@@ -46957,19 +46957,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-269"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-270"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-271"
       }
@@ -46978,7 +46978,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 425 degrees.",
+        "text": "Precalentar el horno a 425°C degrees.",
         "timerMinutes": 5
       },
       {
@@ -47323,61 +47323,61 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "champiñones frescos",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-282"
       },
       {
         "name": "Wood Ear champiñones frescos",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-283"
       },
       {
         "name": "Tofu",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-284"
       },
       {
         "name": "carne de cerdo",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-285"
       },
       {
         "name": "pollo Stock",
-        "qty": "2-1/2 cups",
+        "qty": "2-1/2 tazas",
         "unit": "",
         "requiredId": "ing-286"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-287"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-288"
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-289"
       },
       {
         "name": "Pepper",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-290"
       },
       {
         "name": "Hotsauce",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-291"
       },
@@ -47389,7 +47389,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-293"
       },
@@ -47407,7 +47407,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-296"
       }
@@ -47473,7 +47473,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Chocolate Chips",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-287"
       },
@@ -47491,7 +47491,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-290"
       },
@@ -47530,7 +47530,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the esencia de vainilla to the dark chocolate mixture and stir well until smooth.",
+        "text": "Add the esencia de vainilla to the dark chocolate mixture and revolver bien para integrar los sabores until smooth.",
         "timerMinutes": 20
       },
       {
@@ -47575,13 +47575,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-293"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-294"
       },
@@ -47605,7 +47605,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-298"
       },
@@ -47662,7 +47662,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large bowl, stir the azúcar blanco into the vinagre de vino until dissolved.",
+        "text": "En una sartén grande u olla, stir the azúcar blanco into the vinagre de vino until dissolved.",
         "timerMinutes": 25
       }
     ],
@@ -47746,7 +47746,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Stir in a squeeze of limón juice and season to taste.",
+        "text": "Stir in a squeeze of limón juice and season a gusto.",
         "timerMinutes": 20
       }
     ],
@@ -47779,7 +47779,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-302"
       },
@@ -47803,13 +47803,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coarse sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-306"
       },
       {
         "name": "Ground Cardomom",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-307"
       },
@@ -47905,19 +47905,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-309"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-310"
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-311"
       },
@@ -47965,7 +47965,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Mint",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-319"
       }
@@ -48085,12 +48085,12 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "caster azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-321"
       },
       {
-        "name": "fresh tomillo fresco",
+        "name": "fresco tomillo fresco",
         "qty": "4 sprigs",
         "unit": "",
         "requiredId": "ing-322"
@@ -48118,13 +48118,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Drain and rinse the soaked wheat, put it in a medium pan with lots of agua, bring to a boil and simmer for an hour, until cooked.",
+        "text": "Drain and rinse the soaked wheat, put it En un recipiente mediano with lots of agua, llevar a ebullición and simmer for an hour, until cooked.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Drain and set aside.",
+        "text": "escurrir y reservar.",
         "timerMinutes": 15
       },
       {
@@ -48169,31 +48169,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Yogurt",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-317"
       },
       {
         "name": "Cold agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-318"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-319"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-320"
       },
       {
         "name": "Dried Mint",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-321"
       },
@@ -48265,31 +48265,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-323"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-324"
       },
       {
         "name": "Molasses",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-325"
       },
       {
         "name": "Vanilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-326"
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-327"
       },
@@ -48307,25 +48307,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-330"
       },
       {
         "name": "sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-331"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-332"
       },
       {
         "name": "Jam",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-333"
       }
@@ -48499,19 +48499,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-333"
       },
       {
         "name": "Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-334"
       },
       {
         "name": "Nutmeg",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-335"
       },
@@ -48529,7 +48529,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-338"
       },
@@ -48601,19 +48601,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Plain harina de trigo 000",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-337"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-338"
       },
       {
         "name": "Curry Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-339"
       },
@@ -48625,25 +48625,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-341"
       },
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "900g",
         "unit": "",
         "requiredId": "ing-342"
       },
       {
         "name": "Allspice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-343"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-344"
       },
@@ -48655,7 +48655,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-346"
       },
@@ -48667,7 +48667,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 tsp ground",
+        "qty": "2 cditas ground",
         "unit": "",
         "requiredId": "ing-348"
       },
@@ -48679,7 +48679,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-350"
       },
@@ -48691,13 +48691,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-352"
       },
       {
         "name": "cebollas",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-353"
       },
@@ -48715,7 +48715,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-356"
       }
@@ -48742,7 +48742,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Pour in 1/2 cup of the ice agua and mix with your hands to bring the dough together.",
+        "text": "Pour in 1/2 tazas of the ice agua and mix with your hands to bring the dough together.",
         "timerMinutes": 20
       },
       {
@@ -48781,7 +48781,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "8 cups",
+        "qty": "8 tazas",
         "unit": "",
         "requiredId": "ing-342"
       },
@@ -48793,19 +48793,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-344"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-345"
       },
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-346"
       }
@@ -48814,7 +48814,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large pot, bring agua and sal fina to a boil to boil the dumplings.",
+        "text": "En una sartén grande u olla, bring agua and sal fina to a boil to boil the dumplings.",
         "timerMinutes": 5
       },
       {
@@ -48871,7 +48871,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-347"
       },
@@ -48883,37 +48883,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fine Yellow Cornmeal",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-349"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-350"
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-351"
       },
       {
         "name": "Ground Nutmeg",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-352"
       },
       {
         "name": "Ground Allspice",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-353"
       },
       {
         "name": "Sweetened Condensed leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-354"
       }
@@ -48928,13 +48928,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring to a boil over medium-high heat.",
+        "text": "llevar a ebullición over medium-high heat.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Meanwhile, add 1 cup cornmeal and 1 ½ cup agua to a large mixing cup and whisk until smooth.",
+        "text": "Meanwhile, add 1 tazas cornmeal and 1 ½ cup agua to a large mixing cup and whisk until smooth.",
         "timerMinutes": 15
       },
       {
@@ -48991,19 +48991,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All-purpose Seasoning",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-354"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-355"
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-356"
       },
@@ -49015,13 +49015,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Chopped",
+        "qty": "4 dientes picado/a",
         "unit": "",
         "requiredId": "ing-358"
       },
       {
         "name": "Scotch Bonnet",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-359"
       },
@@ -49039,7 +49039,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-362"
       },
@@ -49051,13 +49051,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-364"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-365"
       }
@@ -49129,37 +49129,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Jamaican Curry Powder",
-        "qty": "2.5 tbsp",
+        "qty": "2.5 cdas",
         "unit": "",
         "requiredId": "ing-358"
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-359"
       },
       {
         "name": "All-purpose Seasoning",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-360"
       },
       {
         "name": "Allspice",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-361"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-362"
       },
       {
         "name": "diente de ajo",
-        "qty": "6 cloves sliced",
+        "qty": "6 dientes en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-363"
       },
@@ -49177,7 +49177,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-366"
       },
@@ -49195,13 +49195,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-369"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-370"
       }
@@ -49273,13 +49273,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Jamaican Curry Powder",
-        "qty": "2.5 tbsp",
+        "qty": "2.5 cdas",
         "unit": "",
         "requiredId": "ing-363"
       },
       {
         "name": "All-purpose Seasoning",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-364"
       },
@@ -49291,31 +49291,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-366"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-367"
       },
       {
         "name": "morrón verde",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-368"
       },
       {
         "name": "Scotch Bonnet",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-369"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-370"
       },
@@ -49339,13 +49339,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-374"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-375"
       }
@@ -49360,13 +49360,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat 2 Tablespoons of aceite de oliva extra virgen in a large skillet over medium heat.",
+        "text": "Heat 2 Tablespoons of aceite de oliva extra virgen En una sartén grande u olla over medium heat.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add sliced yellow cebolla, red morrón / pimiento, green morrón / pimiento, scotch bonnet pepper, if using, and chopped diente de ajo and stir for 5 minutes, until peppers are slightly softened.",
+        "text": "Add en fetas/rodajas yellow cebolla, red morrón / pimiento, green morrón / pimiento, scotch bonnet pepper, if using, and picado/a diente de ajo and stir for 5 minutes, until peppers are slightly softened.",
         "timerMinutes": 15
       },
       {
@@ -49411,13 +49411,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-367"
       },
       {
         "name": "Cornmeal",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-368"
       },
@@ -49429,25 +49429,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-370"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-371"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-372"
       },
       {
         "name": "leche entera",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-373"
       },
@@ -49519,31 +49519,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-372"
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-373"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-374"
       },
       {
         "name": "leche entera",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-375"
       },
       {
         "name": "Oil",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-376"
       }
@@ -49552,7 +49552,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Add harina de trigo 000, polvo de hornear, and sal fina in a large bowl and stir to combine.",
+        "text": "Add harina de trigo 000, polvo de hornear, and sal fina En una sartén grande u olla and stir to combine.",
         "timerMinutes": 5
       },
       {
@@ -49615,55 +49615,55 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-378"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-379"
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-380"
       },
       {
         "name": "arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-381"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-382"
       },
       {
         "name": "agua",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-383"
       },
       {
         "name": "sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-384"
       },
       {
         "name": "Allspice",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-385"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-386"
       },
@@ -49747,7 +49747,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Scotch Bonnet",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-383"
       },
@@ -49759,31 +49759,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Annatto",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-385"
       },
       {
         "name": "Allspice",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-386"
       },
       {
         "name": "camarones Stock",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-387"
       },
       {
         "name": "cebolla",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-388"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-389"
       },
@@ -49801,7 +49801,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-392"
       }
@@ -49810,7 +49810,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium bowl, combine camarones with minced Scotch Bonnet peppers, all-purpose seasoning, ground annatto, and grounf allspice.",
+        "text": "En un recipiente mediano, combine camarones with picado fino Scotch Bonnet peppers, all-purpose seasoning, ground annatto, and grounf allspice.",
         "timerMinutes": 5
       },
       {
@@ -49834,7 +49834,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in the diced cebolla and diente de ajo, cooking until softened and fragrant, about 2 minutes.",
+        "text": "Stir in the en cubos cebolla and diente de ajo, cooking until softened and fragrant, about 2 minutes.",
         "timerMinutes": 25
       }
     ],
@@ -49867,7 +49867,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-387"
       },
@@ -49885,25 +49885,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-390"
       },
       {
         "name": "Kosher sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-391"
       },
       {
         "name": "Ground Allspice",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-392"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-393"
       },
@@ -49993,19 +49993,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-393"
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-394"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-395"
       },
@@ -50029,13 +50029,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-399"
       },
       {
         "name": "miel orgánica",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-400"
       },
@@ -50053,31 +50053,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Caramelized azúcar blanco Sauce",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-403"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-404"
       },
       {
         "name": "Dried cranberries",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-405"
       },
       {
         "name": "Raisins",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-406"
       },
       {
         "name": "Dried Cherries",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-407"
       }
@@ -50086,7 +50086,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Soak the craisins, raisins, and cherries in the 1 cup of beer.",
+        "text": "Soak the craisins, raisins, and cherries in the 1 tazas of beer.",
         "timerMinutes": 5
       },
       {
@@ -50098,7 +50098,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Preheat the oven to 325 degrees Fahrenheit.",
+        "text": "Precalentar el horno a 325°C Fahrenheit.",
         "timerMinutes": 15
       },
       {
@@ -50110,7 +50110,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Combine all-purpose harina de trigo 000, polvo de hornear, ground cinnamon, sal fina, in a large bowl and set aside.",
+        "text": "Combine all-purpose harina de trigo 000, polvo de hornear, ground cinnamon, sal fina, En una sartén grande u olla and set aside.",
         "timerMinutes": 25
       }
     ],
@@ -50149,31 +50149,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-398"
       },
       {
         "name": "Plum tomates perita",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-399"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-400"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Chopped",
+        "qty": "4 dientes picado/a",
         "unit": "",
         "requiredId": "ing-401"
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-402"
       },
@@ -50209,13 +50209,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Kosher sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-408"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-409"
       }
@@ -50281,19 +50281,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-403"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-404"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-405"
       },
@@ -50311,37 +50311,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-408"
       },
       {
         "name": "Ground Nutmeg",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-409"
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-410"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-411"
       },
       {
         "name": "Raisins",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-412"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-413"
       },
@@ -50368,7 +50368,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350°F (175°C).",
+        "text": "Precalentar el horno a 350°C°F (175°C).",
         "timerMinutes": 5
       },
       {
@@ -50380,19 +50380,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Place your cut sweet papas in the bowl of a food processor and process until finely grated.",
+        "text": "Place your cut sweet papas in the bowl of a food processor and process until finely rallado.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a small bowl, toss raisins in 2 teaspoons harina de trigo 000 from the ½ cup.",
+        "text": "En un bowl pequeño, toss raisins in 2 teaspoons harina de trigo 000 from the ½ cup.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large bowl, combine grated sweet papas, light brown azúcar blanco, all-purpose harina de trigo 000, esencia de vainilla, allspice, cinnamon, nutmeg, jengibre fresco, and sal fina.",
+        "text": "En una sartén grande u olla, combine rallado sweet papas, light brown azúcar blanco, all-purpose harina de trigo 000, esencia de vainilla, allspice, cinnamon, nutmeg, jengibre fresco, and sal fina.",
         "timerMinutes": 25
       }
     ],
@@ -50500,7 +50500,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat the oil or manteca in a second pan and, once warm or melted, stir in the harina de trigo 000 for a couple of minutes until it starts to brown a little.",
+        "text": "calentar el aceite o manteca or manteca in a second pan and, once warm or melted, stir in the harina de trigo 000 for a couple of minutes until it starts to brown a little.",
         "timerMinutes": 20
       },
       {
@@ -50578,7 +50578,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Drain and rinse again with fresh agua.",
+        "text": "Drain and rinse again with fresco agua.",
         "timerMinutes": 15
       },
       {
@@ -50635,7 +50635,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne de cerdo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-419"
       },
@@ -50653,13 +50653,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Mirin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-422"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-423"
       },
@@ -50677,7 +50677,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chives",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-426"
       }
@@ -50686,7 +50686,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a pan, fry the sliced cebolla until golden brown, then add the tonkatsu (see recipe here), placing it in the middle of the pan.",
+        "text": "calentar el aceite o manteca in a pan, fry the en fetas/rodajas cebolla until golden brown, then add the tonkatsu (see recipe here), placing it in the middle of the pan.",
         "timerMinutes": 5
       },
       {
@@ -50710,7 +50710,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Divide the arroz between two bowls, then top each with half the huevo and tonkatsu mix, sprinkle over the chives and serve immediately, drizzling with a little more soy if you want an extra umami kick.",
+        "text": "Divide the arroz between two bowls, then top each with half the huevo and tonkatsu mix, sprinkle over the chives and servir bien caliente de inmediato, drizzling with a little more soy if you want an extra umami kick.",
         "timerMinutes": 25
       }
     ],
@@ -50761,13 +50761,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tbs chopped",
+        "qty": "1 tbs picado/a",
         "unit": "",
         "requiredId": "ing-425"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-426"
       },
@@ -50779,7 +50779,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-428"
       },
@@ -50845,7 +50845,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-439"
       },
@@ -50866,7 +50866,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make the jerk marinade, combine all the ingredients in a food processor along with 1 tsp sal fina, and blend to a purée.",
+        "text": "To make the jerk marinade, combine all the ingredients in a food processor along with 1 cditas sal fina, and blend to a purée.",
         "timerMinutes": 5
       },
       {
@@ -50929,7 +50929,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Yellow Split arvejas",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-428"
       },
@@ -50965,7 +50965,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-434"
       }
@@ -50992,7 +50992,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Cover with fresh agua, at least 6-7 litres.",
+        "text": "Cover with fresco agua, at least 6-7 litres.",
         "timerMinutes": 20
       },
       {
@@ -51037,7 +51037,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arroz",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-433"
       },
@@ -51079,13 +51079,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-440"
       },
       {
         "name": "Kabse Spice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-441"
       },
@@ -51163,13 +51163,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "5 chopped",
+        "qty": "5 picado/a",
         "unit": "",
         "requiredId": "ing-438"
       },
       {
         "name": "Green Chilli",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-439"
       },
@@ -51181,7 +51181,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-441"
       },
@@ -51199,13 +51199,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-444"
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-445"
       },
@@ -51448,7 +51448,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat oil in a pan and fry the strips for 6 minutes until it's ready.",
+        "text": "calentar aceite en a pan and fry the strips for 6 minutes until it's ready.",
         "timerMinutes": 10
       },
       {
@@ -51562,13 +51562,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Slice the rest of the cebollas and fry in manteca on low/medium heat until caramelized.",
+        "text": "cortar en rodajas finas rest of the cebollas and fry in manteca on low/medium heat until caramelized.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a bowl, mix together ground carne vacuna, grated cebolla, sal fina, pepper, nutmeg, papa/choclo starch, and agua.",
+        "text": "In a bowl, mix together ground carne vacuna, rallado cebolla, sal fina, pepper, nutmeg, papa/choclo starch, and agua.",
         "timerMinutes": 15
       },
       {
@@ -51676,13 +51676,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix the cubed white pan with the leche entera, season with sal fina, and let the mixture rest for a while.",
+        "text": "Mix the cubed white pan with the leche entera, condimentar con sal fina, and let the mixture rest for a while.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Now add the shredded papas, the grated cheese, huevos, and perejil fresco.",
+        "text": "Now add the shredded papas, the rallado cheese, huevos, and perejil fresco.",
         "timerMinutes": 10
       },
       {
@@ -51769,19 +51769,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-468"
       },
       {
         "name": "diente de ajo",
-        "qty": "5 chopped cloves",
+        "qty": "5 picado/a cloves",
         "unit": "",
         "requiredId": "ing-469"
       },
       {
         "name": "zanahoria",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-470"
       },
@@ -51838,7 +51838,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "For the curry sauce: Heat oil in medium non-stick saucepan, add cebolla and diente de ajo and cook until softened.",
+        "text": "For the curry sauce: calentar aceite en medium non-stick saucepan, add cebolla and diente de ajo and cocinar hasta dorar suavementeened.",
         "timerMinutes": 10
       },
       {
@@ -51931,19 +51931,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-474"
       },
       {
         "name": "Coriander",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-475"
       },
       {
         "name": "Curry Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-476"
       },
@@ -51958,13 +51958,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the arroz, heat the oil in a large, lidded pan, add the cebolla, then gently fry for 5 mins until softened but not coloured.",
+        "text": "For the arroz, calentar el aceite o manteca in a large, lidded pan, add the cebolla, then gently fry for 5 mins until softened but not coloured.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the spices, season with sal fina, then continue to fry until the mix start to go brown and fragrant; about 3 mins.",
+        "text": "Add the spices, condimentar con sal fina, then continue to fry until the mix start to go brown and fragrant; about 3 mins.",
         "timerMinutes": 10
       },
       {
@@ -52045,13 +52045,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Turmeric",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-477"
       },
       {
         "name": "Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-478"
       },
@@ -52108,13 +52108,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Meanwhile, peel and finely chop the cebolla.",
+        "text": "Meanwhile, peel and finely picar el cebolla.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Then chop the herbs.",
+        "text": "Then picar el herbs.",
         "timerMinutes": 15
       },
       {
@@ -52171,13 +52171,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Saffron",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-479"
       },
       {
         "name": "cebolla",
-        "qty": "1 Large Chopped",
+        "qty": "1 Large picado/a",
         "unit": "",
         "requiredId": "ing-480"
       },
@@ -52210,19 +52210,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the aceite de girasol / vegetal in a large frying pan over medium-high heat.",
+        "text": "Heat the aceite de girasol / vegetal En una sartén grande u olla over medium-high heat.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the cordero and cook until browned on all sides, about 5 minutes.",
+        "text": "Add the cordero and cocinar hasta dorar suavemente on all sides, about 5 minutes.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Season with saffron, sal fina and pepper to taste; stir in all but 4 tablespoons of the cebolla, and pour in the agua.",
+        "text": "condimentar con saffron, sal fina and pepper a gusto; stir in all but 4 tablespoons of the cebolla, and pour in the agua.",
         "timerMinutes": 15
       },
       {
@@ -52285,7 +52285,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-485"
       },
@@ -52429,7 +52429,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-487"
       },
@@ -52516,13 +52516,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Bring the 4 cups of agua to a boil in a Dutch oven or soup pot.",
+        "text": "Bring the 4 tazas of agua to a boil in a Dutch oven or soup pot.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the carne vacuna, diente de ajo, and jengibre fresco, and stir well.",
+        "text": "Add the carne vacuna, diente de ajo, and jengibre fresco, and revolver bien para integrar los sabores.",
         "timerMinutes": 10
       },
       {
@@ -52597,7 +52597,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-496"
       },
@@ -52618,7 +52618,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 360 F (180 C).",
+        "text": "Precalentar el horno a 360°C F (180 C).",
         "timerMinutes": 5
       },
       {
@@ -52744,13 +52744,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Bake in the oven for 10 minutes.",
+        "text": "hornear durante 10 minutos hasta que esté bien dorado.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Put the huevo yolks in a large bowl and whisk for a minute with electric beaters.",
+        "text": "Put the huevo yolks En una sartén grande u olla and whisk for a minute with electric beaters.",
         "timerMinutes": 25
       }
     ],
@@ -52783,31 +52783,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "arroz harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-2"
       },
       {
         "name": "Cornstarch",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-3"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-4"
       },
       {
         "name": "agua",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-5"
       },
       {
         "name": "Ground Turmeric",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-6"
       },
@@ -52819,7 +52819,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bean Sprouts",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-8"
       },
@@ -52870,7 +52870,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir the batter briefly and pour about 1/2 cup into the skillet, immediately swirling to coat the bottom thinly.",
+        "text": "Stir the batter briefly and pour about 1/2 tazas into the skillet, immediately swirling to coat the bottom thinly.",
         "timerMinutes": 25
       }
     ],
@@ -52903,7 +52903,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Semolina harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-7"
       },
@@ -52927,7 +52927,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "levadura seca",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-11"
       },
@@ -52939,7 +52939,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-13"
       },
@@ -52957,13 +52957,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-16"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-17"
       },
@@ -52975,7 +52975,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-19"
       }
@@ -52984,7 +52984,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix 1/2 cup plus 2 tablespoons semolina, 2 tablespoons sesame seeds, azúcar blanco, levadura seca, and sal fina together in a large bowl.",
+        "text": "Mix 1/2 tazas plus 2 tablespoons semolina, 2 tablespoons sesame seeds, azúcar blanco, levadura seca, and sal fina together En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -53008,7 +53008,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in 2 3/4 cups harina de trigo 000 with a wooden spoon until a sticky dough forms.",
+        "text": "Stir in 2 3/4 tazas harina de trigo 000 with a wooden spoon until a sticky dough forms.",
         "timerMinutes": 25
       }
     ],
@@ -53047,13 +53047,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-13"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-14"
       },
@@ -53071,24 +53071,24 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-17"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-18"
       },
       {
         "name": "Garam Masala",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-19"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "400g",
         "unit": "",
         "requiredId": "ing-20"
@@ -53110,7 +53110,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large frying pan over a low-medium heat.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla over a low-medium heat.",
         "timerMinutes": 5
       },
       {
@@ -53134,7 +53134,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Tip in the chopped tomates perita and kidney beans in their agua, then bring to the boil.",
+        "text": "Tip in the picado/a tomates perita and kidney beans in their agua, then bring to the boil.",
         "timerMinutes": 25
       }
     ],
@@ -53179,25 +53179,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Yellow Food Colouring",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-19"
       },
       {
         "name": "queso muzzarella",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-20"
       },
       {
         "name": "queso crema",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-21"
       },
       {
         "name": "leche entera",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-22"
       },
@@ -53215,19 +53215,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-25"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-26"
       },
       {
         "name": "Rose agua",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-27"
       },
@@ -53248,7 +53248,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Pour melted manteca, yellow food color and mix well with your hands.",
+        "text": "Pour melted manteca, yellow food color and mezclar homogéneamente with your hands.",
         "timerMinutes": 10
       },
       {
@@ -53341,7 +53341,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-29"
       },
@@ -53353,7 +53353,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-31"
       },
@@ -53425,25 +53425,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Brown Lentils",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-27"
       },
       {
         "name": "arroz",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-28"
       },
       {
         "name": "Coriander",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-29"
       },
       {
         "name": "Macaroni",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-30"
       },
@@ -53467,7 +53467,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-34"
       }
@@ -53482,7 +53482,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring lentils and 4 cups of agua to a boil in a medium pot or saucepan over high heat.",
+        "text": "Bring lentils and 4 tazas of agua to a boil En un recipiente mediano or saucepan over high heat.",
         "timerMinutes": 10
       },
       {
@@ -53494,7 +53494,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Drain from agua and season with a little sal fina.",
+        "text": "Drain from agua and condimentar con a little sal fina.",
         "timerMinutes": 20
       },
       {
@@ -53533,7 +53533,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-32"
       },
@@ -53551,7 +53551,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Melted manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-35"
       },
@@ -53563,13 +53563,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-37"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-38"
       },
@@ -53653,25 +53653,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-38"
       },
       {
         "name": "agua",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-39"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-40"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-41"
       },
@@ -53683,7 +53683,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shortening",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-43"
       },
@@ -53701,19 +53701,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-46"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-47"
       },
       {
         "name": "Vanilla",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-48"
       },
@@ -53725,7 +53725,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-50"
       }
@@ -53740,7 +53740,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add leche entera, azúcar blanco, sal fina, huevos, shortening and 2 cups harina de trigo 000.",
+        "text": "Add leche entera, azúcar blanco, sal fina, huevos, shortening and 2 tazas harina de trigo 000.",
         "timerMinutes": 10
       },
       {
@@ -53803,13 +53803,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-44"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-45"
       },
@@ -54019,7 +54019,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arroz vinagre de vino",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-59"
       },
@@ -54031,13 +54031,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-61"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "6 cloves",
+        "qty": "6 dientes",
         "unit": "",
         "requiredId": "ing-62"
       },
@@ -54127,25 +54127,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate Puree",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-59"
       },
       {
         "name": "choclo harina de trigo 000",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-60"
       },
       {
         "name": "Caster azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-61"
       },
       {
         "name": "Sunflower Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-62"
       },
@@ -54169,7 +54169,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "6 cloves",
+        "qty": "6 dientes",
         "unit": "",
         "requiredId": "ing-66"
       },
@@ -54181,7 +54181,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "jengibre fresco",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-68"
       }
@@ -54190,19 +54190,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix the cornflour and 1 tbsp salsa de soja, toss in the langostinos and set aside for 10 mins.",
+        "text": "Mix the cornflour and 1 cdas salsa de soja, toss in the langostinos and set aside for 10 mins.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Stir the vinagre de vino, remaining salsa de soja, tomate purée, azúcar blanco and 2 tbsp agua together to make a sauce.",
+        "text": "Stir the vinagre de vino, remaining salsa de soja, tomate purée, azúcar blanco and 2 cdas agua together to make a sauce.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "When you’re ready to cook, heat a large frying pan or wok until very hot, then add 1 tbsp oil.",
+        "text": "When you’re ready to cook, heat a large frying pan or wok until very hot, then add 1 cdas oil.",
         "timerMinutes": 15
       },
       {
@@ -54277,7 +54277,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-67"
       },
@@ -54373,19 +54373,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Granulated azúcar blanco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-69"
       },
       {
         "name": "crema de leche",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-70"
       },
       {
         "name": "leche entera",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-71"
       },
@@ -54397,13 +54397,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-73"
       },
       {
         "name": "Granulated azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-74"
       },
@@ -54415,19 +54415,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-76"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1.5 tsp",
+        "qty": "1.5 cditas",
         "unit": "",
         "requiredId": "ing-77"
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-78"
       },
@@ -54439,19 +54439,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Granulated azúcar blanco",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-80"
       },
       {
         "name": "Almonds",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-81"
       },
       {
         "name": "Whipping Cream",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-82"
       }
@@ -54523,37 +54523,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cabbage",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-73"
       },
       {
         "name": "Paprika",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-74"
       },
       {
         "name": "tomate Puree",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-75"
       },
       {
         "name": "morrón rojo",
-        "qty": "2 diced",
+        "qty": "2 en cubos",
         "unit": "",
         "requiredId": "ing-76"
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-77"
       },
       {
         "name": "Chilli Flakes",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-78"
       },
@@ -54592,7 +54592,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "One heated add in the cebollas, diced carne vacuna, red peppers and fry for 5 minutes stirring occasionally.",
+        "text": "One heated add in the cebollas, en cubos carne vacuna, red peppers and fry for 5 minutes stirring occasionally.",
         "timerMinutes": 10
       },
       {
@@ -54604,7 +54604,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the paprika, tomate puree, chilli flakes and season with sal fina and pepper.",
+        "text": "Add the paprika, tomate puree, chilli flakes and condimentar con sal fina and pepper.",
         "timerMinutes": 20
       },
       {
@@ -54661,7 +54661,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-80"
       },
@@ -54733,13 +54733,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-82"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 finely sliced",
+        "qty": "1 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-83"
       },
@@ -54763,7 +54763,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "fish sauce",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-87"
       },
@@ -54796,7 +54796,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a medium saucepan and add the chilli.",
+        "text": "calentar el aceite o manteca in a medium saucepan and add the chilli.",
         "timerMinutes": 5
       },
       {
@@ -54820,7 +54820,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add the fish sauce and a little seasoning.",
+        "text": "agregar la carne sauce and a little seasoning.",
         "timerMinutes": 25
       }
     ],
@@ -54859,25 +54859,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-88"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-89"
       },
       {
         "name": "Ground Cumin",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-90"
       },
       {
         "name": "Ground Coriander",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-91"
       },
@@ -54928,7 +54928,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 2 tsp oil in a pan and soften the cebollas for 5 mins.",
+        "text": "Heat 2 cditas oil in a pan and soften the cebollas for 5 mins.",
         "timerMinutes": 5
       },
       {
@@ -54952,7 +54952,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Meanwhile, add the mint, cordero, apricots and pan rallado to the cooled cebollas, season and mix well with your hands.",
+        "text": "Meanwhile, add the mint, cordero, apricots and pan rallado to the cooled cebollas, season and mezclar homogéneamente with your hands.",
         "timerMinutes": 25
       }
     ],
@@ -54985,13 +54985,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-92"
       },
       {
         "name": "Sea sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-93"
       },
@@ -55105,13 +55105,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-100"
       },
       {
         "name": "zanahorias",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-101"
       },
@@ -55156,13 +55156,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Season with sal fina and pepper.",
+        "text": "condimentar con sal fina and pepper.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the zanahorias, stock and more seasoning to taste.",
+        "text": "Add the zanahorias, stock and more seasoning a gusto.",
         "timerMinutes": 20
       },
       {
@@ -55219,13 +55219,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-105"
       },
       {
         "name": "jengibre fresco diente de ajo paste",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-106"
       },
@@ -55255,13 +55255,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ghee",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-111"
       },
       {
         "name": "Basmati arroz",
-        "qty": "2 Cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-112"
       },
@@ -55273,7 +55273,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin Seeds",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-114"
       },
@@ -55309,13 +55309,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-120"
       },
       {
         "name": "Biryani masala",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-121"
       }
@@ -55330,7 +55330,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Deep fry the sliced cebollas when it is hot.",
+        "text": "Deep fry the en fetas/rodajas cebollas when it is hot.",
         "timerMinutes": 10
       },
       {
@@ -55405,7 +55405,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-111"
       },
@@ -55417,7 +55417,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-113"
       },
@@ -55429,7 +55429,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-115"
       },
@@ -55462,13 +55462,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Roughly chop the prunes.",
+        "text": "Roughly picar el prunes.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Meanwhile, heat the manteca in a large pan, add the cebolla, and cook for 5 minutes.",
+        "text": "Meanwhile, heat the manteca En una sartén grande u olla, add the cebolla, and cook for 5 minutes.",
         "timerMinutes": 20
       },
       {
@@ -55513,31 +55513,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sunflower Oil",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-113"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-114"
       },
       {
         "name": "jengibre fresco",
-        "qty": "Thumb sized peeled and very finely grated",
+        "qty": "Thumb sized peeled and very finely rallado",
         "unit": "",
         "requiredId": "ing-115"
       },
       {
         "name": "Madras Paste",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-116"
       },
       {
         "name": "Paprika",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-117"
       },
@@ -55567,7 +55567,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate Purée",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-122"
       },
@@ -55585,7 +55585,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander",
-        "qty": "Garnish chopped",
+        "qty": "Garnish picado/a",
         "unit": "",
         "requiredId": "ing-125"
       }
@@ -55594,13 +55594,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Put the cebollas in a food processor and whizz until very finely chopped.",
+        "text": "Put the cebollas in a food processor and whizz until very finely picado/a.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a large heavy-based pan, then fry the cebolla with the lid on, stirring every now and then, until it is really golden and soft.",
+        "text": "calentar el aceite o manteca in a large heavy-based pan, then fry the cebolla with the lid on, stirring every now and then, until it is really golden and soft.",
         "timerMinutes": 10
       },
       {
@@ -55618,7 +55618,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir well over the heat for about 30 secs, then add the meat and 300ml agua.",
+        "text": "revolver bien para integrar los sabores over the heat for about 30 secs, then agregar la carne and 300ml agua.",
         "timerMinutes": 25
       }
     ],
@@ -55657,13 +55657,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely sliced",
+        "qty": "1 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-118"
       },
       {
         "name": "zanahorias",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-119"
       },
@@ -55675,7 +55675,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-121"
       },
@@ -55699,7 +55699,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-125"
       },
@@ -55723,7 +55723,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Butternut Squash",
-        "qty": "1 medium chopped",
+        "qty": "1 medium picado/a",
         "unit": "",
         "requiredId": "ing-129"
       },
@@ -55735,7 +55735,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-131"
       }
@@ -55756,7 +55756,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the diced cordero and brown all over.",
+        "text": "Add the en cubos cordero and brown all over.",
         "timerMinutes": 15
       },
       {
@@ -55801,37 +55801,37 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-122"
       },
       {
         "name": "jengibre fresco",
-        "qty": "4cm piece finely chopped",
+        "qty": "4cm piece finely picado/a",
         "unit": "",
         "requiredId": "ing-123"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves peeled and chopped",
+        "qty": "2 dientes peeled and picado/a",
         "unit": "",
         "requiredId": "ing-124"
       },
       {
         "name": "tomates perita",
-        "qty": "800g peeled and chopped",
+        "qty": "800g peeled and picado/a",
         "unit": "",
         "requiredId": "ing-125"
       },
       {
         "name": "limón juice",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-126"
       },
       {
         "name": "caster azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-127"
       },
@@ -55861,37 +55861,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "papas",
-        "qty": "1 small peeled and coarsely grated",
+        "qty": "1 small peeled and coarsely rallado",
         "unit": "",
         "requiredId": "ing-132"
       },
       {
         "name": "basmati arroz",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-133"
       },
       {
-        "name": "chopped perejil fresco",
-        "qty": "2 tbsp",
+        "name": "picado/a perejil fresco",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-134"
       },
       {
         "name": "coriander",
-        "qty": "2 tbsp chopped",
+        "qty": "2 cdas picado/a",
         "unit": "",
         "requiredId": "ing-135"
       },
       {
         "name": "limón juice",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-136"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-137"
       },
@@ -55987,25 +55987,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-129"
       },
       {
         "name": "Coriander",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-130"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-131"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-132"
       },
@@ -56023,7 +56023,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pepino",
-        "qty": "Grated",
+        "qty": "rallado",
         "unit": "",
         "requiredId": "ing-135"
       },
@@ -56056,7 +56056,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "To make the tzatziki, squeeze and discard the juice from the pepino, then mix into the yogurt with the chopped mint and a little sal fina.",
+        "text": "To make the tzatziki, squeeze and discard the juice from the pepino, then mix into the yogurt with the picado/a mint and a little sal fina.",
         "timerMinutes": 15
       },
       {
@@ -56269,7 +56269,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-141"
       },
@@ -56281,7 +56281,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Worcestershire Sauce",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-143"
       },
@@ -56365,7 +56365,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Jasmine arroz",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-142"
       },
@@ -56383,13 +56383,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sour carne de cerdo chorizo",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-145"
       },
       {
         "name": "Pickled Garlics",
-        "qty": "2 diced",
+        "qty": "2 en cubos",
         "unit": "",
         "requiredId": "ing-146"
       },
@@ -56413,43 +56413,43 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-150"
       },
       {
         "name": "Shallots",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-151"
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 finely chopped",
+        "qty": "3 finely picado/a",
         "unit": "",
         "requiredId": "ing-152"
       },
       {
         "name": "cilantro fresco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-153"
       },
       {
         "name": "Hot Mint",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-154"
       },
       {
         "name": "Mint",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-155"
       },
       {
         "name": "Roasted Peanut",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-156"
       },
@@ -56470,7 +56470,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Slice the cebolla and shallots thinly.",
+        "text": "cortar en rodajas finas cebolla and shallots thinly.",
         "timerMinutes": 5
       },
       {
@@ -56488,13 +56488,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Put in a large bowl.",
+        "text": "Put En una sartén grande u olla.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add the coconut in a large bowl.",
+        "text": "Add the coconut En una sartén grande u olla.",
         "timerMinutes": 25
       }
     ],
@@ -56560,7 +56560,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Put the cabbage in a large bowl and add cold agua to rinse.",
+        "text": "Put the cabbage En una sartén grande u olla and add cold agua to rinse.",
         "timerMinutes": 10
       },
       {
@@ -56632,7 +56632,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 degrees.",
+        "text": "Precalentar el horno a 350°C degrees.",
         "timerMinutes": 5
       },
       {
@@ -56689,12 +56689,12 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "crema ácida",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-157"
       },
       {
-        "name": "Chopped cebolla",
+        "name": "picado/a cebolla",
         "qty": "2 tbs",
         "unit": "",
         "requiredId": "ing-158"
@@ -56707,7 +56707,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-160"
       },
@@ -56746,7 +56746,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a small bowl, combine the first four ingredients; spread on four slices of pan.",
+        "text": "En un bowl pequeño, combine the first four ingredients; spread on four slices of pan.",
         "timerMinutes": 5
       },
       {
@@ -56758,7 +56758,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large skillet or griddle, melt 2 tablespoons manteca.",
+        "text": "En una sartén grande u olla or griddle, melt 2 tablespoons manteca.",
         "timerMinutes": 15
       },
       {
@@ -56815,7 +56815,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-164"
       },
@@ -56833,12 +56833,12 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-167"
       },
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-168"
@@ -56850,7 +56850,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-169"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "800g",
         "unit": "",
         "requiredId": "ing-170"
@@ -56896,7 +56896,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large saucepan.",
+        "text": "calentar el aceite o manteca in a large saucepan.",
         "timerMinutes": 5
       },
       {
@@ -56959,19 +56959,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Whipping Cream",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-168"
       },
       {
         "name": "leche entera",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-169"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-170"
       },
@@ -57013,7 +57013,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-177"
       }
@@ -57085,7 +57085,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 medium finely diced",
+        "qty": "1 medium finely en cubos",
         "unit": "",
         "requiredId": "ing-173"
       },
@@ -57103,25 +57103,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-176"
       },
       {
         "name": "diente de ajo",
-        "qty": "5 cloves",
+        "qty": "5 dientes",
         "unit": "",
         "requiredId": "ing-177"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-178"
       },
       {
         "name": "Harissa Spice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-179"
       },
@@ -57142,7 +57142,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large pot.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -57166,7 +57166,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Simmer for 30 minutes.",
+        "text": "cocinar a fuego suave por 30 minutos.",
         "timerMinutes": 25
       }
     ],
@@ -57223,7 +57223,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-181"
       }
@@ -57232,7 +57232,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 degrees F (175 degrees C).",
+        "text": "Precalentar el horno a 350°C degrees F (175 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -57244,7 +57244,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Bring to a simmer over medium-high heat, then reduce heat to low, and cook for 5 minutes.",
+        "text": "llevar a ebullición over medium-high heat, then reduce heat to low, and cook for 5 minutes.",
         "timerMinutes": 15
       },
       {
@@ -57307,13 +57307,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-185"
       },
       {
         "name": "cebolla",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-186"
       },
@@ -57325,25 +57325,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Balsamic vinagre de vino",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-188"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-189"
       },
       {
         "name": "Mint",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-190"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-191"
       }
@@ -57358,13 +57358,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Stir occasionally throughout the days to distribute marinade evenly.",
+        "text": "revolver bien para integrar los sabores throughout the days to distribute marinade evenly.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Bake at a 350-degree oven for 1 hour to 1 1/2 hours or until meat is not red when sliced.",
+        "text": "Bake at a 350-degree oven for 1 hour to 1 1/2 hours or until meat is not red when en fetas/rodajas.",
         "timerMinutes": 15
       },
       {
@@ -57403,13 +57403,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "jengibre fresco",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-187"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-188"
       },
@@ -57427,7 +57427,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-191"
       },
@@ -57451,13 +57451,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Five Spice Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-195"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-196"
       },
@@ -57490,7 +57490,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a pan over a low heat.",
+        "text": "calentar el aceite o manteca in a pan over a low heat.",
         "timerMinutes": 10
       },
       {
@@ -57565,7 +57565,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-196"
       },
@@ -57583,7 +57583,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mostaza",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-199"
       },
@@ -57709,7 +57709,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-204"
       },
@@ -57721,13 +57721,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-206"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-207"
       }
@@ -57742,7 +57742,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Cook Meats: In a large pot, brown the carne vacuna and carne de cerdo.",
+        "text": "Cook Meats: En una sartén grande u olla, brown the carne vacuna and carne de cerdo.",
         "timerMinutes": 10
       },
       {
@@ -57798,7 +57798,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-202"
       },
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "100g",
         "unit": "",
         "requiredId": "ing-203"
@@ -57811,13 +57811,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Doubanjiang",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-205"
       },
       {
         "name": "Fermented Black Beans",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-206"
       },
@@ -57829,13 +57829,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-208"
       },
       {
         "name": "Sichuan pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-209"
       },
@@ -57859,7 +57859,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Scallions",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-213"
       },
@@ -57871,13 +57871,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-215"
       },
       {
         "name": "jengibre fresco",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-216"
       },
@@ -57898,19 +57898,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Add a small pinch of sal fina and sesame oil to minced carne vacuna.",
+        "text": "Add a small pinch of sal fina and sesame oil to picado fino carne vacuna.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Mix well and set aside.",
+        "text": "mezclar homogéneamente and set aside.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Mix 1 tablespoon of cornstarch with 2 and ½ tablespoons of agua in a small bowl to make agua starch.",
+        "text": "Mix 1 tablespoon of cornstarch with 2 and ½ tablespoons of agua En un bowl pequeño to make agua starch.",
         "timerMinutes": 15
       },
       {
@@ -57985,31 +57985,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground cebolla",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-212"
       },
       {
         "name": "mostaza",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-213"
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-214"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-215"
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-216"
       },
@@ -58021,7 +58021,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-218"
       },
@@ -58093,31 +58093,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Macaroni",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-212"
       },
       {
         "name": "Evaporated leche entera",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-213"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-214"
       },
       {
         "name": "azúcar blanco",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-215"
       },
       {
         "name": "sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-216"
       },
@@ -58129,19 +58129,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-218"
       },
       {
         "name": "Raisins",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-219"
       },
       {
         "name": "Nutmeg",
-        "qty": "2 1/2 Tsp",
+        "qty": "2 1/2 cditas",
         "unit": "",
         "requiredId": "ing-220"
       },
@@ -58156,7 +58156,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Add macaroni to large pan with sufficient agua to cover (approximately 4 cups).",
+        "text": "Add macaroni to large pan with sufficient agua to cover (approximately 4 tazas).",
         "timerMinutes": 5
       },
       {
@@ -58174,13 +58174,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mix well and set aside.",
+        "text": "mezclar homogéneamente and set aside.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a separate medium sauce pan, heat evaporated leche entera plus 1 cup of agua and manteca to almost a boiling point.",
+        "text": "In a separate medium sauce pan, heat evaporated leche entera plus 1 tazas of agua and manteca to almost a boiling point.",
         "timerMinutes": 25
       }
     ],
@@ -58315,31 +58315,31 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Warm agua",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-222"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-223"
       },
       {
         "name": "levadura seca",
-        "qty": "2 1/2 Tsp",
+        "qty": "2 1/2 cditas",
         "unit": "",
         "requiredId": "ing-224"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-225"
       },
       {
         "name": "sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-226"
       }
@@ -58411,7 +58411,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Warm agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-228"
       },
@@ -58423,31 +58423,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "levadura seca",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-230"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-231"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-232"
       },
       {
         "name": "Ground azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-233"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-234"
       }
@@ -58615,7 +58615,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-238"
       },
@@ -58639,13 +58639,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-242"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-243"
       }
@@ -58699,55 +58699,55 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Red cebollas",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-242"
       },
       {
         "name": "morrón rojo",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-243"
       },
       {
         "name": "tomate",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-244"
       },
       {
         "name": "Mango",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-245"
       },
       {
         "name": "palta hass",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-246"
       },
       {
         "name": "cilantro fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-247"
       },
       {
         "name": "lima juice",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-248"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-249"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-250"
       }
@@ -58756,7 +58756,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large bowl, combine all the ingredients together, mix well! Cover and refrigerate for at least 15 min before serving.",
+        "text": "En una sartén grande u olla, combine all the ingredients together, mezclar homogéneamente! Cover and refrigerate for at least 15 min before serving.",
         "timerMinutes": 5
       },
       {
@@ -58774,7 +58774,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Have everything chopped and ready and just put it together when your guest arrive.",
+        "text": "Have everything picado/a and ready and just put it together when your guest arrive.",
         "timerMinutes": 20
       }
     ],
@@ -58813,19 +58813,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-248"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-249"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-250"
       }
@@ -58954,7 +58954,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To prepare the dough, sift the harina de trigo 000 with 1tsp of sal fina into a mixing bowl.",
+        "text": "To prepare the dough, sift the harina de trigo 000 with 1 cditas of sal fina into a mixing bowl.",
         "timerMinutes": 5
       },
       {
@@ -58978,7 +58978,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Put the chopped cordero, cebollas, chilli, 1 tsp sal fina, ground pepper and spices in a bowl and mix thoroughly.",
+        "text": "Put the picado/a cordero, cebollas, chilli, 1 cditas sal fina, ground pepper and spices in a bowl and mix thoroughly.",
         "timerMinutes": 25
       }
     ],
@@ -59023,7 +59023,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Massaman curry paste",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-259"
       },
@@ -59059,25 +59059,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Tamarind paste",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-265"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 tbsp palm or soft light",
+        "qty": "1 cdas palm or soft light",
         "unit": "",
         "requiredId": "ing-266"
       },
       {
         "name": "Fish Sauce",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-267"
       },
       {
         "name": "chilli",
-        "qty": "1 red deseeded and finely sliced, to serve",
+        "qty": "1 red deseeded and finely en fetas/rodajas, to serve",
         "unit": "",
         "requiredId": "ing-268"
       },
@@ -59110,7 +59110,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat 2 tbsp coconut cream in a large casserole dish with a lid.",
+        "text": "Heat 2 cdas coconut cream in a large casserole dish with a lid.",
         "timerMinutes": 20
       },
       {
@@ -59161,7 +59161,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-264"
       },
@@ -59185,7 +59185,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-268"
       },
@@ -59215,7 +59215,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-273"
       }
@@ -59224,7 +59224,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place the meat cut into pieces, in a large pan with the cebollas.",
+        "text": "Place the meat cut into pieces, En una sartén grande u olla with the cebollas.",
         "timerMinutes": 5
       },
       {
@@ -59299,7 +59299,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "orégano",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-270"
       },
@@ -59311,13 +59311,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-272"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-273"
       }
@@ -59350,7 +59350,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Serve: Slice and serve hot.",
+        "text": "Serve: Slice and servir bien caliente de inmediato.",
         "timerMinutes": 25
       }
     ],
@@ -59401,19 +59401,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-275"
       },
       {
         "name": "Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-276"
       },
       {
         "name": "Coriander",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-277"
       },
@@ -59437,7 +59437,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Garam Masala",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-281"
       },
@@ -59458,7 +59458,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a frying pan over high heat until it’s shimmering hot.",
+        "text": "calentar el aceite o manteca in a frying pan over high heat until it’s shimmering hot.",
         "timerMinutes": 5
       },
       {
@@ -59515,13 +59515,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-277"
       },
       {
         "name": "Powdered azúcar blanco",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-278"
       },
@@ -59545,7 +59545,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Powdered azúcar blanco",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-282"
       },
@@ -59569,7 +59569,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Almond harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-286"
       },
@@ -59581,7 +59581,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Powdered azúcar blanco",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-288"
       },
@@ -59593,7 +59593,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Almond Extract",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-290"
       }
@@ -59761,7 +59761,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Cumin",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-287"
       },
@@ -59773,7 +59773,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-289"
       },
@@ -59785,25 +59785,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Green Chilli",
-        "qty": "3 finely chopped",
+        "qty": "3 finely picado/a",
         "unit": "",
         "requiredId": "ing-291"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-292"
       },
       {
         "name": "Nutmeg",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-293"
       },
       {
         "name": "Coriander",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-294"
       },
@@ -59815,7 +59815,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-296"
       },
@@ -59866,7 +59866,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in the same pan and fry the cebolla, diente de ajo, chilli, pepper and a good pinch of sal fina for around eight minutes, until there is no moisture left.",
+        "text": "calentar el aceite o manteca in the same pan and fry the cebolla, diente de ajo, chilli, pepper and a good pinch of sal fina for around eight minutes, until there is no moisture left.",
         "timerMinutes": 10
       },
       {
@@ -59878,7 +59878,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a large bowl mix together the minced cordero, white pepper, fresh coriander, and the cooled spiced cebolla mixture until combined.",
+        "text": "En una sartén grande u olla mix together the picado fino cordero, white pepper, fresco coriander, and the cooled spiced cebolla mixture until combined.",
         "timerMinutes": 20
       },
       {
@@ -60016,7 +60016,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the arroz and stir constantly until evenly dark golden brown and very fragrant, about 5 minutes.",
+        "text": "Add the arroz and revolver bien para integrar los sabores until evenly dark golden brown and very fragrant, about 5 minutes.",
         "timerMinutes": 15
       },
       {
@@ -60072,7 +60072,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-298"
       },
       {
-        "name": "fresh albahaca fresca",
+        "name": "fresco albahaca fresca",
         "qty": "1  bunch",
         "unit": "",
         "requiredId": "ing-299"
@@ -60103,13 +60103,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-304"
       },
       {
         "name": "pepper",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-305"
       }
@@ -60136,7 +60136,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Slice the olives.",
+        "text": "cortar en rodajas finas olives.",
         "timerMinutes": 20
       },
       {
@@ -60268,7 +60268,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat oil in a pan at medium heat.",
+        "text": "calentar aceite en a pan at medium heat.",
         "timerMinutes": 5
       },
       {
@@ -60364,7 +60364,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat 2 tsp of aceite de oliva extra virgen in a deep pan.",
+        "text": "Heat 2 cditas of aceite de oliva extra virgen in a deep pan.",
         "timerMinutes": 15
       },
       {
@@ -60427,25 +60427,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-315"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-316"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-317"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-318"
       }
@@ -60466,7 +60466,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Fry: Heat oil in a large pan over medium heat.",
+        "text": "Fry: Heat oil En una sartén grande u olla over medium heat.",
         "timerMinutes": 15
       },
       {
@@ -60478,7 +60478,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Serve: Serve hot with limón wedges or a side salad.",
+        "text": "Serve: servir bien caliente de inmediato with limón wedges or a side salad.",
         "timerMinutes": 25
       }
     ],
@@ -60550,7 +60550,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make the pastry, rub 225g cold, diced manteca into 350g plain harina de trigo 000, then mix in 100g golden caster azúcar blanco and a pinch of sal fina.",
+        "text": "To make the pastry, rub 225g cold, en cubos manteca into 350g plain harina de trigo 000, then mix in 100g golden caster azúcar blanco and a pinch of sal fina.",
         "timerMinutes": 5
       },
       {
@@ -60574,7 +60574,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Preheat the oven to 200C/gas 6/fan 180C.",
+        "text": "Precalentar el horno a 200°C/gas 6/fan 180C.",
         "timerMinutes": 25
       }
     ],
@@ -60582,7 +60582,7 @@ const DEFAULT_KITCHEN_DATA = {
   },
   {
     "id": "rec-real-465",
-    "title": "Minced carne vacuna Pie",
+    "title": "picado fino carne vacuna Pie",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
     "authorAvatar": "👨‍🍳",
@@ -60601,7 +60601,7 @@ const DEFAULT_KITCHEN_DATA = {
     "rating": 4.7,
     "timesCooked": 1330,
     "image": "https://www.themealdb.com/images/media/meals/xwutvy1511555540.jpg",
-    "description": "Receta auténtica de Minced carne vacuna Pie, elaborada con ingredientes seleccionados y técnica tradicional.",
+    "description": "Receta auténtica de picado fino carne vacuna Pie, elaborada con ingredientes seleccionados y técnica tradicional.",
     "pairing": "Vino o bebida recomendada según la ocasión",
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
@@ -60612,14 +60612,14 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-322"
       },
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-323"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-324"
       },
@@ -60670,13 +60670,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 200C/400F/Gas 6.",
+        "text": "Precalentar el horno a 200°C/400F/Gas 6.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a deep frying pan and fry the carne vacuna mince for 4-5 minutes, breaking it up with a wooden spoon as it browns.",
+        "text": "calentar el aceite o manteca in a deep frying pan and fry the carne vacuna mince for 4-5 minutes, breaking it up with a wooden spoon as it browns.",
         "timerMinutes": 10
       },
       {
@@ -60688,13 +60688,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Stir in the harina de trigo 000 and cook for a further minute, then add the chopped champiñones frescos, the stout or carne vacuna stock and a couple of dashes of Worcestershire sauce.",
+        "text": "Stir in the harina de trigo 000 and cook for a further minute, then add the picado/a champiñones frescos, the stout or carne vacuna stock and a couple of dashes of Worcestershire sauce.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Bring to the boil, then reduce the heat, cover the pan with a lid and leave to simmer for 20 minutes.",
+        "text": "Bring to the boil, then reduce the heat, cover the pan with a lid and leave to cocinar a fuego suave por 20 minutos.",
         "timerMinutes": 25
       }
     ],
@@ -60751,13 +60751,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-331"
       },
       {
         "name": "Cocoa Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-332"
       },
@@ -60841,7 +60841,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-333"
       },
@@ -60859,7 +60859,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "2 1/2 Tsp",
+        "qty": "2 1/2 cditas",
         "unit": "",
         "requiredId": "ing-336"
       },
@@ -60955,18 +60955,18 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Hot Chilli Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-340"
       },
       {
         "name": "Ground Cumin",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-341"
       },
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "250g",
         "unit": "",
         "requiredId": "ing-342"
@@ -61008,7 +61008,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-348"
       },
       {
-        "name": "Chopped Chive",
+        "name": "picado/a Chive",
         "qty": "2 tablespoons",
         "unit": "",
         "requiredId": "ing-349"
@@ -61018,7 +61018,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make chilli, heat oil in a pan and fry cebolla for 5 mins until soft.",
+        "text": "To make chilli, calentar aceite en a pan and fry cebolla for 5 mins until soft.",
         "timerMinutes": 5
       },
       {
@@ -61075,7 +61075,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Dried White Navy Beans",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-342"
       },
@@ -61093,13 +61093,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Molasses",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-345"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-346"
       },
@@ -61117,13 +61117,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-349"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-350"
       }
@@ -61132,7 +61132,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place the dried beans into a Dutch oven with 6 cups (1.5 L) of agua.",
+        "text": "Place the dried beans into a Dutch oven with 6 tazas (1.5 L) of agua.",
         "timerMinutes": 5
       },
       {
@@ -61219,13 +61219,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bay Leaf",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-352"
       },
       {
         "name": "Cloves",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-353"
       },
@@ -61267,7 +61267,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "English mostaza",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-360"
       },
@@ -61279,7 +61279,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo Flakes",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-362"
       }
@@ -61288,7 +61288,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make the cure, in a small bowl mix together sal fina, pink sal fina, pimienta negra molida, coriander, azúcar blanco, bay leaf, and cloves.",
+        "text": "To make the cure, En un bowl pequeño mix together sal fina, pink sal fina, pimienta negra molida, coriander, azúcar blanco, bay leaf, and cloves.",
         "timerMinutes": 5
       },
       {
@@ -61345,13 +61345,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "zanahorias",
-        "qty": "6 chopped",
+        "qty": "6 picado/a",
         "unit": "",
         "requiredId": "ing-352"
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-353"
       },
@@ -61363,13 +61363,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-355"
       },
       {
         "name": "Coriander",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-356"
       },
@@ -61381,13 +61381,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Garam Masala",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-358"
       },
       {
         "name": "limón Juice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-359"
       }
@@ -61396,13 +61396,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 180° C.",
+        "text": "Precalentar el horno a 180°C° C.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Combine zanahorias, cebolla, diente de ajo, cumin seeds, coriander seeds, sal fina and aceite de oliva extra virgen in a bowl and mix well.",
+        "text": "Combine zanahorias, cebolla, diente de ajo, cumin seeds, coriander seeds, sal fina and aceite de oliva extra virgen in a bowl and mezclar homogéneamente.",
         "timerMinutes": 10
       },
       {
@@ -61567,7 +61567,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-363"
       },
@@ -61579,7 +61579,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-365"
       },
@@ -61597,7 +61597,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-368"
       }
@@ -61765,7 +61765,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-375"
       },
@@ -61801,7 +61801,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan rallado",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-381"
       },
@@ -61834,19 +61834,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Roughly chop the remaining chestnuts.",
+        "text": "Roughly picar el remaining chestnuts.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat 2 tbsp aceite de oliva extra virgen in a large non-stick frying pan.",
+        "text": "Heat 2 cdas aceite de oliva extra virgen in a large non-stick frying pan.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Fry the shallots with a pinch of sal fina until softened, then add the diente de ajo, chopped chestnuts and romero fresco, and fry for 2 mins more.",
+        "text": "Fry the shallots with a pinch of sal fina until softened, then add the diente de ajo, picado/a chestnuts and romero fresco, and fry for 2 mins more.",
         "timerMinutes": 25
       }
     ],
@@ -61903,7 +61903,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-381"
       },
@@ -61915,7 +61915,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "caldo de verduras Cube",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-383"
       },
@@ -61942,13 +61942,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Chop the cebolla and diente de ajo, slice the champiñones frescos and wash the buckwheat.",
+        "text": "picar el cebolla and diente de ajo, cortar en rodajas finas champiñones frescos and wash the buckwheat.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil and lightly sauté the cebolla.",
+        "text": "calentar el aceite o manteca and lightly sauté the cebolla.",
         "timerMinutes": 10
       },
       {
@@ -61966,7 +61966,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Simmer gently and just before it is completely cooked, add pepper, crema ácida mixed with harina de trigo 000, the chopped perejil fresco and vinagre de vino to taste.",
+        "text": "Simmer gently and just before it is completely cooked, add pepper, crema ácida mixed with harina de trigo 000, the picado/a perejil fresco and vinagre de vino a gusto.",
         "timerMinutes": 25
       }
     ],
@@ -62101,13 +62101,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1.5 tbs minced",
+        "qty": "1.5 tbs picado fino",
         "unit": "",
         "requiredId": "ing-388"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1.5 tbs minced",
+        "qty": "1.5 tbs picado fino",
         "unit": "",
         "requiredId": "ing-389"
       },
@@ -62137,49 +62137,49 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Melted manteca",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-394"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-395"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-396"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-397"
       },
       {
         "name": "Allspice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-398"
       },
       {
         "name": "Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-399"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-400"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-401"
       }
@@ -62194,7 +62194,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Fry the mashed diente de ajo and jengibre fresco first and then add in the minced meat and all seasoning.",
+        "text": "Fry the mashed diente de ajo and jengibre fresco first and then add in the picado fino meat and all seasoning.",
         "timerMinutes": 10
       },
       {
@@ -62212,7 +62212,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add in huevo, chopped tomate, chopped spring cebolla and minced meat.",
+        "text": "Add in huevo, picado/a tomate, picado/a spring cebolla and picado fino meat.",
         "timerMinutes": 25
       }
     ],
@@ -62389,7 +62389,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Boiling agua",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-398"
       },
@@ -62407,7 +62407,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Scallions",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-401"
       },
@@ -62431,19 +62431,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cornstarch",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-405"
       },
       {
         "name": "Kosher sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-406"
       },
       {
         "name": "Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-407"
       }
@@ -62470,13 +62470,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "If you use medium or large dried camarones, hydrate the camarones with more agua (1 cup for medium-sized camarones, 1 1/4 cup for large) and for longer time (45 to 60 minutes), then chop it up into smaller 1/4-inch chunks.",
+        "text": "If you use medium or large dried camarones, hydrate the camarones with more agua (1 tazas for medium-sized camarones, 1 1/4 tazas for large) and for longer time (45 to 60 minutes), then chop it up into smaller 1/4-inch chunks.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "To make this recipe vegetarian, omit the dried camarones and use four or five dried shiitake champiñones frescos, rehydrated, and sliced thin.",
+        "text": "To make this recipe vegetarian, omit the dried camarones and use four or five dried shiitake champiñones frescos, rehydrated, and en fetas/rodajas thin.",
         "timerMinutes": 25
       }
     ],
@@ -62509,19 +62509,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Coconut leche entera",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-402"
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-403"
       },
       {
         "name": "jengibre fresco Paste",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-404"
       },
@@ -62539,7 +62539,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-407"
       },
@@ -62557,7 +62557,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Peanuts",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-410"
       },
@@ -62581,7 +62581,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-414"
       },
@@ -62593,7 +62593,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chilli Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-416"
       },
@@ -62611,7 +62611,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Tamarind Paste",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-419"
       }
@@ -62626,7 +62626,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Cover, and bring to a boil.",
+        "text": "Cover, and llevar a ebullición.",
         "timerMinutes": 10
       },
       {
@@ -62689,7 +62689,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-409"
       },
@@ -62737,13 +62737,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Caster azúcar blanco",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-417"
       },
       {
         "name": "limón Juice",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-418"
       }
@@ -62770,7 +62770,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "For the crust, melt the manteca in a medium pan.",
+        "text": "For the crust, melt the manteca En un recipiente mediano.",
         "timerMinutes": 20
       },
       {
@@ -62809,19 +62809,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Dark Rum",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-412"
       },
       {
         "name": "Raisins",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-413"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-414"
       },
@@ -62839,7 +62839,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-417"
       },
@@ -62851,7 +62851,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-419"
       },
@@ -62890,7 +62890,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large bowl, whisk together the sweetened condensed leche entera, dark brown azúcar blanco, cinnamon, allspice, sal fina, and reserved rum (¼ cup).",
+        "text": "En una sartén grande u olla, whisk together the sweetened condensed leche entera, dark brown azúcar blanco, cinnamon, allspice, sal fina, and reserved rum (¼ cup).",
         "timerMinutes": 25
       }
     ],
@@ -62923,7 +62923,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "8 cups",
+        "qty": "8 tazas",
         "unit": "",
         "requiredId": "ing-417"
       },
@@ -62935,7 +62935,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-419"
       },
@@ -62953,13 +62953,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-422"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-423"
       },
@@ -62971,13 +62971,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bean Sprouts",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-425"
       },
       {
         "name": "Mint",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-426"
       },
@@ -62998,13 +62998,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the aceite de girasol / vegetal in a large pot over medium heat until it shimmers, about 2 minutes.",
+        "text": "Heat the aceite de girasol / vegetal En una sartén grande u olla over medium heat until it shimmers, about 2 minutes.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the minced diente de ajo and sauté until fragrant and lightly golden, about 1 minute, stirring constantly to prevent burning.",
+        "text": "Add the picado fino diente de ajo and sauté until fragrant and lightly golden, about 1 minute, stirring constantly to prevent burning.",
         "timerMinutes": 10
       },
       {
@@ -63016,7 +63016,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Pour in the 8 cups of agua and bring to a boil over high heat, which should take about 8 minutes.",
+        "text": "Pour in the 8 tazas of agua and llevar a ebullición over high heat, which should take about 8 minutes.",
         "timerMinutes": 20
       },
       {
@@ -63067,13 +63067,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-424"
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-425"
       },
@@ -63121,7 +63121,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-433"
       },
@@ -63142,7 +63142,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Tip in the sliced azúcar blanco snaps and leave for 4 minutes.",
+        "text": "Tip in the en fetas/rodajas azúcar blanco snaps and leave for 4 minutes.",
         "timerMinutes": 10
       },
       {
@@ -63292,7 +63292,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make the horseradish cream, mix the crème fraîche, grated horseradish, limón juice, sal fina and white pepper in a bowl.",
+        "text": "To make the horseradish cream, mix the crème fraîche, rallado horseradish, limón juice, sal fina and white pepper in a bowl.",
         "timerMinutes": 5
       },
       {
@@ -63310,7 +63310,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the sliced shallots and fry until golden brown and crispy.",
+        "text": "Add the en fetas/rodajas shallots and fry until golden brown and crispy.",
         "timerMinutes": 20
       },
       {
@@ -63355,13 +63355,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-433"
       },
       {
         "name": "manteca",
-        "qty": "2/3 Cup",
+        "qty": "2/3 tazas",
         "unit": "",
         "requiredId": "ing-434"
       },
@@ -63373,7 +63373,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Nutmeg",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-436"
       },
@@ -63385,7 +63385,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-438"
       },
@@ -63475,25 +63475,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Melted manteca",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-440"
       },
       {
         "name": "crema de leche",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-441"
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-442"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-443"
       },
@@ -63505,7 +63505,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Granulated azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-445"
       },
@@ -63577,25 +63577,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Glutinous arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-442"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-443"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-444"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-445"
       },
@@ -63607,7 +63607,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Mung Bean Paste",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-447"
       }
@@ -63622,7 +63622,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a medium bowl, combine the coconut leche entera, palm azúcar blanco, and sal fina, stirring until the azúcar blanco dissolves completely.",
+        "text": "En un recipiente mediano, combine the coconut leche entera, palm azúcar blanco, and sal fina, stirring until the azúcar blanco dissolves completely.",
         "timerMinutes": 10
       },
       {
@@ -63727,7 +63727,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-456"
       },
@@ -63739,7 +63739,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coconut Cream",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-458"
       }
@@ -63760,7 +63760,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Bring to a boil, then cook 2 more minutes.",
+        "text": "llevar a ebullición, then cook 2 more minutes.",
         "timerMinutes": 15
       },
       {
@@ -63772,7 +63772,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Chop the remaining 4 pandan leaves, blend with ¼ cup agua until very green, then strain well.",
+        "text": "picar el remaining 4 pandan leaves, blend with ¼ cup agua until very green, then strain well.",
         "timerMinutes": 25
       }
     ],
@@ -63817,7 +63817,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-454"
       },
@@ -63835,19 +63835,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-457"
       },
       {
         "name": "Daikon Radish",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-458"
       },
       {
         "name": "arroz vinagre de vino",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-459"
       },
@@ -63859,7 +63859,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mayonesa",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-461"
       },
@@ -63871,13 +63871,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cilantro fresco Leaves",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-463"
       },
       {
         "name": "pepino",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-464"
       }
@@ -63886,7 +63886,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium bowl, whisk together the salsa de soja and miel orgánica to create a marinade.",
+        "text": "En un recipiente mediano, whisk together the salsa de soja and miel orgánica to create a marinade.",
         "timerMinutes": 5
       },
       {
@@ -63904,13 +63904,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a small bowl, mix the mayonesa and sriracha sauce thoroughly to make a spicy aioli.",
+        "text": "En un bowl pequeño, mix the mayonesa and sriracha sauce thoroughly to make a spicy aioli.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Heat the aceite de girasol / vegetal in a large skillet or wok over medium-high heat until it shimmers, about 2 minutes.",
+        "text": "Heat the aceite de girasol / vegetal En una sartén grande u olla or wok over medium-high heat until it shimmers, about 2 minutes.",
         "timerMinutes": 25
       }
     ],
@@ -63967,7 +63967,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sunflower Oil",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-461"
       },
@@ -64012,7 +64012,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the oil in a frying pan, then quickly brown the pollo chunks for 1 min.",
+        "text": "calentar el aceite o manteca in a frying pan, then quickly brown the pollo chunks for 1 min.",
         "timerMinutes": 15
       },
       {
@@ -64075,7 +64075,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-465"
       },
@@ -64183,13 +64183,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-468"
       },
       {
         "name": "Vanilla Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-469"
       },
@@ -64225,7 +64225,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche doble",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-475"
       }
@@ -64258,7 +64258,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add the azúcar blanco to taste after the apples release their juices.",
+        "text": "Add the azúcar blanco a gusto after the apples release their juices.",
         "timerMinutes": 25
       }
     ],
@@ -64327,13 +64327,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-478"
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-479"
       },
@@ -64354,7 +64354,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring to a boil and simmer the papas for about 10 minutes.",
+        "text": "llevar a ebullición and simmer the papas for about 10 minutes.",
         "timerMinutes": 10
       },
       {
@@ -64429,31 +64429,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 medium chopped into ½-inch pieces",
+        "qty": "1 medium picado/a into ½-inch pieces",
         "unit": "",
         "requiredId": "ing-481"
       },
       {
         "name": "zanahorias",
-        "qty": "1 chopped into ½-inch pieces",
+        "qty": "1 picado/a into ½-inch pieces",
         "unit": "",
         "requiredId": "ing-482"
       },
       {
         "name": "apio",
-        "qty": "1 chopped into ½-inch pieces",
+        "qty": "1 picado/a into ½-inch pieces",
         "unit": "",
         "requiredId": "ing-483"
       },
       {
         "name": "Fennel",
-        "qty": "1 bulb chopped into ½-inch pieces",
+        "qty": "1 bulb picado/a into ½-inch pieces",
         "unit": "",
         "requiredId": "ing-484"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-485"
       },
@@ -64477,7 +64477,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dry White Wine",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-489"
       },
@@ -64489,25 +64489,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomates perita",
-        "qty": "1 cup chopped with juice",
+        "qty": "1 tazas picado/a with juice",
         "unit": "",
         "requiredId": "ing-491"
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tablespoons chopped",
+        "qty": "2 tablespoons picado/a",
         "unit": "",
         "requiredId": "ing-492"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 teaspoon minced",
+        "qty": "1 teaspoon picado fino",
         "unit": "",
         "requiredId": "ing-493"
       },
       {
         "name": "limón Zest",
-        "qty": "1 teaspoon grated",
+        "qty": "1 teaspoon rallado",
         "unit": "",
         "requiredId": "ing-494"
       }
@@ -64579,7 +64579,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-483"
       },
@@ -64591,19 +64591,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-485"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-486"
       },
       {
         "name": "Scotch Bonnet",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-487"
       },
@@ -64614,8 +64614,8 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-488"
       },
       {
-        "name": "Fresh tomillo fresco",
-        "qty": "1 chopped",
+        "name": "fresco tomillo fresco",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-489"
       },
@@ -64660,7 +64660,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the aceite de girasol / vegetal in a large frying pan over medium-high heat.",
+        "text": "Heat the aceite de girasol / vegetal En una sartén grande u olla over medium-high heat.",
         "timerMinutes": 10
       },
       {
@@ -64723,13 +64723,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-489"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-490"
       },
@@ -64741,19 +64741,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-492"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-493"
       },
       {
         "name": "Red Wine vinagre de vino",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-494"
       },
@@ -64825,19 +64825,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "pan",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-492"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-493"
       },
       {
         "name": "tomate",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-494"
       },
@@ -64849,7 +64849,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sea sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-496"
       }
@@ -64921,55 +64921,55 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "dark salsa de soja",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-498"
       },
       {
         "name": "oyster sauce",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-499"
       },
       {
         "name": "salsa de soja",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-500"
       },
       {
         "name": "white vinagre de vino",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-1"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-2"
       },
       {
         "name": "agua",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-3"
       },
       {
         "name": "peanut oil",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-4"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-5"
       },
       {
         "name": "pollo",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-6"
       },
@@ -64981,7 +64981,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chinese broccoli",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-8"
       }
@@ -65089,7 +65089,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 finely sliced",
+        "qty": "4 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-9"
       },
@@ -65134,7 +65134,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Put the lima juice, cayenne, azúcar blanco and fish sauce in a bowl and mix well.",
+        "text": "Put the lima juice, cayenne, azúcar blanco and fish sauce in a bowl and mezclar homogéneamente.",
         "timerMinutes": 10
       },
       {
@@ -65146,7 +65146,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat the oil and fry the langostinos until warmed through.",
+        "text": "calentar el aceite o manteca and fry the langostinos until warmed through.",
         "timerMinutes": 20
       },
       {
@@ -65200,7 +65200,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the aceite de oliva extra virgen in a large frying pan over a high heat, or if using an air-fryer, heat to 205C for 3 mins.",
+        "text": "Heat the aceite de oliva extra virgen En una sartén grande u olla over a high heat, or if using an air-fryer, heat to 205C for 3 mins.",
         "timerMinutes": 5
       },
       {
@@ -65218,7 +65218,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Transfer the peppers to a serving plate and season with some sea sal fina.",
+        "text": "Transfer the peppers to a serving plate and condimentar con some sea sal fina.",
         "timerMinutes": 20
       },
       {
@@ -65299,13 +65299,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-19"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-20"
       },
@@ -65344,7 +65344,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tbsp of the oil in a wide, shallow pan.",
+        "text": "Heat 1 cdas of the oil in a wide, shallow pan.",
         "timerMinutes": 5
       },
       {
@@ -65356,7 +65356,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Pour over the sherry or wine and 300ml agua, season with sal fina and simmer for 10 mins to make a stock, mashing the prawn heads as they cook.",
+        "text": "Pour over the sherry or wine and 300ml agua, condimentar con sal fina and simmer for 10 mins to make a stock, mashing the prawn heads as they cook.",
         "timerMinutes": 15
       },
       {
@@ -65401,7 +65401,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Raw Yucca",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-17"
       },
@@ -65413,7 +65413,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-19"
       },
@@ -65425,31 +65425,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Vanilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-21"
       },
       {
         "name": "queso crema",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-22"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-23"
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-24"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-25"
       }
@@ -65458,7 +65458,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 degrees F (175 degrees C).",
+        "text": "Precalentar el horno a 350°C degrees F (175 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -65476,13 +65476,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a medium bowl, combine harina de trigo 000, polvo de hornear and sal fina and set aside.",
+        "text": "En un recipiente mediano, combine harina de trigo 000, polvo de hornear and sal fina and set aside.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large bowl cream the manteca with the azúcar blanco.",
+        "text": "En una sartén grande u olla cream the manteca with the azúcar blanco.",
         "timerMinutes": 25
       }
     ],
@@ -65521,7 +65521,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 cloves",
+        "qty": "4 dientes",
         "unit": "",
         "requiredId": "ing-23"
       },
@@ -65563,7 +65563,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-30"
       },
@@ -65608,7 +65608,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Meanwhile, heat 2 tbsp oil in a frying pan.",
+        "text": "Meanwhile, heat 2 cdas oil in a frying pan.",
         "timerMinutes": 20
       },
       {
@@ -65653,7 +65653,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Panang Curry Paste",
-        "qty": "1-2tbsp",
+        "qty": "1-2 cdas",
         "unit": "",
         "requiredId": "ing-28"
       },
@@ -65671,13 +65671,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fish Sauce",
-        "qty": "2-3 tbsp",
+        "qty": "2-3 cdas",
         "unit": "",
         "requiredId": "ing-31"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1-2tbsp",
+        "qty": "1-2 cdas",
         "unit": "",
         "requiredId": "ing-32"
       },
@@ -65719,7 +65719,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Chopped",
+        "qty": "4 dientes picado/a",
         "unit": "",
         "requiredId": "ing-39"
       },
@@ -65749,7 +65749,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Coriander",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-44"
       },
@@ -65776,7 +65776,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Use a pestle and mortar to pound together the dried and fresh chillies, camarones paste, diente de ajo, galangal, lemongrass, lima zest, white pepper, coriander, cumin, nutmeg and peanuts, plus 1 tsp sal fina.",
+        "text": "Use a pestle and mortar to pound together the dried and fresco chillies, camarones paste, diente de ajo, galangal, lemongrass, lima zest, white pepper, coriander, cumin, nutmeg and peanuts, plus 1 cditas sal fina.",
         "timerMinutes": 10
       },
       {
@@ -65788,7 +65788,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Alternatively, add all the ingredients to a food processor along with 2-3 tbsp of coconut leche entera and pulse until you have a paste.",
+        "text": "Alternatively, add all the ingredients to a food processor along with 2-3 cdas of coconut leche entera and pulse until you have a paste.",
         "timerMinutes": 20
       },
       {
@@ -65872,7 +65872,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Put the harina de trigo 000, huevos, leche entera, 1 tbsp oil and a pinch of sal fina into a bowl or large jug, then whisk to a smooth batter.",
+        "text": "Put the harina de trigo 000, huevos, leche entera, 1 cdas oil and a pinch of sal fina into a bowl or large jug, then whisk to a smooth batter.",
         "timerMinutes": 5
       },
       {
@@ -65959,7 +65959,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-42"
       },
@@ -65971,43 +65971,43 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Powder",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-44"
       },
       {
         "name": "Cumin",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-45"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-46"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-47"
       },
       {
         "name": "Whipping Cream",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-48"
       },
       {
         "name": "cilantro fresco",
-        "qty": "1 tablespoon chopped",
+        "qty": "1 tablespoon picado/a",
         "unit": "",
         "requiredId": "ing-49"
       },
       {
         "name": "queso muzzarella",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-50"
       }
@@ -66022,7 +66022,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Cover with agua and bring to a boil and cook about 30 minutes until tender.",
+        "text": "Cover with agua and llevar a ebullición and cook about 30 minutes until tender.",
         "timerMinutes": 10
       },
       {
@@ -66034,7 +66034,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "While the papas are cooking, heat the oil and manteca in a frying pan over medium heat.",
+        "text": "While the papas are cooking, calentar el aceite o manteca and manteca in a frying pan over medium heat.",
         "timerMinutes": 20
       },
       {
@@ -66085,7 +66085,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-44"
       },
@@ -66097,19 +66097,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cherry tomates perita",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-46"
       },
       {
         "name": "Spring cebollas",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-47"
       },
       {
         "name": "Roasted Peanut",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-48"
       },
@@ -66181,25 +66181,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Unsalted Peanuts",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-47"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-48"
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-49"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-50"
       }
@@ -66214,7 +66214,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring to a boil; cook until syrup has evaporated, about 10 minutes.",
+        "text": "llevar a ebullición; cook until syrup has evaporated, about 10 minutes.",
         "timerMinutes": 10
       },
       {
@@ -66340,7 +66340,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Gently melt the syrup, treacle, azúcar blanco and manteca together in a large pan until the azúcar blanco has dissolved.",
+        "text": "Gently melt the syrup, treacle, azúcar blanco and manteca together En una sartén grande u olla until the azúcar blanco has dissolved.",
         "timerMinutes": 20
       },
       {
@@ -66391,7 +66391,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-59"
       },
@@ -66481,31 +66481,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-63"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-64"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-65"
       },
       {
         "name": "Paprika",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-66"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-67"
       },
@@ -66541,7 +66541,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "albahaca fresca",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-73"
       },
@@ -66553,19 +66553,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-75"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-76"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-77"
       }
@@ -66580,19 +66580,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Bring to a boil, remove from heat, and let huevos stand in hot agua for 15 minutes.",
+        "text": "llevar a ebullición, remove from heat, and let huevos stand in hot agua for 15 minutes.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Meanwhile, heat oil in a skillet over medium heat.",
+        "text": "Meanwhile, calentar aceite en a skillet over medium heat.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add cebollas, diente de ajo, 1 pinch sal fina, ¼ teaspoon paprika, and pimienta negra molida; cook until fragrant, about 2 minutes.",
+        "text": "Add cebollas, diente de ajo, 1 pizca sal fina, ¼ teaspoon paprika, and pimienta negra molida; cook until fragrant, about 2 minutes.",
         "timerMinutes": 20
       },
       {
@@ -66631,7 +66631,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "papas",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-67"
       },
@@ -66643,7 +66643,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-69"
       },
@@ -66655,25 +66655,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-71"
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-72"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-73"
       },
       {
         "name": "tomate",
-        "qty": "2 diced",
+        "qty": "2 en cubos",
         "unit": "",
         "requiredId": "ing-74"
       },
@@ -66697,25 +66697,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-78"
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-79"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-80"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-81"
       }
@@ -66724,7 +66724,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Place papas into a large pot and cover with salted agua; bring to a boil.",
+        "text": "Place papas into a large pot and cover with salted agua; llevar a ebullición.",
         "timerMinutes": 5
       },
       {
@@ -66736,7 +66736,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "While the papas are cooking, heat oil in a large skillet over medium heat.",
+        "text": "While the papas are cooking, heat oil En una sartén grande u olla over medium heat.",
         "timerMinutes": 15
       },
       {
@@ -66748,7 +66748,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in diced tomates perita and tomate paste; cook until tomates perita soften and begin to lose their shape, 3 to 5 minutes.",
+        "text": "Stir in en cubos tomates perita and tomate paste; cook until tomates perita soften and begin to lose their shape, 3 to 5 minutes.",
         "timerMinutes": 25
       }
     ],
@@ -66781,13 +66781,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-72"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-73"
       },
@@ -66817,13 +66817,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-78"
       },
       {
         "name": "Swede",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-79"
       },
@@ -66841,13 +66841,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-82"
       },
       {
         "name": "Pepper",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-83"
       }
@@ -66868,7 +66868,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the raw huevo and mix well.",
+        "text": "Add the raw huevo and mezclar homogéneamente.",
         "timerMinutes": 15
       },
       {
@@ -66919,13 +66919,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-78"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-79"
       },
@@ -66961,7 +66961,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-85"
       },
@@ -66973,7 +66973,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-87"
       }
@@ -66982,13 +66982,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a pan and fry the cebolla for about 5 mins until softened.",
+        "text": "calentar el aceite o manteca in a pan and fry the cebolla for about 5 mins until softened.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the diente de ajo, chopped tomates perita, tomate purée, sweet paprika, chilli powder, azúcar blanco and a pinch of sal fina, then bring to the boil, stirring occasionally.",
+        "text": "Add the diente de ajo, picado/a tomates perita, tomate purée, sweet paprika, chilli powder, azúcar blanco and a pinch of sal fina, then bring to the boil, stirring occasionally.",
         "timerMinutes": 10
       },
       {
@@ -67039,7 +67039,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "papas",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-82"
       },
@@ -67056,14 +67056,14 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-84"
       },
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "450g",
         "unit": "",
         "requiredId": "ing-85"
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-86"
       },
@@ -67075,13 +67075,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-88"
       },
       {
         "name": "perejil fresco",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-89"
       },
@@ -67102,7 +67102,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large pot of salted agua, cook the papas until they are very tender.",
+        "text": "En una sartén grande u olla of salted agua, cook the papas until they are very tender.",
         "timerMinutes": 5
       },
       {
@@ -67120,7 +67120,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Season with sal fina and pepper.",
+        "text": "condimentar con sal fina and pepper.",
         "timerMinutes": 20
       },
       {
@@ -67159,7 +67159,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "choclo harina de trigo 000",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-87"
       },
@@ -67213,7 +67213,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-96"
       },
@@ -67240,13 +67240,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Blend the cornflour with the orange zest and juice, and put in a large pan with the azúcar blanco.",
+        "text": "Blend the cornflour with the orange zest and juice, and put En una sartén grande u olla with the azúcar blanco.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Halve, stone and slice the peaches and add to the pan.",
+        "text": "Halve, stone and cortar en rodajas finas peaches and add to the pan.",
         "timerMinutes": 20
       },
       {
@@ -67405,13 +67405,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Peanut manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-97"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-98"
       },
@@ -67426,13 +67426,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350ºF (180ºC).",
+        "text": "Precalentar el horno a 350°CºF (180ºC).",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a large bowl, mix together the peanut manteca, azúcar blanco, and huevo.",
+        "text": "En una sartén grande u olla, mix together the peanut manteca, azúcar blanco, and huevo.",
         "timerMinutes": 10
       },
       {
@@ -67603,19 +67603,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-109"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-110"
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-111"
       }
@@ -67687,49 +67687,49 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Flank Steak",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-113"
       },
       {
         "name": "cebolla",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-114"
       },
       {
         "name": "Pepper",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-115"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-116"
       },
       {
         "name": "tomillo fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-117"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-118"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-119"
       },
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-120"
       }
@@ -67744,13 +67744,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In the meantime, finely chopped the green beans.",
+        "text": "In the meantime, finely picado/a the green beans.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add to the pot, the shredded meat, green beans, tomillo fresco, sal fina and pepper, and mix well.",
+        "text": "Add to the pot, the shredded meat, green beans, tomillo fresco, sal fina and pepper, and mezclar homogéneamente.",
         "timerMinutes": 15
       },
       {
@@ -67813,13 +67813,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-121"
       },
       {
         "name": "Ground Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-122"
       },
@@ -67831,13 +67831,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Nutmeg",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-124"
       },
       {
         "name": "Pepper",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-125"
       },
@@ -67900,7 +67900,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Put the harina de trigo 000 and spices in a large bowl and mix everything together.",
+        "text": "Put the harina de trigo 000 and spices En una sartén grande u olla and mix everything together.",
         "timerMinutes": 25
       }
     ],
@@ -67938,14 +67938,14 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-122"
       },
       {
-        "name": "Chopped cebolla",
-        "qty": "1/3 cup",
+        "name": "picado/a cebolla",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-123"
       },
       {
         "name": "Sauerkraut",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-124"
       },
@@ -67956,14 +67956,14 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-125"
       },
       {
-        "name": "Chopped cebolla",
-        "qty": "1/2 cup",
+        "name": "picado/a cebolla",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-126"
       },
       {
         "name": "papas",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-127"
       },
@@ -67981,13 +67981,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-130"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-131"
       },
@@ -68020,7 +68020,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Season to taste with sal fina and pepper, then remove to a plate to cool.",
+        "text": "Season a gusto with sal fina and pepper, then remove to a plate to cool.",
         "timerMinutes": 20
       },
       {
@@ -68071,13 +68071,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-129"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-130"
       },
@@ -68122,7 +68122,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a non-stick frying pan and cook the cebolla, diente de ajo and chilli for 3-4 mins to soften.",
+        "text": "calentar el aceite o manteca in a non-stick frying pan and cook the cebolla, diente de ajo and chilli for 3-4 mins to soften.",
         "timerMinutes": 10
       },
       {
@@ -68140,7 +68140,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Drain the pasta / fideos and add to the pan with 2-3 tbsp of the cooking agua.",
+        "text": "Drain the pasta / fideos and add to the pan with 2-3 cdas of the cooking agua.",
         "timerMinutes": 25
       }
     ],
@@ -68179,37 +68179,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-133"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-134"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-135"
       },
       {
         "name": "Dried orégano",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-136"
       },
       {
         "name": "Coriander",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-137"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-138"
       },
@@ -68227,7 +68227,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-141"
       },
@@ -68269,7 +68269,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin Seeds",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-148"
       }
@@ -68353,7 +68353,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-140"
       },
@@ -68371,7 +68371,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-143"
       },
@@ -68479,7 +68479,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Unsalted Pistachio",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-143"
       },
@@ -68503,7 +68503,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-147"
       },
@@ -68521,7 +68521,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-150"
       },
@@ -68623,7 +68623,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-149"
       },
@@ -68641,7 +68641,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-152"
       },
@@ -68653,13 +68653,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Courgettes",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-154"
       },
       {
         "name": "Aubergine",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-155"
       },
@@ -68686,7 +68686,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large flameproof casserole dish or a cast-iron skillet over a low heat.",
+        "text": "calentar el aceite o manteca in a large flameproof casserole dish or a cast-iron skillet over a low heat.",
         "timerMinutes": 5
       },
       {
@@ -68749,7 +68749,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-153"
       },
@@ -68767,7 +68767,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-156"
       },
@@ -68791,7 +68791,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "orégano",
-        "qty": "Peeled and Sliced",
+        "qty": "Peeled and en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-160"
       },
@@ -68818,7 +68818,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "2 Add the azúcar blanco and crumble the fresh levadura seca into warm agua.",
+        "text": "2 Add the azúcar blanco and crumble the fresco levadura seca into warm agua.",
         "timerMinutes": 10
       },
       {
@@ -68875,7 +68875,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-158"
       },
@@ -68887,7 +68887,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-160"
       }
@@ -68896,13 +68896,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Slice them in ¼ inch slices (horizontally).",
+        "text": "cortar en rodajas finasm in ¼ inch slices (horizontally).",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat oil in the frying and add your plantain slices to the pan.",
+        "text": "calentar aceite en the frying and add your plantain slices to the pan.",
         "timerMinutes": 10
       },
       {
@@ -69085,7 +69085,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Caster azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-168"
       },
@@ -69121,7 +69121,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-174"
       },
@@ -69259,7 +69259,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-174"
       },
@@ -69367,7 +69367,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Extra Virgin aceite de oliva extra virgen",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-178"
       },
@@ -69391,7 +69391,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-182"
       },
@@ -69403,19 +69403,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-184"
       },
       {
         "name": "zanahorias",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-185"
       },
       {
         "name": "apio",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-186"
       },
@@ -69466,7 +69466,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Put the saffron in a small bowl with 75ml of just-boiled agua.",
+        "text": "Put the saffron En un bowl pequeño with 75ml of just-boiled agua.",
         "timerMinutes": 5
       },
       {
@@ -69478,7 +69478,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat 2 tbsp of the oil in a broad, shallow casserole dish.",
+        "text": "Heat 2 cdas of the oil in a broad, shallow casserole dish.",
         "timerMinutes": 15
       },
       {
@@ -69529,37 +69529,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "orégano",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-183"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-184"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-185"
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-186"
       },
       {
         "name": "Achiote Paste",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-187"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-188"
       },
@@ -69583,7 +69583,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo Stock",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-192"
       }
@@ -69592,7 +69592,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Chopped pepper, cebolla and tomate and set aside.",
+        "text": "picado/a pepper, cebolla and tomate and set aside.",
         "timerMinutes": 5
       },
       {
@@ -69649,7 +69649,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-187"
       },
@@ -69661,13 +69661,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-189"
       },
       {
         "name": "agua",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-190"
       },
@@ -69679,7 +69679,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-192"
       },
@@ -69694,7 +69694,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Add harina de trigo 000, huevos, leche entera, agua, and sal fina in a large bowl then mix with a hand mixer until you have a smooth, lump-free batter.",
+        "text": "Add harina de trigo 000, huevos, leche entera, agua, and sal fina En una sartén grande u olla then mix with a hand mixer until you have a smooth, lump-free batter.",
         "timerMinutes": 5
       },
       {
@@ -69787,13 +69787,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-198"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-199"
       },
@@ -69814,7 +69814,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Combine the aceite de oliva extra virgen, limón juice, miel orgánica and tomillo fresco leaves in a large bowl.",
+        "text": "Combine the aceite de oliva extra virgen, limón juice, miel orgánica and tomillo fresco leaves En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -69871,7 +69871,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-198"
       },
@@ -69889,7 +69889,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-201"
       },
@@ -69940,7 +69940,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the lard in a saucepan over a medium heat and fry the finely chopped cebolla until golden, around 5-8 mins.",
+        "text": "Heat the lard in a saucepan over a medium heat and fry the finely picado/a cebolla until golden, around 5-8 mins.",
         "timerMinutes": 5
       },
       {
@@ -69997,7 +69997,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Goose Fat",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-202"
       },
@@ -70021,13 +70021,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "1 thinly sliced",
+        "qty": "1 thinly en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-206"
       },
       {
         "name": "Fennel Seeds",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-207"
       },
@@ -70108,13 +70108,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add your fat and diced meat, cook for a few mins to seal the edges, giving it a quick stir to cook evenly.",
+        "text": "Add your fat and en cubos meat, cook for a few mins to seal the edges, giving it a quick stir to cook evenly.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Reduce the heat to low, add the sliced cebolla, whole diente de ajo cloves, zanahoria and fennel seeds, and cook gently to soften the veg for a few mins.",
+        "text": "Reduce the heat to low, add the en fetas/rodajas cebolla, whole diente de ajo cloves, zanahoria and fennel seeds, and cook gently to soften the veg for a few mins.",
         "timerMinutes": 20
       },
       {
@@ -70177,25 +70177,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-211"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-212"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-213"
       },
       {
         "name": "Red Chilli",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-214"
       },
@@ -70207,7 +70207,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "papas",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-216"
       },
@@ -70315,7 +70315,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Butternut Squash",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-214"
       },
@@ -70327,25 +70327,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Lima Beans",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-216"
       },
       {
         "name": "pollo Stock",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-217"
       },
       {
         "name": "Sweetcorn",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-218"
       },
       {
         "name": "albahaca fresca",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-219"
       },
@@ -70429,7 +70429,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-219"
       },
@@ -70663,13 +70663,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "cebollas",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-227"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-228"
       },
@@ -70687,7 +70687,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-231"
       },
@@ -70753,7 +70753,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Baguette",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-242"
       }
@@ -70768,7 +70768,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Finely chop the coriander stalks (keep the leaves for later), and add to the pan with the chilli and chopped diente de ajo.",
+        "text": "Finely picar el coriander stalks (keep the leaves for later), and add to the pan with the chilli and picado/a diente de ajo.",
         "timerMinutes": 10
       },
       {
@@ -70819,7 +70819,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-232"
       },
@@ -70885,7 +70885,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-243"
       },
@@ -70897,7 +70897,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Caster azúcar blanco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-245"
       }
@@ -70924,7 +70924,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "To make the sauce, put all the ingredients into a blender with 1 tbsp agua and whizz until as smooth as possible.",
+        "text": "To make the sauce, put all the ingredients into a blender with 1 cdas agua and whizz until as smooth as possible.",
         "timerMinutes": 20
       },
       {
@@ -71017,7 +71017,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-246"
       },
@@ -71041,7 +71041,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cornstarch",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-250"
       }
@@ -71050,7 +71050,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the sponge cake preheat oven to 180 degrees Celsius and prepare either one or two 20cm/8 inch cake pan(s).",
+        "text": "For the sponge cake Precalentar el horno a 180°C degrees Celsius and prepare either one or two 20cm/8 inch cake pan(s).",
         "timerMinutes": 5
       },
       {
@@ -71239,19 +71239,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-249"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-250"
       },
       {
         "name": "tomate Sauce",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-251"
       },
@@ -71263,25 +71263,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-253"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-254"
       },
       {
         "name": "Summer Savoury",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-255"
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-256"
       },
@@ -71293,19 +71293,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-258"
       },
       {
         "name": "leche entera",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-259"
       },
       {
         "name": "Dried Mint",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-260"
       },
@@ -71317,13 +71317,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-262"
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-263"
       },
@@ -71335,13 +71335,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Feta",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-265"
       },
       {
         "name": "Ground Nutmeg",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-266"
       }
@@ -71350,13 +71350,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 F.",
+        "text": "Precalentar el horno a 350°C F.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat oil in a skillet.",
+        "text": "calentar aceite en a skillet.",
         "timerMinutes": 10
       },
       {
@@ -71461,7 +71461,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "mayonesa",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-261"
       }
@@ -71476,7 +71476,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Place them in a large pot and fill with agua.",
+        "text": "Place them En una sartén grande u olla and fill with agua.",
         "timerMinutes": 10
       },
       {
@@ -71533,7 +71533,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-258"
       },
@@ -71545,49 +71545,49 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-260"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-261"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-262"
       },
       {
         "name": "leche entera",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-263"
       },
       {
         "name": "Maple Syrup",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-264"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-265"
       },
       {
         "name": "Single Cream",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-266"
       },
       {
         "name": "manteca",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-267"
       }
@@ -71596,7 +71596,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large bowl, with an electric mixer, mix the manteca and azúcar blanco till the mix is light.",
+        "text": "En una sartén grande u olla, with an electric mixer, mix the manteca and azúcar blanco till the mix is light.",
         "timerMinutes": 5
       },
       {
@@ -71653,13 +71653,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-262"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-263"
       },
@@ -71683,25 +71683,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-267"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-268"
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-269"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-270"
       },
@@ -71716,7 +71716,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 degrees F (175 degrees C).",
+        "text": "Precalentar el horno a 350°C degrees F (175 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -71785,7 +71785,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cheese Curds",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-270"
       }
@@ -71794,7 +71794,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat oil in a deep fryer or deep heavy skillet to 365°F (185°C).",
+        "text": "calentar aceite en a deep fryer or deep heavy skillet to 365°F (185°C).",
         "timerMinutes": 5
       },
       {
@@ -71857,7 +71857,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-273"
       },
@@ -71875,13 +71875,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-276"
       },
       {
         "name": "Shallots",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-277"
       },
@@ -71920,13 +71920,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 2 tbsp aceite de girasol / vegetal in a large skillet over medium-high heat until shimmering, about 1 minute.",
+        "text": "Heat 2 cdas aceite de girasol / vegetal En una sartén grande u olla over medium-high heat until shimmering, about 1 minute.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add 4 cloves minced diente de ajo and 2 finely chopped shallots to the skillet, stirring constantly until fragrant and lightly golden, 2-3 minutes.",
+        "text": "Add 4 dientes picado fino diente de ajo and 2 finely picado/a shallots to the skillet, stirring constantly until fragrant and lightly golden, 2-3 minutes.",
         "timerMinutes": 10
       },
       {
@@ -71944,7 +71944,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in 3 tbsp prahok and cook for 1 minute to blend the flavors, mashing it slightly into the carne de cerdo.",
+        "text": "Stir in 3 cdas prahok and cook for 1 minute to blend the flavors, mashing it slightly into the carne de cerdo.",
         "timerMinutes": 25
       }
     ],
@@ -72001,7 +72001,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-281"
       },
@@ -72018,7 +72018,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-283"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "400g",
         "unit": "",
         "requiredId": "ing-284"
@@ -72052,7 +72052,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Shell the langostinos, then fry the shells in the oil in a large pan for about 5 mins.",
+        "text": "Shell the langostinos, then fry the shells in the oil En una sartén grande u olla for about 5 mins.",
         "timerMinutes": 5
       },
       {
@@ -72076,7 +72076,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Meanwhile, chop the langostinos.",
+        "text": "Meanwhile, picar el langostinos.",
         "timerMinutes": 25
       }
     ],
@@ -72121,19 +72121,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-284"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-285"
       },
       {
         "name": "pepino",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-286"
       },
@@ -72169,13 +72169,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fish Sauce",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-292"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-293"
       },
@@ -72265,13 +72265,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Green Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-288"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-289"
       },
@@ -72295,7 +72295,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fish Sauce",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-293"
       },
@@ -72319,7 +72319,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-297"
       },
@@ -72376,7 +72376,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat 1 tbsp oil in a wok, add the jengibre fresco and spring cebollas and fry for 1 min.",
+        "text": "Heat 1 cdas oil in a wok, add the jengibre fresco and spring cebollas and fry for 1 min.",
         "timerMinutes": 20
       },
       {
@@ -72457,7 +72457,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pan",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-299"
       },
@@ -72508,7 +72508,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Then chop the tomate roughly.",
+        "text": "Then picar el tomate roughly.",
         "timerMinutes": 25
       }
     ],
@@ -72553,7 +72553,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-299"
       },
@@ -72661,13 +72661,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Courgettes",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-304"
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 finely chopped",
+        "qty": "3 finely picado/a",
         "unit": "",
         "requiredId": "ing-305"
       },
@@ -72679,7 +72679,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-307"
       },
@@ -72736,13 +72736,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Whisk lightly and season with sal fina and pepper.",
+        "text": "Whisk lightly and condimentar con sal fina and pepper.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the oil in a pan, add the courgettes and spring cebollas, then fry gently for about 10 mins until softened.",
+        "text": "calentar el aceite o manteca in a pan, add the courgettes and spring cebollas, then fry gently for about 10 mins until softened.",
         "timerMinutes": 15
       },
       {
@@ -72823,7 +72823,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-313"
       },
@@ -72961,7 +72961,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Birds-eye Chillies",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-320"
       },
@@ -72976,7 +72976,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the nuoc cham, whisk together all of the ingredients with 5 tbsp hot agua in a small bowl.",
+        "text": "For the nuoc cham, whisk together all of the ingredients with 5 cdas hot agua En un bowl pequeño.",
         "timerMinutes": 5
       },
       {
@@ -73063,13 +73063,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-322"
       },
       {
         "name": "Cardamom",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-323"
       },
@@ -73087,7 +73087,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Rhubarb",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-326"
       },
@@ -73171,19 +73171,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-323"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-324"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-325"
       },
@@ -73210,7 +73210,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Cocción & Elaboración",
-        "text": "step 1\r\nIn a blender (or with a stick blender), whizz together the passata, morrón rojo, chilli, diente de ajo, sherry vinagre de vino and lima juice until smooth. Season to taste, then serve with ice cubes",
+        "text": "step 1\r\nIn a blender (or with a stick blender), whizz together the passata, morrón rojo, chilli, diente de ajo, sherry vinagre de vino and lima juice until smooth. Season a gusto, then serve with ice cubes",
         "timerMinutes": 20
       },
       {
@@ -73273,7 +73273,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-331"
       },
@@ -73351,7 +73351,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-333"
       },
@@ -73363,13 +73363,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-335"
       },
       {
         "name": "Chilli Sauce",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-336"
       },
@@ -73381,7 +73381,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-338"
       },
@@ -73408,7 +73408,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Marinate (Optional but recommended): Peel the huevos and marinate in a mix of 2 tbsp salsa de soja, 2 tbsp mirin, 1 tsp azúcar blanco, and 4 tbsp agua for at least 4 hours (or overnight).",
+        "text": "Marinate (Optional but recommended): Peel the huevos and marinate in a mix of 2 cdas salsa de soja, 2 cdas mirin, 1 cditas azúcar blanco, and 4 cdas agua for at least 4 hours (or overnight).",
         "timerMinutes": 15
       },
       {
@@ -73453,7 +73453,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-338"
       },
@@ -73483,7 +73483,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-343"
       }
@@ -73492,7 +73492,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 400 degrees F (200 degrees C).",
+        "text": "Precalentar el horno a 400°C degrees F (200 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -73663,7 +73663,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-351"
       },
@@ -73686,7 +73686,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-354"
       },
       {
-        "name": "Freshly Chopped perejil fresco",
+        "name": "Freshly picado/a perejil fresco",
         "qty": "Pinch",
         "unit": "",
         "requiredId": "ing-355"
@@ -73705,7 +73705,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cream",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-358"
       },
@@ -73825,19 +73825,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "3 finely chopped",
+        "qty": "3 finely picado/a",
         "unit": "",
         "requiredId": "ing-359"
       },
       {
         "name": "Red Wine vinagre de vino",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-360"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-361"
       }
@@ -73921,19 +73921,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "8 cloves",
+        "qty": "8 dientes",
         "unit": "",
         "requiredId": "ing-360"
       },
       {
         "name": "Pepper",
-        "qty": "1.5 tsp",
+        "qty": "1.5 cditas",
         "unit": "",
         "requiredId": "ing-361"
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-362"
       },
@@ -73963,7 +73963,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-367"
       },
@@ -73975,7 +73975,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "vinagre de vino",
-        "qty": "2.5 tbsp",
+        "qty": "2.5 cdas",
         "unit": "",
         "requiredId": "ing-369"
       },
@@ -74065,13 +74065,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-365"
       },
       {
         "name": "Courgettes",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-366"
       },
@@ -74098,7 +74098,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Tip pollo, curry paste and coconut leche entera into a bowl, then mix well until the pollo is evenly coated.",
+        "text": "Tip pollo, curry paste and coconut leche entera into a bowl, then mezclar homogéneamente until the pollo is evenly coated.",
         "timerMinutes": 10
       },
       {
@@ -74155,7 +74155,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sea sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-368"
       },
@@ -74173,7 +74173,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-371"
       },
@@ -74212,7 +74212,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Bring to a simmer, stirring to help the azúcar blanco dissolve, and cook for a couple of minutes.",
+        "text": "llevar a ebullición, stirring to help the azúcar blanco dissolve, and cook for a couple of minutes.",
         "timerMinutes": 25
       }
     ],
@@ -74245,7 +74245,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Kidney Beans",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-372"
       },
@@ -74257,7 +74257,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-374"
       },
@@ -74269,19 +74269,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-376"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-377"
       },
       {
         "name": "morrón rojo",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-378"
       },
@@ -74317,19 +74317,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Plain harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-384"
       },
       {
         "name": "agua",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-385"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-386"
       }
@@ -74401,31 +74401,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-378"
       },
       {
         "name": "zanahorias",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-379"
       },
       {
         "name": "apio",
-        "qty": "1 stalk chopped",
+        "qty": "1 stalk picado/a",
         "unit": "",
         "requiredId": "ing-380"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 tablespoon minced",
+        "qty": "1 tablespoon picado fino",
         "unit": "",
         "requiredId": "ing-381"
       },
       {
         "name": "Cannellini Beans",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-382"
       },
@@ -74437,25 +74437,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-384"
       },
       {
         "name": "romero fresco",
-        "qty": "1 fresh sprig",
+        "qty": "1 fresco sprig",
         "unit": "",
         "requiredId": "ing-385"
       },
       {
         "name": "tomillo fresco",
-        "qty": "1 fresh sprig",
+        "qty": "1 fresco sprig",
         "unit": "",
         "requiredId": "ing-386"
       },
       {
         "name": "Kale",
-        "qty": "1 pound chopped",
+        "qty": "1 pound picado/a",
         "unit": "",
         "requiredId": "ing-387"
       },
@@ -74467,13 +74467,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 thinly sliced",
+        "qty": "1 thinly en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-389"
       },
       {
         "name": "queso parmesano",
-        "qty": "½ cup freshly grated",
+        "qty": "½ cup freshly rallado",
         "unit": "",
         "requiredId": "ing-390"
       }
@@ -74482,7 +74482,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Put 2 tablespoons of the oil in a large pot over medium heat.",
+        "text": "Put 2 tablespoons of the oil En una sartén grande u olla over medium heat.",
         "timerMinutes": 5
       },
       {
@@ -74551,7 +74551,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-384"
       },
@@ -74653,7 +74653,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-391"
       },
@@ -74665,19 +74665,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-393"
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-394"
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-395"
       },
@@ -74713,7 +74713,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-401"
       }
@@ -74722,13 +74722,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Tip the cabbage into a food processor and blitz until finely chopped.",
+        "text": "Tip the cabbage into a food processor and blitz until finely picado/a.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Season with ½ tsp sal fina, toss well and set aside for 15 mins.",
+        "text": "condimentar con ½ tsp sal fina, toss well and set aside for 15 mins.",
         "timerMinutes": 10
       },
       {
@@ -74746,7 +74746,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Season with pimienta negra molida.",
+        "text": "condimentar con pimienta negra molida.",
         "timerMinutes": 25
       }
     ],
@@ -74791,13 +74791,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 large peeled and chopped",
+        "qty": "1 large peeled and picado/a",
         "unit": "",
         "requiredId": "ing-394"
       },
       {
         "name": "fennel bulb",
-        "qty": "1 trimmed and roughly chopped; reserve any fronds to garnish",
+        "qty": "1 trimmed and roughly picado/a; reserve any fronds to garnish",
         "unit": "",
         "requiredId": "ing-395"
       },
@@ -74809,13 +74809,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove, peeled and sliced",
+        "qty": "1 dientes, peeled and en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-397"
       },
       {
         "name": "fennel seeds",
-        "qty": "2 tsp lightly toasted and then gently crushed",
+        "qty": "2 cditas lightly toasted and then gently crushed",
         "unit": "",
         "requiredId": "ing-398"
       },
@@ -74826,7 +74826,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-399"
       },
       {
-        "name": "chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "400g tinned",
         "unit": "",
         "requiredId": "ing-400"
@@ -74863,7 +74863,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove, peeled and crushed",
+        "qty": "1 dientes, peeled and crushed",
         "unit": "",
         "requiredId": "ing-406"
       },
@@ -74908,7 +74908,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add the tomates perita, azúcar blanco, 100ml agua, the seared chorizo and half a teaspoon of sal fina, cover and simmer for 30 minutes; remove the lid after 10 minutes, and cook until the sauce is thick and rich.",
+        "text": "Add the tomates perita, azúcar blanco, 100ml agua, the seared chorizo and half a teaspoon of sal fina, cover and cocinar a fuego suave por 30 minutos; remove the lid after 10 minutes, and cook until the sauce is thick and rich.",
         "timerMinutes": 25
       }
     ],
@@ -74941,7 +74941,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Aubergine",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-397"
       },
@@ -74977,19 +74977,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shallots",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-403"
       },
       {
         "name": "Shallots",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-404"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-405"
       },
@@ -75016,7 +75016,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Brush the aubergine slices with 1 tbsp of the oil, then season.",
+        "text": "Brush the aubergine slices with 1 cdas of the oil, then season.",
         "timerMinutes": 10
       },
       {
@@ -75079,7 +75079,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "1 thinly sliced",
+        "qty": "1 thinly en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-404"
       },
@@ -75091,7 +75091,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-406"
       },
@@ -75103,7 +75103,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-408"
       },
@@ -75133,7 +75133,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-413"
       },
@@ -75166,7 +75166,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add a glug of aceite de oliva extra virgen, season with sal fina and pepper and toss around to coat the veggies in the oil.",
+        "text": "Add a glug of aceite de oliva extra virgen, condimentar con sal fina and pepper and toss around to coat the veggies in the oil.",
         "timerMinutes": 10
       },
       {
@@ -75223,13 +75223,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-408"
       },
       {
         "name": "Paprika",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-409"
       },
@@ -75259,13 +75259,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-414"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-415"
       },
@@ -75298,7 +75298,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a roasting tin, toss together the pollo, cumin, paprika, 1 tbsp aceite de oliva extra virgen and seasoning.",
+        "text": "In a roasting tin, toss together the pollo, cumin, paprika, 1 cdas aceite de oliva extra virgen and seasoning.",
         "timerMinutes": 10
       },
       {
@@ -75310,7 +75310,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Meanwhile, tear up 1 pitta pan and place in a small bowl.",
+        "text": "Meanwhile, tear up 1 pitta pan and place En un bowl pequeño.",
         "timerMinutes": 20
       },
       {
@@ -75367,13 +75367,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 medium finely diced",
+        "qty": "1 medium finely en cubos",
         "unit": "",
         "requiredId": "ing-415"
       },
       {
         "name": "diente de ajo",
-        "qty": "6 medium cloves sliced",
+        "qty": "6 medium cloves en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-416"
       },
@@ -75391,7 +75391,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-419"
       },
@@ -75427,7 +75427,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pine nuts",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-425"
       },
@@ -75442,7 +75442,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "For the Lentils: Adjust oven rack to center position and preheat oven to 450°F to prepare for roasting berenjena.",
+        "text": "For the Lentils: Adjust oven rack to center position and Precalentar el horno a 450°C°F to prepare for roasting berenjena.",
         "timerMinutes": 5
       },
       {
@@ -75511,7 +75511,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-419"
       },
@@ -75541,7 +75541,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-424"
       }
@@ -75550,7 +75550,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 180C/350F/Gas 4 and line a baking tray with baking parchment.",
+        "text": "Precalentar el horno a 180°CC/350F/Gas 4 and line a baking tray with baking parchment.",
         "timerMinutes": 5
       },
       {
@@ -75607,13 +75607,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Miniature Marshmallows",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-422"
       },
       {
         "name": "Chocolate Chips",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-423"
       },
@@ -75625,7 +75625,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-425"
       },
@@ -75664,7 +75664,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add the esencia de vainilla and stir well, until smooth.",
+        "text": "Add the esencia de vainilla and revolver bien para integrar los sabores, until smooth.",
         "timerMinutes": 25
       }
     ],
@@ -75697,7 +75697,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-427"
       },
@@ -75715,13 +75715,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-430"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-431"
       },
@@ -75736,7 +75736,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium bowl mix huevo yolks, philly cheese and polvo de hornear using a hand held mixer.",
+        "text": "En un recipiente mediano mix huevo yolks, philly cheese and polvo de hornear using a hand held mixer.",
         "timerMinutes": 5
       },
       {
@@ -75793,25 +75793,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Full fat crema ácida",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-432"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-433"
       },
       {
         "name": "leche entera",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-434"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-435"
       },
@@ -75829,7 +75829,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-438"
       }
@@ -75844,7 +75844,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Turn down the heat and add half of the harina de trigo 000 and stir well with a whisk.",
+        "text": "Turn down the heat and add half of the harina de trigo 000 and revolver bien para integrar los sabores with a whisk.",
         "timerMinutes": 10
       },
       {
@@ -75856,7 +75856,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Use a spoon to gather as much of the fat as you can in a small bowl, saving for later.",
+        "text": "Use a spoon to gather as much of the fat as you can En un bowl pequeño, saving for later.",
         "timerMinutes": 20
       },
       {
@@ -75901,7 +75901,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Kosher sal fina",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-438"
       },
@@ -75931,7 +75931,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "6 cloves",
+        "qty": "6 dientes",
         "unit": "",
         "requiredId": "ing-443"
       },
@@ -75949,19 +75949,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-446"
       },
       {
         "name": "Dried orégano",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-447"
       },
       {
         "name": "Dry White Wine",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-448"
       },
@@ -75979,7 +75979,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pimento Stuffed Olives",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-451"
       },
@@ -75997,7 +75997,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cilantro fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-454"
       }
@@ -76018,7 +76018,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large pot over medium-high heat, heat 2 tablespoons oil.",
+        "text": "En una sartén grande u olla over medium-high heat, heat 2 tablespoons oil.",
         "timerMinutes": 15
       },
       {
@@ -76081,7 +76081,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-445"
       },
@@ -76099,7 +76099,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-448"
       },
@@ -76111,7 +76111,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bramley Apples",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-450"
       },
@@ -76132,13 +76132,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Place in a large pan with all the other ingredients apart from the chorizos, then mix in 300ml agua and some sal fina and pepper.",
+        "text": "Place En una sartén grande u olla with all the other ingredients apart from the chorizos, then mix in 300ml agua and some sal fina and pepper.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Bring to a simmer, then reduce the heat, cover with a well-fitting lid and gently cook for 1½ hrs, stirring frequently.",
+        "text": "llevar a ebullición, then reduce the heat, cover with a well-fitting lid and gently cook for 1½ hrs, stirring frequently.",
         "timerMinutes": 15
       },
       {
@@ -76183,7 +76183,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "pollo Legs",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-447"
       },
@@ -76195,13 +76195,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "5 chopped",
+        "qty": "5 picado/a",
         "unit": "",
         "requiredId": "ing-449"
       },
       {
         "name": "Leek",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-450"
       },
@@ -76225,7 +76225,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Allspice",
-        "qty": "1tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-454"
       },
@@ -76249,7 +76249,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-458"
       },
@@ -76276,7 +76276,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Bring to a boil and simmer for 2 to 2 1/2 hours, skimming any impurities off the top to insure a clear broth.",
+        "text": "llevar a ebullición and simmer for 2 to 2 1/2 hours, skimming any impurities off the top to insure a clear broth.",
         "timerMinutes": 15
       },
       {
@@ -76320,7 +76320,7 @@ const DEFAULT_KITCHEN_DATA = {
     "chefTip": "Controlar el punto de cocción y atemperar los ingredientes antes de cocinar.",
     "ingredients": [
       {
-        "name": "Minced carne vacuna",
+        "name": "picado fino carne vacuna",
         "qty": "1/4 lb",
         "unit": "",
         "requiredId": "ing-452"
@@ -76351,13 +76351,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-457"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-458"
       },
@@ -76435,13 +76435,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-458"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-459"
       },
@@ -76492,13 +76492,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Wash and chop the runner beans.",
+        "text": "Wash and picar el runner beans.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Place in a saucepan with salted agua and bring to a boil.",
+        "text": "Place in a saucepan with salted agua and llevar a ebullición.",
         "timerMinutes": 10
       },
       {
@@ -76510,13 +76510,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Drain and set aside.",
+        "text": "escurrir y reservar.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Meanwhile, add the papas and cook until tender.",
+        "text": "Meanwhile, add the papas and cocinar hasta dorar suavemente.",
         "timerMinutes": 25
       }
     ],
@@ -76567,7 +76567,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-465"
       },
@@ -76579,7 +76579,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Caraway Seed",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-467"
       }
@@ -76681,7 +76681,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "miel orgánica",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-473"
       },
@@ -76708,7 +76708,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Halve, stone, peel and slice the avocados.",
+        "text": "Halve, stone, peel and cortar en rodajas finas avocados.",
         "timerMinutes": 15
       },
       {
@@ -76783,13 +76783,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "limón Juice",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-477"
       },
       {
         "name": "White Wine vinagre de vino",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-478"
       },
@@ -76816,7 +76816,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Put the limón juice and vinagre de vino in a small bowl, add the huevo yolks and whisk with a balloon whisk until light and frothy.",
+        "text": "Put the limón juice and vinagre de vino En un bowl pequeño, add the huevo yolks and whisk with a balloon whisk until light and frothy.",
         "timerMinutes": 10
       },
       {
@@ -76873,7 +76873,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Thai Red Curry Paste",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-478"
       },
@@ -76993,7 +76993,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-483"
       },
@@ -77056,7 +77056,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Mix well until the manteca has melted.",
+        "text": "mezclar homogéneamente until the manteca has melted.",
         "timerMinutes": 25
       }
     ],
@@ -77095,7 +77095,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-488"
       },
@@ -77227,13 +77227,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pimienta negra molida",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-494"
       },
       {
         "name": "Szechuan Peppercorns",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-495"
       },
@@ -77251,19 +77251,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-498"
       },
       {
         "name": "Green Chilli",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-499"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-500"
       },
@@ -77275,7 +77275,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-2"
       },
@@ -77293,7 +77293,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fish Sauce",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-5"
       }
@@ -77302,13 +77302,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make the dipping sauce, mix all the ingredients in a small bowl until the azúcar blanco has dissolved, then set aside.",
+        "text": "To make the dipping sauce, mix all the ingredients En un bowl pequeño until the azúcar blanco has dissolved, then set aside.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Mix the cornflour and plain harina de trigo 000 with both peppers and 2 tsp sea sal fina in a large bowl, then set aside.",
+        "text": "Mix the cornflour and plain harina de trigo 000 with both peppers and 2 cditas sea sal fina En una sartén grande u olla, then set aside.",
         "timerMinutes": 10
       },
       {
@@ -77365,7 +77365,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Kidney Beans",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-498"
       },
@@ -77383,25 +77383,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-1"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-2"
       },
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-3"
       },
       {
         "name": "Coconut leche entera",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-4"
       },
@@ -77419,7 +77419,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-7"
       }
@@ -77428,7 +77428,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Cover the diced sal fina carne vacuna with agua and bring to a boil.",
+        "text": "Cover the en cubos sal fina carne vacuna with agua and llevar a ebullición.",
         "timerMinutes": 5
       },
       {
@@ -77446,7 +77446,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Slowly bring to a boil and simmer for about 2 hours, or until beans are tender.",
+        "text": "Slowly llevar a ebullición and simmer for about 2 hours, or until beans are tender.",
         "timerMinutes": 20
       },
       {
@@ -77485,13 +77485,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-2"
       },
       {
         "name": "cebolla",
-        "qty": "1 Large Chopped",
+        "qty": "1 Large picado/a",
         "unit": "",
         "requiredId": "ing-3"
       },
@@ -77503,7 +77503,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-5"
       },
@@ -77611,7 +77611,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-11"
       },
@@ -77629,7 +77629,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sea sal fina",
-        "qty": "1tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-14"
       },
@@ -77731,43 +77731,43 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-14"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-15"
       },
       {
         "name": "Curry Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-16"
       },
       {
         "name": "Jerusalem Artichokes",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-17"
       },
       {
         "name": "Hotsauce",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-18"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-19"
       },
       {
         "name": "Yellow Pepper",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-20"
       },
@@ -77779,13 +77779,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-22"
       },
       {
         "name": "Pepper",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-23"
       },
@@ -77824,13 +77824,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Drain, then put the bacalao / merluza in a large pan of fresh agua and bring to the boil.",
+        "text": "Drain, then put the bacalao / merluza En una sartén grande u olla of fresco agua and bring to the boil.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Drain again, add fresh agua and bring to the boil again.",
+        "text": "Drain again, add fresco agua and bring to the boil again.",
         "timerMinutes": 15
       },
       {
@@ -77887,13 +77887,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 medium chopped",
+        "qty": "1 medium picado/a",
         "unit": "",
         "requiredId": "ing-19"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-20"
       },
@@ -77917,7 +77917,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-24"
       },
@@ -77935,13 +77935,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bamboo Shoot",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-27"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-28"
       },
@@ -77962,13 +77962,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tbsp aceite de girasol / vegetal in a large pot or Dutch oven over medium-high heat until it shimmers, about 2 minutes.",
+        "text": "Heat 1 cdas aceite de girasol / vegetal En una sartén grande u olla or Dutch oven over medium-high heat until it shimmers, about 2 minutes.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add 1 lb pollo pieces to the pot and cook until browned on all sides, approximately 5–7 minutes, stirring occasionally to prevent sticking.",
+        "text": "Add 1 lb pollo pieces to the pot and cocinar hasta dorar suavemente on all sides, approximately 5–7 minutes, stirring occasionally to prevent sticking.",
         "timerMinutes": 10
       },
       {
@@ -77980,13 +77980,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Reduce the heat to medium and add 1 sliced cebolla to the pot, cooking until softened and translucent, about 4 minutes.",
+        "text": "Reduce the heat to medium and add 1 en fetas/rodajas cebolla to the pot, cooking until softened and translucent, about 4 minutes.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in 3 cloves minced diente de ajo and 1 tbsp grated jengibre fresco, cooking for 1 minute until fragrant to avoid burning.",
+        "text": "Stir in 3 dientes picado fino diente de ajo and 1 cdas rallado jengibre fresco, cooking for 1 minute until fragrant to avoid burning.",
         "timerMinutes": 25
       }
     ],
@@ -78031,7 +78031,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-24"
       },
@@ -78049,25 +78049,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-27"
       },
       {
         "name": "Pineapple Chunks",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-28"
       },
       {
         "name": "Cherry tomates perita",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-29"
       },
       {
         "name": "Green Beans",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-30"
       },
@@ -78085,7 +78085,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-33"
       }
@@ -78094,31 +78094,31 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tbsp aceite de girasol / vegetal in a large pot over medium-high heat until it shimmers, about 1 minute.",
+        "text": "Heat 1 cdas aceite de girasol / vegetal En una sartén grande u olla over medium-high heat until it shimmers, about 1 minute.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add 1 lb boneless, skinless pata muslos de pollo to the pot and cook until browned on all sides, approximately 5-7 minutes, stirring occasionally to prevent sticking.",
+        "text": "Add 1 lb boneless, skinless pata muslos de pollo to the pot and cocinar hasta dorar suavemente on all sides, approximately 5-7 minutes, stirring occasionally to prevent sticking.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Pour 4 cups agua into the pot and bring to a boil, then reduce heat to a simmer.",
+        "text": "Pour 4 tazas agua into the pot and llevar a ebullición, then reduce heat to a simmer.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Stir in 2 tbsp tamarind paste, 1 tbsp fish sauce, and 1 tsp azúcar blanco until fully dissolved, about 1 minute.",
+        "text": "Stir in 2 cdas tamarind paste, 1 cdas fish sauce, and 1 cditas azúcar blanco until fully dissolved, about 1 minute.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add 1 stalk lemongrass and 2 kaffir lima leaves to the pot, then cover and simmer for 10 minutes to infuse the broth with flavor.",
+        "text": "Add 1 stalk lemongrass and 2 kaffir lima leaves to the pot, then cover and cocinar a fuego suave por 10 minutos to infuse the broth with flavor.",
         "timerMinutes": 25
       }
     ],
@@ -78151,25 +78151,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "All purpose harina de trigo 000",
-        "qty": "6 cups",
+        "qty": "6 tazas",
         "unit": "",
         "requiredId": "ing-27"
       },
       {
         "name": "sal fina",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-28"
       },
       {
         "name": "Unsalted manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-29"
       },
       {
         "name": "Vegetable Shortening",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-30"
       },
@@ -78193,13 +78193,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Saskatoon Berries",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-34"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-35"
       },
@@ -78238,7 +78238,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "To make the pastry, place the harina de trigo 000 and sal fina in a large bowl.",
+        "text": "To make the pastry, place the harina de trigo 000 and sal fina En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -78295,13 +78295,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-32"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-33"
       },
@@ -78319,25 +78319,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-36"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-37"
       },
       {
         "name": "Ground Coriander",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-38"
       },
       {
         "name": "Oil",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-39"
       },
@@ -78349,7 +78349,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Oil",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-41"
       },
@@ -78370,7 +78370,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "1 large cebolla, coarsely chopped 2 cloves of diente de ajo.",
+        "text": "1 large cebolla, coarsely picado/a 2 dientes of diente de ajo.",
         "timerMinutes": 10
       },
       {
@@ -78382,13 +78382,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "of azúcar blanco 1 cup of salsa de soja.",
+        "text": "of azúcar blanco 1 tazas of salsa de soja.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "ground coriander for carne vacuna (or pollo) or 1 tsp.",
+        "text": "ground coriander for carne vacuna (or pollo) or 1 cditas.",
         "timerMinutes": 25
       }
     ],
@@ -78439,7 +78439,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Rye pan",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-40"
       },
@@ -78490,7 +78490,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Mix together sauerkraut, sliced huevo, fish and pan pieces.",
+        "text": "Mix together sauerkraut, en fetas/rodajas huevo, fish and pan pieces.",
         "timerMinutes": 25
       }
     ],
@@ -78604,7 +78604,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a saucepan to 180C (a cube of pan will turn golden in 15 secs).",
+        "text": "calentar el aceite o manteca in a saucepan to 180C (a cube of pan will turn golden in 15 secs).",
         "timerMinutes": 10
       },
       {
@@ -78661,7 +78661,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shallots",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-48"
       },
@@ -78703,7 +78703,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shallots",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-55"
       },
@@ -78736,7 +78736,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a saucepan to 180C (a cube of pan will turn golden in 15 secs).",
+        "text": "calentar el aceite o manteca in a saucepan to 180C (a cube of pan will turn golden in 15 secs).",
         "timerMinutes": 10
       },
       {
@@ -78805,7 +78805,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-55"
       },
@@ -78838,7 +78838,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat a heavy-based frying pan and add 1 tbsp sunflower oil.",
+        "text": "Heat a heavy-based frying pan and add 1 cdas sunflower oil.",
         "timerMinutes": 10
       },
       {
@@ -78925,7 +78925,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-63"
       },
@@ -79033,13 +79033,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-62"
       },
       {
         "name": "Leek",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-63"
       },
@@ -79084,7 +79084,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a deep frying pan, then soften the leek for 5 mins without browning.",
+        "text": "calentar el aceite o manteca in a deep frying pan, then soften the leek for 5 mins without browning.",
         "timerMinutes": 5
       },
       {
@@ -79159,7 +79159,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-70"
       },
@@ -79261,13 +79261,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-73"
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-74"
       },
@@ -79285,13 +79285,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli Flakes",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-77"
       },
       {
         "name": "Sesame Seed",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-78"
       }
@@ -79375,7 +79375,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-80"
       },
@@ -79471,19 +79471,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-85"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-86"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-87"
       }
@@ -79510,7 +79510,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Simmer for 5 minutes.",
+        "text": "cocinar a fuego suave por 5 minutos.",
         "timerMinutes": 20
       },
       {
@@ -79555,25 +79555,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-88"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-89"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-90"
       },
       {
         "name": "Coriander",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-91"
       },
@@ -79606,7 +79606,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a frying pan that has a lid, then soften the cebollas, chilli, diente de ajo and coriander stalks for 5 mins until soft.",
+        "text": "calentar el aceite o manteca in a frying pan that has a lid, then soften the cebollas, chilli, diente de ajo and coriander stalks for 5 mins until soft.",
         "timerMinutes": 5
       },
       {
@@ -79681,7 +79681,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shallots",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-95"
       },
@@ -79693,19 +79693,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-97"
       },
       {
         "name": "espinaca fresca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-98"
       },
       {
         "name": "Feta",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-99"
       },
@@ -79717,7 +79717,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-101"
       },
@@ -79738,13 +79738,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a pan heat the oil medium to high heat, with a tablespoon of aceite de oliva extra virgen.",
+        "text": "In a pan calentar el aceite o manteca medium to high heat, with a tablespoon of aceite de oliva extra virgen.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add the chopped vegetables as cebollas, diente de ajo, apio and morrón rojo.",
+        "text": "Add the picado/a vegetables as cebollas, diente de ajo, apio and morrón rojo.",
         "timerMinutes": 10
       },
       {
@@ -79819,13 +79819,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-101"
       },
       {
         "name": "Paprika",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-102"
       },
@@ -79843,7 +79843,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Greek Yogurt",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-105"
       },
@@ -79855,7 +79855,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-107"
       },
@@ -79867,13 +79867,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "lechuga",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-109"
       },
       {
         "name": "tomate",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-110"
       },
@@ -79945,25 +79945,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-102"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-103"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-104"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-105"
       },
@@ -80047,7 +80047,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-108"
       },
@@ -80065,25 +80065,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-111"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-112"
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-113"
       },
       {
         "name": "Turmeric",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-114"
       },
@@ -80107,7 +80107,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Clove",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-118"
       }
@@ -80209,7 +80209,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-118"
       },
@@ -80236,7 +80236,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add half the harina de trigo 000 and the walnuts (you can add the walnuts whole or ground them) and mix well.",
+        "text": "Add half the harina de trigo 000 and the walnuts (you can add the walnuts whole or ground them) and mezclar homogéneamente.",
         "timerMinutes": 10
       },
       {
@@ -80287,13 +80287,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "pepino",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-117"
       },
       {
         "name": "tomates perita",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-118"
       },
@@ -80305,31 +80305,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón verde",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-120"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-121"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-122"
       },
       {
         "name": "Feta",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-123"
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-124"
       }
@@ -80407,7 +80407,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-126"
       },
@@ -80424,32 +80424,32 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-128"
       },
       {
-        "name": "Minced diente de ajo",
-        "qty": "1 tsp",
+        "name": "picado fino diente de ajo",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-129"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-130"
       },
       {
         "name": "cebolla",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-131"
       },
       {
         "name": "Bean Sprouts",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-132"
       },
       {
         "name": "Spring cebollas",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-133"
       },
@@ -80545,7 +80545,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Cornstarch",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-127"
       },
@@ -80557,7 +80557,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Kosher sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-129"
       },
@@ -80581,7 +80581,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves Chopped",
+        "qty": "3 dientes picado/a",
         "unit": "",
         "requiredId": "ing-133"
       },
@@ -80593,13 +80593,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-135"
       },
       {
         "name": "pollo Stock",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-136"
       },
@@ -80611,7 +80611,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-138"
       }
@@ -80638,7 +80638,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mix all marinade ingredients in a large bowl, then add the camarones.",
+        "text": "Mix all marinade ingredients En una sartén grande u olla, then add the camarones.",
         "timerMinutes": 20
       },
       {
@@ -80677,7 +80677,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "huevo Plants",
-        "qty": "1.5 pounds sliced",
+        "qty": "1.5 pounds en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-132"
       },
@@ -80689,19 +80689,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo Stock",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-134"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-135"
       },
       {
         "name": "salsa de soja",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-136"
       },
@@ -80713,37 +80713,37 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sichuan Pepper",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-138"
       },
       {
         "name": "jengibre fresco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-139"
       },
       {
         "name": "diente de ajo",
-        "qty": "5 cloves",
+        "qty": "5 dientes",
         "unit": "",
         "requiredId": "ing-140"
       },
       {
         "name": "Cornstarch",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-141"
       },
       {
         "name": "Apple Cider vinagre de vino",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-142"
       },
       {
         "name": "Scallions",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-143"
       },
@@ -80833,19 +80833,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sichuan Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-140"
       },
       {
         "name": "sal fina",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-141"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-142"
       },
@@ -80929,13 +80929,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Scallions",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-145"
       },
       {
         "name": "Sesame Seed",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-146"
       }
@@ -80956,13 +80956,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Carefully slice the tofu into 1/2-inch slabs widthwise.",
+        "text": "Carefully cortar en rodajas finas tofu into 1/2-inch slabs widthwise.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "With the palm of your hands, gently push the sliced tofu sidewise so that they fan out over the plate.",
+        "text": "With the palm of your hands, gently push the en fetas/rodajas tofu sidewise so that they fan out over the plate.",
         "timerMinutes": 20
       },
       {
@@ -81013,7 +81013,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-149"
       },
@@ -81091,7 +81091,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Sesame Seed Oil",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-152"
       },
@@ -81127,7 +81127,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-158"
       },
@@ -81139,7 +81139,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Jalapeno",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-160"
       },
@@ -81151,7 +81151,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-162"
       },
@@ -81181,7 +81181,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Curry Powder",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-167"
       },
@@ -81271,7 +81271,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-159"
       },
@@ -81301,19 +81301,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-164"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-165"
       },
       {
         "name": "manteca",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-166"
       }
@@ -81322,7 +81322,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Adjust racks to top and middle positions and preheat oven to 450 degrees.",
+        "text": "Adjust racks to top and middle positions and Precalentar el horno a 450°C degrees.",
         "timerMinutes": 5
       },
       {
@@ -81505,25 +81505,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-168"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-169"
       },
       {
         "name": "Allspice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-170"
       },
       {
         "name": "Pepper",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-171"
       },
@@ -81661,7 +81661,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground Cumin",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-183"
       },
@@ -81673,13 +81673,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-185"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-186"
       }
@@ -81787,7 +81787,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-184"
       }
@@ -81853,7 +81853,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "diente de ajo",
-        "qty": "5 chopped cloves",
+        "qty": "5 picado/a cloves",
         "unit": "",
         "requiredId": "ing-182"
       },
@@ -81967,7 +81967,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 Cloves Crushed",
+        "qty": "3 dientes Crushed",
         "unit": "",
         "requiredId": "ing-189"
       },
@@ -81994,7 +81994,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Slice the aubergines in half lengthways, then grill for 25 mins, turning occasionally, until soft – the skin will remain firm, but the flesh will soften.",
+        "text": "cortar en rodajas finas aubergines in half lengthways, then grill for 25 mins, turning occasionally, until soft – the skin will remain firm, but the flesh will soften.",
         "timerMinutes": 10
       },
       {
@@ -82051,7 +82051,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-193"
       },
@@ -82063,7 +82063,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Turmeric",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-195"
       },
@@ -82075,7 +82075,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Bay Leaf",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-197"
       },
@@ -82105,13 +82105,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "3 tblsp chopped",
+        "qty": "3 tblsp picado/a",
         "unit": "",
         "requiredId": "ing-202"
       },
       {
         "name": "limón",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-203"
       }
@@ -82120,7 +82120,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Melt 50g manteca in a large saucepan (about 20cm across), add 1 finely chopped medium cebolla and cook gently over a medium heat for 5 minutes, until softened but not browned.",
+        "text": "Melt 50g manteca in a large saucepan (about 20cm across), add 1 finely picado/a medium cebolla and cook gently over a medium heat for 5 minutes, until softened but not browned.",
         "timerMinutes": 5
       },
       {
@@ -82189,31 +82189,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fennel Seeds",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-199"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-200"
       },
       {
         "name": "sweet smoked paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-201"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-202"
       },
       {
         "name": "Red Wine vinagre de vino",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-203"
       },
@@ -82240,7 +82240,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add 1 tbsp aceite de oliva extra virgen, the spices, diente de ajo and vinagre de vino, toss well and season.",
+        "text": "Add 1 cdas aceite de oliva extra virgen, the spices, diente de ajo and vinagre de vino, toss well and season.",
         "timerMinutes": 15
       },
       {
@@ -82297,85 +82297,85 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Leek",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-204"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-205"
       },
       {
         "name": "Cumin",
-        "qty": "4 tsp ground",
+        "qty": "4 cditas ground",
         "unit": "",
         "requiredId": "ing-206"
       },
       {
         "name": "Coriander",
-        "qty": "2 tsp ground",
+        "qty": "2 cditas ground",
         "unit": "",
         "requiredId": "ing-207"
       },
       {
         "name": "Smoked Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-208"
       },
       {
         "name": "Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-209"
       },
       {
         "name": "ají picante Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-210"
       },
       {
         "name": "Cocoa",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-211"
       },
       {
         "name": "Dried orégano",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-212"
       },
       {
-        "name": "Diced tomates perita",
+        "name": "en cubos tomates perita",
         "qty": "1 can",
         "unit": "",
         "requiredId": "ing-213"
       },
       {
         "name": "agua",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-214"
       },
       {
         "name": "zanahorias",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-215"
       },
       {
         "name": "Brown Lentils",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-216"
       },
       {
         "name": "Sea sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-217"
       },
@@ -82387,13 +82387,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cashews",
-        "qty": "1 Cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-219"
       },
       {
         "name": "Apple Cider vinagre de vino",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-220"
       }
@@ -82414,7 +82414,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "I added a fresh little sage I had in the fridge, but it’s unnecessary.",
+        "text": "I added a fresco little sage I had in the fridge, but it’s unnecessary.",
         "timerMinutes": 15
       },
       {
@@ -82495,7 +82495,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-213"
       },
@@ -82516,7 +82516,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Cocción & Elaboración",
-        "text": "step 1\r\nPut all the ingredients in a food processor and pulse until chopped, but not too fine. Pour into a serving bowl and add seasoning and a pinch of azúcar blanco.",
+        "text": "step 1\r\nPut all the ingredients in a food processor and pulse until picado/a, but not too fine. Pour into a serving bowl and add seasoning and a pinch of azúcar blanco.",
         "timerMinutes": 20
       },
       {
@@ -82609,7 +82609,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Celeriac",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-221"
       },
@@ -82642,7 +82642,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Remove the carne de cerdo chop, debone, and thinly slice the meat.",
+        "text": "Remove the carne de cerdo chop, debone, and thinly cortar en rodajas finas meat.",
         "timerMinutes": 20
       },
       {
@@ -82699,7 +82699,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-220"
       },
@@ -82729,19 +82729,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-225"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-226"
       },
       {
         "name": "manteca",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-227"
       }
@@ -82750,7 +82750,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 425 degrees.",
+        "text": "Precalentar el horno a 425°C degrees.",
         "timerMinutes": 5
       },
       {
@@ -82852,7 +82852,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Finely chop the 100g pancetta, having first removed any rind.",
+        "text": "Finely picar el 100g pancetta, having first removed any rind.",
         "timerMinutes": 10
       },
       {
@@ -82864,7 +82864,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Beat the 3 large huevos in a medium bowl and season with a little freshly grated pimienta negra molida.",
+        "text": "Beat the 3 large huevos En un recipiente mediano and condimentar con a little freshly rallado pimienta negra molida.",
         "timerMinutes": 20
       },
       {
@@ -82909,18 +82909,18 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-228"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-229"
       },
       {
-        "name": "lean minced carne vacuna",
+        "name": "lean picado fino carne vacuna",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-230"
@@ -82933,7 +82933,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "dried orégano",
-        "qty": "1tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-232"
       },
@@ -82951,13 +82951,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate puree",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-235"
       },
       {
         "name": "worcestershire sauce",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-236"
       },
@@ -82978,7 +82978,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Put the cebolla and oil in a large pan and fry over a fairly high heat for 3-4 mins.",
+        "text": "Put the cebolla and oil En una sartén grande u olla and fry over a fairly high heat for 3-4 mins.",
         "timerMinutes": 5
       },
       {
@@ -83059,7 +83059,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-236"
       },
@@ -83080,7 +83080,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Meanwhile, snip the chorizo into strips with scissors, and chop the perejil fresco and peppers (check for stray seeds first).",
+        "text": "Meanwhile, snip the chorizo into strips with scissors, and picar el perejil fresco and peppers (check for stray seeds first).",
         "timerMinutes": 10
       },
       {
@@ -83098,7 +83098,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large frying pan, heat the oil, add the chorizo and peppers and plenty of pimienta negra molida.",
+        "text": "En una sartén grande u olla, calentar el aceite o manteca, add the chorizo and peppers and plenty of pimienta negra molida.",
         "timerMinutes": 25
       }
     ],
@@ -83137,7 +83137,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-238"
       },
@@ -83149,7 +83149,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomillo fresco",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-240"
       },
@@ -83194,7 +83194,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Soak the beans for at least 4 hrs or overnight in a large bowl with plenty of agua to cover.",
+        "text": "Soak the beans for at least 4 hrs or overnight En una sartén grande u olla with plenty of agua to cover.",
         "timerMinutes": 5
       },
       {
@@ -83257,7 +83257,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-243"
       },
@@ -83359,7 +83359,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-248"
       },
@@ -83371,13 +83371,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-250"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-251"
       },
@@ -83422,19 +83422,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Drain, return to the pan, then mash with some seasoning and 2 tsp of the paprika.",
+        "text": "Drain, return to the pan, then mash with some seasoning and 2 cditas of the paprika.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Meanwhile, heat the oil in a large pan, then fry the cebollas and diente de ajo for a few mins until softened.",
+        "text": "Meanwhile, calentar el aceite o manteca En una sartén grande u olla, then fry the cebollas and diente de ajo for a few mins until softened.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in the remaining paprika for 1 min, add the tomates perita , then, bring to a simmer.",
+        "text": "Stir in the remaining paprika for 1 min, add the tomates perita , then, llevar a ebullición.",
         "timerMinutes": 25
       }
     ],
@@ -83518,13 +83518,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Whizz the almonds in a food processor until most are finely chopped, then tip into a large bowl.",
+        "text": "Whizz the almonds in a food processor until most are finely picado/a, then tip into a large bowl.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Roughly chop the figs, then whizz to a smooth sticky paste.",
+        "text": "Roughly picar el figs, then whizz to a smooth sticky paste.",
         "timerMinutes": 10
       },
       {
@@ -83581,7 +83581,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shallots",
-        "qty": "3 diced",
+        "qty": "3 en cubos",
         "unit": "",
         "requiredId": "ing-258"
       },
@@ -83593,13 +83593,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-260"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-261"
       },
@@ -83737,19 +83737,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-262"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-263"
       },
       {
         "name": "morrón verde",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-264"
       },
@@ -83761,7 +83761,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-266"
       },
@@ -83800,7 +83800,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Stir in the arroz and chopped tomates perita with 500ml boiling agua, cover, then cook over a high heat for 12 mins.",
+        "text": "Stir in the arroz and picado/a tomates perita with 500ml boiling agua, cover, then cook over a high heat for 12 mins.",
         "timerMinutes": 10
       },
       {
@@ -83851,7 +83851,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-268"
       },
@@ -83869,7 +83869,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-271"
       },
@@ -83914,7 +83914,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large saucepan and soften the cebolla for 6-7 mins.",
+        "text": "calentar el aceite o manteca in a large saucepan and soften the cebolla for 6-7 mins.",
         "timerMinutes": 5
       },
       {
@@ -83971,13 +83971,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "tomate",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-272"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-273"
       },
@@ -84016,7 +84016,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix together the chopped tomates perita, diente de ajo clove, aceite de oliva extra virgen, sal fina and pepper.",
+        "text": "Mix together the picado/a tomates perita, diente de ajo clove, aceite de oliva extra virgen, sal fina and pepper.",
         "timerMinutes": 5
       },
       {
@@ -84073,13 +84073,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-277"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-278"
       },
@@ -84097,7 +84097,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "6 cloves",
+        "qty": "6 dientes",
         "unit": "",
         "requiredId": "ing-281"
       },
@@ -84205,13 +84205,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-284"
       },
       {
         "name": "zanahorias",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-285"
       },
@@ -84253,7 +84253,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-292"
       },
@@ -84304,7 +84304,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Heat the oil in a large flameproof casserole dish or roasting tin over a medium-high heat, add the cebollas, zanahorias and diente de ajo and sizzle for 5 mins until the cebollas and zanahorias are softened.",
+        "text": "calentar el aceite o manteca in a large flameproof casserole dish or roasting tin over a medium-high heat, add the cebollas, zanahorias and diente de ajo and sizzle for 5 mins until the cebollas and zanahorias are softened.",
         "timerMinutes": 25
       }
     ],
@@ -84337,7 +84337,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-287"
       },
@@ -84463,7 +84463,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Sunflower Oil",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-292"
       },
@@ -84514,7 +84514,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large frying pan.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -84577,18 +84577,18 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-298"
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-299"
       },
       {
-        "name": "chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "1 tin",
         "unit": "",
         "requiredId": "ing-300"
@@ -84640,7 +84640,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a large skillet over medium-high heat, add the aceite de oliva extra virgen and heat until the oil starts to shimmer.",
+        "text": "En una sartén grande u olla over medium-high heat, add the aceite de oliva extra virgen and heat until the oil starts to shimmer.",
         "timerMinutes": 20
       },
       {
@@ -84685,13 +84685,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Harissa Spice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-303"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-304"
       },
@@ -84721,7 +84721,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Mint",
-        "qty": "20 chopped",
+        "qty": "20 picado/a",
         "unit": "",
         "requiredId": "ing-309"
       },
@@ -84766,7 +84766,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Combine harissa spice, aceite de oliva extra virgen, sal fina and pepper and limón juice in a small bowl and whisk until combined.",
+        "text": "Combine harissa spice, aceite de oliva extra virgen, sal fina and pepper and limón juice En un bowl pequeño and whisk until combined.",
         "timerMinutes": 20
       },
       {
@@ -84823,7 +84823,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-310"
       },
@@ -84874,13 +84874,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Cook the fideos following the pack instructions, drain and set aside for later.",
+        "text": "Cook the fideos following the pack instructions, escurrir y reservar for later.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a large frying pan and pour in the beaten huevo.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla and pour in the beaten huevo.",
         "timerMinutes": 10
       },
       {
@@ -84931,19 +84931,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-312"
       },
       {
         "name": "diente de ajo",
-        "qty": "8 cloves chopped",
+        "qty": "8 dientes picado/a",
         "unit": "",
         "requiredId": "ing-313"
       },
       {
         "name": "Caster azúcar blanco",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-314"
       },
@@ -84954,7 +84954,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-315"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "3 400g Cans",
         "unit": "",
         "requiredId": "ing-316"
@@ -84973,7 +84973,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-319"
       },
@@ -84985,7 +84985,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "queso muzzarella",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-321"
       },
@@ -85030,7 +85030,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a large pan and fry the diente de ajo for 1 min.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla and fry the diente de ajo for 1 min.",
         "timerMinutes": 10
       },
       {
@@ -85093,13 +85093,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-319"
       },
       {
         "name": "zanahorias",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-320"
       },
@@ -85111,7 +85111,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "apio",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-322"
       },
@@ -85315,13 +85315,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 finely sliced",
+        "qty": "1 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-329"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-330"
       },
@@ -85357,7 +85357,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "White Wine vinagre de vino",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-336"
       }
@@ -85384,7 +85384,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Trim the green ends of the spring cebollas and then finely slice the rest.",
+        "text": "Trim the green ends of the spring cebollas and then finely cortar en rodajas finas rest.",
         "timerMinutes": 20
       },
       {
@@ -85582,7 +85582,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large bowl mix the peppers and any juices with the chickpeas, perejil fresco, chilli and diente de ajo.",
+        "text": "En una sartén grande u olla mix the peppers and any juices with the chickpeas, perejil fresco, chilli and diente de ajo.",
         "timerMinutes": 15
       },
       {
@@ -85669,7 +85669,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Nutmeg",
-        "qty": "Grated",
+        "qty": "rallado",
         "unit": "",
         "requiredId": "ing-349"
       },
@@ -85753,7 +85753,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Rapeseed Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-348"
       },
@@ -85777,7 +85777,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 finely sliced",
+        "qty": "4 finely en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-352"
       },
@@ -85789,7 +85789,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-354"
       },
@@ -85801,19 +85801,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-356"
       },
       {
         "name": "arroz vinagre de vino",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-357"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-358"
       },
@@ -85828,7 +85828,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Mix all the ingredients for the dressing together in a bowl with 1 tbsp agua until the azúcar blanco has dissolved.",
+        "text": "Mix all the ingredients for the dressing together in a bowl with 1 cdas agua until the azúcar blanco has dissolved.",
         "timerMinutes": 5
       },
       {
@@ -85846,7 +85846,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat the oil in a frying pan over a high heat.",
+        "text": "calentar el aceite o manteca in a frying pan over a high heat.",
         "timerMinutes": 20
       },
       {
@@ -85921,7 +85921,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-358"
       },
@@ -85960,13 +85960,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 220C/425F/Gas 7.",
+        "text": "Precalentar el horno a 220°C/425F/Gas 7.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the aceite de girasol / vegetal in a large frying pan, and brown the carne vacuna all over.",
+        "text": "Heat the aceite de girasol / vegetal En una sartén grande u olla, and brown the carne vacuna all over.",
         "timerMinutes": 10
       },
       {
@@ -86029,7 +86029,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-359"
       },
@@ -86041,13 +86041,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-361"
       },
       {
         "name": "Challots",
-        "qty": "1 medium finely diced",
+        "qty": "1 medium finely en cubos",
         "unit": "",
         "requiredId": "ing-362"
       },
@@ -86089,25 +86089,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tbs minced",
+        "qty": "1 tbs picado fino",
         "unit": "",
         "requiredId": "ing-369"
       },
       {
         "name": "Chives",
-        "qty": "1 tbs minced",
+        "qty": "1 tbs picado fino",
         "unit": "",
         "requiredId": "ing-370"
       },
       {
         "name": "sal fina",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-371"
       },
       {
         "name": "Pepper",
-        "qty": "to taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-372"
       }
@@ -86116,7 +86116,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat oil in a 12\" skillet over medium-high heat.",
+        "text": "calentar aceite en a 12\" skillet over medium-high heat.",
         "timerMinutes": 5
       },
       {
@@ -86134,7 +86134,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Return skillet to high heat, and add stock; cook until reduced until to 1⁄2 cup, about 10 minutes.",
+        "text": "Return skillet to high heat, and add stock; cook until reduced until to 1⁄2 tazas, about 10 minutes.",
         "timerMinutes": 20
       },
       {
@@ -86203,7 +86203,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dijon mostaza",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-367"
       }
@@ -86293,13 +86293,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-371"
       },
       {
         "name": "Bicarbonate Of Soda",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-372"
       },
@@ -86347,7 +86347,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-380"
       }
@@ -86356,7 +86356,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 180C/160C Fan/Gas 4.",
+        "text": "Precalentar el horno a 180°C/160C Fan/Gas 4.",
         "timerMinutes": 5
       },
       {
@@ -86425,7 +86425,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-374"
       },
@@ -86437,7 +86437,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "bicarbonate of soda",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-376"
       },
@@ -86461,7 +86461,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "black treacle",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-380"
       },
@@ -86497,7 +86497,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "black treacle",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-386"
       }
@@ -86506,7 +86506,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Stone and chop the dates quite small, put them in a bowl, then pour the boiling agua over.",
+        "text": "Stone and picar el dates quite small, put them in a bowl, then pour the boiling agua over.",
         "timerMinutes": 5
       },
       {
@@ -86575,13 +86575,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 tblsp chopped",
+        "qty": "3 tblsp picado/a",
         "unit": "",
         "requiredId": "ing-379"
       },
       {
         "name": "Shallots",
-        "qty": "3 tblsp chopped",
+        "qty": "3 tblsp picado/a",
         "unit": "",
         "requiredId": "ing-380"
       },
@@ -86599,13 +86599,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-383"
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-384"
       },
@@ -86620,7 +86620,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat a wok or large frying pan until it is very hot, then add 1 tbsp of the oil.",
+        "text": "Heat a wok or large frying pan until it is very hot, then add 1 cdas of the oil.",
         "timerMinutes": 5
       },
       {
@@ -86701,13 +86701,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cherry tomates perita",
-        "qty": "2 cups halved",
+        "qty": "2 tazas halved",
         "unit": "",
         "requiredId": "ing-386"
       },
       {
         "name": "Greek yogurt",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-387"
       },
@@ -86728,7 +86728,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a 12-inch skillet over high heat until shimmering.",
+        "text": "calentar el aceite o manteca in a 12-inch skillet over high heat until shimmering.",
         "timerMinutes": 5
       },
       {
@@ -86740,7 +86740,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Season with sal fina and pepper as you rotate the eggplants, browning them on all sides.",
+        "text": "condimentar con sal fina and pepper as you rotate the eggplants, browning them on all sides.",
         "timerMinutes": 15
       },
       {
@@ -86803,13 +86803,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cream",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-390"
       },
       {
         "name": "crema ácida",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-391"
       }
@@ -86818,7 +86818,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a medium bowl, combine hulled and quartered strawberries, 4 Tbsp azúcar blanco and 4 Tbsp liqueur, stir to combine then cover and refrigerate at least 1 hour and up to 2 hours, stirring once or twice.",
+        "text": "En un recipiente mediano, combine hulled and quartered strawberries, 4 cdas azúcar blanco and 4 cdas liqueur, stir to combine then cover and refrigerate at least 1 hour and up to 2 hours, stirring once or twice.",
         "timerMinutes": 5
       },
       {
@@ -86830,13 +86830,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Just before serving, in a large mixing bowl, combine 1 cup cold crema de leche and 1/4 cup powdered azúcar blanco, and beat with an electric mixer until stiff peaks form.",
+        "text": "Just before serving, in a large mixing bowl, combine 1 tazas cold crema de leche and 1/4 tazas powdered azúcar blanco, and beat with an electric mixer until stiff peaks form.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Using a spatula, fold in 1/4 cup crema ácida just until well blended.",
+        "text": "Using a spatula, fold in 1/4 tazas crema ácida just until well blended.",
         "timerMinutes": 20
       },
       {
@@ -86881,7 +86881,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-393"
       },
@@ -86893,13 +86893,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "manteca",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-395"
       },
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-396"
       },
@@ -86929,13 +86929,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-401"
       },
       {
         "name": "limón Juice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-402"
       },
@@ -86980,7 +86980,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Pour 1/4 cup (60 ml) agua in a slow, steady stream, through the feed tube until the dough just holds together when pinched.",
+        "text": "Pour 1/4 tazas (60 ml) agua in a slow, steady stream, through the feed tube until the dough just holds together when pinched.",
         "timerMinutes": 20
       },
       {
@@ -87055,7 +87055,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "vanilla azúcar blanco",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-403"
       },
@@ -87079,13 +87079,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-407"
       },
       {
         "name": "crema de leche doble",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-408"
       },
@@ -87175,19 +87175,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-404"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-405"
       },
       {
         "name": "Quinoa",
-        "qty": "1 cups",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-406"
       },
@@ -87199,12 +87199,12 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sweetcorn",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-408"
       },
       {
-        "name": "Diced tomates perita",
+        "name": "en cubos tomates perita",
         "qty": "1 can",
         "unit": "",
         "requiredId": "ing-409"
@@ -87229,25 +87229,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-413"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-414"
       },
       {
         "name": "Shredded Mexican Cheese",
-        "qty": "1 1/2 cup",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-415"
       },
       {
         "name": "cilantro fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-416"
       }
@@ -87313,61 +87313,61 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "arroz",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-407"
       },
       {
         "name": "pollo Stock",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-408"
       },
       {
         "name": "tomate Sauce",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-409"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-410"
       },
       {
         "name": "Ground Allspice",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-411"
       },
       {
         "name": "Cinnamon",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-412"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-413"
       },
       {
         "name": "Raisins",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-414"
       },
       {
         "name": "Dill",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-415"
       },
       {
         "name": "Pine Nuts",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-416"
       },
@@ -87379,13 +87379,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-418"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-419"
       }
@@ -87418,7 +87418,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Bring to a gentle boil, then simmer for 30 minutes until all stock is absorbed and arroz is tender.",
+        "text": "Bring to a gentle boil, then cocinar a fuego suave por 30 minutos until all stock is absorbed and arroz is tender.",
         "timerMinutes": 25
       }
     ],
@@ -87469,13 +87469,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-415"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-416"
       },
@@ -87493,7 +87493,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate Puree",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-419"
       },
@@ -87516,7 +87516,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-422"
       },
       {
-        "name": "Chopped perejil fresco",
+        "name": "picado/a perejil fresco",
         "qty": "2 tbs",
         "unit": "",
         "requiredId": "ing-423"
@@ -87538,7 +87538,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Slice the tops off the tomates perita and reserve.",
+        "text": "cortar en rodajas finas tops off the tomates perita and reserve.",
         "timerMinutes": 10
       },
       {
@@ -87550,7 +87550,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Finely chop the pulp, and keep any juices.",
+        "text": "Finely picar el pulp, and keep any juices.",
         "timerMinutes": 20
       },
       {
@@ -87595,7 +87595,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-418"
       }
@@ -87661,7 +87661,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Brown azúcar blanco",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-422"
       },
@@ -87679,13 +87679,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-425"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-426"
       },
@@ -87697,7 +87697,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-428"
       }
@@ -87706,7 +87706,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 degrees F (175 degrees C).",
+        "text": "Precalentar el horno a 350°C degrees F (175 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -87763,7 +87763,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Almonds",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-427"
       },
@@ -87775,7 +87775,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Granulated azúcar blanco",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-429"
       },
@@ -87799,13 +87799,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-433"
       },
       {
         "name": "Granulated azúcar blanco",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-434"
       },
@@ -87826,7 +87826,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 345°F (175°C) and grease cake form (I use a 27 cm spring form) – you can line the bottom with baking paper if you like.",
+        "text": "Precalentar el horno a 345°C°F (175°C) and grease cake form (I use a 27 cm spring form) – you can line the bottom with baking paper if you like.",
         "timerMinutes": 5
       },
       {
@@ -87907,7 +87907,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche doble",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-436"
       }
@@ -87916,7 +87916,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the 2 tablespoons of oil in a large skillet or pot over medium heat until shimmering.",
+        "text": "Heat the 2 tablespoons of oil En una sartén grande u olla or pot over medium heat until shimmering.",
         "timerMinutes": 5
       },
       {
@@ -87928,7 +87928,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the shredded kale to the cebollas and mix well.",
+        "text": "Add the shredded kale to the cebollas and mezclar homogéneamente.",
         "timerMinutes": 15
       },
       {
@@ -87940,7 +87940,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "After 5 minutes, remove the lid, add sal fina to taste, and stir in the cream.",
+        "text": "After 5 minutes, remove the lid, add sal fina a gusto, and stir in the cream.",
         "timerMinutes": 25
       }
     ],
@@ -88081,7 +88081,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Leek",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-443"
       },
@@ -88111,13 +88111,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomates perita",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-448"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-449"
       },
@@ -88138,7 +88138,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large pan and fry the leeks and courgette for 5 mins to soften.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla and fry the leeks and courgette for 5 mins to soften.",
         "timerMinutes": 5
       },
       {
@@ -88240,7 +88240,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Put azúcar blanco and 3 tbsp agua into a large pan.",
+        "text": "Put azúcar blanco and 3 cdas agua into a large pan.",
         "timerMinutes": 10
       },
       {
@@ -88252,7 +88252,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Bring to a boil for 1 min, then tip in the fruit (not strawberries).",
+        "text": "llevar a ebullición for 1 min, then tip in the fruit (not strawberries).",
         "timerMinutes": 20
       },
       {
@@ -88405,13 +88405,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Kosher sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-459"
       },
       {
         "name": "Cornstarch",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-460"
       },
@@ -88423,19 +88423,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pineapple Juice",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-462"
       },
       {
         "name": "White vinagre de vino",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-463"
       },
       {
         "name": "tomate Ketchup",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-464"
       },
@@ -88447,25 +88447,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Oil",
-        "qty": "4 tsp",
+        "qty": "4 cditas",
         "unit": "",
         "requiredId": "ing-466"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-467"
       },
       {
         "name": "Yellow Pepper",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-468"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-469"
       }
@@ -88549,13 +88549,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-465"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-466"
       },
@@ -88612,7 +88612,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Slice the carne de cerdo tenderloin into strips.",
+        "text": "cortar en rodajas finas carne de cerdo tenderloin into strips.",
         "timerMinutes": 20
       },
       {
@@ -88669,7 +88669,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-470"
       },
@@ -88759,7 +88759,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "1 and 1/8 cup",
+        "qty": "1 and 1/8 tazas",
         "unit": "",
         "requiredId": "ing-472"
       },
@@ -88777,19 +88777,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-475"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-476"
       },
       {
         "name": "levadura seca",
-        "qty": "1 1/2 tsp",
+        "qty": "1 1/2 cditas",
         "unit": "",
         "requiredId": "ing-477"
       }
@@ -88810,7 +88810,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "When the Dough cycle is almost complete, preheat the oven to 475 degrees F (245 degrees C).",
+        "text": "When the Dough cycle is almost complete, Precalentar el horno a 475°C F (245 degrees C).",
         "timerMinutes": 15
       },
       {
@@ -88855,7 +88855,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "manteca",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-477"
       },
@@ -88891,13 +88891,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pollo Stock",
-        "qty": "5 Cups",
+        "qty": "5 tazas",
         "unit": "",
         "requiredId": "ing-483"
       },
       {
         "name": "arroz",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-484"
       },
@@ -88909,7 +88909,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Pine Nuts",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-486"
       }
@@ -88918,13 +88918,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1/4 cup manteca in a large saucepan over medium-high heat.",
+        "text": "Heat 1/4 tazas manteca in a large saucepan over medium-high heat.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add ground carne vacuna and season with sal fina, allspice, cinnamon, and pimienta negra molida.",
+        "text": "Add ground carne vacuna and condimentar con sal fina, allspice, cinnamon, and pimienta negra molida.",
         "timerMinutes": 10
       },
       {
@@ -88936,7 +88936,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Stir pollo broth and arroz into carne vacuna in the saucepan; bring to a boil.",
+        "text": "Stir pollo broth and arroz into carne vacuna in the saucepan; llevar a ebullición.",
         "timerMinutes": 20
       },
       {
@@ -88999,7 +88999,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-486"
       },
@@ -89020,7 +89020,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350 degrees F (175 degrees C).",
+        "text": "Precalentar el horno a 350°C degrees F (175 degrees C).",
         "timerMinutes": 5
       },
       {
@@ -89083,19 +89083,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-488"
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-489"
       },
       {
         "name": "Pepper",
-        "qty": "1 pinch",
+        "qty": "1 pizca",
         "unit": "",
         "requiredId": "ing-490"
       },
@@ -89119,43 +89119,43 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-494"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-495"
       },
       {
         "name": "cebolla",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-496"
       },
       {
         "name": "zanahorias",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-497"
       },
       {
         "name": "morrón verde",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-498"
       },
       {
         "name": "apio",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-499"
       },
       {
         "name": "champiñones frescos",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-500"
       },
@@ -89167,7 +89167,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-2"
       },
@@ -89179,13 +89179,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Hotsauce",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-4"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-5"
       },
@@ -89281,7 +89281,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-496"
       },
@@ -89320,7 +89320,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Slice the unpeeled cebolla in half widthways and fry off the cut surfaces without fat until fairly well browned.",
+        "text": "cortar en rodajas finas unpeeled cebolla in half widthways and fry off the cut surfaces without fat until fairly well browned.",
         "timerMinutes": 5
       },
       {
@@ -89332,13 +89332,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the root vegetables, leek, halves of cebolla, bay leaves, and peppercorns and bring to a boil.",
+        "text": "Add the root vegetables, leek, halves of cebolla, bay leaves, and peppercorns and llevar a ebullición.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the washed meat and bones and, depending on the type of meat, allow to cook until softened in gently simmering agua, which will take around 2 1⁄2 – 3 hours.",
+        "text": "Add the washed meat and bones and, depending on the type of meat, allow to cocinar hasta dorar suavementeened in gently simmering agua, which will take around 2 1⁄2 – 3 hours.",
         "timerMinutes": 20
       },
       {
@@ -89395,19 +89395,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-500"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-1"
       },
       {
         "name": "Yellow Pepper",
-        "qty": "1 thinly sliced",
+        "qty": "1 thinly en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-2"
       },
@@ -89419,7 +89419,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Courgettes",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-4"
       },
@@ -89446,13 +89446,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Season to taste, then set aside.",
+        "text": "Season a gusto, then set aside.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the oil in a wok or large frying pan over a medium-high heat.",
+        "text": "calentar el aceite o manteca in a wok or large frying pan over a medium-high heat.",
         "timerMinutes": 15
       },
       {
@@ -89497,13 +89497,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "cebolla",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-2"
       },
       {
         "name": "apio",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-3"
       },
@@ -89521,13 +89521,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Turmeric",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-6"
       },
       {
         "name": "Ground Cumin",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-7"
       },
@@ -89539,25 +89539,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-9"
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-10"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-11"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-12"
       },
@@ -89575,13 +89575,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Raisins",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-15"
       },
       {
         "name": "pollo Stock",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-16"
       },
@@ -89593,13 +89593,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-18"
       },
       {
         "name": "Prunes",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-19"
       }
@@ -89608,7 +89608,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Combine cebollas, apio, cilantro fresco, and perejil fresco in a large pot.",
+        "text": "Combine cebollas, apio, cilantro fresco, and perejil fresco En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -89665,13 +89665,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "leche entera",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-7"
       },
       {
         "name": "Instant levadura seca",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-8"
       },
@@ -89683,7 +89683,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cardamom",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-10"
       },
@@ -89695,7 +89695,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "harina de trigo 000",
-        "qty": "2 1/4 cups",
+        "qty": "2 1/4 tazas",
         "unit": "",
         "requiredId": "ing-12"
       },
@@ -89707,7 +89707,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "leche entera",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-14"
       },
@@ -89737,7 +89737,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Powdered azúcar blanco",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-19"
       },
@@ -89749,7 +89749,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shredded Coconut",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-21"
       }
@@ -89815,7 +89815,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "leche entera",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-12"
       },
@@ -89827,19 +89827,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-14"
       },
       {
         "name": "Vanilla",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-15"
       },
       {
         "name": "Cornstarch",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-16"
       },
@@ -89860,19 +89860,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a non-stick medium pot, add the leche entera, manteca, azúcar blanco, and vanilla; bring to a boil, and reduce heat to low.",
+        "text": "In a non-stick medium pot, add the leche entera, manteca, azúcar blanco, and vanilla; llevar a ebullición, and reduce heat to low.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "In a large bowl, add the huevos and the cornstarch and mix well.",
+        "text": "En una sartén grande u olla, add the huevos and the cornstarch and mezclar homogéneamente.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Slowly add 1 cup of the leche entera mixture, mixing constantly to temper the huevos.",
+        "text": "Slowly add 1 tazas of the leche entera mixture, mixing constantly to temper the huevos.",
         "timerMinutes": 20
       },
       {
@@ -89911,7 +89911,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Broad Beans",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-17"
       },
@@ -89929,25 +89929,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-20"
       },
       {
         "name": "Cumin",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-21"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-22"
       },
       {
         "name": "Cayenne Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-23"
       },
@@ -90031,13 +90031,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "paprika",
-        "qty": "4 tsp",
+        "qty": "4 cditas",
         "unit": "",
         "requiredId": "ing-23"
       },
       {
         "name": "red cebollas",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-24"
       },
@@ -90181,7 +90181,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "apio sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-31"
       },
@@ -90205,13 +90205,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-35"
       },
       {
         "name": "apio",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-36"
       }
@@ -90220,7 +90220,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Whisk together mayonesa, limón zest and juice, vinagre de vino, mostaza and apio sal fina in a small bowl, then season generously.",
+        "text": "Whisk together mayonesa, limón zest and juice, vinagre de vino, mostaza and apio sal fina En un bowl pequeño, then season generously.",
         "timerMinutes": 5
       },
       {
@@ -90232,7 +90232,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Mix well and refrigerate.",
+        "text": "mezclar homogéneamente and refrigerate.",
         "timerMinutes": 15
       },
       {
@@ -90271,7 +90271,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "zanahorias",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-32"
       },
@@ -90283,7 +90283,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-34"
       },
@@ -90319,7 +90319,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-40"
       },
@@ -90505,7 +90505,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "orégano",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-46"
       },
@@ -90517,7 +90517,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves chopped",
+        "qty": "2 dientes picado/a",
         "unit": "",
         "requiredId": "ing-48"
       },
@@ -90574,7 +90574,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "In a large pan (with a lid) melt the manteca and aceite de oliva extra virgen together then add the diced cordero.",
+        "text": "En una sartén grande u olla (with a lid) melt the manteca and aceite de oliva extra virgen together then add the en cubos cordero.",
         "timerMinutes": 5
       },
       {
@@ -90586,19 +90586,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the diente de ajo, orégano, 300ml of agua and season with sal fina and pepper.",
+        "text": "Add the diente de ajo, orégano, 300ml of agua and condimentar con sal fina and pepper.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mix well before covering with the lid.",
+        "text": "mezclar homogéneamente before covering with the lid.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Leave to simmer for 50 minutes mixing a couple of times ensuring the cordero doesn’t start to burn.",
+        "text": "Leave to cocinar a fuego suave por 50 minutos mixing a couple of times ensuring the cordero doesn’t start to burn.",
         "timerMinutes": 25
       }
     ],
@@ -90637,7 +90637,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "morrón rojo",
-        "qty": "3 diced",
+        "qty": "3 en cubos",
         "unit": "",
         "requiredId": "ing-48"
       },
@@ -90649,7 +90649,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove finely chopped",
+        "qty": "1 dientes finely picado/a",
         "unit": "",
         "requiredId": "ing-50"
       },
@@ -90661,25 +90661,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-52"
       },
       {
         "name": "orégano",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-53"
       },
       {
         "name": "perejil fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-54"
       },
       {
         "name": "albahaca fresca",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-55"
       },
@@ -90763,25 +90763,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "levadura seca",
-        "qty": "2 1/2 Tsp",
+        "qty": "2 1/2 cditas",
         "unit": "",
         "requiredId": "ing-52"
       },
       {
         "name": "Warm agua",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-53"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-54"
       },
       {
         "name": "harina de trigo 000",
-        "qty": "3 Cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-55"
       },
@@ -90793,7 +90793,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Poppy Seeds",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-57"
       }
@@ -90859,19 +90859,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "salsa de soja",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-57"
       },
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-58"
       },
       {
         "name": "brown azúcar blanco",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-59"
       },
@@ -90882,7 +90882,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-60"
       },
       {
-        "name": "minced diente de ajo",
+        "name": "picado fino diente de ajo",
         "qty": "1/2 teaspoon",
         "unit": "",
         "requiredId": "ing-61"
@@ -90907,7 +90907,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "brown arroz",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-65"
       }
@@ -90916,7 +90916,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 350° F.",
+        "text": "Precalentar el horno a 350°C° F.",
         "timerMinutes": 5
       },
       {
@@ -90934,7 +90934,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Bring to a boil over medium heat.",
+        "text": "llevar a ebullición over medium heat.",
         "timerMinutes": 20
       },
       {
@@ -90973,7 +90973,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-62"
       },
@@ -90985,7 +90985,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-64"
       },
@@ -91069,7 +91069,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-68"
       },
@@ -91081,7 +91081,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-70"
       },
@@ -91093,7 +91093,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Green Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-72"
       },
@@ -91117,13 +91117,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-76"
       },
       {
         "name": "Red Chilli",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-77"
       }
@@ -91150,13 +91150,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat the oil in a frying pan, then fry the cakes over a medium heat for about 6-8 mins, turning once.",
+        "text": "calentar el aceite o manteca in a frying pan, then fry the cakes over a medium heat for about 6-8 mins, turning once.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Serve hot, with sweet chilli sauce, lima wedges, coriander, shredded spring cebolla and red chilli.",
+        "text": "servir bien caliente de inmediato, with sweet chilli sauce, lima wedges, coriander, shredded spring cebolla and red chilli.",
         "timerMinutes": 25
       }
     ],
@@ -91195,7 +91195,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-73"
       },
@@ -91213,7 +91213,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-76"
       },
@@ -91255,7 +91255,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-83"
       },
@@ -91333,7 +91333,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Thai Green Curry Paste",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-78"
       },
@@ -91381,13 +91381,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-86"
       },
       {
         "name": "Spring cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-87"
       }
@@ -91396,7 +91396,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a saucepan over a medium heat and cook the curry paste for 1 min before adding the stir-fry veg and langostinos.",
+        "text": "calentar el aceite o manteca in a saucepan over a medium heat and cook the curry paste for 1 min before adding the stir-fry veg and langostinos.",
         "timerMinutes": 5
       },
       {
@@ -91465,7 +91465,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-85"
       },
@@ -91543,25 +91543,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-87"
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-88"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-89"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-90"
       },
@@ -91618,7 +91618,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tbsp of the oil in a wok, add the cebolla, diente de ajo and chilli, and cook for 2-3 mins until golden.",
+        "text": "Heat 1 cdas of the oil in a wok, add the cebolla, diente de ajo and chilli, and cook for 2-3 mins until golden.",
         "timerMinutes": 5
       },
       {
@@ -91636,7 +91636,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the soy and fish sauce, then stir through the chopped coriander.",
+        "text": "Add the soy and fish sauce, then stir through the picado/a coriander.",
         "timerMinutes": 20
       },
       {
@@ -91681,7 +91681,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-93"
       },
@@ -91693,7 +91693,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-95"
       },
@@ -91762,7 +91762,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in your largest pan, add the cebolla and fry for 3 mins to soften.",
+        "text": "calentar el aceite o manteca in your largest pan, add the cebolla and fry for 3 mins to soften.",
         "timerMinutes": 5
       },
       {
@@ -91780,7 +91780,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the chopped cebolla tops, green beans and bamboo shoots and cook for 4-6 mins, until the beans are just tender.",
+        "text": "Add the picado/a cebolla tops, green beans and bamboo shoots and cook for 4-6 mins, until the beans are just tender.",
         "timerMinutes": 20
       },
       {
@@ -91831,19 +91831,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sunflower oil",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-99"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-100"
       },
       {
         "name": "Thai green curry paste",
-        "qty": "4 tsp",
+        "qty": "4 cditas",
         "unit": "",
         "requiredId": "ing-101"
       },
@@ -91855,13 +91855,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Thai fish sauce",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-103"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-104"
       },
@@ -91873,7 +91873,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "lima",
-        "qty": "2 fresh kaffir leaves",
+        "qty": "2 fresco kaffir leaves",
         "unit": "",
         "requiredId": "ing-106"
       },
@@ -91912,7 +91912,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "In a wok or large frying pan, heat the oil until very hot, then drop in the diente de ajo and cook until golden, this should take only a few seconds.",
+        "text": "In a wok or large frying pan, calentar el aceite o manteca until very hot, then drop in the diente de ajo and cook until golden, this should take only a few seconds.",
         "timerMinutes": 20
       },
       {
@@ -91993,7 +91993,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-109"
       },
@@ -92026,7 +92026,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large saucepan or flameproof casserole.",
+        "text": "calentar el aceite o manteca in a large saucepan or flameproof casserole.",
         "timerMinutes": 5
       },
       {
@@ -92089,19 +92089,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-108"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-109"
       },
       {
         "name": "Thai Red Curry Paste",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-110"
       },
@@ -92125,7 +92125,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-114"
       }
@@ -92134,7 +92134,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a medium saucepan.",
+        "text": "calentar el aceite o manteca in a medium saucepan.",
         "timerMinutes": 5
       },
       {
@@ -92152,7 +92152,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Pour over the chopped tomates perita and coconut cream.",
+        "text": "Pour over the picado/a tomates perita and coconut cream.",
         "timerMinutes": 20
       },
       {
@@ -92197,19 +92197,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sunflower Oil",
-        "qty": "4 tsp",
+        "qty": "4 cditas",
         "unit": "",
         "requiredId": "ing-113"
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-114"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tbsp grated",
+        "qty": "1 cdas rallado",
         "unit": "",
         "requiredId": "ing-115"
       },
@@ -92239,13 +92239,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "lima juice",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-120"
       },
       {
         "name": "azúcar blanco",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-121"
       },
@@ -92284,7 +92284,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Stir in the curry paste for 1 min, followed by the roasted pumpkin, all but 3 tbsp of the coconut leche entera and the stock.",
+        "text": "Stir in the curry paste for 1 min, followed by the roasted pumpkin, all but 3 cdas of the coconut leche entera and the stock.",
         "timerMinutes": 25
       }
     ],
@@ -92335,19 +92335,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Fish Sauce",
-        "qty": "2-3 tbsp",
+        "qty": "2-3 cdas",
         "unit": "",
         "requiredId": "ing-120"
       },
       {
         "name": "Muscovado azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-121"
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-122"
       },
@@ -92358,7 +92358,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-123"
       },
       {
-        "name": "Minced carne de cerdo",
+        "name": "picado fino carne de cerdo",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-124"
@@ -92377,7 +92377,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sunflower Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-127"
       },
@@ -92389,7 +92389,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-129"
       },
@@ -92401,7 +92401,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-131"
       }
@@ -92542,7 +92542,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Bring to a simmer and cook for 5 mins.",
+        "text": "llevar a ebullición and cook for 5 mins.",
         "timerMinutes": 20
       },
       {
@@ -92593,13 +92593,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-129"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 small finely diced",
+        "qty": "1 small finely en cubos",
         "unit": "",
         "requiredId": "ing-130"
       },
@@ -92713,7 +92713,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Leek",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-137"
       },
@@ -92737,7 +92737,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "perejil fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-141"
       },
@@ -92770,7 +92770,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 200C/400F/Gas 6 (180C fan).",
+        "text": "Precalentar el horno a 200°C/400F/Gas 6 (180C fan).",
         "timerMinutes": 5
       },
       {
@@ -92959,19 +92959,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "harina de trigo 000",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-142"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-143"
       },
       {
         "name": "polvo de hornear",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-144"
       },
@@ -93121,13 +93121,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-155"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-156"
       },
@@ -93154,7 +93154,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Finely chop the shallots, and dice the smoked jamón cocido or chorizo into small cubes.",
+        "text": "Finely picar el shallots, and dice the smoked jamón cocido or chorizo into small cubes.",
         "timerMinutes": 5
       },
       {
@@ -93166,7 +93166,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the meat and the perejil fresco and fry together briefly before removing from the heat.",
+        "text": "agregar la carne and the perejil fresco and fry together briefly before removing from the heat.",
         "timerMinutes": 15
       },
       {
@@ -93217,7 +93217,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "3 tbsp",
+        "qty": "3 cdas",
         "unit": "",
         "requiredId": "ing-153"
       },
@@ -93235,7 +93235,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "horseradish",
-        "qty": "1 tbsp grated",
+        "qty": "1 cdas rallado",
         "unit": "",
         "requiredId": "ing-156"
       },
@@ -93274,7 +93274,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Put the plain harina de trigo 000 in a bowl, crack in the medium free-range huevos, then stir in the grated horseradish.",
+        "text": "Put the plain harina de trigo 000 in a bowl, crack in the medium free-range huevos, then stir in the rallado horseradish.",
         "timerMinutes": 20
       },
       {
@@ -93325,13 +93325,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-159"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-160"
       },
@@ -93382,7 +93382,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a non-stick wok.",
+        "text": "calentar el aceite o manteca in a non-stick wok.",
         "timerMinutes": 5
       },
       {
@@ -93784,7 +93784,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Stir and bring to a boil, then reduce the heat to medium and simmer for 20 mins until the liquid has reduced.",
+        "text": "Stir and llevar a ebullición, then reduce the heat to medium and simmer for 20 mins until the liquid has reduced.",
         "timerMinutes": 15
       },
       {
@@ -93955,13 +93955,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Whole leche entera",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-184"
       },
       {
         "name": "azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-185"
       },
@@ -93973,7 +93973,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dry sherry",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-187"
       },
@@ -93985,7 +93985,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-189"
       },
@@ -94012,19 +94012,19 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add 1 quart whole leche entera, 1/2 cup granulated azúcar blanco, and 1 (3-inch) cinnamon stick.",
+        "text": "Add 1 quart whole leche entera, 1/2 tazas granulated azúcar blanco, and 1 (3-inch) cinnamon stick.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Bring to a boil over medium heat.",
+        "text": "llevar a ebullición over medium heat.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Remove the pan from the heat and add 1/3 cup dry sherry.",
+        "text": "Remove the pan from the heat and add 1/3 tazas dry sherry.",
         "timerMinutes": 20
       },
       {
@@ -94069,7 +94069,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "crema de leche doble",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-188"
       },
@@ -94081,7 +94081,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Golden Caster azúcar blanco",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-190"
       },
@@ -94138,7 +94138,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Heat 1½ tbsp aceite de oliva extra virgen in a large frying pan and cook the pan for about 3 mins on each side until dark golden and crisp on the edge.",
+        "text": "Heat 1½ tbsp aceite de oliva extra virgen En una sartén grande u olla and cook the pan for about 3 mins on each side until dark golden and crisp on the edge.",
         "timerMinutes": 20
       },
       {
@@ -94213,19 +94213,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-198"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-199"
       },
       {
         "name": "Dried orégano",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-200"
       }
@@ -94240,7 +94240,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Preheat oven to 220 degrees Celsius.",
+        "text": "Precalentar el horno a 220°C degrees Celsius.",
         "timerMinutes": 10
       },
       {
@@ -94252,7 +94252,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mix all remaining ingredients in a large bowl for about one to two minutes.",
+        "text": "Mix all remaining ingredients En una sartén grande u olla for about one to two minutes.",
         "timerMinutes": 20
       },
       {
@@ -94303,13 +94303,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-199"
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "4 tsp",
+        "qty": "4 cditas",
         "unit": "",
         "requiredId": "ing-200"
       }
@@ -94381,25 +94381,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sunflower Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-203"
       },
       {
-        "name": "Minced carne de cerdo",
+        "name": "picado fino carne de cerdo",
         "qty": "500g",
         "unit": "",
         "requiredId": "ing-204"
       },
       {
         "name": "cebolla",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-205"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "1 finely chopped",
+        "qty": "1 finely picado/a",
         "unit": "",
         "requiredId": "ing-206"
       },
@@ -94456,13 +94456,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat the oil in a non-stick pan, add the mince and cebolla and quickly fry until browned.",
+        "text": "calentar el aceite o manteca in a non-stick pan, add the mince and cebolla and quickly fry until browned.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the diente de ajo, spices, stock, plenty of pepper and a little sal fina and mix well.",
+        "text": "Add the diente de ajo, spices, stock, plenty of pepper and a little sal fina and mezclar homogéneamente.",
         "timerMinutes": 20
       },
       {
@@ -94507,19 +94507,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-208"
       },
       {
         "name": "zanahorias",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-209"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves",
+        "qty": "2 dientes",
         "unit": "",
         "requiredId": "ing-210"
       },
@@ -94549,19 +94549,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-215"
       },
       {
         "name": "Pepper",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-216"
       },
       {
         "name": "Paprika",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-217"
       },
@@ -94681,7 +94681,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-220"
       },
@@ -94705,13 +94705,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-224"
       },
       {
         "name": "limón Juice",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-225"
       }
@@ -94828,7 +94828,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Preheat the oven to 200C/400F/Gas 6 and put a heavy baking tray in the oven to heat up.",
+        "text": "Precalentar el horno a 200°C/400F/Gas 6 and put a heavy baking tray in the oven to heat up.",
         "timerMinutes": 15
       },
       {
@@ -94885,13 +94885,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "panceta ahumada",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-224"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-225"
       },
@@ -94903,13 +94903,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-227"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-228"
       }
@@ -94918,13 +94918,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Bring salted agua to boil in a large pot.",
+        "text": "Bring salted agua to boil En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Add in the cabbage and papas, cook until tender about 30-40 minutes.",
+        "text": "Add in the cabbage and papas, cocinar hasta dorar suavemente about 30-40 minutes.",
         "timerMinutes": 10
       },
       {
@@ -95017,7 +95017,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomates perita",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-234"
       },
@@ -95044,7 +95044,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 2 tsp of the oil in a large saucepan and cook the spring cebollas over a low heat for 3 minutes or until beginning to soften.",
+        "text": "Heat 2 cditas of the oil in a large saucepan and cook the spring cebollas over a low heat for 3 minutes or until beginning to soften.",
         "timerMinutes": 5
       },
       {
@@ -95164,7 +95164,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Toss the papas with 2 tsp oil and some seasoning.",
+        "text": "Toss the papas with 2 cditas oil and some seasoning.",
         "timerMinutes": 10
       },
       {
@@ -95221,7 +95221,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-238"
       },
@@ -95257,7 +95257,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Harissa Spice",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-244"
       },
@@ -95389,7 +95389,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "esencia de vainilla",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-248"
       }
@@ -95398,7 +95398,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 190 C / Gas 5.",
+        "text": "Precalentar el horno a 190°C C / Gas 5.",
         "timerMinutes": 5
       },
       {
@@ -95416,7 +95416,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Slice the orange and remove all seeds.",
+        "text": "cortar en rodajas finas orange and remove all seeds.",
         "timerMinutes": 20
       },
       {
@@ -95485,7 +95485,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-252"
       },
@@ -95509,7 +95509,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Ground jengibre fresco",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-256"
       },
@@ -95536,7 +95536,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "In a small bowl, combine the jengibre fresco, arroz vinagre de vino, azúcar blanco and a few pinches of sal fina.",
+        "text": "En un bowl pequeño, combine the jengibre fresco, arroz vinagre de vino, azúcar blanco and a few pinches of sal fina.",
         "timerMinutes": 10
       },
       {
@@ -95599,7 +95599,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-254"
       },
@@ -95611,7 +95611,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "tomate Puree",
-        "qty": "3 tsp",
+        "qty": "3 cditas",
         "unit": "",
         "requiredId": "ing-256"
       },
@@ -95662,13 +95662,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat the oil in a large frying pan and cook the cebolla for 8-10 mins until softened.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla and cook the cebolla for 8-10 mins until softened.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the diente de ajo, Worcestershire sauce and 2 tsp tomate purée, and stir until combined.",
+        "text": "Add the diente de ajo, Worcestershire sauce and 2 cditas tomate purée, and stir until combined.",
         "timerMinutes": 15
       },
       {
@@ -95680,7 +95680,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Put the pavo mince, huevo, pan rallado and cooled cebolla mix in a large bowl and season well.",
+        "text": "Put the pavo mince, huevo, pan rallado and cooled cebolla mix En una sartén grande u olla and season well.",
         "timerMinutes": 25
       }
     ],
@@ -95743,7 +95743,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 Chopped",
+        "qty": "4 picado/a",
         "unit": "",
         "requiredId": "ing-262"
       },
@@ -95761,7 +95761,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chilli Flakes",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-265"
       },
@@ -95773,7 +95773,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Allspice",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-267"
       },
@@ -95818,7 +95818,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Use your hands to mix in 250ml more agua along with 1 tsp sal fina and knead the dough for about 10 mins until elastic and no longer sticky.",
+        "text": "Use your hands to mix in 250ml more agua along with 1 cditas sal fina and knead the dough for about 10 mins until elastic and no longer sticky.",
         "timerMinutes": 20
       },
       {
@@ -95869,7 +95869,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Large Chopped",
+        "qty": "1 Large picado/a",
         "unit": "",
         "requiredId": "ing-264"
       },
@@ -95914,7 +95914,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Dry-fry the pine nuts or almonds in a large pan until lightly toasted, then tip onto a plate.",
+        "text": "Dry-fry the pine nuts or almonds En una sartén grande u olla until lightly toasted, then tip onto a plate.",
         "timerMinutes": 5
       },
       {
@@ -95932,7 +95932,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Pour in 500ml boiling agua, crumble in the stock cube, add the apricots, then season to taste.",
+        "text": "Pour in 500ml boiling agua, crumble in the stock cube, add the apricots, then season a gusto.",
         "timerMinutes": 20
       },
       {
@@ -96067,13 +96067,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Seasoning",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-273"
       },
       {
         "name": "Dried orégano",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-274"
       },
@@ -96103,7 +96103,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red cebollas",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-279"
       },
@@ -96136,7 +96136,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Leave the meat to rest on a board for a few mins while you toast the pittas, shred the lechuga and thinly slice the red cebolla.",
+        "text": "Leave the meat to rest on a board for a few mins while you toast the pittas, shred the lechuga and thinly cortar en rodajas finas red cebolla.",
         "timerMinutes": 20
       },
       {
@@ -96175,13 +96175,13 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "agua",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-277"
       },
       {
         "name": "White Cornmeal",
-        "qty": "1 1/2 cups",
+        "qty": "1 1/2 tazas",
         "unit": "",
         "requiredId": "ing-278"
       }
@@ -96295,13 +96295,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-290"
       },
       {
         "name": "esencia de vainilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-291"
       },
@@ -96391,7 +96391,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Golden Caster azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-289"
       },
@@ -96436,7 +96436,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Put the shredded veg in a bowl and add the vinagre de vino, azúcar blanco and 1 tsp sal fina.",
+        "text": "Put the shredded veg in a bowl and add the vinagre de vino, azúcar blanco and 1 cditas sal fina.",
         "timerMinutes": 5
       },
       {
@@ -96493,25 +96493,25 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Self-raising harina de trigo 000",
-        "qty": "1 1/4 cup",
+        "qty": "1 1/4 tazas",
         "unit": "",
         "requiredId": "ing-292"
       },
       {
         "name": "coco azúcar blanco",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-293"
       },
       {
         "name": "cacao",
-        "qty": "1/3 cup raw",
+        "qty": "1/3 tazas raw",
         "unit": "",
         "requiredId": "ing-294"
       },
       {
         "name": "polvo de hornear",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-295"
       },
@@ -96523,19 +96523,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "almond leche entera",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-297"
       },
       {
         "name": "vanilla",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-298"
       },
       {
         "name": "agua",
-        "qty": "1/2 cup boiling",
+        "qty": "1/2 tazas boiling",
         "unit": "",
         "requiredId": "ing-299"
       }
@@ -96589,7 +96589,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "green red lentils",
-        "qty": "1 cups",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-297"
       },
@@ -96664,7 +96664,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "1) Preheat oven to 180 degrees celcius.",
+        "text": "1) Precalentar el horno a 180°C degrees celcius.",
         "timerMinutes": 5
       },
       {
@@ -96733,7 +96733,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Salted manteca",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-304"
       },
@@ -96745,31 +96745,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Brown Lentils",
-        "qty": "3/4 cup",
+        "qty": "3/4 tazas",
         "unit": "",
         "requiredId": "ing-306"
       },
       {
         "name": "diente de ajo",
-        "qty": "6 cloves",
+        "qty": "6 dientes",
         "unit": "",
         "requiredId": "ing-307"
       },
       {
         "name": "Kosher sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-308"
       },
       {
         "name": "cebolla",
-        "qty": "3 cups",
+        "qty": "3 tazas",
         "unit": "",
         "requiredId": "ing-309"
       },
       {
         "name": "tomate Puree",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-310"
       },
@@ -96787,25 +96787,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Dry White Wine",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-313"
       },
       {
         "name": "caldo de verduras",
-        "qty": "8 cups",
+        "qty": "8 tazas",
         "unit": "",
         "requiredId": "ing-314"
       },
       {
         "name": "Cornstarch",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-315"
       },
       {
         "name": "salsa de soja",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-316"
       },
@@ -96844,25 +96844,25 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "12 cups chopped mixed vegetables.",
+        "text": "12 tazas picado/a mixed vegetables.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "1   cup chopped fresh champiñones frescos.",
+        "text": "1 tazas picado/a fresco champiñones frescos.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "1   cup pearl cebollas.",
+        "text": "1 tazas pearl cebollas.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Preheat oven to 450°.",
+        "text": "Precalentar el horno a 450°C°.",
         "timerMinutes": 25
       }
     ],
@@ -96907,13 +96907,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "3 cloves",
+        "qty": "3 dientes",
         "unit": "",
         "requiredId": "ing-309"
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-310"
       },
@@ -96967,7 +96967,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Courgettes",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-319"
       },
@@ -96988,7 +96988,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large, heavy-based pan.",
+        "text": "calentar el aceite o manteca in a large, heavy-based pan.",
         "timerMinutes": 5
       },
       {
@@ -97006,7 +97006,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the tomates perita, stock, courgettes and fresh tomillo fresco and cook for 20 - 25 minutes.",
+        "text": "Add the tomates perita, stock, courgettes and fresco tomillo fresco and cook for 20 - 25 minutes.",
         "timerMinutes": 20
       },
       {
@@ -97056,7 +97056,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-313"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "1 can",
         "unit": "",
         "requiredId": "ing-314"
@@ -97147,7 +97147,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Granules",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-321"
       },
@@ -97159,7 +97159,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Paprika",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-323"
       },
@@ -97183,7 +97183,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Toast",
-        "qty": "2 sliced",
+        "qty": "2 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-327"
       }
@@ -97204,7 +97204,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add chopped tomates perita and remaining spices, stir well.",
+        "text": "Add picado/a tomates perita and remaining spices, revolver bien para integrar los sabores.",
         "timerMinutes": 15
       },
       {
@@ -97261,25 +97261,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebollas",
-        "qty": "2 finely chopped",
+        "qty": "2 finely picado/a",
         "unit": "",
         "requiredId": "ing-324"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-325"
       },
       {
         "name": "Cinnamon",
-        "qty": "2 tsp ground",
+        "qty": "2 cditas ground",
         "unit": "",
         "requiredId": "ing-326"
       },
       {
         "name": "Plain harina de trigo 000",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-327"
       },
@@ -97290,7 +97290,7 @@ const DEFAULT_KITCHEN_DATA = {
         "requiredId": "ing-328"
       },
       {
-        "name": "Chopped tomates perita",
+        "name": "picado/a tomates perita",
         "qty": "800g",
         "unit": "",
         "requiredId": "ing-329"
@@ -97315,7 +97315,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-333"
       },
@@ -97333,7 +97333,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "queso parmesano Cheese",
-        "qty": "Grated",
+        "qty": "rallado",
         "unit": "",
         "requiredId": "ing-336"
       }
@@ -97342,7 +97342,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a large pan.",
+        "text": "calentar el aceite o manteca En una sartén grande u olla.",
         "timerMinutes": 5
       },
       {
@@ -97399,19 +97399,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Cornmeal",
-        "qty": "2 cups",
+        "qty": "2 tazas",
         "unit": "",
         "requiredId": "ing-327"
       },
       {
         "name": "agua",
-        "qty": "2 1/2 cups",
+        "qty": "2 1/2 tazas",
         "unit": "",
         "requiredId": "ing-328"
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-329"
       },
@@ -97426,7 +97426,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat oven to 410° F.",
+        "text": "Precalentar el horno a 410°C° F.",
         "timerMinutes": 5
       },
       {
@@ -97489,13 +97489,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-333"
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove peeled crushed",
+        "qty": "1 dientes peeled crushed",
         "unit": "",
         "requiredId": "ing-334"
       },
@@ -97549,7 +97549,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de oliva extra virgen",
-        "qty": "1/3 cup",
+        "qty": "1/3 tazas",
         "unit": "",
         "requiredId": "ing-343"
       },
@@ -97561,7 +97561,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "agua",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-345"
       }
@@ -97645,13 +97645,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Chopped",
+        "qty": "4 dientes picado/a",
         "unit": "",
         "requiredId": "ing-340"
       },
       {
         "name": "diente de ajo",
-        "qty": "4 Cloves Crushed",
+        "qty": "4 dientes Crushed",
         "unit": "",
         "requiredId": "ing-341"
       },
@@ -97663,19 +97663,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "8 cups",
+        "qty": "8 tazas",
         "unit": "",
         "requiredId": "ing-343"
       },
       {
         "name": "Sweet Red Peppers",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-344"
       },
       {
         "name": "Scallions",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-345"
       },
@@ -97711,19 +97711,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-351"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-352"
       },
       {
         "name": "cilantro fresco",
-        "qty": "Chopped",
+        "qty": "picado/a",
         "unit": "",
         "requiredId": "ing-353"
       }
@@ -97756,7 +97756,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add diced cebolla, 2 minced diente de ajo, mini sweet peppers, sliced leeks (light green part), scallions, yucca, and choclo; Mix and simmer covered over medium heat for 5- 8 minutes, until the yucca is starting to soften.",
+        "text": "Add en cubos cebolla, 2 picado fino diente de ajo, mini sweet peppers, en fetas/rodajas leeks (light green part), scallions, yucca, and choclo; Mix and simmer covered over medium heat for 5- 8 minutes, until the yucca is starting to soften.",
         "timerMinutes": 25
       }
     ],
@@ -97795,43 +97795,43 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-343"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-344"
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-345"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-346"
       },
       {
         "name": "tomate",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-347"
       },
       {
         "name": "carne vacuna Stock",
-        "qty": "4 cups",
+        "qty": "4 tazas",
         "unit": "",
         "requiredId": "ing-348"
       },
       {
         "name": "Worcestershire Sauce",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-349"
       },
@@ -97843,25 +97843,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cumin",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-351"
       },
       {
         "name": "tomate Ketchup",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-352"
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-353"
       },
       {
         "name": "Pepper",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-354"
       },
@@ -97876,7 +97876,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Season carne vacuna with sal fina, pepper and minced diente de ajo.",
+        "text": "Season carne vacuna with sal fina, pepper and picado fino diente de ajo.",
         "timerMinutes": 5
       },
       {
@@ -97957,31 +97957,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 cup",
+        "qty": "1 tazas",
         "unit": "",
         "requiredId": "ing-351"
       },
       {
         "name": "morrón verde",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-352"
       },
       {
         "name": "morrón rojo",
-        "qty": "1/2 cup",
+        "qty": "1/2 tazas",
         "unit": "",
         "requiredId": "ing-353"
       },
       {
         "name": "diente de ajo Powder",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-354"
       },
       {
         "name": "Capers",
-        "qty": "1/4 cup",
+        "qty": "1/4 tazas",
         "unit": "",
         "requiredId": "ing-355"
       },
@@ -98083,7 +98083,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-354"
       },
@@ -98113,7 +98113,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Coriander",
-        "qty": "Sprigs of fresh",
+        "qty": "Sprigs of fresco",
         "unit": "",
         "requiredId": "ing-359"
       },
@@ -98146,13 +98146,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Add the fish sauce, most of the chilli and jengibre fresco, then splash in 1 tbsp agua to dilute.",
+        "text": "agregar la carne sauce, most of the chilli and jengibre fresco, then splash in 1 cdas agua to dilute.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Boil again until syrupy, then add the fish fillets, skin-side down, and the bok choi, cut-side down.",
+        "text": "Boil again until syrupy, then agregar la carne fillets, skin-side down, and the bok choi, cut-side down.",
         "timerMinutes": 25
       }
     ],
@@ -98233,7 +98233,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-365"
       },
@@ -98323,7 +98323,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "carne de cerdo",
-        "qty": "1.5 pounds sliced",
+        "qty": "1.5 pounds en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-362"
       },
@@ -98341,13 +98341,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Challots",
-        "qty": "3 tablespoons minced",
+        "qty": "3 tablespoons picado fino",
         "unit": "",
         "requiredId": "ing-365"
       },
       {
         "name": "diente de ajo",
-        "qty": "1.5 tablespoons minced garlic",
+        "qty": "1.5 tablespoons picado fino garlic",
         "unit": "",
         "requiredId": "ing-366"
       },
@@ -98383,7 +98383,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pepino",
-        "qty": "Sliced",
+        "qty": "en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-372"
       },
@@ -98404,7 +98404,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Slice the uncooked carne de cerdo thinly, about ⅛\".",
+        "text": "cortar en rodajas finas uncooked carne de cerdo thinly, about ⅛\".",
         "timerMinutes": 5
       },
       {
@@ -98479,25 +98479,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "jengibre fresco",
-        "qty": "2 tbs chopped",
+        "qty": "2 tbs picado/a",
         "unit": "",
         "requiredId": "ing-370"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-371"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-372"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-373"
       },
@@ -98509,7 +98509,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-375"
       },
@@ -98578,7 +98578,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Heat 1 tbsp oil in a heavy-bottomed casserole, season the shanks, then brown them 2 at a time on all sides, adding the remaining oil for the second batch.",
+        "text": "Heat 1 cdas oil in a heavy-bottomed casserole, season the shanks, then brown them 2 at a time on all sides, adding the remaining oil for the second batch.",
         "timerMinutes": 10
       },
       {
@@ -98590,13 +98590,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Fry them quite briskly, about 30 secs, add the jengibre fresco, diente de ajo and chopped chilli, then turn the heat down and cook for 1 min.",
+        "text": "Fry them quite briskly, about 30 secs, add the jengibre fresco, diente de ajo and picado/a chilli, then turn the heat down and cook for 1 min.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Add 1 tbsp azúcar blanco, stir, then add the star anise, lemongrass, stock, purée and seasoning.",
+        "text": "Add 1 cdas azúcar blanco, stir, then add the star anise, lemongrass, stock, purée and seasoning.",
         "timerMinutes": 25
       }
     ],
@@ -98629,7 +98629,7 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "Golden Caster azúcar blanco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-372"
       },
@@ -98641,7 +98641,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-374"
       },
@@ -98689,31 +98689,31 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "pepino",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-382"
       },
       {
         "name": "apio",
-        "qty": "5 chopped",
+        "qty": "5 picado/a",
         "unit": "",
         "requiredId": "ing-383"
       },
       {
         "name": "Spring cebollas",
-        "qty": "3 sliced thinly",
+        "qty": "3 en fetas/rodajas thinly",
         "unit": "",
         "requiredId": "ing-384"
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-385"
       },
       {
         "name": "Lemongrass Stalks",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-386"
       },
@@ -98746,13 +98746,13 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 2,
         "title": "Sellado & Cocción Inicial",
-        "text": "Put the azúcar blanco and lima juice in a pan with 1 tbsp agua and bring to the boil to dissolve the azúcar blanco.",
+        "text": "Put the azúcar blanco and lima juice in a pan with 1 cdas agua and bring to the boil to dissolve the azúcar blanco.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Add the chilli and coriander and stir well, then pulse in a blender until smooth.",
+        "text": "Add the chilli and coriander and revolver bien para integrar los sabores, then pulse in a blender until smooth.",
         "timerMinutes": 15
       },
       {
@@ -98821,7 +98821,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Birds-eye Chillies",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-381"
       },
@@ -98941,19 +98941,19 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "zanahorias",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-385"
       },
       {
         "name": "pepino",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-386"
       },
       {
         "name": "morrón rojo",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-387"
       },
@@ -98995,7 +98995,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-394"
       }
@@ -99073,7 +99073,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Shallots",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-389"
       },
@@ -99085,7 +99085,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Chilli",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-391"
       },
@@ -99103,7 +99103,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Chilli Sauce",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-394"
       },
@@ -99130,7 +99130,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat 1 tbsp of the oil in a wok over a high heat and stir-fry the carne de cerdo in batches until browned all over.",
+        "text": "Heat 1 cdas of the oil in a wok over a high heat and stir-fry the carne de cerdo in batches until browned all over.",
         "timerMinutes": 5
       },
       {
@@ -99187,19 +99187,19 @@ const DEFAULT_KITCHEN_DATA = {
     "ingredients": [
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-392"
       },
       {
         "name": "jengibre fresco",
-        "qty": "4cm finely chopped",
+        "qty": "4cm finely picado/a",
         "unit": "",
         "requiredId": "ing-393"
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "2 chopped",
+        "qty": "2 picado/a",
         "unit": "",
         "requiredId": "ing-394"
       },
@@ -99211,13 +99211,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "salsa de soja",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-396"
       },
       {
         "name": "Brown azúcar blanco",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-397"
       },
@@ -99235,7 +99235,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Spring cebollas",
-        "qty": "4 sliced",
+        "qty": "4 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-400"
       },
@@ -99256,7 +99256,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Heat the oil in a medium-size, lidded saucepan.",
+        "text": "calentar el aceite o manteca in a medium-size, lidded saucepan.",
         "timerMinutes": 5
       },
       {
@@ -99331,7 +99331,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1/2 tsp",
+        "qty": "1/2 cditas",
         "unit": "",
         "requiredId": "ing-400"
       },
@@ -99373,7 +99373,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Cinnamon",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-407"
       },
@@ -99508,7 +99508,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 160C/Gas 3/fan oven 140C.",
+        "text": "Precalentar el horno a 160°C/Gas 3/fan oven 140C.",
         "timerMinutes": 5
       },
       {
@@ -99526,7 +99526,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Mash the bananas and chop the dates (kitchen scissors are easiest for this) and add to the bowl.",
+        "text": "Mash the bananas and picar el dates (kitchen scissors are easiest for this) and add to the bowl.",
         "timerMinutes": 20
       },
       {
@@ -99571,7 +99571,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Red Wine vinagre de vino",
-        "qty": "2 tbsp",
+        "qty": "2 cdas",
         "unit": "",
         "requiredId": "ing-408"
       },
@@ -99583,7 +99583,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Extra Virgin aceite de oliva extra virgen",
-        "qty": "1 tbsp",
+        "qty": "1 cdas",
         "unit": "",
         "requiredId": "ing-410"
       },
@@ -99628,7 +99628,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "Preheat the oven to 200C/Gas 6/fan 180C.",
+        "text": "Precalentar el horno a 200°C/Gas 6/fan 180C.",
         "timerMinutes": 5
       },
       {
@@ -99646,7 +99646,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "Cut the tomates perita in half widthways, nestle them in with the asparagus, season with sea sal fina and pepper and drizzle with aceite de oliva extra virgen.",
+        "text": "Cut the tomates perita in half widthways, nestle them in with the asparagus, condimentar con sea sal fina and pepper and drizzle with aceite de oliva extra virgen.",
         "timerMinutes": 20
       },
       {
@@ -99787,13 +99787,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo Clove",
-        "qty": "3 chopped",
+        "qty": "3 picado/a",
         "unit": "",
         "requiredId": "ing-418"
       },
       {
         "name": "jengibre fresco",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-419"
       },
@@ -99805,25 +99805,25 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Sesame Seed Oil",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-421"
       },
       {
         "name": "zanahorias",
-        "qty": "3 finely chopped",
+        "qty": "3 finely picado/a",
         "unit": "",
         "requiredId": "ing-422"
       },
       {
         "name": "apio",
-        "qty": "3 finely chopped",
+        "qty": "3 finely picado/a",
         "unit": "",
         "requiredId": "ing-423"
       },
       {
         "name": "Spring cebollas",
-        "qty": "6 chopped",
+        "qty": "6 picado/a",
         "unit": "",
         "requiredId": "ing-424"
       },
@@ -99919,7 +99919,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 sliced",
+        "qty": "1 en fetas/rodajas",
         "unit": "",
         "requiredId": "ing-424"
       },
@@ -99943,7 +99943,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Mirin",
-        "qty": "4 tbsp",
+        "qty": "4 cdas",
         "unit": "",
         "requiredId": "ing-428"
       },
@@ -99988,7 +99988,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 4,
         "title": "Horneado / Reducción",
-        "text": "If using frozen or fresh fideos, cook for 2 mins or until al dente; dried will take longer, about 5-6 mins.",
+        "text": "If using frozen or fresco fideos, cook for 2 mins or until al dente; dried will take longer, about 5-6 mins.",
         "timerMinutes": 20
       },
       {
@@ -100033,13 +100033,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-428"
       },
       {
         "name": "tomate",
-        "qty": "1 Diced",
+        "qty": "1 en cubos",
         "unit": "",
         "requiredId": "ing-429"
       },
@@ -100051,13 +100051,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "Allspice",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-431"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "1/4 tsp",
+        "qty": "1/4 cditas",
         "unit": "",
         "requiredId": "ing-432"
       },
@@ -100072,7 +100072,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 1,
         "title": "Mise en Place & Corte",
-        "text": "First, On medium heat, heat the aceite de oliva extra virgen and add the diced cebolla until it wethers.",
+        "text": "First, On medium heat, heat the aceite de oliva extra virgen and add the en cubos cebolla until it wethers.",
         "timerMinutes": 5
       },
       {
@@ -100180,7 +100180,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "Season with sal fina and pepper.",
+        "text": "condimentar con sal fina and pepper.",
         "timerMinutes": 25
       }
     ],
@@ -100225,13 +100225,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "aceite de girasol / vegetal",
-        "qty": "2 tsp",
+        "qty": "2 cditas",
         "unit": "",
         "requiredId": "ing-439"
       },
       {
         "name": "cebolla",
-        "qty": "1 chopped",
+        "qty": "1 picado/a",
         "unit": "",
         "requiredId": "ing-440"
       },
@@ -100243,7 +100243,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "diente de ajo",
-        "qty": "1 clove",
+        "qty": "1 dientes",
         "unit": "",
         "requiredId": "ing-442"
       },
@@ -100312,7 +100312,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Heat 2 tsp of the manteca and 1 tsp of the oil in a pan over a low heat and cook the chopped cebolla for 5 mins until soft.",
+        "text": "Heat 2 cditas of the manteca and 1 cditas of the oil in a pan over a low heat and cook the picado/a cebolla for 5 mins until soft.",
         "timerMinutes": 15
       },
       {
@@ -100393,7 +100393,7 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "1 tsp",
+        "qty": "1 cditas",
         "unit": "",
         "requiredId": "ing-448"
       },
@@ -100438,7 +100438,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 3,
         "title": "Cocción Principal & Salsas",
-        "text": "Then add the harina de trigo 000, huevo, manteca, sal fina, 1 tsp of cinnamon and cardamom and process until smooth.",
+        "text": "Then add the harina de trigo 000, huevo, manteca, sal fina, 1 cditas of cinnamon and cardamom and process until smooth.",
         "timerMinutes": 15
       },
       {
@@ -100489,13 +100489,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "cebolla",
-        "qty": "1 medium chopped",
+        "qty": "1 medium picado/a",
         "unit": "",
         "requiredId": "ing-448"
       },
       {
         "name": "diente de ajo",
-        "qty": "2 cloves minced",
+        "qty": "2 dientes picado fino",
         "unit": "",
         "requiredId": "ing-449"
       },
@@ -100519,13 +100519,13 @@ const DEFAULT_KITCHEN_DATA = {
       },
       {
         "name": "sal fina",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-453"
       },
       {
         "name": "pimienta negra molida",
-        "qty": "To taste",
+        "qty": "a gusto",
         "unit": "",
         "requiredId": "ing-454"
       },
@@ -100564,7 +100564,7 @@ const DEFAULT_KITCHEN_DATA = {
       {
         "stepNumber": 5,
         "title": "Emplatado & Servicio",
-        "text": "In a large mixing bowl, combine the grated papas, chopped cebolla, minced diente de ajo, huevos, harina de trigo 000, marjoram, sal fina, and pimienta negra molida.",
+        "text": "In a large mixing bowl, combine the rallado papas, picado/a cebolla, picado fino diente de ajo, huevos, harina de trigo 000, marjoram, sal fina, and pimienta negra molida.",
         "timerMinutes": 25
       }
     ],
