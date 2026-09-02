@@ -287,8 +287,26 @@ function registerGlobalIngredient({ name, category = 'alacena', unit = 'un', min
     }
   });
 
+  // 3. Sincronizar nuevo insumo global con Supabase Cloud
+  if (typeof pushMasterIngredientToSupabase === 'function') {
+    pushMasterIngredientToSupabase(masterItem);
+  } else if (typeof window !== 'undefined' && typeof window.pushMasterIngredientToSupabase === 'function') {
+    window.pushMasterIngredientToSupabase(masterItem);
+  }
+
   updateMasterIngredientsDatalist();
   return currentPantry.find(p => p.id === newIngId) || masterItem;
+}
+
+function getCategoryName(category) {
+  switch (category) {
+    case 'carnes': return '🥩 Carnes & Pescados';
+    case 'heladera': return '🥦 Frescos & Lácteos';
+    case 'alacena': return '🥫 Despensa & Limpieza';
+    case 'especias': return '🌿 Condimentos & Salsas';
+    case 'cava': return '🍷 Bebidas & Cava';
+    default: return '📦 General';
+  }
 }
 
 function updateMasterIngredientsDatalist() {
@@ -1344,11 +1362,11 @@ function renderPantryView() {
   const pantry = getCurrentPantry();
 
   const categories = [
-    { id: 'carnes', title: '🥩 Carnes & Pescados', icon: '🥩' },
-    { id: 'heladera', title: '❄️ Heladera & Frescos', icon: '🥦' },
-    { id: 'alacena', title: '🥫 Alacena & Secos', icon: '🌾' },
-    { id: 'especias', title: '🌿 Condimentos & Especias', icon: '🌶️' },
-    { id: 'cava', title: '🍷 Cava & Bebidas', icon: '🍷' }
+    { id: 'carnes', title: '🥩 Carnes, Aves, Cerdo & Pescadería', icon: '🥩' },
+    { id: 'heladera', title: '🥦 Frescos, Verdulería, Frutas & Lácteos', icon: '🥦' },
+    { id: 'alacena', title: '🥫 Despensa, Secos, Congelados & Limpieza', icon: '🌾' },
+    { id: 'especias', title: '🌿 Condimentos, Especias, Aceites & Salsas', icon: '🌶️' },
+    { id: 'cava', title: '🍷 Bebidas, Cava & Refrescos', icon: '🍷' }
   ];
 
   let html = '';

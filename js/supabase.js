@@ -193,6 +193,23 @@ async function syncFromSupabase() {
           }
         }
       });
+
+      // Asegurar que todos los usuarios tengan los insumos del catálogo maestro en su alacena
+      if (typeof MASTER_PANTRY_CATALOG !== 'undefined' && Array.isArray(MASTER_PANTRY_CATALOG)) {
+        appState.users.forEach(u => {
+          if (!appState.pantries[u.id]) appState.pantries[u.id] = [];
+          const uPantry = appState.pantries[u.id];
+          const existingNames = new Set(uPantry.map(i => i.name.toLowerCase()));
+          MASTER_PANTRY_CATALOG.forEach(masterItem => {
+            if (!existingNames.has(masterItem.name.toLowerCase())) {
+              uPantry.push({
+                ...masterItem,
+                qty: 0
+              });
+            }
+          });
+        });
+      }
     }
 
     // 5. Cargar Listas de Compras
