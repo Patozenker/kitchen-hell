@@ -115,6 +115,9 @@ async function syncFromSupabase() {
           userName: c.user_name,
           userAvatar: c.user_avatar,
           text: c.text,
+          ratingGeneral: c.rating_general || 5,
+          ratingTaste: c.rating_taste || 5,
+          ratingEase: c.rating_ease || 5,
           date: new Date(c.created_at).toLocaleDateString('es-AR'),
           replies: []
         };
@@ -371,14 +374,19 @@ async function deleteRecipeFromSupabase(recipeId) {
 async function pushCommentToSupabase(recipeId, comment) {
   if (!supabaseClient || !isSupabaseConnected) return;
   try {
-    await supabaseClient.from('recipe_comments').upsert({
+    const payload = {
       id: comment.id,
       recipe_id: recipeId,
       user_id: comment.userId,
       user_name: comment.userName,
       user_avatar: comment.userAvatar || '👨‍🍳',
       text: comment.text
-    });
+    };
+    if (comment.ratingGeneral) payload.rating_general = comment.ratingGeneral;
+    if (comment.ratingTaste) payload.rating_taste = comment.ratingTaste;
+    if (comment.ratingEase) payload.rating_ease = comment.ratingEase;
+
+    await supabaseClient.from('recipe_comments').upsert(payload);
   } catch (e) {
     console.warn("Error pushCommentToSupabase:", e);
   }

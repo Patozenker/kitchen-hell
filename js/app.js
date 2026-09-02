@@ -634,6 +634,7 @@ function renderSmartMatcher() {
 
     const canEdit = canUserModifyRecipe(r);
     const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
+    const ratings = calculateRecipeRatings(r);
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -666,9 +667,9 @@ function renderSmartMatcher() {
           ` : ''}
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
-              <span>⭐ ${r.difficulty}</span>
+              <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
@@ -738,6 +739,7 @@ function renderRecipesView() {
     const match = calculateRecipeMatch(r);
     const canEdit = canUserModifyRecipe(r);
     const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
+    const ratings = calculateRecipeRatings(r);
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -759,11 +761,9 @@ function renderRecipesView() {
           <p class="recipe-desc">${escapeAttr(r.description)}</p>
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
-              <span style="color:${match.pct === 100 ? '#34d399' : '#fbbf24'}; font-weight:700;">
-                ${match.pct === 100 ? '✅ 100%' : `⚠️ ${match.pct}%`}
-              </span>
+              <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
@@ -1546,6 +1546,65 @@ function addMissingToShopping(name, qty) {
 }
 
 // =========================================================
+
+// =========================================================
+// 8.0 SISTEMA DE CALIFICACIÓN POR ESTRELLAS (SABOR, FACILIDAD, GENERAL)
+// =========================================================
+
+let currentFormRatings = {
+  general: 5,
+  taste: 5,
+  ease: 5
+};
+
+function setFormRating(dimension, val) {
+  currentFormRatings[dimension] = val;
+  const groupMap = {
+    general: 'starGroupGeneral',
+    taste: 'starGroupTaste',
+    ease: 'starGroupEase'
+  };
+  const group = document.getElementById(groupMap[dimension]);
+  if (group) {
+    Array.from(group.children).forEach(btn => {
+      const bVal = parseInt(btn.dataset.val);
+      btn.classList.toggle('active', bVal <= val);
+    });
+  }
+}
+
+function calculateRecipeRatings(recipe) {
+  if (!recipe) return { general: '5.0', taste: '5.0', ease: '5.0', votesCount: 0 };
+  const commentsWithRating = (recipe.comments || []).filter(c => c.ratingGeneral || c.ratingTaste || c.ratingEase);
+  
+  if (commentsWithRating.length === 0) {
+    const baseGeneral = (typeof recipe.rating === 'number' ? recipe.rating : 5).toFixed(1);
+    const baseTaste = (typeof recipe.ratingTaste === 'number' ? recipe.ratingTaste : 5).toFixed(1);
+    const baseEase = (typeof recipe.ratingEase === 'number' ? recipe.ratingEase : 5).toFixed(1);
+    return {
+      general: baseGeneral,
+      taste: baseTaste,
+      ease: baseEase,
+      votesCount: 0
+    };
+  }
+
+  let sumGen = 0, sumTaste = 0, sumEase = 0;
+  commentsWithRating.forEach(c => {
+    sumGen += (c.ratingGeneral || 5);
+    sumTaste += (c.ratingTaste || 5);
+    sumEase += (c.ratingEase || 5);
+  });
+
+  const count = commentsWithRating.length;
+  return {
+    general: (sumGen / count).toFixed(1),
+    taste: (sumTaste / count).toFixed(1),
+    ease: (sumEase / count).toFixed(1),
+    votesCount: count
+  };
+}
+
 // 8.1 SISTEMA DE COMENTARIOS & RESPUESTAS DEL AUTOR
 // =========================================================
 
@@ -1558,11 +1617,33 @@ function renderRecipeComments(recipe) {
   const curUser = getCurrentUser();
 
   if (avatarEl) avatarEl.innerText = curUser.avatar || '👨‍🍳';
-
   if (!recipe) return;
+
   if (!Array.isArray(recipe.comments)) {
     recipe.comments = [];
   }
+
+  // Actualizar Scoreboard de Calificaciones
+  const ratings = calculateRecipeRatings(recipe);
+  const scoreGenEl = document.getElementById('modalScoreGeneral');
+  const scoreStarsEl = document.getElementById('modalScoreGeneralStars');
+  const scoreTasteEl = document.getElementById('modalScoreTaste');
+  const scoreEaseEl = document.getElementById('modalScoreEase');
+  const scoreVotesEl = document.getElementById('modalScoreVotesCount');
+
+  if (scoreGenEl) scoreGenEl.innerText = ratings.general;
+  if (scoreStarsEl) {
+    const fullStars = Math.round(parseFloat(ratings.general));
+    scoreStarsEl.innerText = '★'.repeat(Math.min(5, fullStars)) + '☆'.repeat(Math.max(0, 5 - fullStars));
+  }
+  if (scoreTasteEl) scoreTasteEl.innerText = `${ratings.taste} ★`;
+  if (scoreEaseEl) scoreEaseEl.innerText = `${ratings.ease} ★`;
+  if (scoreVotesEl) scoreVotesEl.innerText = ratings.votesCount;
+
+  // Resetear selectores de estrellas del formulario a 5
+  setFormRating('general', 5);
+  setFormRating('taste', 5);
+  setFormRating('ease', 5);
 
   // Contar total comentarios + respuestas
   let totalCommentsCount = recipe.comments.length;
@@ -1576,9 +1657,9 @@ function renderRecipeComments(recipe) {
 
   if (recipe.comments.length === 0) {
     container.innerHTML = `
-      <div style="text-align:center; padding:20px; background:var(--bg-card); border-radius:var(--radius-sm); border:1px dashed var(--border);">
-        <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">
-          Sé el primero en dejar un tip, reseña o pregunta para <strong>${escapeAttr(recipe.authorName || 'el Chef')}</strong>.
+      <div style="text-align:center; padding:18px; background:var(--bg-main); border-radius:var(--radius-sm); border:1px dashed var(--border);">
+        <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">
+          ⭐ ¡Sé el primero en calificar y dejar tu reseña sobre este plato!
         </p>
       </div>
     `;
@@ -1589,6 +1670,9 @@ function renderRecipeComments(recipe) {
     const isCommentAuthor = (comment.userId === recipe.authorId);
     const replies = Array.isArray(comment.replies) ? comment.replies : [];
     const isReplying = currentOpenReplyCommentId === comment.id;
+    const rGen = comment.ratingGeneral || 5;
+    const rTaste = comment.ratingTaste || 5;
+    const rEase = comment.ratingEase || 5;
 
     return `
       <div class="comment-item" id="comment-${comment.id}">
@@ -1596,9 +1680,15 @@ function renderRecipeComments(recipe) {
           <div class="comment-user-info">
             <span class="comment-avatar">${comment.userAvatar || '👨‍🍳'}</span>
             <span class="comment-author-name">${escapeAttr(comment.userName || 'Chef')}</span>
-            ${isCommentAuthor ? '<span class="comment-author-badge">👨‍🍳 Autor de la Receta</span>' : ''}
+            ${isCommentAuthor ? '<span class="comment-author-badge">👑 Autor de la Receta</span>' : ''}
           </div>
           <span class="comment-date">${escapeAttr(comment.date || '')}</span>
+        </div>
+
+        <div class="comment-ratings-tags">
+          <span class="comment-rating-pill">⭐ ${rGen}/5</span>
+          <span class="comment-rating-pill">😋 Sabor: ${rTaste}★</span>
+          <span class="comment-rating-pill">⚡ Fácil: ${rEase}★</span>
         </div>
 
         <div class="comment-text">${escapeAttr(comment.text || '')}</div>
@@ -1655,7 +1745,7 @@ function handleAddRecipeComment() {
   const inp = document.getElementById('inpNewCommentText');
   const text = inp?.value.trim();
   if (!text) {
-    showToast('Por favor escribí un comentario.', 'info');
+    showToast('Por favor escribí un comentario o reseña.', 'info');
     return;
   }
 
@@ -1666,6 +1756,9 @@ function handleAddRecipeComment() {
     userName: curUser.name,
     userAvatar: curUser.avatar,
     text,
+    ratingGeneral: currentFormRatings.general || 5,
+    ratingTaste: currentFormRatings.taste || 5,
+    ratingEase: currentFormRatings.ease || 5,
     date: new Date().toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
     replies: []
   };
@@ -1675,6 +1768,12 @@ function handleAddRecipeComment() {
   }
   currentDetailRecipe.comments.push(newComment);
 
+  // Recalcular promedios en la receta
+  const updatedRatings = calculateRecipeRatings(currentDetailRecipe);
+  currentDetailRecipe.rating = parseFloat(updatedRatings.general);
+  currentDetailRecipe.ratingTaste = parseFloat(updatedRatings.taste);
+  currentDetailRecipe.ratingEase = parseFloat(updatedRatings.ease);
+
   // Guardar en la receta en appState
   const idx = appState.recipes.findIndex(r => r.id === currentDetailRecipe.id);
   if (idx !== -1) {
@@ -1682,9 +1781,19 @@ function handleAddRecipeComment() {
   }
 
   saveState();
+  if (typeof window !== 'undefined' && typeof window.pushCommentToSupabase === 'function') {
+    window.pushCommentToSupabase(currentDetailRecipe.id, newComment);
+  }
+  if (typeof window !== 'undefined' && typeof window.pushRecipeToSupabase === 'function') {
+    window.pushRecipeToSupabase(currentDetailRecipe);
+  }
+
   if (inp) inp.value = '';
   renderRecipeComments(currentDetailRecipe);
-  showToast('💬 ¡Comentario publicado!', 'success');
+  if (currentTab === 'recetas') renderRecipesView();
+  if (currentTab === 'matcher') renderSmartMatcher();
+
+  showToast(`⭐ ¡Reseña de ${curUser.name} publicada con éxito!`, 'success');
 }
 
 function toggleReplyInput(commentId) {
@@ -2681,3 +2790,6 @@ if (typeof document !== 'undefined') {
     switchTab('matcher');
   });
 }
+
+window.setFormRating = setFormRating;
+window.calculateRecipeRatings = calculateRecipeRatings;

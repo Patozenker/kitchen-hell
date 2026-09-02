@@ -247,112 +247,201 @@
   <!-- 4. MODAL DE DETALLE DE RECETA & PORCIONES DINÁMICAS       -->
   <!-- ========================================================= -->
   <div class="modal-overlay" id="recipeDetailModal" style="display:none;" onclick="if(event.target===this) closeRecipeDetailModal()">
-    <div class="modal-content" style="max-width:750px;">
+    <div class="modal-content" style="max-width:1100px; width:95vw; max-height:92vh; overflow-y:auto;">
       
-      <!-- Portada -->
-      <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; margin-bottom:18px; height:240px;">
-        <img id="modalRecipeImg" src="" alt="Receta" style="width:100%; height:100%; object-fit:cover;">
-        <button class="btn-icon btn-secondary" style="position:absolute; top:12px; right:52px; background:rgba(0,0,0,0.7);" onclick="openEditCurrentRecipeModal()" title="Editar receta">✏️</button>
-        <button class="btn-icon btn-secondary" style="position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.7);" onclick="closeRecipeDetailModal()">✕</button>
-        <div style="position:absolute; bottom:12px; left:12px; display:flex; gap:8px;">
+      <!-- Encabezado del Modal con Botón Cerrar -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);">
+        <div style="display:flex; align-items:center; gap:10px;">
           <span class="recipe-match-badge match-100" id="modalRecipeCategory"></span>
           <span class="recipe-time-tag" id="modalRecipeTime"></span>
         </div>
-      </div>
-
-      <!-- Título & Descripción -->
-      <h2 id="modalRecipeTitle" style="font-family:var(--font-serif); font-size:1.6rem; color:#ffffff; margin-bottom:8px; line-height:1.2;"></h2>
-      <p id="modalRecipeDesc" style="color:var(--text-muted); font-size:0.95rem; margin-bottom:18px;"></p>
-
-      <!-- Selector de Porciones -->
-      <div style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-md); padding:12px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
-        <div>
-          <strong style="color:#ffffff; font-size:0.9rem; display:block;">👥 Selector de Porciones:</strong>
-          <small id="modalRecipePortionsText" style="color:var(--primary-light); font-weight:700;"></small>
-        </div>
-        <div class="cooking-portion-selector" id="modalPortionButtons">
-          <!-- Botones 1x, 2x, 4x, 6x generados por JS -->
+        <div style="display:flex; gap:8px;">
+          <button class="btn-icon btn-secondary" onclick="openEditCurrentRecipeModal()" title="Editar receta">✏️</button>
+          <button class="btn-icon btn-secondary" onclick="closeRecipeDetailModal()" title="Cerrar">✕</button>
         </div>
       </div>
 
-      <!-- Maridaje & Tips -->
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
-        <div style="background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.3); border-radius:var(--radius-md); padding:12px;">
-          <strong style="color:var(--accent-purple); font-size:0.85rem; display:block; margin-bottom:4px;">🍷 Maridaje Recomendado:</strong>
-          <span id="modalRecipePairing" style="font-size:0.85rem; color:#e2e8f0;"></span>
-        </div>
-        <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:var(--radius-md); padding:12px;">
-          <strong style="color:var(--accent-gold); font-size:0.85rem; display:block; margin-bottom:4px;">👨‍🍳 Secreto del Chef:</strong>
-          <span id="modalRecipeChefTip" style="font-size:0.85rem; color:#e2e8f0;"></span>
-        </div>
-      </div>
+      <!-- GRID DE 2 COLUMNAS (RECETA A LA IZQUIERDA, COMENTARIOS Y ESTRELLAS A LA DERECHA) -->
+      <div class="recipe-modal-grid">
+        
+        <!-- ========================================================= -->
+        <!-- COLUMNA IZQUIERDA: RECETA, INGREDIENTES & PREPARACIÓN     -->
+        <!-- ========================================================= -->
+        <div class="recipe-modal-left">
+          
+          <!-- Portada -->
+          <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; margin-bottom:16px; height:240px;">
+            <img id="modalRecipeImg" src="" alt="Receta" style="width:100%; height:100%; object-fit:cover;">
+          </div>
 
-      <!-- Ingredientes -->
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid var(--border); padding-bottom:6px; flex-wrap:wrap; gap:8px;">
-        <h3 style="font-size:1.15rem; color:#ffffff;">📋 Ingredientes Necesarios</h3>
-        <button class="btn btn-outline btn-sm" id="modalBtnAddAllToCart" onclick="addCurrentRecipeToCart(false)" title="Agregar todos los ingredientes escalados a la lista de compras">
-          🛒 + Todo a Compras
-        </button>
-      </div>
-      <div id="modalRecipeIngredientsList" style="margin-bottom:24px;">
-        <!-- Lista de ingredientes calculados -->
-      </div>
+          <!-- Título & Descripción -->
+          <h2 id="modalRecipeTitle" style="font-family:var(--font-serif); font-size:1.6rem; color:#ffffff; margin-bottom:8px; line-height:1.2;"></h2>
+          <p id="modalRecipeDesc" style="color:var(--text-muted); font-size:0.95rem; margin-bottom:16px;"></p>
 
-      <!-- Pasos -->
-      <h3 style="font-size:1.15rem; color:#ffffff; margin-bottom:10px; border-bottom:1px solid var(--border); padding-bottom:6px;">
-        👨‍🍳 Preparación Paso a Paso
-      </h3>
-      <div id="modalRecipeStepsList" style="margin-bottom:24px;">
-        <!-- Pasos -->
-      </div>
+          <!-- Selector de Porciones -->
+          <div style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-md); padding:12px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+            <div>
+              <strong style="color:#ffffff; font-size:0.9rem; display:block;">👥 Selector de Porciones:</strong>
+              <small id="modalRecipePortionsText" style="color:var(--primary-light); font-weight:700;"></small>
+            </div>
+            <div class="cooking-portion-selector" id="modalPortionButtons">
+              <!-- Botones 1x, 2x, 4x, 6x generados por JS -->
+            </div>
+          </div>
 
-      <!-- Botones de Acción de la Receta -->
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:20px;">
-        <button class="btn btn-secondary" id="modalBtnAddToCart" onclick="addCurrentRecipeToCart()" style="padding:14px; font-size:1rem; display:flex; align-items:center; justify-content:center; gap:8px;">
-          🛒 Agregar al Carrito
-        </button>
-        <button class="btn btn-primary" id="modalBtnStartCooking" style="padding:14px; font-size:1rem; box-shadow:0 6px 20px var(--primary-glow); display:flex; align-items:center; justify-content:center; gap:8px;">
-          🔥 Iniciar Modo Cocina
-        </button>
-      </div>
+          <!-- Maridaje & Tips -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px;">
+            <div style="background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.3); border-radius:var(--radius-md); padding:12px;">
+              <strong style="color:var(--accent-purple); font-size:0.85rem; display:block; margin-bottom:4px;">🍷 Maridaje Recomendado:</strong>
+              <span id="modalRecipePairing" style="font-size:0.85rem; color:#e2e8f0;"></span>
+            </div>
+            <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:var(--radius-md); padding:12px;">
+              <strong style="color:var(--accent-gold); font-size:0.85rem; display:block; margin-bottom:4px;">👨‍🍳 Secreto del Chef:</strong>
+              <span id="modalRecipeChefTip" style="font-size:0.85rem; color:#e2e8f0;"></span>
+            </div>
+          </div>
 
-      <div style="margin-top:14px; border-top:1px solid var(--border); padding-top:14px; display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-        <button class="btn btn-secondary btn-sm" id="modalBtnEditRecipe" onclick="openEditCurrentRecipeModal()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
-          ✏️ Editar Receta
-        </button>
-        <button class="btn btn-danger btn-sm" id="modalBtnDeleteRecipe" onclick="deleteCurrentRecipe()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
-          🗑️ Eliminar Receta
-        </button>
-      </div>
+          <!-- Ingredientes -->
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid var(--border); padding-bottom:6px; flex-wrap:wrap; gap:8px;">
+            <h3 style="font-size:1.15rem; color:#ffffff;">📋 Ingredientes Necesarios</h3>
+            <button class="btn btn-outline btn-sm" id="modalBtnAddAllToCart" onclick="addCurrentRecipeToCart(false)" title="Agregar todos los ingredientes escalados a la lista de compras">
+              🛒 + Todo a Compras
+            </button>
+          </div>
+          <div id="modalRecipeIngredientsList" style="margin-bottom:20px;">
+            <!-- Lista de ingredientes calculados -->
+          </div>
 
-      <!-- ========================================================= -->
-      <!-- SECCIÓN DE COMENTARIOS & RESPUESTAS DEL AUTOR             -->
-      <!-- ========================================================= -->
-      <div id="modalCommentsContainer" style="margin-top:24px; border-top:1px solid var(--border); padding-top:18px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-          <h3 style="font-size:1.15rem; color:#ffffff; display:flex; align-items:center; gap:8px;">
-            💬 Comentarios & Respuestas (<span id="modalCommentsCount">0</span>)
+          <!-- Pasos -->
+          <h3 style="font-size:1.15rem; color:#ffffff; margin-bottom:10px; border-bottom:1px solid var(--border); padding-bottom:6px;">
+            👨‍🍳 Preparación Paso a Paso
           </h3>
+          <div id="modalRecipeStepsList" style="margin-bottom:20px;">
+            <!-- Pasos -->
+          </div>
+
+          <!-- Botones de Acción de la Receta -->
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:10px;">
+            <button class="btn btn-secondary" id="modalBtnAddToCart" onclick="addCurrentRecipeToCart()" style="padding:14px; font-size:1rem; display:flex; align-items:center; justify-content:center; gap:8px;">
+              🛒 Agregar al Carrito
+            </button>
+            <button class="btn btn-primary" id="modalBtnStartCooking" style="padding:14px; font-size:1rem; box-shadow:0 6px 20px var(--primary-glow); display:flex; align-items:center; justify-content:center; gap:8px;">
+              🔥 Iniciar Modo Cocina
+            </button>
+          </div>
+
+          <div style="margin-top:14px; border-top:1px solid var(--border); padding-top:14px; display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+            <button class="btn btn-secondary btn-sm" id="modalBtnEditRecipe" onclick="openEditCurrentRecipeModal()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
+              ✏️ Editar Receta
+            </button>
+            <button class="btn btn-danger btn-sm" id="modalBtnDeleteRecipe" onclick="deleteCurrentRecipe()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
+              🗑️ Eliminar Receta
+            </button>
+          </div>
+
         </div>
 
-        <!-- Formulario para agregar comentario nuevo -->
-        <div class="comment-input-card" id="modalCommentInputBox">
-          <div style="display:flex; gap:10px; align-items:flex-start;">
-            <span class="user-avatar-chip" id="commentCurrentUserAvatar" style="font-size:1.4rem;">👨‍🍳</span>
-            <div style="flex:1;">
-              <textarea id="inpNewCommentText" rows="2" placeholder="Escribí un comentario, pregunta o tip sobre esta receta..." style="width:100%; background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px; color:#fff; font-size:0.88rem; resize:vertical;"></textarea>
-              <div style="display:flex; justify-content:flex-end; margin-top:6px;">
-                <button type="button" class="btn btn-primary btn-sm" onclick="handleAddRecipeComment()">💬 Enviar Comentario</button>
+        <!-- ========================================================= -->
+        <!-- COLUMNA DERECHA: CALIFICACIONES (ESTRELLAS) & COMENTARIOS -->
+        <!-- ========================================================= -->
+        <div class="recipe-modal-right" id="modalCommentsContainer">
+          
+          <h3 style="font-size:1.2rem; color:#ffffff; margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+            ⭐ Calificaciones & Opiniones
+          </h3>
+
+          <!-- Scoreboard de Calificaciones Globales de la Receta -->
+          <div class="rating-scoreboard" id="modalRatingScoreboard">
+            <div class="rating-score-main">
+              <div>
+                <div class="rating-score-num" id="modalScoreGeneral">5.0</div>
+                <div class="rating-score-stars" id="modalScoreGeneralStars">★★★★★</div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-size:0.82rem; color:var(--text-muted);">Calificación general</div>
+                <div style="font-size:0.85rem; color:var(--text-main); font-weight:700;"><span id="modalScoreVotesCount">0</span> opiniones</div>
+              </div>
+            </div>
+
+            <div class="rating-dimensions-list">
+              <div class="rating-dim-row">
+                <span class="rating-dim-label">😋 Lo Rico / Sabor:</span>
+                <span class="rating-dim-val" id="modalScoreTaste">5.0 ★</span>
+              </div>
+              <div class="rating-dim-row">
+                <span class="rating-dim-label">⚡ Lo Fácil / Dificultad:</span>
+                <span class="rating-dim-val" id="modalScoreEase">5.0 ★</span>
               </div>
             </div>
           </div>
+
+          <!-- Formulario de Calificación y Comentario -->
+          <div class="comment-input-card" id="modalCommentInputBox" style="margin-bottom:16px;">
+            <div style="font-weight:700; font-size:0.88rem; color:#ffffff; margin-bottom:10px; display:flex; align-items:center; gap:6px;">
+              <span>✍️</span> Calificá este plato:
+            </div>
+
+            <!-- Selectores de Estrellas -->
+            <div class="stars-input-container">
+              <div class="star-rating-row">
+                <span class="star-rating-label">⭐ General del Plato:</span>
+                <div class="star-group" id="starGroupGeneral">
+                  <button type="button" class="star-btn active" data-val="1" onclick="setFormRating('general', 1)">★</button>
+                  <button type="button" class="star-btn active" data-val="2" onclick="setFormRating('general', 2)">★</button>
+                  <button type="button" class="star-btn active" data-val="3" onclick="setFormRating('general', 3)">★</button>
+                  <button type="button" class="star-btn active" data-val="4" onclick="setFormRating('general', 4)">★</button>
+                  <button type="button" class="star-btn active" data-val="5" onclick="setFormRating('general', 5)">★</button>
+                </div>
+              </div>
+
+              <div class="star-rating-row">
+                <span class="star-rating-label">😋 ¿Qué tan rico quedó?:</span>
+                <div class="star-group" id="starGroupTaste">
+                  <button type="button" class="star-btn active" data-val="1" onclick="setFormRating('taste', 1)">★</button>
+                  <button type="button" class="star-btn active" data-val="2" onclick="setFormRating('taste', 2)">★</button>
+                  <button type="button" class="star-btn active" data-val="3" onclick="setFormRating('taste', 3)">★</button>
+                  <button type="button" class="star-btn active" data-val="4" onclick="setFormRating('taste', 4)">★</button>
+                  <button type="button" class="star-btn active" data-val="5" onclick="setFormRating('taste', 5)">★</button>
+                </div>
+              </div>
+
+              <div class="star-rating-row">
+                <span class="star-rating-label">⚡ ¿Qué tan fácil fue?:</span>
+                <div class="star-group" id="starGroupEase">
+                  <button type="button" class="star-btn active" data-val="1" onclick="setFormRating('ease', 1)">★</button>
+                  <button type="button" class="star-btn active" data-val="2" onclick="setFormRating('ease', 2)">★</button>
+                  <button type="button" class="star-btn active" data-val="3" onclick="setFormRating('ease', 3)">★</button>
+                  <button type="button" class="star-btn active" data-val="4" onclick="setFormRating('ease', 4)">★</button>
+                  <button type="button" class="star-btn active" data-val="5" onclick="setFormRating('ease', 5)">★</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Texto de Comentario -->
+            <div style="display:flex; gap:10px; align-items:flex-start;">
+              <span class="user-avatar-chip" id="commentCurrentUserAvatar" style="font-size:1.4rem;">👨‍🍳</span>
+              <div style="flex:1;">
+                <textarea id="inpNewCommentText" rows="2" placeholder="Escribí tu opinión, tips o preguntas sobre el plato..." style="width:100%; background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px; color:#fff; font-size:0.88rem; resize:vertical;"></textarea>
+                <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+                  <button type="button" class="btn btn-primary btn-sm" onclick="handleAddRecipeComment()">⭐ Publicar Reseña</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subtítulo y Lista de Comentarios -->
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid var(--border); padding-bottom:6px;">
+            <strong style="color:#ffffff; font-size:0.92rem;">💬 Comentarios de la Comunidad (<span id="modalCommentsCount">0</span>)</strong>
+          </div>
+
+          <div id="modalCommentsList" style="display:flex; flex-direction:column; gap:12px; max-height:480px; overflow-y:auto; padding-right:4px;">
+            <!-- Renderizado dinámico de comentarios -->
+          </div>
+
         </div>
 
-        <!-- Lista de Comentarios y Respuestas de la Receta -->
-        <div id="modalCommentsList" style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
-          <!-- Renderizado dinámico de comentarios -->
-        </div>
       </div>
+
     </div>
   </div>
 
