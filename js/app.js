@@ -112,10 +112,22 @@ function loadState() {
       }
 
       if (!Array.isArray(appState.users) || appState.users.length === 0) {
-        appState.users = [
-          { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'user' }
+        appState.users = (typeof DEFAULT_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_USERS)) : [
+          { id: 'user-pato', name: 'Chef Pato', email: 'pato@hellskitchen.com', profession: 'Chef Ejecutivo / Creador', password: 'pato', avatar: '👨‍🍳', role: 'admin' }
         ];
       }
+
+      // Asegurar que Chef Pato y los usuarios tengan email y profesión
+      appState.users.forEach(u => {
+        if (u.id === 'user-pato') {
+          if (!u.email) u.email = 'pato@hellskitchen.com';
+          if (!u.profession) u.profession = 'Chef Ejecutivo / Creador';
+          if (!u.password) u.password = 'pato';
+        } else {
+          if (!u.profession) u.profession = 'Cocinero/a Aficionado/a';
+        }
+      });
+
       if (!appState.currentUser || !appState.users.some(u => u.id === appState.currentUser)) {
         appState.currentUser = appState.users[0]?.id || 'user-pato';
       }
@@ -190,9 +202,22 @@ function loadState() {
   }
 
   // Semilla inicial
-  appState = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA));
-  const defaultData = (typeof DEFAULT_KITCHEN_DATA !== 'undefined') ? DEFAULT_KITCHEN_DATA : (typeof window !== 'undefined' && window.DEFAULT_KITCHEN_DATA ? window.DEFAULT_KITCHEN_DATA : {});
+  const defaultData = (typeof DEFAULT_KITCHEN_DATA !== 'undefined') ? DEFAULT_KITCHEN_DATA : (typeof window !== 'undefined' && window.DEFAULT_KITCHEN_DATA ? window.DEFAULT_KITCHEN_DATA : (typeof global !== 'undefined' && global.DEFAULT_KITCHEN_DATA ? global.DEFAULT_KITCHEN_DATA : {}));
   appState = JSON.parse(JSON.stringify(defaultData));
+  if (!Array.isArray(appState.users) || appState.users.length === 0) {
+    appState.users = (typeof DEFAULT_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_USERS)) : [
+      { id: 'user-pato', name: 'Chef Pato', email: 'pato@hellskitchen.com', profession: 'Chef Ejecutivo / Creador', password: 'pato', avatar: '👨‍🍳', role: 'admin' }
+    ];
+  }
+  appState.users.forEach(u => {
+    if (u.id === 'user-pato') {
+      if (!u.email) u.email = 'pato@hellskitchen.com';
+      if (!u.profession) u.profession = 'Chef Ejecutivo / Creador';
+      if (!u.password) u.password = 'pato';
+    } else {
+      if (!u.profession) u.profession = 'Cocinero/a Aficionado/a';
+    }
+  });
   saveState();
   updateMasterIngredientsDatalist();
   updateHeaderUserBadge();
@@ -591,9 +616,14 @@ function switchUser(userId) {
 // 1.4 PANEL DE BASE DE DATOS DE USUARIOS & LEADS (MARKETING)
 // =========================================================
 
+// =========================================================
+// 1.4 PANEL DE BASE DE DATOS DE USUARIOS & LEADS (MARKETING)
+// =========================================================
+
 function openUserLeadsModal() {
   const modal = document.getElementById('userLeadsModal');
   if (!modal) return;
+  populateProfessionFilterOptions();
   renderLeadsTable();
   modal.style.display = 'flex';
 }
@@ -603,38 +633,117 @@ function closeUserLeadsModal() {
   if (modal) modal.style.display = 'none';
 }
 
-function renderLeadsTable() {
-  const tbody = document.getElementById('leadsTableBody');
-  const countEl = document.getElementById('leadsUsersCount');
-  const filterSel = document.getElementById('selLeadsFilterProfession');
-  const filterVal = filterSel?.value || 'all';
+function populateProfessionFilterOptions() {
+  const select = document.getElementById('selLeadsFilterProfession');
+  if (!select) return;
 
-  if (!tbody) return;
+  const currentSelection = select.value || 'all';
+  const allUsers = Array.isArray(appState.users) ? appState.users : [];
+  
+  // Contar frecuencias de cada profesión
+  const profCounts = {};
+  allUsers.forEach(u => {
+    const prof = (u.profession || 'Sin profesión').trim();
+    profCounts[prof] = (profCounts[prof] || 0) + 1;
+  });
+
+  const sortedProfessions = Object.keys(profCounts).sort((a, b) => a.localeCompare(b, 'es'));
+
+  let optionsHtml = `<option value="all">Todas las Profesiones (${allUsers.length})</option>`;
+  sortedProfessions.forEach(prof => {
+    const isSelected = prof === currentSelection ? 'selected' : '';
+    optionsHtml += `<option value="${escapeAttr(prof)}" ${isSelected}>${escapeAttr(prof)} (${profCounts[prof]})</option>`;
+  });
+
+  select.innerHTML = optionsHtml;
+}
+
+function getFilteredLeadsUsers() {
+  const searchInp = document.getElementById('inpLeadsSearch');
+  const filterSel = document.getElementById('selLeadsFilterProfession');
+  
+  const searchVal = (searchInp?.value || '').trim().toLowerCase();
+  const filterVal = filterSel?.value || 'all';
 
   let users = Array.isArray(appState.users) ? [...appState.users] : [];
 
+  // Filtro por dropdown de profesión
   if (filterVal !== 'all') {
-    users = users.filter(u => u.profession === filterVal);
+    users = users.filter(u => (u.profession || '').toLowerCase() === filterVal.toLowerCase());
   }
 
-  if (countEl) countEl.innerText = users.length;
+  // Filtro por búsqueda de texto (busca en profesión, nombre o email)
+  if (searchVal) {
+    users = users.filter(u => 
+      (u.profession && u.profession.toLowerCase().includes(searchVal)) ||
+      (u.name && u.name.toLowerCase().includes(searchVal)) ||
+      (u.email && u.email.toLowerCase().includes(searchVal))
+    );
+  }
 
-  if (users.length === 0) {
+  return users;
+}
+
+function renderLeadsTable() {
+  const tbody = document.getElementById('leadsTableBody');
+  const countEl = document.getElementById('leadsUsersCount');
+  const summaryEl = document.getElementById('leadsActiveFilterSummary');
+  const btnCopy = document.getElementById('btnCopyFilteredEmails');
+  const btnExport = document.getElementById('btnExportFilteredCSV');
+
+  if (!tbody) return;
+
+  const filteredUsers = getFilteredLeadsUsers();
+  const totalUsers = (appState.users || []).length;
+
+  if (countEl) countEl.innerText = filteredUsers.length;
+
+  // Actualizar resumen y botones dinámicos
+  const filterSel = document.getElementById('selLeadsFilterProfession');
+  const searchInp = document.getElementById('inpLeadsSearch');
+  const searchVal = searchInp?.value?.trim();
+  const filterVal = filterSel?.value;
+
+  if (summaryEl) {
+    if (searchVal) {
+      summaryEl.innerHTML = `🔍 Búsqueda: <strong>"${escapeAttr(searchVal)}"</strong> — ${filteredUsers.length} de ${totalUsers} usuario(s)`;
+    } else if (filterVal && filterVal !== 'all') {
+      summaryEl.innerHTML = `🎯 Segmento: <strong>"${escapeAttr(filterVal)}"</strong> — ${filteredUsers.length} usuario(s)`;
+    } else {
+      summaryEl.innerHTML = `👥 Mostrando todos los usuarios registrados (${totalUsers})`;
+    }
+  }
+
+  if (btnCopy) btnCopy.innerText = `📋 Copiar Mails (${filteredUsers.filter(u => u.email).length})`;
+  if (btnExport) btnExport.innerText = `📥 Descargar CSV (${filteredUsers.length})`;
+
+  if (filteredUsers.length === 0) {
     tbody.innerHTML = `
       <tr>
-        <td colspan="5" style="text-align:center; padding:24px; color:var(--text-muted);">
-          No se encontraron usuarios con la profesión seleccionada.
+        <td colspan="5" style="text-align:center; padding:32px; color:var(--text-muted);">
+          <div style="font-size:1.8rem; margin-bottom:8px;">🔍</div>
+          <div>No se encontraron usuarios con la profesión o búsqueda ingresada.</div>
+          <small style="color:var(--text-dim);">Probá con otro término o seleccioná "Todas las Profesiones".</small>
         </td>
       </tr>
     `;
     return;
   }
 
-  tbody.innerHTML = users.map(u => {
+  tbody.innerHTML = filteredUsers.map(u => {
     const userRecipesCount = (appState.recipes || []).filter(r => r.authorId === u.id).length;
     const dateFormatted = u.createdAt ? new Date(u.createdAt).toLocaleDateString('es-AR') : 'Reciente';
-    const profClass = (u.profession || '').toLowerCase().includes('chef') ? 'chef' : 
-                      (u.profession || '').toLowerCase().includes('estudiante') ? 'estudiante' : 'aficionado';
+    const profName = u.profession || 'Cocinero/a Aficionado/a';
+    
+    // Asignar colores por tipo de profesión
+    const lowerProf = profName.toLowerCase();
+    let profBadgeColor = 'background:rgba(59, 130, 246, 0.15); border:1px solid rgba(59, 130, 246, 0.4); color:#93c5fd;'; // default azul
+    if (lowerProf.includes('arquitect')) profBadgeColor = 'background:rgba(14, 165, 233, 0.2); border:1px solid rgba(14, 165, 233, 0.5); color:#7dd3fc;'; // celeste
+    else if (lowerProf.includes('abogad') || lowerProf.includes('ley')) profBadgeColor = 'background:rgba(234, 179, 8, 0.2); border:1px solid rgba(234, 179, 8, 0.5); color:#fde047;'; // dorado
+    else if (lowerProf.includes('médic') || lowerProf.includes('medic') || lowerProf.includes('salud') || lowerProf.includes('nutri')) profBadgeColor = 'background:rgba(16, 185, 129, 0.2); border:1px solid rgba(16, 185, 129, 0.5); color:#6ee7b7;'; // verde
+    else if (lowerProf.includes('chef') || lowerProf.includes('gastro')) profBadgeColor = 'background:rgba(245, 158, 11, 0.2); border:1px solid rgba(245, 158, 11, 0.5); color:#fcd34d;'; // naranja
+    else if (lowerProf.includes('diseñ') || lowerProf.includes('arte') || lowerProf.includes('foto')) profBadgeColor = 'background:rgba(236, 72, 153, 0.2); border:1px solid rgba(236, 72, 153, 0.5); color:#f472b6;'; // rosa
+    else if (lowerProf.includes('ingeni') || lowerProf.includes('program') || lowerProf.includes('it') || lowerProf.includes('tech')) profBadgeColor = 'background:rgba(168, 85, 247, 0.2); border:1px solid rgba(168, 85, 247, 0.5); color:#d8b4fe;'; // violeta
 
     return `
       <tr>
@@ -654,8 +763,8 @@ function renderLeadsTable() {
           </div>
         </td>
         <td>
-          <span class="profession-pill ${profClass}">
-            💼 ${escapeAttr(u.profession || 'Cocinero/a')}
+          <span style="display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:var(--radius-full); font-size:0.78rem; font-weight:700; ${profBadgeColor}">
+            💼 ${escapeAttr(profName)}
           </span>
         </td>
         <td style="color:var(--text-muted); font-size:0.82rem;">
@@ -685,24 +794,22 @@ function copySingleEmail(email) {
 }
 
 function copyAllEmailsToClipboard() {
-  const filterSel = document.getElementById('selLeadsFilterProfession');
-  const filterVal = filterSel?.value || 'all';
-
-  let users = Array.isArray(appState.users) ? [...appState.users] : [];
-  if (filterVal !== 'all') {
-    users = users.filter(u => u.profession === filterVal);
-  }
-
-  const emails = users.map(u => u.email).filter(e => e && e.includes('@'));
+  const filteredUsers = getFilteredLeadsUsers();
+  const emails = filteredUsers.map(u => u.email).filter(e => e && e.includes('@'));
+  
   if (emails.length === 0) {
-    showToast('No hay emails registrados para copiar.', 'info');
+    showToast('No hay emails en el segmento seleccionado para copiar.', 'info');
     return;
   }
+
+  const filterSel = document.getElementById('selLeadsFilterProfession');
+  const searchInp = document.getElementById('inpLeadsSearch');
+  const segmentName = searchInp?.value?.trim() || filterSel?.value || 'Todos';
 
   const emailsString = emails.join(', ');
   if (typeof navigator !== 'undefined' && navigator.clipboard) {
     navigator.clipboard.writeText(emailsString).then(() => {
-      showToast(`📋 ¡${emails.length} emails copiados al portapapeles listos para enviar promociones!`, 'success');
+      showToast(`📋 ¡${emails.length} emails copiados al portapapeles (Segmento: ${segmentName})!`, 'success');
     }).catch(() => {
       prompt('Copiá los emails para tu campaña:', emailsString);
     });
@@ -712,16 +819,21 @@ function copyAllEmailsToClipboard() {
 }
 
 function exportUsersToCSV() {
-  const users = Array.isArray(appState.users) ? appState.users : [];
-  if (users.length === 0) {
-    showToast('No hay usuarios registrados para exportar.', 'info');
+  const filteredUsers = getFilteredLeadsUsers();
+  if (filteredUsers.length === 0) {
+    showToast('No hay usuarios en la selección actual para exportar.', 'info');
     return;
   }
 
-  let csvContent = "\uFEFF"; // UTF-8 BOM para Excel
+  const filterSel = document.getElementById('selLeadsFilterProfession');
+  const searchInp = document.getElementById('inpLeadsSearch');
+  const rawSegment = searchInp?.value?.trim() || filterSel?.value || 'todos';
+  const cleanSegment = rawSegment.toLowerCase().replace(/[^a-z0-9]/g, '_');
+
+  let csvContent = "\uFEFF"; // UTF-8 BOM para soporte de tildes en Excel y Sheets
   csvContent += "ID,Nombre,Email,Profesion,Rol,Fecha_Registro,Recetas_Publicadas\n";
 
-  users.forEach(u => {
+  filteredUsers.forEach(u => {
     const userRecipesCount = (appState.recipes || []).filter(r => r.authorId === u.id).length;
     const dateFormatted = u.createdAt ? new Date(u.createdAt).toLocaleDateString('es-AR') : '';
     const safeName = `"${(u.name || '').replace(/"/g, '""')}"`;
@@ -736,12 +848,12 @@ function exportUsersToCSV() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.setAttribute('href', url);
-  link.setAttribute('download', `hells_kitchen_leads_usuarios_${new Date().toISOString().split('T')[0]}.csv`);
+  link.setAttribute('download', `hells_kitchen_leads_${cleanSegment}_${new Date().toISOString().split('T')[0]}.csv`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 
-  showToast(`📥 ¡Base de datos de ${users.length} usuarios exportada a CSV exitosamente!`, 'success');
+  showToast(`📥 ¡Base de datos de ${filteredUsers.length} usuario(s) exportada a CSV con éxito!`, 'success');
 }
 
 
@@ -3085,6 +3197,8 @@ window.handleRegisterSubmit = handleRegisterSubmit;
 window.logoutUser = logoutUser;
 window.openUserLeadsModal = openUserLeadsModal;
 window.closeUserLeadsModal = closeUserLeadsModal;
+window.populateProfessionFilterOptions = populateProfessionFilterOptions;
+window.getFilteredLeadsUsers = getFilteredLeadsUsers;
 window.renderLeadsTable = renderLeadsTable;
 window.copySingleEmail = copySingleEmail;
 window.copyAllEmailsToClipboard = copyAllEmailsToClipboard;

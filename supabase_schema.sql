@@ -23,11 +23,6 @@ CREATE TABLE IF NOT EXISTS public.kitchen_users (
   avatar TEXT DEFAULT '👨‍🍳',
   role TEXT NOT NULL DEFAULT 'chef' CHECK (role IN ('admin', 'chef')),
   email TEXT,
-  role TEXT NOT NULL DEFAULT 'chef' CHECK (role IN ('admin', 'chef', 'user')),
-  email TEXT UNIQUE,
-  profession TEXT DEFAULT 'Cocinero/a Aficionado/a',
-  password TEXT,
-  marketing_opt_in BOOLEAN DEFAULT TRUE,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 

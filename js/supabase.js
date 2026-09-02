@@ -83,16 +83,6 @@ async function syncFromSupabase() {
     const { data: users, error: errU } = await supabaseClient.from('kitchen_users').select('*');
     if (!errU && users && users.length > 0) {
       appState.users = users;
-      appState.users = users.map(u => ({
-        id: u.id,
-        name: u.name,
-        avatar: u.avatar || '👨‍🍳',
-        role: u.role || 'chef',
-        email: u.email || '',
-        profession: u.profession || 'Cocinero/a Aficionado/a',
-        password: u.password || '',
-        createdAt: u.created_at || new Date().toISOString()
-      }));
     }
 
     // 2. Cargar Catálogo Maestro de Insumos

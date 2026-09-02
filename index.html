@@ -751,7 +751,6 @@
   </div>
 
   <!-- ========================================================= -->
-  <!-- 9. MODAL: LOGIN / PERFILES DE USUARIOS Y CHEFS            -->
   <!-- 9. MODAL: AUTENTICACIÓN & REGISTRO DE USUARIOS (LEADS)   -->
   <!-- ========================================================= -->
   <div class="modal-overlay" id="authModal" style="display:none;" onclick="if(event.target===this && canCloseAuthModal()) closeAuthModal()">
@@ -794,7 +793,7 @@
       <form id="formRegister" onsubmit="handleRegisterSubmit(event)" style="display:none;">
         <div class="auth-promo-box">
           <span>🎁</span>
-          <span>¡Registrate para acceder a recetas exclusivas, guardar tu stock y recibir promociones culinarias!</span>
+          <span>¡Registrate para acceder a recetas exclusivas, guardar tu stock y recibir promociones culinarias personalizadas!</span>
         </div>
 
         <div class="form-group">
@@ -808,18 +807,8 @@
         </div>
 
         <div class="form-group">
-          <label>Profesión u Ocupación *</label>
-          <select id="inpRegProfession" required>
-            <option value="Chef Profesional / Gastronómico">👨‍🍳 Chef Profesional / Gastronómico</option>
-            <option value="Cocinero/a Aficionado/a" selected>🍳 Cocinero/a Aficionado/a</option>
-            <option value="Estudiante de Gastronomía">🎓 Estudiante de Gastronomía</option>
-            <option value="Pastelero/a o Panadero/a">🥐 Pastelero/a / Panadero/a</option>
-            <option value="Nutricionista / Salud">🥗 Nutricionista / Dietista</option>
-            <option value="Sommelier / Bartender">🍷 Sommelier / Bartender</option>
-            <option value="Emprendedor/a Gastronómico">🏢 Emprendedor/a Gastronómico</option>
-            <option value="Foodie / Amante del Buen Comer">😋 Foodie / Amante del Buen Comer</option>
-            <option value="Otra profesión">💼 Otra profesión</option>
-          </select>
+          <label>Profesión u Ocupación * (ej: Arquitecto, Abogado, Chef, etc.)</label>
+          <input type="text" id="inpRegProfession" list="professionSuggestionsList" placeholder="Escribí tu profesión (ej: Arquitecto, Abogado, Diseñador...)" required autocomplete="organization-title">
         </div>
 
         <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px;">
@@ -873,7 +862,7 @@
       <!-- Acciones de Usuario -->
       <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:18px;">
         <button type="button" class="btn btn-secondary" id="btnAdminLeadsDirectory" onclick="closeUserProfileModal(); openUserLeadsModal();" style="width:100%; justify-content:center; gap:8px; display:none;">
-          👥 Base de Datos & Leads de Usuarios (CSV)
+          👥 Base de Datos & Segmentación por Profesión (CSV)
         </button>
         <button type="button" class="btn btn-outline" onclick="closeUserProfileModal(); openAuthModal('register');" style="width:100%; justify-content:center; gap:8px;">
           ✨ Registrar Otra Cuenta / Nuevo Chef
@@ -890,7 +879,6 @@
           <!-- Renderizado dinámico de tarjetas de miembros -->
         </div>
       </div>
-      </div>
     </div>
   </div>
 
@@ -898,44 +886,46 @@
   <!-- 11. MODAL: BASE DE DATOS DE USUARIOS & LEADS (MARKETING)  -->
   <!-- ========================================================= -->
   <div class="modal-overlay" id="userLeadsModal" style="display:none;" onclick="if(event.target===this) closeUserLeadsModal()">
-    <div class="modal-content" style="max-width:850px; width:95vw; max-height:90vh; overflow-y:auto;">
+    <div class="modal-content" style="max-width:880px; width:95vw; max-height:90vh; overflow-y:auto;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);">
         <div>
           <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff; margin:0; display:flex; align-items:center; gap:8px;">
-            👥 Base de Datos & Leads de Usuarios (<span id="leadsUsersCount">0</span>)
+            👥 Base de Datos de Usuarios & Profesiones (<span id="leadsUsersCount">0</span>)
           </h3>
           <p style="font-size:0.84rem; color:var(--text-muted); margin-top:4px;">
-            Directorio de todos los usuarios registrados con email y profesión para promociones y campañas.
+            Filtrá por profesión (ej: Arquitectos, Abogados, Chefs) para descargar bases de datos y enviar campañas segmentadas.
           </p>
         </div>
         <button class="btn-icon btn-secondary" onclick="closeUserLeadsModal()">✕</button>
       </div>
 
-      <!-- Barra de Acciones y Filtro -->
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
-        <div style="display:flex; gap:8px; align-items:center;">
-          <label style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">Filtrar por Profesión:</label>
-          <select id="selLeadsFilterProfession" onchange="renderLeadsTable()" style="padding:6px 10px; font-size:0.84rem; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:var(--radius-sm);">
+      <!-- Barra de Búsqueda y Filtros de Segmentación -->
+      <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:10px; margin-bottom:14px;">
+        <div>
+          <label style="font-size:0.82rem; color:var(--text-muted); font-weight:600; display:block; margin-bottom:4px;">🔍 Búsqueda rápida por Profesión o Nombre:</label>
+          <input type="text" id="inpLeadsSearch" placeholder="Escribí: arquitecto, abogado, médico, etc..." oninput="renderLeadsTable()" style="width:100%; padding:8px 12px; font-size:0.88rem; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:var(--radius-sm);">
+        </div>
+        <div>
+          <label style="font-size:0.82rem; color:var(--text-muted); font-weight:600; display:block; margin-bottom:4px;">🎯 Filtrar por Profesión:</label>
+          <select id="selLeadsFilterProfession" onchange="renderLeadsTable()" style="width:100%; padding:8px 10px; font-size:0.88rem; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:var(--radius-sm);">
             <option value="all">Todas las Profesiones</option>
-            <option value="Chef Profesional / Gastronómico">👨‍🍳 Chef Profesional</option>
-            <option value="Cocinero/a Aficionado/a">🍳 Aficionados</option>
-            <option value="Estudiante de Gastronomía">🎓 Estudiantes</option>
-            <option value="Pastelero/a o Panadero/a">🥐 Pasteleros/as</option>
-            <option value="Nutricionista / Salud">🥗 Nutricionistas</option>
-            <option value="Sommelier / Bartender">🍷 Sommeliers</option>
-            <option value="Emprendedor/a Gastronómico">🏢 Emprendedores</option>
-            <option value="Foodie / Amante del Buen Comer">😋 Foodies</option>
-            <option value="Otra profesión">💼 Otra profesión</option>
+            <!-- Opciones dinámicas de profesiones registradas -->
           </select>
+        </div>
+      </div>
+
+      <!-- Barra de Acciones de Marketing -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px; padding:10px 14px; background:var(--bg-card); border-radius:var(--radius-sm); border:1px solid var(--border);">
+        <div style="font-size:0.84rem; color:var(--text-muted);" id="leadsActiveFilterSummary">
+          Mostrando todos los usuarios registrados
         </div>
 
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button type="button" class="btn btn-outline btn-sm" onclick="copyAllEmailsToClipboard()" title="Copiar todos los mails para enviar newsletter o promociones">
-            📋 Copiar todos los Mails
+          <button type="button" class="btn btn-outline btn-sm" id="btnCopyFilteredEmails" onclick="copyAllEmailsToClipboard()" title="Copiar mails de los usuarios filtrados">
+            📋 Copiar Mails del Segmento
           </button>
-        </form>
-          <button type="button" class="btn btn-primary btn-sm" onclick="exportUsersToCSV()" title="Descargar archivo Excel / CSV para Mailchimp o SendGrid">
-            📥 Descargar CSV / Excel
+          <button type="button" class="btn btn-primary btn-sm" id="btnExportFilteredCSV" onclick="exportUsersToCSV()" title="Descargar archivo Excel / CSV para Mailchimp, SendGrid o campañas">
+            📥 Descargar CSV de este Segmento
           </button>
         </div>
       </div>
@@ -947,7 +937,7 @@
             <tr>
               <th>Chef / Usuario</th>
               <th>Email</th>
-              <th>Profesión</th>
+              <th>Profesión / Ocupación</th>
               <th>Fecha de Registro</th>
               <th>Rol</th>
             </tr>
@@ -960,6 +950,27 @@
 
     </div>
   </div>
+
+  <!-- Datalist Sugerencias de Profesiones -->
+  <datalist id="professionSuggestionsList">
+    <option value="Arquitecto/a">
+    <option value="Abogado/a">
+    <option value="Médico/a / Salud">
+    <option value="Ingeniero/a">
+    <option value="Diseñador/a / Creativo">
+    <option value="Chef Profesional / Gastronómico">
+    <option value="Cocinero/a Aficionado/a">
+    <option value="Estudiante">
+    <option value="Contador/a / Finanzas">
+    <option value="Programador/a / IT">
+    <option value="Profesor/a / Docente">
+    <option value="Pastelero/a o Panadero/a">
+    <option value="Nutricionista">
+    <option value="Sommelier / Bartender">
+    <option value="Emprendedor/a">
+    <option value="Comerciante / Ventas">
+    <option value="Foodie / Amante del Buen Comer">
+  </datalist>
 
   <!-- Toast Container -->
   <div id="toastContainer" class="toast-container"></div>

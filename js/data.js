@@ -109,16 +109,6 @@ const MASTER_PANTRY_CATALOG = [
 
 // 👥 Usuarios por Defecto (Hell's Kitchen Community)
 const DEFAULT_USERS = [
-  {
-    id: 'user-pato',
-    name: 'Chef Pato',
-    email: 'pato@hellskitchen.com',
-    profession: 'Chef Ejecutivo / Creador',
-    password: 'pato',
-    avatar: '👨‍🍳',
-    role: 'admin',
-    createdAt: '2026-08-01T00:00:00.000Z'
-  }
 ];
 const DEFAULT_FAMILY_USERS = DEFAULT_USERS; // Alias de compatibilidad
 
@@ -501,11 +491,4 @@ if (typeof window !== 'undefined') {
   window.DEFAULT_USERS = DEFAULT_USERS;
   window.DEFAULT_FAMILY_USERS = DEFAULT_USERS;
   window.DEFAULT_KITCHEN_DATA = DEFAULT_KITCHEN_DATA;
-}
-if (typeof global !== 'undefined') {
-  global.MASTER_PANTRY_CATALOG = MASTER_PANTRY_CATALOG;
-  global.createEmptyUserPantry = createEmptyUserPantry;
-  global.DEFAULT_USERS = DEFAULT_USERS;
-  global.DEFAULT_FAMILY_USERS = DEFAULT_USERS;
-  global.DEFAULT_KITCHEN_DATA = DEFAULT_KITCHEN_DATA;
 }
