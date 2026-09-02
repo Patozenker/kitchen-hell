@@ -159,6 +159,6 @@ ALTER PUBLICATION supabase_realtime ADD TABLE public.recipe_replies;
 INSERT INTO public.kitchen_users (id, name, avatar, role)
 VALUES 
   ('user-pato', 'Chef Pato', '👨‍🍳', 'admin'),
-  ('user-mama', 'Mamá', '👩‍🍳', 'chef'),
-  ('user-hermano', 'Hermano', '🧑‍🍳', 'chef')
+  ('user-gaston', 'Gastón', '🧑‍🍳', 'chef'),
+  ('user-sofia', 'Sofía', '👩‍🍳', 'chef')
 ON CONFLICT (id) DO NOTHING;

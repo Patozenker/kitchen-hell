@@ -107,22 +107,34 @@ const MASTER_PANTRY_CATALOG = [
   { id: 'ing-90', name: 'Cerveza Rubia / IPA', category: 'cava', qty: 0, unit: 'latas', minQty: 2, icon: '🍺' }
 ];
 
-// 👥 Miembros Familiares por Defecto (Hell's Kitchen Family)
-const DEFAULT_FAMILY_USERS = [
+// 👥 Usuarios / Chefs por Defecto (Hell's Kitchen Community)
+const DEFAULT_USERS = [
   { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' },
-  { id: 'user-mama', name: 'Mamá', avatar: '👩‍🍳', role: 'member' },
-  { id: 'user-hermano', name: 'Hermano', avatar: '🧑‍🍳', role: 'member' }
+  { id: 'user-gaston', name: 'Gastón', avatar: '🧑‍🍳', role: 'chef' },
+  { id: 'user-sofia', name: 'Sofía', avatar: '👩‍🍳', role: 'chef' }
 ];
+const DEFAULT_FAMILY_USERS = DEFAULT_USERS; // Alias de compatibilidad
 
 const DEFAULT_KITCHEN_DATA = {
-  // 0. USUARIOS & SESIÓN FAMILIAR
-  users: DEFAULT_FAMILY_USERS,
+  // 0. USUARIOS & SESIÓN
+  users: DEFAULT_USERS,
   currentUser: 'user-pato',
 
-  // 1. INVENTARIO DE INGREDIENTES (ALACENA & HELADERA)
-  pantry: MASTER_PANTRY_CATALOG,
+  // 1. ALACENAS INDIVIDUALES POR USUARIO
+  pantries: {
+    'user-pato': JSON.parse(JSON.stringify(MASTER_PANTRY_CATALOG)),
+    'user-gaston': createEmptyUserPantry(),
+    'user-sofia': createEmptyUserPantry()
+  },
 
-  // 2. RECETARIO DE AUTOR
+  // 2. LISTAS DE COMPRAS INDIVIDUALES POR USUARIO
+  shoppingLists: {
+    'user-pato': [],
+    'user-gaston': [],
+    'user-sofia': []
+  },
+
+  // 3. RECETARIO (PÚBLICAS Y PRIVADAS)
   recipes: [
     {
       id: 'rec-1',
@@ -474,6 +486,7 @@ const DEFAULT_KITCHEN_DATA = {
 
 if (typeof window !== 'undefined') {
   window.MASTER_PANTRY_CATALOG = MASTER_PANTRY_CATALOG;
+  window.DEFAULT_USERS = DEFAULT_USERS;
   window.DEFAULT_FAMILY_USERS = DEFAULT_FAMILY_USERS;
   window.DEFAULT_KITCHEN_DATA = DEFAULT_KITCHEN_DATA;
 }

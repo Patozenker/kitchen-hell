@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Hell's Kitchen - Chef Personal & Alacena Inteligente</title>
+  <title>Hell's Kitchen - Chef Personal & Alacena Familiar</title>
   
   <!-- PWA & Iconos -->
   <link rel="manifest" href="manifest.json">
@@ -13,7 +13,7 @@
   <meta name="apple-mobile-web-app-title" content="Hell's Kitchen">
   
   <!-- Fuentes e Iconos -->
-  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 <body>
 
@@ -30,11 +30,6 @@
     </div>
 
     <div class="header-actions">
-      <!-- Indicador / Configuración de Base de Datos Supabase -->
-      <button class="btn btn-outline btn-sm" id="supabaseStatusBadge" onclick="openSupabaseModal()" title="Configurar Base de Datos en la Nube">
-        ☁️ <span style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">Modo Local</span>
-      </button>
-
       <!-- Chip Perfil de Usuario / Switcher -->
       <button class="user-profile-btn" id="btnUserHeader" onclick="openUserProfileModal()" title="Cambiar de usuario / chef">
         <span class="user-profile-avatar" id="headerUserAvatar">👨‍🍳</span>
@@ -60,7 +55,6 @@
     <section class="hero-card">
       <div class="hero-text">
         <h1 id="heroGreeting">¿Qué cocinamos hoy, Chef Pato? 🔥</h1>
-        <p>Tu asistente culinario familiar que cruza la alacena y la heladera para sugerirte los mejores platos sin desperdiciar nada.</p>
         <p>Tu asistente culinario que cruza tu alacena y heladera para sugerirte los mejores platos sin desperdiciar nada.</p>
       </div>
 
@@ -81,12 +75,10 @@
           </div>
         </div>
 
-        <div class="stat-pill" onclick="switchTab('recetas')" style="cursor:pointer;" title="Ver todo el recetario familiar">
         <div class="stat-pill" onclick="switchTab('recetas')" style="cursor:pointer;" title="Ver todo el recetario">
           <span class="stat-icon">📖</span>
           <div>
             <div class="stat-num" id="badgeRecipesCount">0</div>
-            <div class="stat-label">Recetas Familiares</div>
             <div class="stat-label">Recetas</div>
           </div>
         </div>
@@ -138,14 +130,12 @@
         </div>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-          <!-- Filtro por Miembro Familiar / Autor -->
           <!-- Filtro por Usuario / Autor -->
           <select id="recipeAuthorFilter" class="form-group" style="margin:0; width:auto; padding:8px 12px;" onchange="filterRecipesByAuthor(this.value)">
             <option value="all">👥 Todos los Chefs</option>
           </select>
 
           <div class="filter-pills" id="recipesScopePills">
-            <button class="filter-pill active" onclick="filterRecipesByScope('all', this)">🌐 Toda la Familia</button>
             <button class="filter-pill active" onclick="filterRecipesByScope('all', this)">🌐 Todas las Públicas</button>
             <button class="filter-pill" onclick="filterRecipesByScope('mine', this)">👤 Mis Recetas</button>
             <button class="filter-pill" onclick="filterRecipesByScope('private', this)">🔒 Privadas</button>
@@ -452,19 +442,16 @@
           <input type="text" id="inpRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
         </div>
 
-        <!-- Visibilidad y Autoría Familiar -->
         <!-- Visibilidad y Autoría -->
         <div class="form-group">
           <label>Visibilidad en Hell's Kitchen</label>
           <div class="visibility-selector">
             <label class="visibility-opt selected" id="lblAddPublic" onclick="setAddRecipeVisibility(false)">
               <input type="radio" name="radAddVisibility" id="radAddPublic" value="public" checked>
-              <span>🌐 Familiar (Pública)</span>
               <span>🌐 Pública (Comunidad)</span>
             </label>
             <label class="visibility-opt" id="lblAddPrivate" onclick="setAddRecipeVisibility(true)">
               <input type="radio" name="radAddVisibility" id="radAddPrivate" value="private">
-              <span>🔒 Solo para mí (Privada)</span>
               <span>🔒 Privada (Solo para mí)</span>
             </label>
           </div>
@@ -571,19 +558,16 @@
           <input type="text" id="inpEditRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
         </div>
 
-        <!-- Visibilidad y Autoría Familiar -->
         <!-- Visibilidad y Autoría -->
         <div class="form-group">
           <label>Visibilidad en Hell's Kitchen</label>
           <div class="visibility-selector">
             <label class="visibility-opt selected" id="lblEditPublic" onclick="setEditRecipeVisibility(false)">
               <input type="radio" name="radEditVisibility" id="radEditPublic" value="public" checked>
-              <span>🌐 Familiar (Pública)</span>
               <span>🌐 Pública (Comunidad)</span>
             </label>
             <label class="visibility-opt" id="lblEditPrivate" onclick="setEditRecipeVisibility(true)">
               <input type="radio" name="radEditVisibility" id="radEditPrivate" value="private">
-              <span>🔒 Solo para mí (Privada)</span>
               <span>🔒 Privada (Solo para mí)</span>
             </label>
           </div>
@@ -672,23 +656,19 @@
   </div>
 
   <!-- ========================================================= -->
-  <!-- 9. MODAL: LOGIN / PERFILES FAMILIARES                     -->
   <!-- 9. MODAL: LOGIN / PERFILES DE USUARIOS Y CHEFS            -->
   <!-- ========================================================= -->
   <div class="modal-overlay" id="userProfileModal" style="display:none;" onclick="if(event.target===this) closeUserProfileModal()">
     <div class="modal-content" style="max-width:520px;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-        <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">👥 Chefs de la Familia</h3>
         <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">👥 Usuarios & Chefs</h3>
         <button class="btn-icon btn-secondary" onclick="closeUserProfileModal()">✕</button>
       </div>
       
       <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:14px;">
-        Seleccioná quién está cocinando hoy para cargar y gestionar sus recetas privadas y de autor.
         Seleccioná con qué perfil estás cocinando para gestionar tu alacena personal, compras y recetas.
       </p>
 
-      <!-- Lista de Miembros Familiares -->
       <!-- Lista de Usuarios -->
       <div class="family-grid" id="familyMembersGrid">
         <!-- Renderizado dinámico de tarjetas de miembros -->
@@ -726,43 +706,6 @@
     </div>
   </div>
 
-  <!-- ========================================================= -->
-  <!-- 10. MODAL: CONEXIÓN A BASE DE DATOS SUPABASE              -->
-  <!-- ========================================================= -->
-  <div class="modal-overlay" id="supabaseConfigModal" style="display:none;" onclick="if(event.target===this) closeSupabaseModal()">
-    <div class="modal-content" style="max-width:500px;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-        <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:#ffffff;">☁️ Base de Datos en la Nube (Supabase)</h3>
-        <button class="btn-icon btn-secondary" onclick="closeSupabaseModal()">✕</button>
-      </div>
-
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:14px; line-height:1.45;">
-        Conectá tu proyecto de Supabase para sincronizar recetas, usuarios, alacenas y comentarios en tiempo real desde cualquier dispositivo.
-      </p>
-
-      <form onsubmit="handleSaveSupabaseConfig(event)">
-        <div class="form-group">
-          <label>Supabase Project URL *</label>
-          <input type="text" id="inpSupabaseUrl" placeholder="https://xyzcompany.supabase.co">
-        </div>
-
-        <div class="form-group">
-          <label>Supabase Anon Key (Public) *</label>
-          <input type="password" id="inpSupabaseKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
-        </div>
-
-        <div style="background:rgba(0,0,0,0.25); border:1px dashed var(--border); border-radius:var(--radius-sm); padding:10px; font-size:0.78rem; color:var(--text-dim); margin-bottom:14px;">
-          💡 <strong>¿No tenés claves aún?</strong> Dejalo en blanco para seguir usando el <em>Modo Local (LocalStorage)</em>. El script de base de datos está listo en <code>supabase_schema.sql</code>.
-        </div>
-
-        <div style="display:flex; justify-content:flex-end; gap:8px;">
-          <button type="button" class="btn btn-secondary btn-sm" onclick="closeSupabaseModal()">Cancelar</button>
-          <button type="submit" class="btn btn-primary btn-sm">💾 Guardar y Conectar</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <!-- Toast Container -->
   <div id="toastContainer" class="toast-container"></div>
 
@@ -770,13 +713,9 @@
   <datalist id="masterIngredientsList"></datalist>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/data.js?v=11"></script>
-  <script src="js/supabase.js?v=11"></script>
-  <script src="js/app.js?v=11"></script>
+  <script src="js/data.js?v=10"></script>
+  <script src="js/app.js?v=10"></script>
   <script>
-    if (typeof initSupabase === 'function') initSupabase();
-
     // Limpiar Service Worker antiguo para asegurar recarga en vivo de scripts
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(function(registrations) {
