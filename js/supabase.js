@@ -134,33 +134,49 @@ async function syncFromSupabase() {
         }
       });
 
-      appState.recipes = recipes.map(r => {
+      const baseRecipes = (typeof DEFAULT_KITCHEN_DATA !== 'undefined' && Array.isArray(DEFAULT_KITCHEN_DATA.recipes))
+        ? JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes))
+        : [];
+      
+      const recipeMap = new Map();
+      baseRecipes.forEach(br => recipeMap.set(br.id, br));
+
+      recipes.forEach(r => {
         const rComments = (comments || [])
           .filter(c => c.recipe_id === r.id)
           .map(c => commentsMap[c.id])
           .filter(Boolean);
 
-        return {
-          id: r.id,
-          title: r.title,
-          authorId: r.author_id,
-          authorName: r.author_name,
-          authorAvatar: r.author_avatar,
-          isPrivate: r.is_private,
-          category: r.category,
-          time: r.time,
-          portions: r.portions,
-          difficulty: r.difficulty,
-          rating: r.rating,
-          image: r.image,
-          description: r.description,
-          pairing: r.pairing,
-          chefTip: r.chef_tip,
-          ingredients: r.ingredients || [],
-          steps: r.steps || [],
-          comments: rComments
-        };
+        const existing = recipeMap.get(r.id);
+        if (existing) {
+          existing.comments = rComments;
+          if (r.rating) existing.rating = r.rating;
+        } else {
+          recipeMap.set(r.id, {
+            id: r.id,
+            title: r.title,
+            authorId: r.author_id || 'user-anon',
+            authorName: r.author_name || 'Chef Anónimo',
+            authorAvatar: r.author_avatar || '👨‍🍳',
+            isPrivate: r.is_private === true,
+            category: r.category,
+            time: r.time,
+            portions: r.portions,
+            difficulty: r.difficulty || 'Media',
+            rating: r.rating || 5,
+            image: r.image,
+            description: r.description,
+            pairing: r.pairing,
+            chefTip: r.chef_tip,
+            ingredients: r.ingredients || [],
+            steps: r.steps || [],
+            comments: rComments
+          });
+        }
       });
+
+      appState.recipes = Array.from(recipeMap.values());
+      if (typeof renderRecipesView === 'function') renderRecipesView(false);
     }
 
     // 4. Cargar Alacenas por Usuario
