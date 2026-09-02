@@ -251,7 +251,7 @@
       
       <!-- Encabezado del Modal con Botón Cerrar -->
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);">
-        <div style="display:flex; align-items:center; gap:10px;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
           <span class="recipe-match-badge match-100" id="modalRecipeCategory"></span>
           <span class="recipe-time-tag" id="modalRecipeTime"></span>
         </div>
@@ -270,12 +270,19 @@
         <div class="recipe-modal-left">
           
           <!-- Portada -->
-          <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; margin-bottom:16px; height:240px;">
+          <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; margin-bottom:14px; height:240px;">
             <img id="modalRecipeImg" src="" alt="Receta" style="width:100%; height:100%; object-fit:cover;">
           </div>
 
-          <!-- Título & Descripción -->
-          <h2 id="modalRecipeTitle" style="font-family:var(--font-serif); font-size:1.6rem; color:#ffffff; margin-bottom:8px; line-height:1.2;"></h2>
+          <!-- Título -->
+          <h2 id="modalRecipeTitle" style="font-family:var(--font-serif); font-size:1.6rem; color:#ffffff; margin-bottom:6px; line-height:1.2;"></h2>
+          
+          <!-- Línea de Autor & Visibilidad -->
+          <div id="modalRecipeAuthorLine" style="display:flex; align-items:center; gap:8px; margin-bottom:14px; flex-wrap:wrap;">
+            <!-- Renderizado dinámico de autor y badge de visibilidad -->
+          </div>
+
+          <!-- Descripción -->
           <p id="modalRecipeDesc" style="color:var(--text-muted); font-size:0.95rem; margin-bottom:16px;"></p>
 
           <!-- Selector de Porciones -->
@@ -441,7 +448,6 @@
         </div>
 
       </div>
-
     </div>
   </div>
 

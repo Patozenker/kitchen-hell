@@ -634,7 +634,6 @@ function renderSmartMatcher() {
 
     const canEdit = canUserModifyRecipe(r);
     const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
-    const ratings = calculateRecipeRatings(r);
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -652,7 +651,7 @@ function renderSmartMatcher() {
             <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
             <div style="display:flex; gap:4px; align-items:center;">
               ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
-              <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+              <span class="recipe-author-badge" title="Subida por este Chef">${r.authorAvatar || '👨‍🍳'} Subida por <strong>${escapeAttr(r.authorName || 'Chef Pato')}</strong></span>
             </div>
           </div>
 
@@ -667,9 +666,9 @@ function renderSmartMatcher() {
           ` : ''}
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
-              <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
+              <span>⭐ ${r.difficulty}</span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
@@ -739,7 +738,6 @@ function renderRecipesView() {
     const match = calculateRecipeMatch(r);
     const canEdit = canUserModifyRecipe(r);
     const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
-    const ratings = calculateRecipeRatings(r);
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -753,7 +751,7 @@ function renderRecipesView() {
             <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
             <div style="display:flex; gap:4px; align-items:center;">
               ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
-              <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+              <span class="recipe-author-badge" title="Subida por este Chef">${r.authorAvatar || '👨‍🍳'} Subida por <strong>${escapeAttr(r.authorName || 'Chef Pato')}</strong></span>
             </div>
           </div>
 
@@ -761,9 +759,11 @@ function renderRecipesView() {
           <p class="recipe-desc">${escapeAttr(r.description)}</p>
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
-              <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
+              <span style="color:${match.pct === 100 ? '#34d399' : '#fbbf24'}; font-weight:700;">
+                ${match.pct === 100 ? '✅ 100%' : `⚠️ ${match.pct}%`}
+              </span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
@@ -1353,9 +1353,18 @@ function renderRecipeDetailModalContent() {
   if (catEl) {
     catEl.innerHTML = `
       <span>${getCategoryName(r.category)}</span>
-      <span style="opacity:0.6;">•</span>
-      <span>${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
-      ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.4); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🔒 Privada</span>' : '<span style="background:rgba(16,185,129,0.3); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🌐 Pública</span>'}
+    `;
+  }
+
+  const authorLineEl = document.getElementById('modalRecipeAuthorLine');
+  if (authorLineEl) {
+    authorLineEl.innerHTML = `
+      <span style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">👨‍🍳 Subida por:</span>
+      <span style="background:rgba(234,88,12,0.15); border:1px solid rgba(234,88,12,0.4); border-radius:var(--radius-full); padding:3px 10px; font-weight:700; color:#fdba74; font-size:0.88rem; display:inline-flex; align-items:center; gap:5px;">
+        <span>${r.authorAvatar || '👨‍🍳'}</span>
+        <span>${escapeAttr(r.authorName || 'Chef Pato')}</span>
+      </span>
+      ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.2); border:1px solid rgba(239,68,68,0.4); border-radius:var(--radius-full); padding:3px 8px; font-size:0.75rem; color:#fca5a5; font-weight:700;">🔒 Solo visible para vos</span>' : '<span style="background:rgba(16,185,129,0.2); border:1px solid rgba(16,185,129,0.4); border-radius:var(--radius-full); padding:3px 8px; font-size:0.75rem; color:#6ee7b7; font-weight:700;">🌐 Receta Pública</span>'}
     `;
   }
 
