@@ -198,13 +198,6 @@ function loadState() {
         });
       }
 
-      // Purgar categorías de prueba
-      appState.recipeCategories = appState.recipeCategories.filter(c => {
-        const n = (c.name || '').toLowerCase();
-        const id = (c.id || '').toLowerCase();
-        return id !== 'tttttggg' && !n.includes('tttttggg');
-      });
-
       // Asegurar catálogo completo de 1.000+ recetas mundiales
       if (!Array.isArray(appState.recipes) || appState.recipes.length === 0) {
         appState.recipes = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes));
