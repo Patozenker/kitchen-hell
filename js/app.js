@@ -510,12 +510,16 @@ function updateHeaderUserBadge() {
   const avatarEl = document.getElementById('headerUserAvatar');
   const nameEl = document.getElementById('headerUserName');
   const greetingEl = document.getElementById('heroGreeting');
+  const leadsBtn = document.getElementById('btnHeaderLeads');
 
   if (avatarEl) avatarEl.innerText = user.avatar || '👨‍🍳';
   if (nameEl) {
     nameEl.innerHTML = `<span>${escapeAttr(user.name || 'Chef')}</span>`;
   }
   if (greetingEl) greetingEl.innerText = `¿Qué cocinamos hoy, ${user.name}? 🔥`;
+  if (leadsBtn) {
+    leadsBtn.style.display = (user && user.role === 'admin') ? 'inline-flex' : 'none';
+  }
   updateDynamicUserTitles();
 }
 
@@ -621,6 +625,11 @@ function switchUser(userId) {
 // =========================================================
 
 function openUserLeadsModal() {
+  const user = getCurrentUser();
+  if (!user || user.role !== 'admin') {
+    showToast('🔒 Esta base de datos es privada y exclusiva del Administrador.', 'error');
+    return;
+  }
   const modal = document.getElementById('userLeadsModal');
   if (!modal) return;
   populateProfessionFilterOptions();
