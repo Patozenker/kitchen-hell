@@ -125,46 +125,183 @@
     <!-- VISTA 2: RECETARIO FAMILIAR & DE AUTOR                    -->
     <!-- ========================================================= -->
     <section id="view-recetas" class="tab-view" style="display:none;">
-      <div class="toolbar-row">
-        <div class="search-input-wrapper">
+      <!-- Barra Superior: Búsqueda, Ordenamiento, Favoritas y Filtros Mobile -->
+      <div class="toolbar-row" style="margin-bottom:16px; gap:10px; align-items:center;">
+        <div class="search-input-wrapper" style="flex:1; min-width:260px;">
           <span class="search-icon-pos">🔍</span>
-          <input type="text" placeholder="Buscar por receta, ingrediente o chef..." oninput="handleRecipeSearch(this.value)">
+          <input type="text" id="recipeSearchInput" placeholder="Buscar entre 1.000+ recetas, ingredientes, países o chefs..." oninput="handleRecipeSearch(this.value)">
         </div>
 
-        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-          <!-- Filtro por Usuario / Autor -->
-          <select id="recipeAuthorFilter" class="filter-select-pill" onchange="filterRecipesByAuthor(this.value)">
-            <option value="all">👥 Todos los Chefs</option>
+        <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          <!-- Botón de Favoritas Rápido -->
+          <button type="button" id="btnQuickFavorites" class="filter-pill" onclick="toggleFilterFavorites()" style="display:flex; align-items:center; gap:6px; font-weight:700;">
+            <span>❤️</span> <span>Favoritas</span> <span id="favCountBadge" class="badge" style="background:rgba(239,68,68,0.3); color:#f87171; font-size:0.75rem; padding:2px 6px; border-radius:10px;">0</span>
+          </button>
+
+          <!-- Selector de Ordenamiento -->
+          <select id="recipeSortSelect" class="filter-select-pill" onchange="handleRecipeSortChange(this.value)" style="min-width:160px;">
+            <option value="popular">🔥 Más Elegidas</option>
+            <option value="rating">⭐ Mejor Calificadas</option>
+            <option value="fastest">⏱️ Más Rápidas</option>
+            <option value="az">🔤 Nombre A-Z</option>
           </select>
 
-          <div class="filter-pills" id="recipesScopePills">
-            <button class="filter-pill active" onclick="filterRecipesByScope('all', this)">🌐 Todas las Públicas</button>
-            <button class="filter-pill" onclick="filterRecipesByScope('mine', this)">👤 Mis Recetas</button>
-            <button class="filter-pill" onclick="filterRecipesByScope('private', this)">🔒 Privadas</button>
-          </div>
+          <!-- Botón Filtros para Mobile -->
+          <button type="button" class="btn btn-secondary btn-mobile-filter" onclick="toggleMobileFilterDrawer()" style="display:none; gap:6px;">
+            <span>🎛️</span> <span>Filtros</span>
+          </button>
+
+          <button type="button" class="btn btn-primary" onclick="openAddRecipeModal()" style="font-weight:700;">
+            + Nueva Receta
+          </button>
         </div>
       </div>
 
-      <div class="filter-pills" id="recipesFilterPills" style="margin-bottom:16px;">
-        <button class="filter-pill active" onclick="filterRecipesByCat('all', this)">Todas</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('carnes', this)">🥩 Carnes & Fuegos</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('pastas', this)">🍝 Pastas & Risottos</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('rapidas', this)">⚡ Rápidas de Semana</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('postres', this)">🍫 Postres & Dulces</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('ensaladas', this)">🥗 Ensaladas & Frescos</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('pizzas', this)">🍕 Pizzas, Tartas & Empanadas</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('guisos', this)">🍲 Guisos, Sopas & Ollas</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('sandwiches', this)">🥪 Sandwiches & Burgers</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('pescados', this)">🐟 Pescados & Mariscos</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('veggie', this)">🥑 Veggie & Saludable</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('panaderia', this)">🥐 Panadería & Desayunos</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('internacional', this)">🌮 Comida Internacional</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('tragos', this)">🍹 Tragos & Coctelería</button>
-        <button class="filter-pill" onclick="openAddCategoryModal()" style="border:1px dashed var(--primary); color:var(--primary-light); font-weight:700; background:rgba(234,88,12,0.08);">+ Nueva Categoría</button>
-      </div>
+      <!-- Layout Principal con Panel Lateral "Filtrar por" y Grilla de Recetas -->
+      <div class="recipes-layout-wrapper">
+        <!-- Panel Lateral "Filtrar por" -->
+        <aside class="recipes-filter-sidebar" id="recipesFilterSidebar">
+          <div class="sidebar-header">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <h3 style="font-size:1rem; color:#ffffff; margin:0; display:flex; align-items:center; gap:6px;">
+                <span>🎛️</span> Filtrar por
+              </h3>
+              <button type="button" class="btn-link" onclick="resetAllRecipeFilters()" style="font-size:0.75rem; color:var(--primary-light); background:none; border:none; cursor:pointer; font-weight:700;">
+                Limpiar
+              </button>
+            </div>
+          </div>
 
-      <div class="recipes-grid" id="recipesGridContainer">
-        <!-- Renderizado dinámico del recetario completo -->
+          <!-- 1. MOMENTO DEL DÍA -->
+          <div class="filter-section">
+            <div class="filter-section-title">🌅 Momento del Día</div>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" value="desayuno" onchange="handleMealTypeFilterChange(this)">
+                  <span>🌅 Desayuno</span>
+                </span>
+                <span class="count" id="count-meal-desayuno">0</span>
+              </label>
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" value="almuerzo" onchange="handleMealTypeFilterChange(this)">
+                  <span>☀️ Almuerzo</span>
+                </span>
+                <span class="count" id="count-meal-almuerzo">0</span>
+              </label>
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" value="merienda" onchange="handleMealTypeFilterChange(this)">
+                  <span>☕ Merienda</span>
+                </span>
+                <span class="count" id="count-meal-merienda">0</span>
+              </label>
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" value="cena" onchange="handleMealTypeFilterChange(this)">
+                  <span>🌙 Cena</span>
+                </span>
+                <span class="count" id="count-meal-cena">0</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 2. DISPONIBILIDAD EN ALACENA -->
+          <div class="filter-section">
+            <div class="filter-section-title">🟢 Alacena</div>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-row" style="color:#34d399; font-weight:700;">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="checkbox" id="chkFilterOnlyAvailable" onchange="handleOnlyAvailableFilterChange(this.checked)">
+                  <span>✅ Cocinar ya (100% stock)</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 3. CATEGORÍAS & SUBCATEGORÍAS -->
+          <div class="filter-section">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <div class="filter-section-title" style="margin:0;">🍽️ Categorías</div>
+              <button type="button" class="btn-link" onclick="openAddCategoryModal()" style="font-size:0.72rem; color:var(--primary-light); background:none; border:none; cursor:pointer; font-weight:700;">+ Crear</button>
+            </div>
+            <div id="sidebarCategoriesContainer" class="sidebar-categories-tree">
+              <!-- Renderizado dinámico de categorías y subcategorías con contadores -->
+            </div>
+          </div>
+
+          <!-- 4. COCINAS DEL MUNDO -->
+          <div class="filter-section">
+            <div class="filter-section-title">🌎 Cocinas del Mundo</div>
+            <div class="filter-options-list" id="sidebarCuisinesContainer">
+              <!-- Renderizado dinámico de países / orígenes -->
+            </div>
+          </div>
+
+          <!-- 5. TIEMPO DE COCCIÓN -->
+          <div class="filter-section">
+            <div class="filter-section-title">⏱️ Tiempo</div>
+            <div class="filter-options-list">
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="radio" name="radTimeFilter" value="all" checked onchange="handleTimeFilterChange(this.value)">
+                  <span>Cualquier duración</span>
+                </span>
+              </label>
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="radio" name="radTimeFilter" value="20" onchange="handleTimeFilterChange(this.value)">
+                  <span>⚡ Rápido (≤ 20 min)</span>
+                </span>
+              </label>
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="radio" name="radTimeFilter" value="45" onchange="handleTimeFilterChange(this.value)">
+                  <span>🍲 Medio (≤ 45 min)</span>
+                </span>
+              </label>
+              <label class="filter-checkbox-row">
+                <span style="display:flex; align-items:center; gap:6px;">
+                  <input type="radio" name="radTimeFilter" value="90" onchange="handleTimeFilterChange(this.value)">
+                  <span>🔥 Fuego Lento (+45 min)</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 6. FILTRO POR CHEF -->
+          <div class="filter-section" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+            <div class="filter-section-title">👥 Chef / Autor</div>
+            <select id="recipeAuthorFilter" class="filter-select-pill" style="width:100%;" onchange="filterRecipesByAuthor(this.value)">
+              <option value="all">👥 Todos los Chefs</option>
+            </select>
+          </div>
+        </aside>
+
+        <!-- Área Central: Contador, Chips activos y Grilla de Recetas -->
+        <main class="recipes-main-content">
+          <!-- Cabecera de Resultados -->
+          <div class="recipes-results-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+            <div style="color:var(--text-muted); font-size:0.88rem;">
+              <strong id="recipesCountDisplay" style="color:#ffffff; font-size:1.05rem;">Mostrando 0 recetas</strong>
+              <span id="activeFiltersSummary"></span>
+            </div>
+          </div>
+
+          <!-- Grilla de Recetas -->
+          <div class="recipes-grid" id="recipesGridContainer">
+            <!-- Renderizado dinámico de tarjetas con corazón favorito -->
+          </div>
+
+          <!-- Centinela de Scroll Infinito & Botón Cargar Más -->
+          <div id="infiniteScrollContainer" style="text-align:center; padding:30px 0;">
+            <button type="button" id="btnLoadMoreRecipes" class="btn btn-secondary" onclick="loadMoreRecipes()" style="padding:10px 26px; font-weight:700; border-radius:var(--radius-full);">
+              ⬇️ Cargar más recetas
+            </button>
+            <div id="infiniteScrollSentinel" style="height:10px;"></div>
+          </div>
+        </main>
       </div>
     </section>
 

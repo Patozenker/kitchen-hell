@@ -198,18 +198,26 @@ function loadState() {
         });
       }
 
-      // Asegurar autoría, comentarios y privacidad en todas las recetas
-      if (Array.isArray(appState.recipes)) {
-        appState.recipes.forEach(r => {
-          if (!r.authorId) r.authorId = 'user-pato';
-          if (!r.authorName) r.authorName = 'Chef Pato';
-          if (!r.authorAvatar) r.authorAvatar = '👨‍🍳';
-          if (r.isPrivate === undefined) r.isPrivate = false;
-          if (!Array.isArray(r.comments)) r.comments = [];
-        });
-      } else {
+      // Asegurar catálogo completo de 1.000+ recetas mundiales
+      if (!Array.isArray(appState.recipes) || appState.recipes.length === 0) {
         appState.recipes = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes));
+      } else if (typeof DEFAULT_KITCHEN_DATA !== 'undefined' && Array.isArray(DEFAULT_KITCHEN_DATA.recipes)) {
+        const existingIds = new Set(appState.recipes.map(r => r.id));
+        DEFAULT_KITCHEN_DATA.recipes.forEach(defRec => {
+          if (!existingIds.has(defRec.id)) {
+            appState.recipes.push(JSON.parse(JSON.stringify(defRec)));
+          }
+        });
       }
+
+      // Asegurar autoría, comentarios y privacidad en todas las recetas
+      appState.recipes.forEach(r => {
+        if (!r.authorId) r.authorId = 'user-anon';
+        if (!r.authorName) r.authorName = 'Chef Anónimo';
+        if (!r.authorAvatar) r.authorAvatar = '👨‍🍳';
+        if (r.isPrivate === undefined) r.isPrivate = false;
+        if (!Array.isArray(r.comments)) r.comments = [];
+      });
 
       updateMasterIngredientsDatalist();
       updateHeaderUserBadge();
@@ -1449,114 +1457,502 @@ function handleAddCategorySubmit(e) {
   showToast(`✨ ¡Categoría "${icon} ${name}" creada con éxito!`, 'success');
 }
 
-function renderRecipesView() {
-  renderRecipeFilterPills();
-  populateRecipeCategoryDropdowns();
+// =========================================================
+// 5. MOTOR FACETADO DE RECETAS, FAVORITAS & SCROLL INFINITO
+// =========================================================
+
+let recipeFilterState = {
+  search: '',
+  category: 'all',
+  subcategories: [],
+  mealTypes: [],
+  cuisines: [],
+  onlyFavorites: false,
+  onlyAvailable: false,
+  timeMax: 'all',
+  author: 'all',
+  sort: 'popular'
+};
+
+let recipesPageSize = 24;
+let recipesCurrentOffset = 0;
+let cachedFilteredRecipes = [];
+let infiniteScrollObserver = null;
+
+function isRecipeFavorite(recipeId) {
+  const user = getCurrentUser();
+  if (!user || !Array.isArray(user.favorites)) return false;
+  return user.favorites.includes(recipeId);
+}
+
+function toggleRecipeFavorite(recipeId, e) {
+  if (e) e.stopPropagation();
+  const user = getCurrentUser();
+  if (!user) return;
+  if (!Array.isArray(user.favorites)) user.favorites = [];
+
+  const idx = user.favorites.indexOf(recipeId);
+  const isFavNow = idx === -1;
+  if (isFavNow) {
+    user.favorites.push(recipeId);
+    showToast('❤️ Agregada a tus recetas favoritas', 'success');
+  } else {
+    user.favorites.splice(idx, 1);
+    showToast('🤍 Eliminada de tus favoritas', 'info');
+  }
+
+  saveState();
+  updateFavoritesBadges();
+  
+  // Actualizar íconos visuales
+  const heartBtns = document.querySelectorAll(`[data-recipe-fav-id="${recipeId}"]`);
+  heartBtns.forEach(btn => {
+    btn.innerHTML = isFavNow ? '❤️' : '🤍';
+    btn.classList.toggle('is-favorite', isFavNow);
+  });
+
+  if (recipeFilterState.onlyFavorites) {
+    renderRecipesView(true);
+  }
+}
+
+function toggleFilterFavorites() {
+  recipeFilterState.onlyFavorites = !recipeFilterState.onlyFavorites;
+  updateFavoritesBadges();
+  renderRecipesView(true);
+}
+
+function updateFavoritesBadges() {
+  const user = getCurrentUser();
+  const count = (user && Array.isArray(user.favorites)) ? user.favorites.length : 0;
+  const badge = document.getElementById('favCountBadge');
+  if (badge) badge.innerText = count;
+  const quickBtn = document.getElementById('btnQuickFavorites');
+  if (quickBtn) {
+    quickBtn.classList.toggle('active', recipeFilterState.onlyFavorites);
+  }
+}
+
+function handleRecipeSortChange(sortVal) {
+  recipeFilterState.sort = sortVal;
+  renderRecipesView(true);
+}
+
+function handleMealTypeFilterChange(chk) {
+  const val = chk.value;
+  if (chk.checked) {
+    if (!recipeFilterState.mealTypes.includes(val)) recipeFilterState.mealTypes.push(val);
+  } else {
+    recipeFilterState.mealTypes = recipeFilterState.mealTypes.filter(m => m !== val);
+  }
+  renderRecipesView(true);
+}
+
+function handleOnlyAvailableFilterChange(isChecked) {
+  recipeFilterState.onlyAvailable = isChecked;
+  renderRecipesView(true);
+}
+
+function handleTimeFilterChange(timeVal) {
+  recipeFilterState.timeMax = timeVal;
+  renderRecipesView(true);
+}
+
+function handleRecipeSearch(query) {
+  recipeFilterState.search = query.trim();
+  renderRecipesView(true);
+}
+
+function filterRecipesByCat(catId) {
+  recipeFilterState.category = (recipeFilterState.category === catId) ? 'all' : catId;
+  recipeFilterState.subcategories = [];
+  renderRecipesView(true);
+}
+
+function toggleSubcategoryFilter(subName) {
+  const idx = recipeFilterState.subcategories.indexOf(subName);
+  if (idx === -1) {
+    recipeFilterState.subcategories.push(subName);
+  } else {
+    recipeFilterState.subcategories.splice(idx, 1);
+  }
+  renderRecipesView(true);
+}
+
+function toggleCuisineFilter(cuisineName) {
+  const idx = recipeFilterState.cuisines.indexOf(cuisineName);
+  if (idx === -1) {
+    recipeFilterState.cuisines.push(cuisineName);
+  } else {
+    recipeFilterState.cuisines.splice(idx, 1);
+  }
+  renderRecipesView(true);
+}
+
+function filterRecipesByAuthor(authorId) {
+  recipeFilterState.author = authorId;
+  renderRecipesView(true);
+}
+
+function resetAllRecipeFilters() {
+  recipeFilterState = {
+    search: '',
+    category: 'all',
+    subcategories: [],
+    mealTypes: [],
+    cuisines: [],
+    onlyFavorites: false,
+    onlyAvailable: false,
+    timeMax: 'all',
+    author: 'all',
+    sort: 'popular'
+  };
+
+  const searchInp = document.getElementById('recipeSearchInput');
+  if (searchInp) searchInp.value = '';
+
+  const chkAvail = document.getElementById('chkFilterOnlyAvailable');
+  if (chkAvail) chkAvail.checked = false;
+
+  const sortSel = document.getElementById('recipeSortSelect');
+  if (sortSel) sortSel.value = 'popular';
+
+  const authorSel = document.getElementById('recipeAuthorFilter');
+  if (authorSel) authorSel.value = 'all';
+
+  document.querySelectorAll('input[name="radTimeFilter"]').forEach(r => {
+    if (r.value === 'all') r.checked = true;
+  });
+
+  document.querySelectorAll('.filter-checkbox-row input[type="checkbox"]').forEach(c => {
+    c.checked = false;
+  });
+
+  renderRecipesView(true);
+  showToast('🧹 Filtros reiniciados', 'info');
+}
+
+function toggleMobileFilterDrawer() {
+  const sidebar = document.getElementById('recipesFilterSidebar');
+  if (sidebar) sidebar.classList.toggle('open');
+}
+
+function renderSidebarFacetTree() {
+  const visibleRecipes = getVisibleRecipes();
+  const categories = appState.recipeCategories || (typeof DEFAULT_RECIPE_CATEGORIES !== 'undefined' ? DEFAULT_RECIPE_CATEGORIES : []);
+
+  // 1. Contadores de Momento del Día
+  ['desayuno', 'almuerzo', 'merienda', 'cena'].forEach(meal => {
+    const countEl = document.getElementById(`count-meal-${meal}`);
+    if (countEl) {
+      const count = visibleRecipes.filter(r => (r.mealTypes || ['almuerzo', 'cena']).includes(meal)).length;
+      countEl.innerText = count;
+    }
+  });
+
+  // 2. Árbol de Categorías & Subcategorías
+  const catTreeContainer = document.getElementById('sidebarCategoriesContainer');
+  if (catTreeContainer) {
+    let catHtml = '';
+    categories.forEach(cat => {
+      const catRecipes = visibleRecipes.filter(r => r.category === cat.id);
+      const isSelectedCat = (recipeFilterState.category === cat.id);
+      
+      // Obtener subcategorías únicas de esta categoría
+      const subSet = new Set();
+      catRecipes.forEach(r => { if (r.subcategory) subSet.add(r.subcategory); });
+      const subList = Array.from(subSet);
+
+      catHtml += `
+        <div class="sidebar-category-group">
+          <div class="sidebar-cat-header ${isSelectedCat ? 'active' : ''}" onclick="filterRecipesByCat('${cat.id}')">
+            <span>${cat.icon || '🍽️'} ${escapeAttr(cat.name)}</span>
+            <span class="count">${catRecipes.length}</span>
+          </div>
+          ${(isSelectedCat && subList.length > 0) ? `
+            <div class="sidebar-subcat-list">
+              ${subList.map(sub => {
+                const subCount = catRecipes.filter(r => r.subcategory === sub).length;
+                const isChecked = recipeFilterState.subcategories.includes(sub);
+                return `
+                  <label class="filter-checkbox-row" style="font-size:0.78rem;">
+                    <span style="display:flex; align-items:center; gap:5px;">
+                      <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSubcategoryFilter('${escapeAttr(sub)}')">
+                      <span>${escapeAttr(sub)}</span>
+                    </span>
+                    <span class="count">${subCount}</span>
+                  </label>
+                `;
+              }).join('')}
+            </div>
+          ` : ''}
+        </div>
+      `;
+    });
+    catTreeContainer.innerHTML = catHtml;
+  }
+
+  // 3. Cocinas del Mundo
+  const cuisinesContainer = document.getElementById('sidebarCuisinesContainer');
+  if (cuisinesContainer) {
+    const cuisineCounts = {};
+    visibleRecipes.forEach(r => {
+      const c = r.cuisine || 'Internacional';
+      cuisineCounts[c] = (cuisineCounts[c] || 0) + 1;
+    });
+
+    const cuisineKeys = Object.keys(cuisineCounts).sort((a,b) => cuisineCounts[b] - cuisineCounts[a]).slice(0, 8);
+    cuisinesContainer.innerHTML = cuisineKeys.map(c => {
+      const isChecked = recipeFilterState.cuisines.includes(c);
+      return `
+        <label class="filter-checkbox-row">
+          <span style="display:flex; align-items:center; gap:6px;">
+            <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleCuisineFilter('${escapeAttr(c)}')">
+            <span>${escapeAttr(c)}</span>
+          </span>
+          <span class="count">${cuisineCounts[c]}</span>
+        </label>
+      `;
+    }).join('');
+  }
+}
+
+function renderRecipesView(resetOffset = true) {
+  if (resetOffset) {
+    recipesCurrentOffset = 0;
+  }
 
   const container = document.getElementById('recipesGridContainer');
   if (!container) return;
 
-  const currentUserId = getCurrentUserId();
+  renderSidebarFacetTree();
+  updateFavoritesBadges();
+  populateRecipeCategoryDropdowns();
+
   const visibleRecipes = getVisibleRecipes();
+  const q = (recipeFilterState.search || '').toLowerCase().trim();
+  const timeLimit = recipeFilterState.timeMax === 'all' ? null : parseInt(recipeFilterState.timeMax);
 
-  const filtered = visibleRecipes.filter(r => {
-    // Filtro por categoría
-    const matchCat = (currentRecipeCategory === 'all' || r.category === currentRecipeCategory);
-    
-    // Filtro por búsqueda
-    const q = currentRecipeSearch.toLowerCase();
-    const matchSearch = (!currentRecipeSearch || 
-      r.title.toLowerCase().includes(q) || 
-      r.description.toLowerCase().includes(q) ||
-      (r.authorName && r.authorName.toLowerCase().includes(q))
-    );
-
-    // Filtro por Scope (Toda la comunidad, Mis recetas, Solo privadas)
-    let matchScope = true;
-    if (currentRecipeScope === 'mine') {
-      matchScope = (r.authorId === currentUserId);
-    } else if (currentRecipeScope === 'private') {
-      matchScope = (r.isPrivate === true && r.authorId === currentUserId);
+  cachedFilteredRecipes = visibleRecipes.filter(r => {
+    // Búsqueda
+    if (q) {
+      const inTitle = (r.title || '').toLowerCase().includes(q);
+      const inDesc = (r.description || '').toLowerCase().includes(q);
+      const inCuisine = (r.cuisine || '').toLowerCase().includes(q);
+      const inSub = (r.subcategory || '').toLowerCase().includes(q);
+      const inAuthor = (r.authorName || '').toLowerCase().includes(q);
+      const inIng = Array.isArray(r.ingredients) && r.ingredients.some(i => (i.name || '').toLowerCase().includes(q));
+      if (!inTitle && !inDesc && !inCuisine && !inSub && !inAuthor && !inIng) return false;
     }
 
-    // Filtro por Autor
-    let matchAuthor = true;
-    if (currentRecipeAuthorFilter !== 'all') {
-      matchAuthor = (r.authorId === currentRecipeAuthorFilter);
+    // Categoría
+    if (recipeFilterState.category !== 'all') {
+      if (r.category !== recipeFilterState.category) return false;
     }
 
-    return matchCat && matchSearch && matchScope && matchAuthor;
+    // Subcategorías
+    if (recipeFilterState.subcategories.length > 0) {
+      if (!recipeFilterState.subcategories.includes(r.subcategory)) return false;
+    }
+
+    // Momentos del Día
+    if (recipeFilterState.mealTypes.length > 0) {
+      const rMeals = r.mealTypes || ['almuerzo', 'cena'];
+      const hasMeal = recipeFilterState.mealTypes.some(m => rMeals.includes(m));
+      if (!hasMeal) return false;
+    }
+
+    // Cocinas del Mundo
+    if (recipeFilterState.cuisines.length > 0) {
+      if (!recipeFilterState.cuisines.includes(r.cuisine)) return false;
+    }
+
+    // Solo Favoritas ❤️
+    if (recipeFilterState.onlyFavorites) {
+      if (!isRecipeFavorite(r.id)) return false;
+    }
+
+    // Solo Disponibles en Alacena (100% stock)
+    if (recipeFilterState.onlyAvailable) {
+      const match = calculateRecipeMatch(r);
+      if (match.pct < 100) return false;
+    }
+
+    // Tiempo de Cocción
+    if (timeLimit) {
+      const rTime = parseInt(r.time) || 30;
+      if (timeLimit === 20 && rTime > 20) return false;
+      if (timeLimit === 45 && rTime > 45) return false;
+      if (timeLimit === 90 && rTime <= 45) return false;
+    }
+
+    // Autor / Chef
+    if (recipeFilterState.author !== 'all') {
+      if (r.authorId !== recipeFilterState.author) return false;
+    }
+
+    return true;
   });
 
-  if (filtered.length === 0) {
+  // Ordenamiento
+  const sortMode = recipeFilterState.sort;
+  cachedFilteredRecipes.sort((a, b) => {
+    if (sortMode === 'popular') {
+      return (b.timesCooked || 0) - (a.timesCooked || 0);
+    }
+    if (sortMode === 'rating') {
+      return (b.rating || 5) - (a.rating || 5);
+    }
+    if (sortMode === 'fastest') {
+      return (parseInt(a.time) || 30) - (parseInt(b.time) || 30);
+    }
+    if (sortMode === 'az') {
+      return (a.title || '').localeCompare(b.title || '');
+    }
+    return 0;
+  });
+
+  // Contador en cabecera
+  const countEl = document.getElementById('recipesCountDisplay');
+  if (countEl) {
+    countEl.innerText = `Mostrando ${Math.min(recipesPageSize, cachedFilteredRecipes.length)} de ${cachedFilteredRecipes.length} recetas`;
+  }
+
+  // Renderizar primera página
+  const pageItems = cachedFilteredRecipes.slice(0, recipesPageSize);
+  recipesCurrentOffset = pageItems.length;
+
+  if (pageItems.length === 0) {
     container.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align:center; padding: 40px; background: var(--bg-card); border-radius: var(--radius-lg);">
-        <h3 style="color:#ffffff;">No se encontraron recetas</h3>
-        <p style="color:var(--text-muted);">Probá con otro término o creá tu propia receta con el botón "+ Nueva Receta".</p>
+      <div style="grid-column: 1 / -1; text-align:center; padding: 50px 20px; background: var(--bg-card); border-radius: var(--radius-lg);">
+        <span style="font-size:3rem;">🔍</span>
+        <h3 style="color:#ffffff; margin:10px 0;">No se encontraron recetas con los filtros aplicados</h3>
+        <p style="color:var(--text-muted); max-width:400px; margin:0 auto 16px;">Probá desmarcando algunos filtros o limpiando la búsqueda.</p>
+        <button class="btn btn-secondary" onclick="resetAllRecipeFilters()">🧹 Limpiar todos los filtros</button>
       </div>
     `;
+    updateInfiniteScrollVisibility(false);
     return;
   }
 
-  container.innerHTML = filtered.map(r => {
-    const match = calculateRecipeMatch(r);
-    const canEdit = canUserModifyRecipe(r);
-    const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
-    const ratings = calculateRecipeRatings(r);
-    const authorDisplay = getRecipeAuthorDisplay(r);
+  container.innerHTML = pageItems.map(r => renderRecipeCardHtml(r)).join('');
+  updateInfiniteScrollVisibility(recipesCurrentOffset < cachedFilteredRecipes.length);
+  setupInfiniteScrollObserver();
+}
 
-    return `
-      <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
-        <div class="recipe-img-container">
-          <img src="${r.image}" alt="${escapeAttr(r.title)}" class="recipe-img">
-          <div class="recipe-time-tag">⏱️ ${r.time} min</div>
+function loadMoreRecipes() {
+  if (recipesCurrentOffset >= cachedFilteredRecipes.length) {
+    updateInfiniteScrollVisibility(false);
+    return;
+  }
+
+  const container = document.getElementById('recipesGridContainer');
+  if (!container) return;
+
+  const nextItems = cachedFilteredRecipes.slice(recipesCurrentOffset, recipesCurrentOffset + recipesPageSize);
+  recipesCurrentOffset += nextItems.length;
+
+  const fragment = document.createDocumentFragment();
+  nextItems.forEach(r => {
+    const cardWrapper = document.createElement('div');
+    cardWrapper.innerHTML = renderRecipeCardHtml(r);
+    fragment.appendChild(cardWrapper.firstElementChild);
+  });
+  container.appendChild(fragment);
+
+  const countEl = document.getElementById('recipesCountDisplay');
+  if (countEl) {
+    countEl.innerText = `Mostrando ${recipesCurrentOffset} de ${cachedFilteredRecipes.length} recetas`;
+  }
+
+  updateInfiniteScrollVisibility(recipesCurrentOffset < cachedFilteredRecipes.length);
+}
+
+function updateInfiniteScrollVisibility(hasMore) {
+  const container = document.getElementById('infiniteScrollContainer');
+  if (container) {
+    container.style.display = hasMore ? 'block' : 'none';
+  }
+}
+
+function setupInfiniteScrollObserver() {
+  const sentinel = document.getElementById('infiniteScrollSentinel');
+  if (!sentinel) return;
+
+  if (infiniteScrollObserver) {
+    infiniteScrollObserver.disconnect();
+  }
+
+  infiniteScrollObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      loadMoreRecipes();
+    }
+  }, { rootMargin: '400px' });
+
+  infiniteScrollObserver.observe(sentinel);
+}
+
+function renderRecipeCardHtml(r) {
+  const match = calculateRecipeMatch(r);
+  const canEdit = canUserModifyRecipe(r);
+  const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
+  const authorDisplay = getRecipeAuthorDisplay(r);
+  const isFav = isRecipeFavorite(r.id);
+
+  const meals = Array.isArray(r.mealTypes) ? r.mealTypes : ['almuerzo', 'cena'];
+  const mealIcons = { desayuno: '🌅', almuerzo: '☀️', merienda: '☕', cena: '🌙' };
+  const mealTags = meals.slice(0, 2).map(m => `<span style="font-size:0.7rem; background:rgba(255,255,255,0.06); padding:1px 5px; border-radius:4px; color:var(--text-muted);">${mealIcons[m] || '🍽️'} ${m}</span>`).join(' ');
+
+  return `
+    <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')" style="position:relative;">
+      <!-- Botón de Corazón Favorito Flotante -->
+      <button type="button" class="btn-favorite-heart ${isFav ? 'is-favorite' : ''}" data-recipe-fav-id="${r.id}" onclick="toggleRecipeFavorite('${r.id}', event)" title="${isFav ? 'Quitar de favoritas' : 'Guardar en favoritas'}">
+        ${isFav ? '❤️' : '🤍'}
+      </button>
+
+      <div class="recipe-img-container">
+        <img src="${r.image}" alt="${escapeAttr(r.title)}" class="recipe-img" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=600&auto=format&fit=crop&q=80'">
+        <div class="recipe-time-tag">⏱️ ${r.time} min</div>
+        ${r.cuisine ? `<div style="position:absolute; bottom:8px; left:8px; background:rgba(0,0,0,0.65); backdrop-filter:blur(4px); font-size:0.72rem; padding:2px 8px; border-radius:12px; color:#ffffff; font-weight:700;">🌎 ${escapeAttr(r.cuisine)}</div>` : ''}
+      </div>
+
+      <div class="recipe-content">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;">
+          <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
+          <div style="display:flex; gap:4px; align-items:center;">
+            ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
+            <span class="recipe-author-badge">${authorDisplay.avatar} ${escapeAttr(authorDisplay.name)}</span>
+          </div>
         </div>
 
-        <div class="recipe-content">
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;">
-            <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
-            <div style="display:flex; gap:4px; align-items:center;">
-              ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
-              <span class="recipe-author-badge">${authorDisplay.avatar} ${escapeAttr(authorDisplay.name)}</span>
-            </div>
+        <h3 class="recipe-card-title">${escapeAttr(r.title)}</h3>
+        <p class="recipe-desc">${escapeAttr(r.description)}</p>
+
+        <div style="display:flex; gap:6px; align-items:center; margin-bottom:8px; flex-wrap:wrap;">
+          ${mealTags}
+          ${r.subcategory ? `<span style="font-size:0.7rem; background:rgba(234,88,12,0.12); color:var(--primary-light); padding:1px 6px; border-radius:4px; font-weight:700;">🏷️ ${escapeAttr(r.subcategory)}</span>` : ''}
+        </div>
+
+        <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:10px; border-top:1px solid var(--border);">
+          <div style="display:flex; gap:8px; font-size:0.8rem; color:var(--text-muted); align-items:center; flex-wrap:wrap;">
+            <span>👥 ${r.portions}p</span>
+            <span style="color:${match.pct === 100 ? '#34d399' : '#fbbf24'}; font-weight:700;">
+              ${match.pct === 100 ? '✅ 100%' : `⚠️ ${match.pct}%`}
+            </span>
+            <span style="color:var(--accent-gold); font-weight:700;">⭐ ${(r.rating || 5).toFixed(1)}</span>
+            ${r.timesCooked ? `<span style="font-size:0.72rem; color:var(--text-dim);">🔥 ${r.timesCooked}</span>` : ''}
           </div>
-
-          <h3 class="recipe-card-title">${escapeAttr(r.title)}</h3>
-          <p class="recipe-desc">${escapeAttr(r.description)}</p>
-
-          <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:12px; border-top:1px solid var(--border);">
-            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center; flex-wrap:wrap;">
-              <span>👥 ${r.portions}p</span>
-              <span style="color:${match.pct === 100 ? '#34d399' : '#fbbf24'}; font-weight:700;">
-                ${match.pct === 100 ? '✅ 100%' : `⚠️ ${match.pct}%`}
-              </span>
-              <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
-              ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
-            </div>
-            <div style="display:flex; gap:6px; align-items:center;">
-              ${canEdit ? `
-                <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
-              ` : ''}
-              <button class="btn btn-secondary btn-sm" onclick="event.stopPropagation(); addRecipeToCartQuick('${r.id}')" title="Agregar insumos a la lista de compras">🛒 + Carrito</button>
-              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); startCookingMode('${r.id}')">🔥 Cocinar</button>
-            </div>
+          <div style="display:flex; gap:6px; align-items:center;">
+            ${canEdit ? `
+              <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
+            ` : ''}
+            <button class="btn btn-secondary btn-sm" onclick="event.stopPropagation(); addRecipeToCartQuick('${r.id}')" title="Agregar insumos a la lista de compras">🛒 + Carrito</button>
+            <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); startCookingMode('${r.id}')">🔥 Cocinar</button>
           </div>
         </div>
       </div>
-    `;
-  }).join('');
-}
-
-function filterRecipesByCat(cat, btnEl) {
-  currentRecipeCategory = cat;
-  document.querySelectorAll('#recipesFilterPills .filter-pill').forEach(b => b.classList.remove('active'));
-  if (btnEl) btnEl.classList.add('active');
-  renderRecipesView();
-}
-
-function handleRecipeSearch(query) {
-  currentRecipeSearch = query.trim();
-  renderRecipesView();
+    </div>
+  `;
 }
 
 // =========================================================
@@ -4413,6 +4809,18 @@ window.renderSmartMatcher = renderSmartMatcher;
 window.renderRecipesView = renderRecipesView;
 window.filterRecipesByCat = filterRecipesByCat;
 window.handleRecipeSearch = handleRecipeSearch;
+window.toggleRecipeFavorite = toggleRecipeFavorite;
+window.toggleFilterFavorites = toggleFilterFavorites;
+window.handleRecipeSortChange = handleRecipeSortChange;
+window.handleMealTypeFilterChange = handleMealTypeFilterChange;
+window.handleOnlyAvailableFilterChange = handleOnlyAvailableFilterChange;
+window.handleTimeFilterChange = handleTimeFilterChange;
+window.toggleSubcategoryFilter = toggleSubcategoryFilter;
+window.toggleCuisineFilter = toggleCuisineFilter;
+window.filterRecipesByAuthor = filterRecipesByAuthor;
+window.resetAllRecipeFilters = resetAllRecipeFilters;
+window.toggleMobileFilterDrawer = toggleMobileFilterDrawer;
+window.loadMoreRecipes = loadMoreRecipes;
 window.toggleShoppingItem = toggleShoppingItem;
 window.deleteShoppingItem = deleteShoppingItem;
 window.addShoppingItemManual = addShoppingItemManual;
