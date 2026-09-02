@@ -510,16 +510,12 @@ function updateHeaderUserBadge() {
   const avatarEl = document.getElementById('headerUserAvatar');
   const nameEl = document.getElementById('headerUserName');
   const greetingEl = document.getElementById('heroGreeting');
-  const leadsBtn = document.getElementById('btnHeaderLeads');
 
   if (avatarEl) avatarEl.innerText = user.avatar || '👨‍🍳';
   if (nameEl) {
     nameEl.innerHTML = `<span>${escapeAttr(user.name || 'Chef')}</span>`;
   }
   if (greetingEl) greetingEl.innerText = `¿Qué cocinamos hoy, ${user.name}? 🔥`;
-  if (leadsBtn) {
-    leadsBtn.style.display = (user && user.role === 'admin') ? 'inline-flex' : 'none';
-  }
   updateDynamicUserTitles();
 }
 
@@ -540,7 +536,6 @@ function openUserProfileModal() {
   const modal = document.getElementById('userProfileModal');
   const card = document.getElementById('currentUserProfileCard');
   const grid = document.getElementById('familyMembersGrid');
-  const adminBtn = document.getElementById('btnAdminLeadsDirectory');
   if (!modal) return;
 
   const curUser = getCurrentUser();
@@ -561,11 +556,6 @@ function openUserProfileModal() {
         </div>
       </div>
     `;
-  }
-
-  // Mostrar botón de Leads / Directorio para admin
-  if (adminBtn) {
-    adminBtn.style.display = 'flex';
   }
 
   if (grid) {
