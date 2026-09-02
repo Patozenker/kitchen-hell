@@ -297,11 +297,14 @@ function handleSaveSupabaseConfig(e) {
 }
 
 // =========================================================
-// OPERACIONES DE ESCRITURA EN SUPABASE (PUSH TO CLOUD)
-// =========================================================
-
 async function pushUserToSupabase(user) {
-  if (!supabaseClient || !isSupabaseConnected) return;
+  if (!supabaseClient) {
+    initSupabase();
+  }
+  if (!supabaseClient) {
+    console.warn("No se pudo conectar a Supabase para guardar el usuario.");
+    return { success: false, error: "No client" };
+  }
   try {
     const payload = {
       id: user.id,
@@ -313,9 +316,16 @@ async function pushUserToSupabase(user) {
       password: user.password || null,
       marketing_opt_in: true
     };
-    await supabaseClient.from('kitchen_users').upsert(payload);
+    const { data, error } = await supabaseClient.from('kitchen_users').upsert(payload, { onConflict: 'id' }).select();
+    if (error) {
+      console.error("Error pushUserToSupabase:", error);
+      return { success: false, error };
+    }
+    console.log("🟢 Usuario sincronizado con éxito en Supabase:", payload.email || payload.name);
+    return { success: true, data };
   } catch (e) {
-    console.warn("Error pushUserToSupabase:", e);
+    console.error("Error de red pushUserToSupabase:", e);
+    return { success: false, error: e };
   }
 }
 
@@ -419,3 +429,12 @@ window.pushRecipeToSupabase = pushRecipeToSupabase;
 window.deleteRecipeFromSupabase = deleteRecipeFromSupabase;
 window.pushCommentToSupabase = pushCommentToSupabase;
 window.pushReplyToSupabase = pushReplyToSupabase;
+
+// Auto-inicialización inmediata al cargar el archivo o el DOM
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSupabase);
+  } else {
+    initSupabase();
+  }
+}
