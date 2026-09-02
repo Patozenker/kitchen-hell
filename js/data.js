@@ -107,7 +107,18 @@ const MASTER_PANTRY_CATALOG = [
   { id: 'ing-90', name: 'Cerveza Rubia / IPA', category: 'cava', qty: 0, unit: 'latas', minQty: 2, icon: '🍺' }
 ];
 
+// 👥 Miembros Familiares por Defecto (Hell's Kitchen Family)
+const DEFAULT_FAMILY_USERS = [
+  { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' },
+  { id: 'user-mama', name: 'Mamá', avatar: '👩‍🍳', role: 'member' },
+  { id: 'user-hermano', name: 'Hermano', avatar: '🧑‍🍳', role: 'member' }
+];
+
 const DEFAULT_KITCHEN_DATA = {
+  // 0. USUARIOS & SESIÓN FAMILIAR
+  users: DEFAULT_FAMILY_USERS,
+  currentUser: 'user-pato',
+
   // 1. INVENTARIO DE INGREDIENTES (ALACENA & HELADERA)
   pantry: MASTER_PANTRY_CATALOG,
 
@@ -116,6 +127,10 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-1',
       title: 'Pollo al Curry Aromático con Leche de Coco & Basmati',
+      authorId: 'user-pato',
+      authorName: 'Chef Pato',
+      authorAvatar: '👨‍🍳',
+      isPrivate: false,
       category: 'rapidas',
       time: 25,
       portions: 2,
@@ -171,6 +186,10 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-2',
       title: 'Ojo de Bife Sellado a la Sartén de Hierro con Papas Rústicas al Romero',
+      authorId: 'user-pato',
+      authorName: 'Chef Pato',
+      authorAvatar: '👨‍🍳',
+      isPrivate: false,
       category: 'carnes',
       time: 35,
       portions: 2,
@@ -225,6 +244,10 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-3',
       title: 'Risotto Cremoso de Hongos de Pino, Verdeo & Parmesano',
+      authorId: 'user-mama',
+      authorName: 'Mamá',
+      authorAvatar: '👩‍🍳',
+      isPrivate: false,
       category: 'pastas',
       time: 30,
       portions: 2,
@@ -280,6 +303,10 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-4',
       title: 'Spaghetti al Pesto Genovés Auténtico de Albahaca, Parmesano y Nueces',
+      authorId: 'user-pato',
+      authorName: 'Chef Pato',
+      authorAvatar: '👨‍🍳',
+      isPrivate: false,
       category: 'pastas',
       time: 18,
       portions: 2,
@@ -326,6 +353,10 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-5',
       title: 'Volcán de Chocolate Fondant con Centro Líquido',
+      authorId: 'user-hermano',
+      authorName: 'Hermano',
+      authorAvatar: '🧑‍🍳',
+      isPrivate: false,
       category: 'postres',
       time: 20,
       portions: 2,
@@ -376,6 +407,10 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-6',
       title: 'Wok Expres de Pollo, Morrón, Verdeo & Soja',
+      authorId: 'user-pato',
+      authorName: 'Chef Pato',
+      authorAvatar: '👨‍🍳',
+      isPrivate: false,
       category: 'rapidas',
       time: 15,
       portions: 2,
@@ -439,5 +474,6 @@ const DEFAULT_KITCHEN_DATA = {
 
 if (typeof window !== 'undefined') {
   window.MASTER_PANTRY_CATALOG = MASTER_PANTRY_CATALOG;
+  window.DEFAULT_FAMILY_USERS = DEFAULT_FAMILY_USERS;
   window.DEFAULT_KITCHEN_DATA = DEFAULT_KITCHEN_DATA;
 }

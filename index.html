@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Pato's Kitchen - Chef Personal & Alacena Inteligente</title>
+  <title>Hell's Kitchen - Chef Personal & Alacena Familiar</title>
   
   <!-- PWA & Iconos -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#090d16">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Pato's Kitchen">
+  <meta name="apple-mobile-web-app-title" content="Hell's Kitchen">
   
   <!-- Fuentes e Iconos -->
-  <link rel="stylesheet" href="css/styles.css?v=9">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 <body>
 
@@ -22,14 +22,21 @@
   <!-- ========================================================= -->
   <header class="app-header">
     <div class="brand-wrapper" onclick="switchTab('matcher')">
-      <div class="brand-icon">🍳</div>
+      <div class="brand-icon">🔥</div>
       <div>
-        <h1 class="brand-title">PATO'S KITCHEN</h1>
-        <div class="brand-subtitle">Chef Personal & Alacena Viva</div>
+        <h1 class="brand-title">HELL'S KITCHEN</h1>
+        <div class="brand-subtitle">Cocina Familiar & Alacena Viva</div>
       </div>
     </div>
 
     <div class="header-actions">
+      <!-- Chip Perfil Familiar / Switcher -->
+      <button class="user-profile-btn" id="btnUserHeader" onclick="openUserProfileModal()" title="Cambiar de miembro familiar">
+        <span class="user-profile-avatar" id="headerUserAvatar">👨‍🍳</span>
+        <span class="user-profile-name" id="headerUserName">Chef Pato</span>
+        <span class="user-profile-arrow">▼</span>
+      </button>
+
       <button class="btn btn-primary btn-sm" onclick="openAddRecipeModal()" title="Crear nueva receta de autor" style="font-weight:700;">
         + Nueva Receta
       </button>
@@ -47,8 +54,8 @@
     <!-- HERO / BANNER DE BIENVENIDA -->
     <section class="hero-card">
       <div class="hero-text">
-        <h1>¿Qué cocinamos hoy, Pato?</h1>
-        <p>Tu asistente inteligente que cruza lo que tenés en la alacena y la heladera para sugerirte los mejores platos sin desperdiciar nada.</p>
+        <h1 id="heroGreeting">¿Qué cocinamos hoy, Chef Pato? 🔥</h1>
+        <p>Tu asistente culinario familiar que cruza la alacena y la heladera para sugerirte los mejores platos sin desperdiciar nada.</p>
       </div>
 
       <div class="hero-stats">
@@ -68,11 +75,11 @@
           </div>
         </div>
 
-        <div class="stat-pill" onclick="switchTab('recetas')" style="cursor:pointer;" title="Ver todo mi recetario">
+        <div class="stat-pill" onclick="switchTab('recetas')" style="cursor:pointer;" title="Ver todo el recetario familiar">
           <span class="stat-icon">📖</span>
           <div>
             <div class="stat-num" id="badgeRecipesCount">0</div>
-            <div class="stat-label">Recetas de Autor</div>
+            <div class="stat-label">Recetas Familiares</div>
           </div>
         </div>
       </div>
@@ -113,22 +120,35 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- VISTA 2: RECETARIO DE AUTOR                               -->
+    <!-- VISTA 2: RECETARIO FAMILIAR & DE AUTOR                    -->
     <!-- ========================================================= -->
     <section id="view-recetas" class="tab-view" style="display:none;">
       <div class="toolbar-row">
         <div class="search-input-wrapper">
           <span class="search-icon-pos">🔍</span>
-          <input type="text" placeholder="Buscar por receta, ingrediente o técnica..." oninput="handleRecipeSearch(this.value)">
+          <input type="text" placeholder="Buscar por receta, ingrediente o chef..." oninput="handleRecipeSearch(this.value)">
         </div>
 
-        <div class="filter-pills" id="recipesFilterPills">
-          <button class="filter-pill active" onclick="filterRecipesByCat('all', this)">Todas</button>
-          <button class="filter-pill" onclick="filterRecipesByCat('carnes', this)">🥩 Carnes</button>
-          <button class="filter-pill" onclick="filterRecipesByCat('pastas', this)">🍝 Pastas</button>
-          <button class="filter-pill" onclick="filterRecipesByCat('rapidas', this)">⚡ Rápidas</button>
-          <button class="filter-pill" onclick="filterRecipesByCat('postres', this)">🍫 Postres</button>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <!-- Filtro por Miembro Familiar / Autor -->
+          <select id="recipeAuthorFilter" class="form-group" style="margin:0; width:auto; padding:8px 12px;" onchange="filterRecipesByAuthor(this.value)">
+            <option value="all">👥 Todos los Chefs</option>
+          </select>
+
+          <div class="filter-pills" id="recipesScopePills">
+            <button class="filter-pill active" onclick="filterRecipesByScope('all', this)">🌐 Toda la Familia</button>
+            <button class="filter-pill" onclick="filterRecipesByScope('mine', this)">👤 Mis Recetas</button>
+            <button class="filter-pill" onclick="filterRecipesByScope('private', this)">🔒 Privadas</button>
+          </div>
         </div>
+      </div>
+
+      <div class="filter-pills" id="recipesFilterPills" style="margin-bottom:16px;">
+        <button class="filter-pill active" onclick="filterRecipesByCat('all', this)">Todas</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('carnes', this)">🥩 Carnes</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('pastas', this)">🍝 Pastas</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('rapidas', this)">⚡ Rápidas</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('postres', this)">🍫 Postres</button>
       </div>
 
       <div class="recipes-grid" id="recipesGridContainer">
@@ -388,6 +408,21 @@
           <input type="text" id="inpRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
         </div>
 
+        <!-- Visibilidad y Autoría Familiar -->
+        <div class="form-group">
+          <label>Visibilidad en Hell's Kitchen</label>
+          <div class="visibility-selector">
+            <label class="visibility-opt selected" id="lblAddPublic" onclick="setAddRecipeVisibility(false)">
+              <input type="radio" name="radAddVisibility" id="radAddPublic" value="public" checked>
+              <span>🌐 Familiar (Pública)</span>
+            </label>
+            <label class="visibility-opt" id="lblAddPrivate" onclick="setAddRecipeVisibility(true)">
+              <input type="radio" name="radAddVisibility" id="radAddPrivate" value="private">
+              <span>🔒 Solo para mí (Privada)</span>
+            </label>
+          </div>
+        </div>
+
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
           <div class="form-group">
             <label>Categoría</label>
@@ -489,6 +524,21 @@
           <input type="text" id="inpEditRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
         </div>
 
+        <!-- Visibilidad y Autoría Familiar -->
+        <div class="form-group">
+          <label>Visibilidad en Hell's Kitchen</label>
+          <div class="visibility-selector">
+            <label class="visibility-opt selected" id="lblEditPublic" onclick="setEditRecipeVisibility(false)">
+              <input type="radio" name="radEditVisibility" id="radEditPublic" value="public" checked>
+              <span>🌐 Familiar (Pública)</span>
+            </label>
+            <label class="visibility-opt" id="lblEditPrivate" onclick="setEditRecipeVisibility(true)">
+              <input type="radio" name="radEditVisibility" id="radEditPrivate" value="private">
+              <span>🔒 Solo para mí (Privada)</span>
+            </label>
+          </div>
+        </div>
+
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
           <div class="form-group">
             <label>Categoría</label>
@@ -571,6 +621,57 @@
     </div>
   </div>
 
+  <!-- ========================================================= -->
+  <!-- 9. MODAL: LOGIN / PERFILES FAMILIARES                     -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="userProfileModal" style="display:none;" onclick="if(event.target===this) closeUserProfileModal()">
+    <div class="modal-content" style="max-width:520px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">👥 Chefs de la Familia</h3>
+        <button class="btn-icon btn-secondary" onclick="closeUserProfileModal()">✕</button>
+      </div>
+      
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:14px;">
+        Seleccioná quién está cocinando hoy para cargar y gestionar sus recetas privadas y de autor.
+      </p>
+
+      <!-- Lista de Miembros Familiares -->
+      <div class="family-grid" id="familyMembersGrid">
+        <!-- Renderizado dinámico de tarjetas de miembros -->
+      </div>
+
+      <!-- Formulario para Agregar Nuevo Miembro Familiar -->
+      <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:14px;">
+        <h4 style="color:#ffffff; font-size:0.95rem; margin-bottom:10px;">+ Sumar un nuevo Chef a la Familia</h4>
+        <form onsubmit="handleCreateFamilyMember(event)">
+          <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px; align-items:end;">
+            <div class="form-group" style="margin:0;">
+              <label>Nombre / Apodo *</label>
+              <input type="text" id="inpNewUserName" placeholder="Ej: Papá, Sofi, Abuela" required>
+            </div>
+            <div class="form-group" style="margin:0;">
+              <label>Avatar / Emoji</label>
+              <select id="inpNewUserAvatar">
+                <option value="👨‍🍳">👨‍🍳 Chef</option>
+                <option value="👩‍🍳">👩‍🍳 Chef Mujer</option>
+                <option value="🧑‍🍳">🧑‍🍳 Cocinero/a</option>
+                <option value="🔥">🔥 Fuego</option>
+                <option value="🍕">🍕 Pizza</option>
+                <option value="🍔">🍔 Burger</option>
+                <option value="🌮">🌮 Taco</option>
+                <option value="🥘">🥘 Paella</option>
+                <option value="⭐">⭐ Master</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline btn-sm" style="margin-top:12px; width:100%;">
+            ✨ Agregar a la Familia
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Container -->
   <div id="toastContainer" class="toast-container"></div>
 
@@ -578,8 +679,8 @@
   <datalist id="masterIngredientsList"></datalist>
 
   <!-- Scripts -->
-  <script src="js/data.js?v=9"></script>
-  <script src="js/app.js?v=9"></script>
+  <script src="js/data.js?v=10"></script>
+  <script src="js/app.js?v=10"></script>
   <script>
     // Limpiar Service Worker antiguo para asegurar recarga en vivo de scripts
     if ('serviceWorker' in navigator) {

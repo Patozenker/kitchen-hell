@@ -5,11 +5,14 @@
  */
 
 // =========================================================
-// 1. ESTADO & PERSISTENCIA (LOCALSTORAGE)
+// 1. ESTADO & PERSISTENCIA (HELL'S KITCHEN LOCALSTORAGE)
 // =========================================================
-const STORAGE_KEY = 'patos_kitchen_store_v1';
+const STORAGE_KEY = 'hells_kitchen_store_v2';
+const LEGACY_STORAGE_KEY = 'patos_kitchen_store_v1';
 
 let appState = {
+  users: [],
+  currentUser: 'user-pato',
   pantry: [],
   recipes: [],
   shoppingList: [],
@@ -18,42 +21,190 @@ let appState = {
 
 function loadState() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    let raw = localStorage.getItem(STORAGE_KEY);
+    let parsed = null;
+
     if (raw) {
-      const parsed = JSON.parse(raw);
-      if (parsed && Array.isArray(parsed.pantry) && Array.isArray(parsed.recipes)) {
-        appState = parsed;
-
-        // Sincronizar con el catálogo maestro para asegurar que todos los ingredientes existan (incluso con stock 0)
-        if (typeof MASTER_PANTRY_CATALOG !== 'undefined' && Array.isArray(MASTER_PANTRY_CATALOG)) {
-          const pantryMap = new Map();
-          appState.pantry.forEach(p => pantryMap.set(p.id, p));
-
-          MASTER_PANTRY_CATALOG.forEach(masterItem => {
-            if (!pantryMap.has(masterItem.id)) {
-              const existingByName = appState.pantry.find(p => p.name.toLowerCase() === masterItem.name.toLowerCase());
-              if (!existingByName) {
-                appState.pantry.push({
-                  ...masterItem,
-                  qty: 0 // Si no estaba registrado previamente, se incorpora con stock 0
-                });
-              }
-            }
-          });
+      parsed = JSON.parse(raw);
+    } else {
+      // Migración desde versión previa patos_kitchen_store_v1
+      const legacyRaw = localStorage.getItem(LEGACY_STORAGE_KEY);
+      if (legacyRaw) {
+        const legacyParsed = JSON.parse(legacyRaw);
+        if (legacyParsed && Array.isArray(legacyParsed.pantry)) {
+          parsed = {
+            users: (typeof DEFAULT_FAMILY_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_FAMILY_USERS)) : [
+              { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' },
+              { id: 'user-mama', name: 'Mamá', avatar: '👩‍🍳', role: 'member' },
+              { id: 'user-hermano', name: 'Hermano', avatar: '🧑‍🍳', role: 'member' }
+            ],
+            currentUser: 'user-pato',
+            pantry: legacyParsed.pantry || [],
+            recipes: (legacyParsed.recipes || []).map(r => ({
+              ...r,
+              authorId: r.authorId || 'user-pato',
+              authorName: r.authorName || 'Chef Pato',
+              authorAvatar: r.authorAvatar || '👨‍🍳',
+              isPrivate: r.isPrivate === true ? true : false
+            })),
+            shoppingList: legacyParsed.shoppingList || [],
+            history: legacyParsed.history || []
+          };
         }
-        updateMasterIngredientsDatalist();
-        if (typeof window !== 'undefined') window.appState = appState;
-        return;
       }
+    }
+
+    if (parsed && Array.isArray(parsed.pantry) && Array.isArray(parsed.recipes)) {
+      appState = parsed;
+
+      // Asegurar usuarios mínimos
+      if (!Array.isArray(appState.users) || appState.users.length === 0) {
+        appState.users = (typeof DEFAULT_FAMILY_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_FAMILY_USERS)) : [
+          { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' }
+        ];
+      }
+      if (!appState.currentUser || !appState.users.some(u => u.id === appState.currentUser)) {
+        appState.currentUser = appState.users[0]?.id || 'user-pato';
+      }
+
+      // Asegurar autoría y privacidad en todas las recetas existentes
+      appState.recipes.forEach(r => {
+        if (!r.authorId) r.authorId = 'user-pato';
+        if (!r.authorName) r.authorName = 'Chef Pato';
+        if (!r.authorAvatar) r.authorAvatar = '👨‍🍳';
+        if (r.isPrivate === undefined) r.isPrivate = false;
+      });
+
+      // Sincronizar con el catálogo maestro para asegurar que todos los ingredientes existan (incluso con stock 0)
+      if (typeof MASTER_PANTRY_CATALOG !== 'undefined' && Array.isArray(MASTER_PANTRY_CATALOG)) {
+        const pantryMap = new Map();
+        appState.pantry.forEach(p => pantryMap.set(p.id, p));
+
+        MASTER_PANTRY_CATALOG.forEach(masterItem => {
+          if (!pantryMap.has(masterItem.id)) {
+            const existingByName = appState.pantry.find(p => p.name.toLowerCase() === masterItem.name.toLowerCase());
+            if (!existingByName) {
+              appState.pantry.push({
+                ...masterItem,
+                qty: 0 // Si no estaba registrado previamente, se incorpora con stock 0
+              });
+            }
+          }
+        });
+      }
+
+      updateMasterIngredientsDatalist();
+      updateHeaderUserBadge();
+      updateAuthorFilterDropdown();
+      if (typeof window !== 'undefined') window.appState = appState;
+      return;
     }
   } catch (e) {
     console.warn("Usando datos por defecto:", e);
   }
+
   // Semilla inicial
   appState = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA));
   saveState();
   updateMasterIngredientsDatalist();
+  updateHeaderUserBadge();
+  updateAuthorFilterDropdown();
   if (typeof window !== 'undefined') window.appState = appState;
+}
+
+// =========================================================
+// 1.1 GESTIÓN DE USUARIOS Y SESIÓN FAMILIAR
+// =========================================================
+
+function getCurrentUser() {
+  if (!appState.users || appState.users.length === 0) {
+    return { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' };
+  }
+  return appState.users.find(u => u.id === appState.currentUser) || appState.users[0];
+}
+
+function updateHeaderUserBadge() {
+  const user = getCurrentUser();
+  const avatarEl = document.getElementById('headerUserAvatar');
+  const nameEl = document.getElementById('headerUserName');
+  const greetingEl = document.getElementById('heroGreeting');
+
+  if (avatarEl) avatarEl.innerText = user.avatar || '👨‍🍳';
+  if (nameEl) nameEl.innerText = user.name || 'Chef';
+  if (greetingEl) greetingEl.innerText = `¿Qué cocinamos hoy, ${user.name}? 🔥`;
+}
+
+function openUserProfileModal() {
+  const modal = document.getElementById('userProfileModal');
+  const grid = document.getElementById('familyMembersGrid');
+  if (!modal || !grid) return;
+
+  grid.innerHTML = (appState.users || []).map(u => {
+    const isActive = u.id === appState.currentUser;
+    return `
+      <div class="family-member-card ${isActive ? 'active' : ''}" onclick="switchUser('${u.id}')">
+        ${isActive ? '<span class="family-card-check">✓</span>' : ''}
+        <span class="family-card-avatar">${u.avatar || '👨‍🍳'}</span>
+        <div class="family-card-name">${escapeAttr(u.name)}</div>
+        <div class="family-card-role">${u.role === 'admin' ? '👑 Chef Principal' : '👨‍🍳 Chef Familiar'}</div>
+      </div>
+    `;
+  }).join('');
+
+  modal.style.display = 'flex';
+}
+
+function closeUserProfileModal() {
+  const modal = document.getElementById('userProfileModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function switchUser(userId) {
+  const user = appState.users.find(u => u.id === userId);
+  if (!user) return;
+
+  appState.currentUser = userId;
+  saveState();
+  updateHeaderUserBadge();
+  closeUserProfileModal();
+
+  if (currentTab === 'matcher') renderSmartMatcher();
+  if (currentTab === 'recetas') renderRecipesView();
+
+  showToast(`👨‍🍳 Sesión activa: ¡Bienvenido/a, ${user.name}!`, 'success');
+}
+
+function handleCreateFamilyMember(e) {
+  if (e) e.preventDefault();
+
+  const nameInp = document.getElementById('inpNewUserName');
+  const avatarInp = document.getElementById('inpNewUserAvatar');
+  const name = nameInp?.value.trim();
+  const avatar = avatarInp?.value || '👨‍🍳';
+
+  if (!name) return;
+
+  const newUser = {
+    id: `user-${Date.now()}`,
+    name,
+    avatar,
+    role: 'member'
+  };
+
+  appState.users.push(newUser);
+  appState.currentUser = newUser.id;
+  saveState();
+
+  if (nameInp) nameInp.value = '';
+
+  updateHeaderUserBadge();
+  updateAuthorFilterDropdown();
+  closeUserProfileModal();
+
+  if (currentTab === 'matcher') renderSmartMatcher();
+  if (currentTab === 'recetas') renderRecipesView();
+
+  showToast(`🎉 ¡${name} se unió a la familia Hell's Kitchen!`, 'success');
 }
 
 function updateMasterIngredientsDatalist() {
@@ -171,6 +322,89 @@ function updateHeaderBadges() {
 }
 
 // =========================================================
+// 1.2 VISIBILIDAD, AUTORÍA Y PERMISOS DE RECETAS
+// =========================================================
+
+function canUserModifyRecipe(recipe) {
+  if (!recipe) return false;
+  const user = getCurrentUser();
+  if (user.role === 'admin') return true;
+  return recipe.authorId === user.id;
+}
+
+function getVisibleRecipes() {
+  const currentUserId = appState.currentUser || 'user-pato';
+  return (appState.recipes || []).filter(r => {
+    // Si la receta no es privada, es pública para toda la familia
+    if (!r.isPrivate) return true;
+    // Si es privada, solo la ve quien la creó
+    return r.authorId === currentUserId;
+  });
+}
+
+let currentRecipeSearch = '';
+let currentRecipeCategory = 'all';
+let currentRecipeScope = 'all'; // 'all' | 'mine' | 'private'
+let currentRecipeAuthorFilter = 'all';
+
+function filterRecipesByScope(scope, btnEl) {
+  currentRecipeScope = scope;
+  document.querySelectorAll('#recipesScopePills .filter-pill').forEach(b => b.classList.remove('active'));
+  if (btnEl) btnEl.classList.add('active');
+  renderRecipesView();
+}
+
+function filterRecipesByAuthor(authorId) {
+  currentRecipeAuthorFilter = authorId;
+  renderRecipesView();
+}
+
+function updateAuthorFilterDropdown() {
+  const sel = document.getElementById('recipeAuthorFilter');
+  if (!sel) return;
+
+  const users = appState.users || [];
+  sel.innerHTML = `
+    <option value="all">👥 Todos los Chefs</option>
+    ${users.map(u => `
+      <option value="${u.id}" ${currentRecipeAuthorFilter === u.id ? 'selected' : ''}>
+        ${u.avatar || '👨‍🍳'} ${escapeAttr(u.name)}
+      </option>
+    `).join('')}
+  `;
+}
+
+// Variables y toggles para visibilidad en modals
+let addRecipeIsPrivate = false;
+let editRecipeIsPrivate = false;
+
+function setAddRecipeVisibility(isPrivate) {
+  addRecipeIsPrivate = isPrivate;
+  const radPub = document.getElementById('radAddPublic');
+  const radPriv = document.getElementById('radAddPrivate');
+  const lblPub = document.getElementById('lblAddPublic');
+  const lblPriv = document.getElementById('lblAddPrivate');
+
+  if (radPub) radPub.checked = !isPrivate;
+  if (radPriv) radPriv.checked = isPrivate;
+  if (lblPub) lblPub.classList.toggle('selected', !isPrivate);
+  if (lblPriv) lblPriv.classList.toggle('selected', isPrivate);
+}
+
+function setEditRecipeVisibility(isPrivate) {
+  editRecipeIsPrivate = isPrivate;
+  const radPub = document.getElementById('radEditPublic');
+  const radPriv = document.getElementById('radEditPrivate');
+  const lblPub = document.getElementById('lblEditPublic');
+  const lblPriv = document.getElementById('lblEditPrivate');
+
+  if (radPub) radPub.checked = !isPrivate;
+  if (radPriv) radPriv.checked = isPrivate;
+  if (lblPub) lblPub.classList.toggle('selected', !isPrivate);
+  if (lblPriv) lblPriv.classList.toggle('selected', isPrivate);
+}
+
+// =========================================================
 // 4. VISTA: GENERADOR "¿QUÉ COCINO HOY?"
 // =========================================================
 function renderSmartMatcher() {
@@ -180,8 +414,11 @@ function renderSmartMatcher() {
   const filterTime = document.getElementById('matcherFilterTime')?.value || 'all';
   const filterCat = document.getElementById('matcherFilterCat')?.value || 'all';
 
+  // Obtener solo las recetas visibles para el usuario actual (públicas de familia + privadas del usuario)
+  const visibleRecipes = getVisibleRecipes();
+
   // Calcular score de cada receta
-  const scored = appState.recipes.map(rec => {
+  const scored = visibleRecipes.map(rec => {
     const match = calculateRecipeMatch(rec);
     return { ...rec, match };
   });
@@ -223,6 +460,8 @@ function renderSmartMatcher() {
       badgeIcon = `🥈 ${r.match.pct}%`;
     }
 
+    const canEdit = canUserModifyRecipe(r);
+
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
         <div class="recipe-img-container">
@@ -235,7 +474,14 @@ function renderSmartMatcher() {
         </div>
 
         <div class="recipe-content">
-          <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;">
+            <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
+            <div style="display:flex; gap:4px; align-items:center;">
+              ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Familia</span>'}
+              <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+            </div>
+          </div>
+
           <h3 class="recipe-card-title">${escapeAttr(r.title)}</h3>
           <p class="recipe-desc">${escapeAttr(r.description)}</p>
 
@@ -252,7 +498,9 @@ function renderSmartMatcher() {
               <span>⭐ ${r.difficulty}</span>
             </div>
             <div style="display:flex; gap:6px;">
-              <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
+              ${canEdit ? `
+                <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
+              ` : ''}
               <button class="btn btn-secondary btn-sm" onclick="event.stopPropagation(); addRecipeToCartQuick('${r.id}')" title="Agregar insumos a la lista de compras">🛒 + Carrito</button>
               <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); startCookingMode('${r.id}')">🔥 Cocinar</button>
             </div>
@@ -264,19 +512,42 @@ function renderSmartMatcher() {
 }
 
 // =========================================================
-// 5. VISTA: RECETARIO DE AUTOR
+// 5. VISTA: RECETARIO FAMILIAR & DE AUTOR
 // =========================================================
-let currentRecipeSearch = '';
-let currentRecipeCategory = 'all';
-
 function renderRecipesView() {
   const container = document.getElementById('recipesGridContainer');
   if (!container) return;
 
-  const filtered = appState.recipes.filter(r => {
+  const currentUserId = appState.currentUser || 'user-pato';
+  const visibleRecipes = getVisibleRecipes();
+
+  const filtered = visibleRecipes.filter(r => {
+    // Filtro por categoría
     const matchCat = (currentRecipeCategory === 'all' || r.category === currentRecipeCategory);
-    const matchSearch = (!currentRecipeSearch || r.title.toLowerCase().includes(currentRecipeSearch.toLowerCase()) || r.description.toLowerCase().includes(currentRecipeSearch.toLowerCase()));
-    return matchCat && matchSearch;
+    
+    // Filtro por búsqueda
+    const q = currentRecipeSearch.toLowerCase();
+    const matchSearch = (!currentRecipeSearch || 
+      r.title.toLowerCase().includes(q) || 
+      r.description.toLowerCase().includes(q) ||
+      (r.authorName && r.authorName.toLowerCase().includes(q))
+    );
+
+    // Filtro por Scope (Toda la familia, Mis recetas, Solo privadas)
+    let matchScope = true;
+    if (currentRecipeScope === 'mine') {
+      matchScope = (r.authorId === currentUserId);
+    } else if (currentRecipeScope === 'private') {
+      matchScope = (r.isPrivate === true && r.authorId === currentUserId);
+    }
+
+    // Filtro por Autor
+    let matchAuthor = true;
+    if (currentRecipeAuthorFilter !== 'all') {
+      matchAuthor = (r.authorId === currentRecipeAuthorFilter);
+    }
+
+    return matchCat && matchSearch && matchScope && matchAuthor;
   });
 
   if (filtered.length === 0) {
@@ -291,6 +562,8 @@ function renderRecipesView() {
 
   container.innerHTML = filtered.map(r => {
     const match = calculateRecipeMatch(r);
+    const canEdit = canUserModifyRecipe(r);
+
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
         <div class="recipe-img-container">
@@ -299,7 +572,14 @@ function renderRecipesView() {
         </div>
 
         <div class="recipe-content">
-          <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;">
+            <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
+            <div style="display:flex; gap:4px; align-items:center;">
+              ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Familia</span>'}
+              <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+            </div>
+          </div>
+
           <h3 class="recipe-card-title">${escapeAttr(r.title)}</h3>
           <p class="recipe-desc">${escapeAttr(r.description)}</p>
 
@@ -311,7 +591,9 @@ function renderRecipesView() {
               </span>
             </div>
             <div style="display:flex; gap:6px;">
-              <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
+              ${canEdit ? `
+                <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
+              ` : ''}
               <button class="btn btn-secondary btn-sm" onclick="event.stopPropagation(); addRecipeToCartQuick('${r.id}')" title="Agregar insumos a la lista de compras">🛒 + Carrito</button>
               <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); startCookingMode('${r.id}')">🔥 Cocinar</button>
             </div>
@@ -880,9 +1162,21 @@ function renderRecipeDetailModalContent() {
   const scaledPortions = Math.round(r.portions * mult);
   const match = calculateRecipeMatch(r);
 
+  const canEdit = canUserModifyRecipe(r);
+
   document.getElementById('modalRecipeTitle').innerText = r.title;
   document.getElementById('modalRecipeImg').src = r.image;
-  document.getElementById('modalRecipeCategory').innerText = getCategoryName(r.category);
+  
+  const catEl = document.getElementById('modalRecipeCategory');
+  if (catEl) {
+    catEl.innerHTML = `
+      <span>${getCategoryName(r.category)}</span>
+      <span style="opacity:0.6;">•</span>
+      <span>${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+      ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.4); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🔒 Privada</span>' : '<span style="background:rgba(16,185,129,0.3); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🌐 Familiar</span>'}
+    `;
+  }
+
   document.getElementById('modalRecipeTime').innerText = `⏱️ ${r.time} min`;
   document.getElementById('modalRecipePortionsText').innerText = `👥 ${scaledPortions} porciones`;
   document.getElementById('modalRecipeDesc').innerText = r.description;
@@ -1346,6 +1640,11 @@ function deleteRecipe(recipeId) {
   const recipe = appState.recipes.find(r => r.id === recipeId);
   if (!recipe) return;
 
+  if (!canUserModifyRecipe(recipe)) {
+    showToast(`⚠️ Esta receta pertenece a ${recipe.authorName || 'otro chef'}. Solo su autor puede eliminarla.`, 'info');
+    return;
+  }
+
   if (!confirm(`¿Estás seguro de que querés eliminar la receta "${recipe.title}"?`)) {
     return;
   }
@@ -1384,6 +1683,9 @@ function openAddRecipeModal() {
   if (pairEl) pairEl.value = '';
   const tipEl = document.getElementById('inpRecChefTip');
   if (tipEl) tipEl.value = '';
+
+  // Por defecto, nueva receta es pública para la familia
+  setAddRecipeVisibility(false);
 
   // Reset ingredients container with 2 default rows
   const ingsContainer = document.getElementById('newRecipeIngredientsContainer');
@@ -1591,9 +1893,16 @@ function handleAddRecipeSubmit(e) {
     return;
   }
 
+  const curUser = getCurrentUser();
+  const isPrivate = !!addRecipeIsPrivate;
+
   const newRecipe = {
     id: `rec-${Date.now()}`,
     title,
+    authorId: curUser.id,
+    authorName: curUser.name,
+    authorAvatar: curUser.avatar,
+    isPrivate,
     category,
     time,
     portions,
@@ -1616,7 +1925,7 @@ function handleAddRecipeSubmit(e) {
   if (currentTab === 'recetas') renderRecipesView();
   if (currentTab === 'matcher') renderSmartMatcher();
 
-  showToast(`🎉 ¡Receta "${title}" guardada con éxito!`, 'success');
+  showToast(`🎉 ¡Receta "${title}" (${isPrivate ? '🔒 Privada' : '🌐 Pública familiar'}) guardada con éxito!`, 'success');
 }
 
 // =========================================================
@@ -1635,6 +1944,11 @@ function openEditRecipeModal(recipeId) {
     return;
   }
 
+  if (!canUserModifyRecipe(recipe)) {
+    showToast(`⚠️ Esta receta fue creada por ${recipe.authorName || 'otro chef'}. Solo su autor puede modificarla.`, 'info');
+    return;
+  }
+
   const modal = document.getElementById('editRecipeModal');
   if (!modal) return;
 
@@ -1644,6 +1958,9 @@ function openEditRecipeModal(recipeId) {
 
   const titleEl = document.getElementById('inpEditRecTitle');
   if (titleEl) titleEl.value = recipe.title || '';
+
+  // Configurar visibilidad actual
+  setEditRecipeVisibility(!!recipe.isPrivate);
 
   const catEl = document.getElementById('inpEditRecCategory');
   if (catEl) catEl.value = recipe.category || 'rapidas';
@@ -1777,6 +2094,12 @@ function handleEditRecipeSubmit(e) {
     return;
   }
 
+  const existingRecipe = appState.recipes[recipeIndex];
+  if (!canUserModifyRecipe(existingRecipe)) {
+    showToast('No tienes permisos para editar esta receta.', 'info');
+    return;
+  }
+
   const title = document.getElementById('inpEditRecTitle')?.value.trim();
   const category = document.getElementById('inpEditRecCategory')?.value || 'rapidas';
   const difficulty = document.getElementById('inpEditRecDifficulty')?.value || 'Media';
@@ -1786,6 +2109,7 @@ function handleEditRecipeSubmit(e) {
   const description = document.getElementById('inpEditRecDesc')?.value.trim() || 'Receta gourmet casera de autor.';
   const pairing = document.getElementById('inpEditRecPairing')?.value.trim() || '';
   const chefTip = document.getElementById('inpEditRecChefTip')?.value.trim() || '';
+  const isPrivate = !!editRecipeIsPrivate;
 
   if (!title) {
     showToast('Por favor completá el título de la receta.', 'info');
@@ -1793,7 +2117,7 @@ function handleEditRecipeSubmit(e) {
   }
 
   if (!image) {
-    image = appState.recipes[recipeIndex].image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80';
+    image = existingRecipe.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80';
   }
 
   // Recolectar ingredientes
@@ -1870,8 +2194,9 @@ function handleEditRecipeSubmit(e) {
 
   // Actualizar receta
   const updatedRecipe = {
-    ...appState.recipes[recipeIndex],
+    ...existingRecipe,
     title,
+    isPrivate,
     category,
     time,
     portions,
@@ -1923,6 +2248,19 @@ function escapeAttr(str) {
 }
 
 // Exponer explícitamente en el objeto global window
+window.getCurrentUser = getCurrentUser;
+window.updateHeaderUserBadge = updateHeaderUserBadge;
+window.openUserProfileModal = openUserProfileModal;
+window.closeUserProfileModal = closeUserProfileModal;
+window.switchUser = switchUser;
+window.handleCreateFamilyMember = handleCreateFamilyMember;
+window.canUserModifyRecipe = canUserModifyRecipe;
+window.getVisibleRecipes = getVisibleRecipes;
+window.filterRecipesByScope = filterRecipesByScope;
+window.filterRecipesByAuthor = filterRecipesByAuthor;
+window.updateAuthorFilterDropdown = updateAuthorFilterDropdown;
+window.setAddRecipeVisibility = setAddRecipeVisibility;
+window.setEditRecipeVisibility = setEditRecipeVisibility;
 window.openAddRecipeModal = openAddRecipeModal;
 window.closeAddRecipeModal = closeAddRecipeModal;
 window.openEditRecipeModal = openEditRecipeModal;
