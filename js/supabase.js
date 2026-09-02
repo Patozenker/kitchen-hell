@@ -365,6 +365,9 @@ async function pushMasterIngredientToSupabase(ing) {
 async function pushRecipeToSupabase(recipe) {
   if (!supabaseClient || !isSupabaseConnected) return;
   try {
+    const DB_ALLOWED = ['carnes', 'pastas', 'rapidas', 'postres'];
+    const safeCat = DB_ALLOWED.includes(recipe.category) ? recipe.category : 'rapidas';
+
     await supabaseClient.from('recipes').upsert({
       id: recipe.id,
       title: recipe.title,
@@ -372,7 +375,7 @@ async function pushRecipeToSupabase(recipe) {
       author_name: recipe.authorName,
       author_avatar: recipe.authorAvatar || '👨‍🍳',
       is_private: recipe.isPrivate === true,
-      category: recipe.category,
+      category: safeCat,
       time: recipe.time,
       portions: recipe.portions,
       difficulty: recipe.difficulty || 'Media',

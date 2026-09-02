@@ -678,6 +678,12 @@ function openUserProfileModal() {
   if (lblPub) lblPub.classList.toggle('active', !isAnonymous);
   if (lblPriv) lblPriv.classList.toggle('active', isAnonymous);
 
+  // Sincronizar porciones por defecto del usuario
+  const inpPortions = document.getElementById('inpUserDefaultPortions');
+  if (inpPortions) {
+    inpPortions.value = parseInt(curUser.defaultPortions) || 2;
+  }
+
   modal.style.display = 'flex';
 }
 
@@ -705,6 +711,33 @@ function setUserProfilePrivacy(isAnonymous) {
   if (currentTab === 'recetas') renderRecipesView();
 
   showToast(`🔒 Visibilidad de perfil: ${isAnonymous ? 'Anónimo (Chef Anónimo en recetas)' : 'Público (Tu nombre es visible)'}`, 'info');
+}
+
+function setUserDefaultPortions(val) {
+  const user = getCurrentUser();
+  if (!user) return;
+  let num = parseInt(val);
+  if (isNaN(num) || num < 1) num = 1;
+  if (num > 50) num = 50;
+
+  user.defaultPortions = num;
+  saveState();
+
+  const inp = document.getElementById('inpUserDefaultPortions');
+  if (inp) inp.value = num;
+
+  if (typeof pushUserToSupabase === 'function') {
+    pushUserToSupabase(user);
+  }
+
+  showToast(`👥 Porciones habituales configuradas en: ${num}`, 'info');
+}
+
+function stepUserDefaultPortions(delta) {
+  const user = getCurrentUser();
+  if (!user) return;
+  let cur = parseInt(user.defaultPortions) || 2;
+  setUserDefaultPortions(cur + delta);
 }
 
 function closeUserProfileModal() {
@@ -2893,7 +2926,10 @@ function openRecipeDetailModal(recipeId) {
   if (!recipe) return;
 
   currentDetailRecipe = recipe;
-  currentPortionMultiplier = 1;
+  const user = getCurrentUser();
+  const basePortions = parseInt(recipe.portions) || 2;
+  const userDefault = (user && user.defaultPortions) ? parseInt(user.defaultPortions) : basePortions;
+  currentPortionMultiplier = userDefault / basePortions;
 
   const modal = document.getElementById('recipeDetailModal');
   if (!modal) return;
@@ -2917,7 +2953,8 @@ function renderRecipeDetailModalContent() {
   if (!r) return;
 
   const mult = currentPortionMultiplier;
-  const scaledPortions = Math.round(r.portions * mult);
+  const basePortions = parseInt(r.portions) || 2;
+  const scaledPortions = Math.max(1, Math.round(basePortions * mult));
   const match = calculateRecipeMatch(r);
   const canEdit = canUserModifyRecipe(r);
   const pantry = getCurrentPantry();
@@ -2937,17 +2974,31 @@ function renderRecipeDetailModalContent() {
   }
 
   document.getElementById('modalRecipeTime').innerText = `⏱️ ${r.time} min`;
-  document.getElementById('modalRecipePortionsText').innerText = `👥 ${scaledPortions} porciones`;
+  document.getElementById('modalRecipePortionsText').innerText = `👥 ${scaledPortions} personas`;
   document.getElementById('modalRecipeDesc').innerText = r.description;
   document.getElementById('modalRecipePairing').innerText = r.pairing || 'Vino Tinto / Blanco a elección';
   document.getElementById('modalRecipeChefTip').innerText = r.chefTip || 'Cociná con pasión y paciencia.';
 
-  // Renderizar Porciones Buttons
+  // Renderizar Botones de Porciones / Personas
   const portionBtnsContainer = document.getElementById('modalPortionButtons');
   if (portionBtnsContainer) {
-    portionBtnsContainer.innerHTML = [1, 2, 4, 6].map(m => `
-      <button class="portion-btn ${mult === m ? 'active' : ''}" onclick="setPortionMultiplier(${m})">${m * r.portions}p (${m}x)</button>
-    `).join('');
+    const user = getCurrentUser();
+    const userDef = (user && user.defaultPortions) ? parseInt(user.defaultPortions) : basePortions;
+    const countOptions = [1, 2, 4, 6];
+    if (!countOptions.includes(userDef)) {
+      countOptions.push(userDef);
+      countOptions.sort((a, b) => a - b);
+    }
+
+    portionBtnsContainer.innerHTML = countOptions.map(p => {
+      const m = p / basePortions;
+      const isActive = Math.abs(mult - m) < 0.05;
+      return `
+        <button class="portion-btn ${isActive ? 'active' : ''}" onclick="setPortionMultiplier(${m})">
+          ${p} ${p === 1 ? 'persona' : 'personas'}
+        </button>
+      `;
+    }).join('');
   }
 
   // Renderizar Ingredientes Escalados contra la alacena del usuario activo
@@ -4404,6 +4455,8 @@ window.handleAddRecipeComment = handleAddRecipeComment;
 window.toggleReplyInput = toggleReplyInput;
 window.handleSendReply = handleSendReply;
 window.setUserProfilePrivacy = setUserProfilePrivacy;
+window.setUserDefaultPortions = setUserDefaultPortions;
+window.stepUserDefaultPortions = stepUserDefaultPortions;
 window.openAddCategoryModal = openAddCategoryModal;
 window.closeAddCategoryModal = closeAddCategoryModal;
 window.handleAddCategorySubmit = handleAddCategorySubmit;
