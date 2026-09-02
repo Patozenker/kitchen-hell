@@ -1,0 +1,11 @@
+# Dependencias y logs
+node_modules/
+*.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Entorno y credenciales
+.env

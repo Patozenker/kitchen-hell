@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Pato's Kitchen - Chef Personal & Alacena Inteligente</title>
+  
+  <!-- PWA & Iconos -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#090d16">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Pato's Kitchen">
+  
+  <!-- Fuentes e Iconos -->
+  <link rel="stylesheet" href="css/styles.css?v=9">
+</head>
+<body>
+
+  <!-- ========================================================= -->
+  <!-- 1. CABECERA PRINCIPAL (STICKY)                            -->
+  <!-- ========================================================= -->
+  <header class="app-header">
+    <div class="brand-wrapper" onclick="switchTab('matcher')">
+      <div class="brand-icon">🍳</div>
+      <div>
+        <h1 class="brand-title">PATO'S KITCHEN</h1>
+        <div class="brand-subtitle">Chef Personal & Alacena Viva</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn btn-primary btn-sm" onclick="openAddRecipeModal()" title="Crear nueva receta de autor" style="font-weight:700;">
+        + Nueva Receta
+      </button>
+      <button class="btn btn-secondary btn-sm" onclick="switchTab('compras')" title="Lista de Compras">
+        🛒 Compras <span id="badgeShopCount" class="nav-badge" style="display:none;">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 2. CONTENEDOR PRINCIPAL                                   -->
+  <!-- ========================================================= -->
+  <main class="main-container">
+
+    <!-- HERO / BANNER DE BIENVENIDA -->
+    <section class="hero-card">
+      <div class="hero-text">
+        <h1>¿Qué cocinamos hoy, Pato?</h1>
+        <p>Tu asistente inteligente que cruza lo que tenés en la alacena y la heladera para sugerirte los mejores platos sin desperdiciar nada.</p>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-pill" onclick="switchTab('matcher')" style="cursor:pointer;" title="Recetas listas para cocinar ya">
+          <span class="stat-icon">🥇</span>
+          <div>
+            <div class="stat-num" id="heroStatReady" style="color:#34d399;">0</div>
+            <div class="stat-label">Listas 100%</div>
+          </div>
+        </div>
+
+        <div class="stat-pill" onclick="switchTab('alacena')" style="cursor:pointer;" title="Ver mi stock de ingredientes">
+          <span class="stat-icon">🥫</span>
+          <div>
+            <div class="stat-num" id="badgePantryCount">0</div>
+            <div class="stat-label">Insumos en Casa</div>
+          </div>
+        </div>
+
+        <div class="stat-pill" onclick="switchTab('recetas')" style="cursor:pointer;" title="Ver todo mi recetario">
+          <span class="stat-icon">📖</span>
+          <div>
+            <div class="stat-num" id="badgeRecipesCount">0</div>
+            <div class="stat-label">Recetas de Autor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VISTA 1: GENERADOR "¿QUÉ COCINO HOY?" (SMART MATCHER)     -->
+    <!-- ========================================================= -->
+    <section id="view-matcher" class="tab-view">
+      <div class="toolbar-row">
+        <div>
+          <h2 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">🪄 Sugerencias con tu Alacena</h2>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Ordenadas por nivel de ingredientes disponibles en casa.</p>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <select id="matcherFilterTime" class="form-group" style="margin:0; width:auto; padding:8px 12px;" onchange="renderSmartMatcher()">
+            <option value="all">⏱️ Todos los tiempos</option>
+            <option value="fast">⚡ Rápidas (≤ 20 min)</option>
+            <option value="medium">🍳 Elaboradas (20 - 40 min)</option>
+          </select>
+
+          <select id="matcherFilterCat" class="form-group" style="margin:0; width:auto; padding:8px 12px;" onchange="renderSmartMatcher()">
+            <option value="all">📁 Todas las categorías</option>
+            <option value="carnes">🥩 Carnes & Fuegos</option>
+            <option value="pastas">🍝 Pastas & Risottos</option>
+            <option value="rapidas">⚡ Rápidas de Semana</option>
+            <option value="postres">🍫 Postres</option>
+          </select>
+
+          <button class="btn btn-primary btn-sm" onclick="openAddRecipeModal()">+ Nueva Receta</button>
+        </div>
+      </div>
+
+      <div class="recipes-grid" id="matcherResultsGrid">
+        <!-- Renderizado dinámico de recetas sugeridas -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VISTA 2: RECETARIO DE AUTOR                               -->
+    <!-- ========================================================= -->
+    <section id="view-recetas" class="tab-view" style="display:none;">
+      <div class="toolbar-row">
+        <div class="search-input-wrapper">
+          <span class="search-icon-pos">🔍</span>
+          <input type="text" placeholder="Buscar por receta, ingrediente o técnica..." oninput="handleRecipeSearch(this.value)">
+        </div>
+
+        <div class="filter-pills" id="recipesFilterPills">
+          <button class="filter-pill active" onclick="filterRecipesByCat('all', this)">Todas</button>
+          <button class="filter-pill" onclick="filterRecipesByCat('carnes', this)">🥩 Carnes</button>
+          <button class="filter-pill" onclick="filterRecipesByCat('pastas', this)">🍝 Pastas</button>
+          <button class="filter-pill" onclick="filterRecipesByCat('rapidas', this)">⚡ Rápidas</button>
+          <button class="filter-pill" onclick="filterRecipesByCat('postres', this)">🍫 Postres</button>
+        </div>
+      </div>
+
+      <div class="recipes-grid" id="recipesGridContainer">
+        <!-- Renderizado dinámico del recetario completo -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VISTA 3: MI ALACENA & HELADERA                            -->
+    <!-- ========================================================= -->
+    <section id="view-alacena" class="tab-view" style="display:none;">
+      <div class="toolbar-row">
+        <div class="search-input-wrapper">
+          <span class="search-icon-pos">🔍</span>
+          <input type="text" placeholder="Buscar por ingrediente (en stock o catálogo)..." oninput="handlePantrySearch(this.value)">
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <div class="filter-pills" id="pantryStockFilterPills">
+            <button class="filter-pill active" onclick="filterPantryByStock('all', this)">📋 Todo</button>
+            <button class="filter-pill" onclick="filterPantryByStock('in_stock', this)">🟢 En Stock</button>
+            <button class="filter-pill" onclick="filterPantryByStock('out_of_stock', this)">🔴 Sin Stock (0)</button>
+          </div>
+
+          <div class="filter-pills" id="pantryFilterPills">
+            <button class="filter-pill active" onclick="filterPantryByCat('all', this)">Categorías</button>
+            <button class="filter-pill" onclick="filterPantryByCat('carnes', this)">🥩 Carnes</button>
+            <button class="filter-pill" onclick="filterPantryByCat('heladera', this)">❄️ Frescos</button>
+            <button class="filter-pill" onclick="filterPantryByCat('alacena', this)">🥫 Secos</button>
+            <button class="filter-pill" onclick="filterPantryByCat('especias', this)">🌿 Especias</button>
+            <button class="filter-pill" onclick="filterPantryByCat('cava', this)">🍷 Cava</button>
+          </div>
+
+          <button class="btn btn-primary btn-sm" onclick="openAddPantryModal()">+ Nuevo Insumo</button>
+        </div>
+      </div>
+
+      <div id="pantrySectionsContainer">
+        <!-- Renderizado dinámico de la alacena -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VISTA 4: LISTA DE COMPRAS INTELIGENTE                     -->
+    <!-- ========================================================= -->
+    <section id="view-compras" class="tab-view" style="display:none;">
+      <div class="toolbar-row">
+        <div>
+          <h2 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">🛒 Lista de Compras</h2>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Los insumos faltantes de tus recetas se suman automáticamente acá.</p>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-outline btn-sm" onclick="consolidateShoppingList()" title="Sumar y unificar ingredientes y unidades repetidas">⚡ Unificar y Sumar</button>
+          <button class="btn btn-secondary btn-sm" onclick="addShoppingItemManual()">+ Agregar Manual</button>
+          <button class="btn btn-success btn-sm" onclick="compartirListaComprasWhatsApp()">📲 WhatsApp</button>
+          <button class="btn btn-danger btn-sm" onclick="clearCheckedShopping()">🧹 Limpiar</button>
+        </div>
+      </div>
+
+      <div id="shoppingListContainer" style="max-width:700px; margin:0 auto;">
+        <!-- Renderizado dinámico de compras -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 3. DOCK DE NAVEGACIÓN INFERIOR                            -->
+  <!-- ========================================================= -->
+  <nav class="nav-dock">
+    <button class="nav-item active" data-tab="matcher" onclick="switchTab('matcher')">
+      <span class="nav-icon">🪄</span>
+      <span>¿Qué Cocino?</span>
+    </button>
+    <button class="nav-item" data-tab="recetas" onclick="switchTab('recetas')">
+      <span class="nav-icon">📖</span>
+      <span>Recetario</span>
+    </button>
+    <button class="nav-item" data-tab="alacena" onclick="switchTab('alacena')">
+      <span class="nav-icon">🧊</span>
+      <span>Alacena</span>
+    </button>
+    <button class="nav-item" data-tab="compras" onclick="switchTab('compras')">
+      <span class="nav-icon">🛒</span>
+      <span>Compras</span>
+    </button>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!-- 4. MODAL DE DETALLE DE RECETA & PORCIONES DINÁMICAS       -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="recipeDetailModal" style="display:none;" onclick="if(event.target===this) closeRecipeDetailModal()">
+    <div class="modal-content" style="max-width:750px;">
+      
+      <!-- Portada -->
+      <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; margin-bottom:18px; height:240px;">
+        <img id="modalRecipeImg" src="" alt="Receta" style="width:100%; height:100%; object-fit:cover;">
+        <button class="btn-icon btn-secondary" style="position:absolute; top:12px; right:52px; background:rgba(0,0,0,0.7);" onclick="openEditCurrentRecipeModal()" title="Editar receta">✏️</button>
+        <button class="btn-icon btn-secondary" style="position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.7);" onclick="closeRecipeDetailModal()">✕</button>
+        <div style="position:absolute; bottom:12px; left:12px; display:flex; gap:8px;">
+          <span class="recipe-match-badge match-100" id="modalRecipeCategory"></span>
+          <span class="recipe-time-tag" id="modalRecipeTime"></span>
+        </div>
+      </div>
+
+      <!-- Título & Descripción -->
+      <h2 id="modalRecipeTitle" style="font-family:var(--font-serif); font-size:1.6rem; color:#ffffff; margin-bottom:8px; line-height:1.2;"></h2>
+      <p id="modalRecipeDesc" style="color:var(--text-muted); font-size:0.95rem; margin-bottom:18px;"></p>
+
+      <!-- Selector de Porciones -->
+      <div style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-md); padding:12px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+        <div>
+          <strong style="color:#ffffff; font-size:0.9rem; display:block;">👥 Selector de Porciones:</strong>
+          <small id="modalRecipePortionsText" style="color:var(--primary-light); font-weight:700;"></small>
+        </div>
+        <div class="cooking-portion-selector" id="modalPortionButtons">
+          <!-- Botones 1x, 2x, 4x, 6x generados por JS -->
+        </div>
+      </div>
+
+      <!-- Maridaje & Tips -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
+        <div style="background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.3); border-radius:var(--radius-md); padding:12px;">
+          <strong style="color:var(--accent-purple); font-size:0.85rem; display:block; margin-bottom:4px;">🍷 Maridaje Recomendado:</strong>
+          <span id="modalRecipePairing" style="font-size:0.85rem; color:#e2e8f0;"></span>
+        </div>
+        <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:var(--radius-md); padding:12px;">
+          <strong style="color:var(--accent-gold); font-size:0.85rem; display:block; margin-bottom:4px;">👨‍🍳 Secreto del Chef:</strong>
+          <span id="modalRecipeChefTip" style="font-size:0.85rem; color:#e2e8f0;"></span>
+        </div>
+      </div>
+
+      <!-- Ingredientes -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom:1px solid var(--border); padding-bottom:6px; flex-wrap:wrap; gap:8px;">
+        <h3 style="font-size:1.15rem; color:#ffffff;">📋 Ingredientes Necesarios</h3>
+        <button class="btn btn-outline btn-sm" id="modalBtnAddAllToCart" onclick="addCurrentRecipeToCart(false)" title="Agregar todos los ingredientes escalados a la lista de compras">
+          🛒 + Todo a Compras
+        </button>
+      </div>
+      <div id="modalRecipeIngredientsList" style="margin-bottom:24px;">
+        <!-- Lista de ingredientes calculados -->
+      </div>
+
+      <!-- Pasos -->
+      <h3 style="font-size:1.15rem; color:#ffffff; margin-bottom:10px; border-bottom:1px solid var(--border); padding-bottom:6px;">
+        👨‍🍳 Preparación Paso a Paso
+      </h3>
+      <div id="modalRecipeStepsList" style="margin-bottom:24px;">
+        <!-- Pasos -->
+      </div>
+
+      <!-- Botones de Acción de la Receta -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:20px;">
+        <button class="btn btn-secondary" id="modalBtnAddToCart" onclick="addCurrentRecipeToCart()" style="padding:14px; font-size:1rem; display:flex; align-items:center; justify-content:center; gap:8px;">
+          🛒 Agregar al Carrito
+        </button>
+        <button class="btn btn-primary" id="modalBtnStartCooking" style="padding:14px; font-size:1rem; box-shadow:0 6px 20px var(--primary-glow); display:flex; align-items:center; justify-content:center; gap:8px;">
+          🔥 Iniciar Modo Cocina
+        </button>
+      </div>
+
+      <div style="margin-top:14px; border-top:1px solid var(--border); padding-top:14px; display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <button class="btn btn-secondary btn-sm" onclick="openEditCurrentRecipeModal()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
+          ✏️ Editar Receta
+        </button>
+        <button class="btn btn-danger btn-sm" onclick="deleteCurrentRecipe()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
+          🗑️ Eliminar Receta
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 5. MODO COCINA EN VIVO (FULLSCREEN COMPANION)              -->
+  <!-- ========================================================= -->
+  <div class="cooking-mode-overlay" id="cookingModeOverlay" style="display:none;">
+    <div class="cooking-header">
+      <div>
+        <small style="color:var(--primary-light); font-weight:800; text-transform:uppercase; letter-spacing:1px;">🔥 Modo Cocina en Vivo</small>
+        <h2 class="cooking-title" id="cookingRecipeTitle"></h2>
+      </div>
+
+      <div style="display:flex; gap:10px; align-items:center;">
+        <button class="btn btn-success btn-sm" onclick="finishPlatoCocinado()">✨ ¡Plato Terminado!</button>
+        <button class="btn btn-secondary btn-sm" onclick="closeCookingMode()">✕ Salir</button>
+      </div>
+    </div>
+
+    <div class="cooking-body" id="cookingStepsContainer">
+      <!-- Pasos detallados con temporizadores individuales -->
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 6. MODAL: AGREGAR INGREDIENTE A ALACENA                   -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="addPantryModal" style="display:none;" onclick="if(event.target===this) closeAddPantryModal()">
+    <div class="modal-content" style="max-width:460px;">
+      <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:#ffffff; margin-bottom:16px;">+ Nuevo Insumo en Alacena</h3>
+      
+      <form onsubmit="handleAddPantrySubmit(event)">
+        <div class="form-group">
+          <label>Nombre del Ingrediente *</label>
+          <input type="text" id="inpPantryName" placeholder="Ej: Arroz Carnaroli, Panceta, Pimentón Ahumado" required>
+        </div>
+
+        <div class="form-group">
+          <label>Categoría</label>
+          <select id="inpPantryCategory">
+            <option value="heladera">❄️ Heladera & Frescos</option>
+            <option value="carnes">🥩 Carnes & Pescados</option>
+            <option value="alacena">🥫 Alacena & Secos</option>
+            <option value="especias">🌿 Condimentos & Especias</option>
+            <option value="cava">🍷 Cava & Bebidas</option>
+          </select>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+          <div class="form-group">
+            <label>Cantidad Disponible *</label>
+            <input type="number" id="inpPantryQty" placeholder="500" value="1" step="any" required>
+          </div>
+          <div class="form-group">
+            <label>Unidad de Medida</label>
+            <input type="text" id="inpPantryUnit" placeholder="g, kg, un, ml, lata" value="un" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Emoji / Ícono representativo</label>
+          <input type="text" id="inpPantryIcon" placeholder="🥘" value="🥘">
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+          <button type="button" class="btn btn-secondary" onclick="closeAddPantryModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar en Alacena</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 7. MODAL: AGREGAR NUEVA RECETA DE AUTOR                   -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="addRecipeModal" style="display:none;" onclick="if(event.target===this) closeAddRecipeModal()">
+    <div class="modal-content" style="max-width:700px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:#ffffff;">👨‍🍳 Nueva Receta de Autor</h3>
+        <button class="btn-icon btn-secondary" onclick="closeAddRecipeModal()">✕</button>
+      </div>
+      
+      <form onsubmit="handleAddRecipeSubmit(event)">
+        <!-- Datos Principales -->
+        <div class="form-group">
+          <label>Nombre del Plato / Receta *</label>
+          <input type="text" id="inpRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Categoría</label>
+            <select id="inpRecCategory">
+              <option value="rapidas">⚡ Rápidas de Semana</option>
+              <option value="carnes">🥩 Carnes & Fuegos</option>
+              <option value="pastas">🍝 Pastas & Risottos</option>
+              <option value="postres">🍫 Postres de Autor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Nivel de Dificultad</label>
+            <select id="inpRecDifficulty">
+              <option value="Fácil">⭐ Fácil</option>
+              <option value="Media" selected>⭐⭐ Media</option>
+              <option value="Avanzada">⭐⭐⭐ Avanzada</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Tiempo de Preparación (minutos) *</label>
+            <input type="number" id="inpRecTime" placeholder="25" min="1" value="30" required>
+          </div>
+          <div class="form-group">
+            <label>Porciones Base *</label>
+            <input type="number" id="inpRecPortions" placeholder="2" min="1" value="2" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Foto / URL de Imagen</label>
+          <input type="url" id="inpRecImage" placeholder="https://... (Dejar en blanco para imagen automática)">
+        </div>
+
+        <div class="form-group">
+          <label>Descripción / Introducción del Plato</label>
+          <textarea id="inpRecDesc" rows="2" placeholder="Breve reseña de la textura, aromas o inspiración del plato..."></textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>🍷 Maridaje Recomendado</label>
+            <input type="text" id="inpRecPairing" placeholder="Ej: Vino Tinto Cabernet / Cerveza IPA">
+          </div>
+          <div class="form-group">
+            <label>👨‍🍳 Secreto o Tip del Chef</label>
+            <input type="text" id="inpRecChefTip" placeholder="Ej: Dorar bien a fuego fuerte antes de sumar líquidos">
+          </div>
+        </div>
+
+        <!-- Constructor de Ingredientes -->
+        <div style="margin-top:20px; border-top:1px solid var(--border); padding-top:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <h4 style="color:#ffffff; font-size:1.05rem;">📋 Ingredientes Necesarios</h4>
+            <button type="button" class="btn btn-outline btn-sm" onclick="addRecipeIngredientRow()">+ Agregar Ingrediente</button>
+          </div>
+          <div id="newRecipeIngredientsContainer" style="display:flex; flex-direction:column; gap:10px;">
+            <!-- Filas dinámicas de ingredientes -->
+          </div>
+        </div>
+
+        <!-- Constructor de Pasos -->
+        <div style="margin-top:20px; border-top:1px solid var(--border); padding-top:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <h4 style="color:#ffffff; font-size:1.05rem;">👨‍🍳 Pasos de Preparación & Timers</h4>
+            <button type="button" class="btn btn-outline btn-sm" onclick="addRecipeStepRow()">+ Agregar Paso</button>
+          </div>
+          <div id="newRecipeStepsContainer" style="display:flex; flex-direction:column; gap:12px;">
+            <!-- Pasos dinámicos -->
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:12px; margin-top:24px; border-top:1px solid var(--border); padding-top:16px;">
+          <button type="button" class="btn btn-secondary" onclick="closeAddRecipeModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" style="padding:10px 24px;">✨ Guardar Receta</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 8. MODAL: EDITAR RECETA EXISTENTE                         -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="editRecipeModal" style="display:none;" onclick="if(event.target===this) closeEditRecipeModal()">
+    <div class="modal-content" style="max-width:700px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:#ffffff;">✏️ Editar Receta</h3>
+        <button class="btn-icon btn-secondary" onclick="closeEditRecipeModal()">✕</button>
+      </div>
+      
+      <form onsubmit="handleEditRecipeSubmit(event)">
+        <input type="hidden" id="inpEditRecId">
+
+        <!-- Datos Principales -->
+        <div class="form-group">
+          <label>Nombre del Plato / Receta *</label>
+          <input type="text" id="inpEditRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Categoría</label>
+            <select id="inpEditRecCategory">
+              <option value="rapidas">⚡ Rápidas de Semana</option>
+              <option value="carnes">🥩 Carnes & Fuegos</option>
+              <option value="pastas">🍝 Pastas & Risottos</option>
+              <option value="postres">🍫 Postres de Autor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Nivel de Dificultad</label>
+            <select id="inpEditRecDifficulty">
+              <option value="Fácil">⭐ Fácil</option>
+              <option value="Media">⭐⭐ Media</option>
+              <option value="Avanzada">⭐⭐⭐ Avanzada</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Tiempo de Preparación (minutos) *</label>
+            <input type="number" id="inpEditRecTime" placeholder="25" min="1" value="30" required>
+          </div>
+          <div class="form-group">
+            <label>Porciones Base *</label>
+            <input type="number" id="inpEditRecPortions" placeholder="2" min="1" value="2" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Foto / URL de Imagen</label>
+          <input type="url" id="inpEditRecImage" placeholder="https://... (Dejar en blanco para imagen automática)">
+        </div>
+
+        <div class="form-group">
+          <label>Descripción / Introducción del Plato</label>
+          <textarea id="inpEditRecDesc" rows="2" placeholder="Breve reseña de la textura, aromas o inspiración del plato..."></textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>🍷 Maridaje Recomendado</label>
+            <input type="text" id="inpEditRecPairing" placeholder="Ej: Vino Tinto Cabernet / Cerveza IPA">
+          </div>
+          <div class="form-group">
+            <label>👨‍🍳 Secreto o Tip del Chef</label>
+            <input type="text" id="inpEditRecChefTip" placeholder="Ej: Dorar bien a fuego fuerte antes de sumar líquidos">
+          </div>
+        </div>
+
+        <!-- Constructor de Ingredientes -->
+        <div style="margin-top:20px; border-top:1px solid var(--border); padding-top:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <h4 style="color:#ffffff; font-size:1.05rem;">📋 Ingredientes Necesarios</h4>
+            <button type="button" class="btn btn-outline btn-sm" onclick="addEditRecipeIngredientRow()">+ Agregar Ingrediente</button>
+          </div>
+          <div id="editRecipeIngredientsContainer" style="display:flex; flex-direction:column; gap:10px;">
+            <!-- Filas dinámicas de ingredientes -->
+          </div>
+        </div>
+
+        <!-- Constructor de Pasos -->
+        <div style="margin-top:20px; border-top:1px solid var(--border); padding-top:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <h4 style="color:#ffffff; font-size:1.05rem;">👨‍🍳 Pasos de Preparación & Timers</h4>
+            <button type="button" class="btn btn-outline btn-sm" onclick="addEditRecipeStepRow()">+ Agregar Paso</button>
+          </div>
+          <div id="editRecipeStepsContainer" style="display:flex; flex-direction:column; gap:12px;">
+            <!-- Pasos dinámicos -->
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:12px; margin-top:24px; border-top:1px solid var(--border); padding-top:16px;">
+          <button type="button" class="btn btn-secondary" onclick="closeEditRecipeModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" style="padding:10px 24px;">💾 Guardar Cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Datalist Autocompletado de Ingredientes Maestros -->
+  <datalist id="masterIngredientsList"></datalist>
+
+  <!-- Scripts -->
+  <script src="js/data.js?v=9"></script>
+  <script src="js/app.js?v=9"></script>
+  <script>
+    // Limpiar Service Worker antiguo para asegurar recarga en vivo de scripts
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
