@@ -1,7 +1,10 @@
 /**
- * PATO'S KITCHEN - MOTOR PRINCIPAL DE LA APLICACIÓN
- * Alacena Inteligente, Smart Matcher de Recetas, Modo Cocina con Timers y WakeLock,
- * Lista de Compras y Persistencia Local.
+ * HELL'S KITCHEN - MOTOR PRINCIPAL DE LA APLICACIÓN
+ * Alacenas y Listas de Compras Individuales por Usuario,
+ * Catálogo de Insumos Global Compartido,
+ * Smart Matcher de Recetas, Modo Cocina con Timers y WakeLock,
+ * Sistema de Comentarios & Respuestas del Autor,
+ * y Persistencia Local.
  */
 
 // =========================================================
@@ -13,11 +16,46 @@ const LEGACY_STORAGE_KEY = 'patos_kitchen_store_v1';
 let appState = {
   users: [],
   currentUser: 'user-pato',
-  pantry: [],
+  pantries: {},       // { 'user-pato': [...], 'user-mama': [...], 'user-hermano': [...] }
+  shoppingLists: {},  // { 'user-pato': [...], 'user-mama': [...], 'user-hermano': [...] }
   recipes: [],
-  shoppingList: [],
   history: []
 };
+
+// =========================================================
+// 1.1 HELPERS DE ACCESO POR USUARIO
+// =========================================================
+
+function getCurrentUserId() {
+  return appState.currentUser || 'user-pato';
+}
+
+function getCurrentUser() {
+  if (!appState.users || appState.users.length === 0) {
+    return { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' };
+  }
+  return appState.users.find(u => u.id === appState.currentUser) || appState.users[0];
+}
+
+function getCurrentPantry() {
+  const uid = getCurrentUserId();
+  if (!appState.pantries) appState.pantries = {};
+  if (!Array.isArray(appState.pantries[uid])) {
+    appState.pantries[uid] = (typeof createEmptyUserPantry === 'function')
+      ? createEmptyUserPantry()
+      : ((typeof MASTER_PANTRY_CATALOG !== 'undefined') ? MASTER_PANTRY_CATALOG.map(i => ({ ...i, qty: 0 })) : []);
+  }
+  return appState.pantries[uid];
+}
+
+function getCurrentShoppingList() {
+  const uid = getCurrentUserId();
+  if (!appState.shoppingLists) appState.shoppingLists = {};
+  if (!Array.isArray(appState.shoppingLists[uid])) {
+    appState.shoppingLists[uid] = [];
+  }
+  return appState.shoppingLists[uid];
+}
 
 function loadState() {
   try {
@@ -31,7 +69,7 @@ function loadState() {
       const legacyRaw = localStorage.getItem(LEGACY_STORAGE_KEY);
       if (legacyRaw) {
         const legacyParsed = JSON.parse(legacyRaw);
-        if (legacyParsed && Array.isArray(legacyParsed.pantry)) {
+        if (legacyParsed) {
           parsed = {
             users: (typeof DEFAULT_FAMILY_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_FAMILY_USERS)) : [
               { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' },
@@ -39,22 +77,31 @@ function loadState() {
               { id: 'user-hermano', name: 'Hermano', avatar: '🧑‍🍳', role: 'member' }
             ],
             currentUser: 'user-pato',
-            pantry: legacyParsed.pantry || [],
+            pantries: {
+              'user-pato': legacyParsed.pantry || (typeof MASTER_PANTRY_CATALOG !== 'undefined' ? JSON.parse(JSON.stringify(MASTER_PANTRY_CATALOG)) : []),
+              'user-mama': (typeof createEmptyUserPantry === 'function') ? createEmptyUserPantry() : [],
+              'user-hermano': (typeof createEmptyUserPantry === 'function') ? createEmptyUserPantry() : []
+            },
+            shoppingLists: {
+              'user-pato': legacyParsed.shoppingList || [],
+              'user-mama': [],
+              'user-hermano': []
+            },
             recipes: (legacyParsed.recipes || []).map(r => ({
               ...r,
               authorId: r.authorId || 'user-pato',
               authorName: r.authorName || 'Chef Pato',
               authorAvatar: r.authorAvatar || '👨‍🍳',
-              isPrivate: r.isPrivate === true ? true : false
+              isPrivate: r.isPrivate === true ? true : false,
+              comments: r.comments || []
             })),
-            shoppingList: legacyParsed.shoppingList || [],
             history: legacyParsed.history || []
           };
         }
       }
     }
 
-    if (parsed && Array.isArray(parsed.pantry) && Array.isArray(parsed.recipes)) {
+    if (parsed) {
       appState = parsed;
 
       // Asegurar usuarios mínimos
@@ -67,34 +114,67 @@ function loadState() {
         appState.currentUser = appState.users[0]?.id || 'user-pato';
       }
 
-      // Asegurar autoría y privacidad en todas las recetas existentes
-      appState.recipes.forEach(r => {
-        if (!r.authorId) r.authorId = 'user-pato';
-        if (!r.authorName) r.authorName = 'Chef Pato';
-        if (!r.authorAvatar) r.authorAvatar = '👨‍🍳';
-        if (r.isPrivate === undefined) r.isPrivate = false;
+      // Migración si existía 'pantry' o 'shoppingList' planos
+      if (!appState.pantries || typeof appState.pantries !== 'object') {
+        appState.pantries = {};
+        if (Array.isArray(parsed.pantry)) {
+          appState.pantries['user-pato'] = parsed.pantry;
+        }
+      }
+      if (!appState.shoppingLists || typeof appState.shoppingLists !== 'object') {
+        appState.shoppingLists = {};
+        if (Array.isArray(parsed.shoppingList)) {
+          appState.shoppingLists['user-pato'] = parsed.shoppingList;
+        }
+      }
+
+      // Asegurar que cada usuario registrado tenga su alacena y su lista de compras
+      appState.users.forEach(u => {
+        if (!Array.isArray(appState.pantries[u.id])) {
+          appState.pantries[u.id] = (typeof createEmptyUserPantry === 'function')
+            ? createEmptyUserPantry()
+            : ((typeof MASTER_PANTRY_CATALOG !== 'undefined') ? MASTER_PANTRY_CATALOG.map(i => ({ ...i, qty: 0 })) : []);
+        }
+        if (!Array.isArray(appState.shoppingLists[u.id])) {
+          appState.shoppingLists[u.id] = [];
+        }
+
+        // Sincronizar con el catálogo maestro para asegurar que todos los ingredientes existan
+        if (typeof MASTER_PANTRY_CATALOG !== 'undefined' && Array.isArray(MASTER_PANTRY_CATALOG)) {
+          const userPantry = appState.pantries[u.id];
+          const pantryMap = new Map();
+          userPantry.forEach(p => pantryMap.set(p.id, p));
+
+          MASTER_PANTRY_CATALOG.forEach(masterItem => {
+            if (!pantryMap.has(masterItem.id)) {
+              const existingByName = userPantry.find(p => p.name.toLowerCase() === masterItem.name.toLowerCase());
+              if (!existingByName) {
+                userPantry.push({
+                  ...masterItem,
+                  qty: 0
+                });
+              }
+            }
+          });
+        }
       });
 
-      // Sincronizar con el catálogo maestro para asegurar que todos los ingredientes existan (incluso con stock 0)
-      if (typeof MASTER_PANTRY_CATALOG !== 'undefined' && Array.isArray(MASTER_PANTRY_CATALOG)) {
-        const pantryMap = new Map();
-        appState.pantry.forEach(p => pantryMap.set(p.id, p));
-
-        MASTER_PANTRY_CATALOG.forEach(masterItem => {
-          if (!pantryMap.has(masterItem.id)) {
-            const existingByName = appState.pantry.find(p => p.name.toLowerCase() === masterItem.name.toLowerCase());
-            if (!existingByName) {
-              appState.pantry.push({
-                ...masterItem,
-                qty: 0 // Si no estaba registrado previamente, se incorpora con stock 0
-              });
-            }
-          }
+      // Asegurar autoría, comentarios y privacidad en todas las recetas
+      if (Array.isArray(appState.recipes)) {
+        appState.recipes.forEach(r => {
+          if (!r.authorId) r.authorId = 'user-pato';
+          if (!r.authorName) r.authorName = 'Chef Pato';
+          if (!r.authorAvatar) r.authorAvatar = '👨‍🍳';
+          if (r.isPrivate === undefined) r.isPrivate = false;
+          if (!Array.isArray(r.comments)) r.comments = [];
         });
+      } else {
+        appState.recipes = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes));
       }
 
       updateMasterIngredientsDatalist();
       updateHeaderUserBadge();
+      updateDynamicUserTitles();
       updateAuthorFilterDropdown();
       if (typeof window !== 'undefined') window.appState = appState;
       return;
@@ -108,20 +188,89 @@ function loadState() {
   saveState();
   updateMasterIngredientsDatalist();
   updateHeaderUserBadge();
+  updateDynamicUserTitles();
   updateAuthorFilterDropdown();
   if (typeof window !== 'undefined') window.appState = appState;
 }
 
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+    if (typeof window !== 'undefined') window.appState = appState;
+  } catch (e) {
+    console.error("Error al guardar estado:", e);
+  }
+}
+
 // =========================================================
-// 1.1 GESTIÓN DE USUARIOS Y SESIÓN FAMILIAR
+// 1.2 REGISTRO GLOBAL DE INSUMOS (CATÁLOGO COMPARTIDO)
 // =========================================================
 
-function getCurrentUser() {
-  if (!appState.users || appState.users.length === 0) {
-    return { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' };
+function registerGlobalIngredient({ name, category = 'alacena', unit = 'un', minQty = 1, icon = '📦', initialQtyForCurrent = 0 }) {
+  const trimmedName = name.trim();
+  if (!trimmedName) return null;
+
+  const currentPantry = getCurrentPantry();
+  let existing = currentPantry.find(p => p.name.toLowerCase() === trimmedName.toLowerCase());
+
+  if (existing) {
+    if (initialQtyForCurrent > 0) {
+      existing.qty = Math.round(((parseFloat(existing.qty) || 0) + initialQtyForCurrent) * 100) / 100;
+    }
+    return existing;
   }
-  return appState.users.find(u => u.id === appState.currentUser) || appState.users[0];
+
+  const newIngId = `ing-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`;
+  const masterItem = {
+    id: newIngId,
+    name: trimmedName,
+    category: category || 'alacena',
+    unit: unit || 'un',
+    minQty: minQty || 1,
+    icon: icon || '📦'
+  };
+
+  // 1. Registrar en catálogo maestro en memoria
+  if (typeof MASTER_PANTRY_CATALOG !== 'undefined' && Array.isArray(MASTER_PANTRY_CATALOG)) {
+    const inMaster = MASTER_PANTRY_CATALOG.find(p => p.name.toLowerCase() === trimmedName.toLowerCase());
+    if (!inMaster) {
+      MASTER_PANTRY_CATALOG.push({ ...masterItem, qty: 0 });
+    }
+  }
+
+  // 2. Propagar a todas las alacenas de los usuarios
+  const curUid = getCurrentUserId();
+  (appState.users || []).forEach(u => {
+    if (!appState.pantries[u.id]) appState.pantries[u.id] = [];
+    const inUserPantry = appState.pantries[u.id].find(p => p.name.toLowerCase() === trimmedName.toLowerCase());
+    if (!inUserPantry) {
+      appState.pantries[u.id].push({
+        ...masterItem,
+        qty: (u.id === curUid) ? initialQtyForCurrent : 0
+      });
+    } else if (u.id === curUid && initialQtyForCurrent > 0) {
+      inUserPantry.qty = Math.round(((parseFloat(inUserPantry.qty) || 0) + initialQtyForCurrent) * 100) / 100;
+    }
+  });
+
+  updateMasterIngredientsDatalist();
+  return currentPantry.find(p => p.id === newIngId) || masterItem;
 }
+
+function updateMasterIngredientsDatalist() {
+  const dl = document.getElementById('masterIngredientsList');
+  const pantry = getCurrentPantry();
+  if (!dl || !pantry) return;
+
+  const sorted = [...pantry].sort((a, b) => a.name.localeCompare(b.name, 'es'));
+  dl.innerHTML = sorted.map(item => `
+    <option value="${escapeAttr(item.name)}">${item.icon || '📦'} ${escapeAttr(item.name)} (${getCategoryName(item.category)}) - Unidad: ${escapeAttr(item.unit)}</option>
+  `).join('');
+}
+
+// =========================================================
+// 1.3 GESTIÓN DE USUARIOS Y SESIÓN
+// =========================================================
 
 function updateHeaderUserBadge() {
   const user = getCurrentUser();
@@ -132,6 +281,20 @@ function updateHeaderUserBadge() {
   if (avatarEl) avatarEl.innerText = user.avatar || '👨‍🍳';
   if (nameEl) nameEl.innerText = user.name || 'Chef';
   if (greetingEl) greetingEl.innerText = `¿Qué cocinamos hoy, ${user.name}? 🔥`;
+  updateDynamicUserTitles();
+}
+
+function updateDynamicUserTitles() {
+  const user = getCurrentUser();
+  const pantryTitleEl = document.getElementById('pantrySectionTitle');
+  const pantrySubtitleEl = document.getElementById('pantrySectionSubtitle');
+  const shoppingTitleEl = document.getElementById('shoppingSectionTitle');
+  const shoppingSubtitleEl = document.getElementById('shoppingSectionSubtitle');
+
+  if (pantryTitleEl) pantryTitleEl.innerText = `🥫 Alacena de ${user.name}`;
+  if (pantrySubtitleEl) pantrySubtitleEl.innerText = `Tu inventario personal de heladera, carnes y secos en Hell's Kitchen.`;
+  if (shoppingTitleEl) shoppingTitleEl.innerText = `🛒 Lista de Compras de ${user.name}`;
+  if (shoppingSubtitleEl) shoppingSubtitleEl.innerText = `Tu lista personalizada para el supermercado y faltantes de recetas.`;
 }
 
 function openUserProfileModal() {
@@ -146,7 +309,7 @@ function openUserProfileModal() {
         ${isActive ? '<span class="family-card-check">✓</span>' : ''}
         <span class="family-card-avatar">${u.avatar || '👨‍🍳'}</span>
         <div class="family-card-name">${escapeAttr(u.name)}</div>
-        <div class="family-card-role">${u.role === 'admin' ? '👑 Chef Principal' : '👨‍🍳 Chef Familiar'}</div>
+        <div class="family-card-role">${u.role === 'admin' ? '👑 Chef Principal' : '👨‍🍳 Chef'}</div>
       </div>
     `;
   }).join('');
@@ -166,10 +329,14 @@ function switchUser(userId) {
   appState.currentUser = userId;
   saveState();
   updateHeaderUserBadge();
+  updateMasterIngredientsDatalist();
+  updateHeaderBadges();
   closeUserProfileModal();
 
   if (currentTab === 'matcher') renderSmartMatcher();
   if (currentTab === 'recetas') renderRecipesView();
+  if (currentTab === 'alacena') renderPantryView();
+  if (currentTab === 'compras') renderShoppingView();
 
   showToast(`👨‍🍳 Sesión activa: ¡Bienvenido/a, ${user.name}!`, 'success');
 }
@@ -193,136 +360,35 @@ function handleCreateFamilyMember(e) {
 
   appState.users.push(newUser);
   appState.currentUser = newUser.id;
+
+  // Inicializar alacena y compras individuales del nuevo miembro con catálogo maestro (qty 0)
+  if (!appState.pantries) appState.pantries = {};
+  if (!appState.shoppingLists) appState.shoppingLists = {};
+  appState.pantries[newUser.id] = (typeof createEmptyUserPantry === 'function')
+    ? createEmptyUserPantry()
+    : ((typeof MASTER_PANTRY_CATALOG !== 'undefined') ? MASTER_PANTRY_CATALOG.map(i => ({ ...i, qty: 0 })) : []);
+  appState.shoppingLists[newUser.id] = [];
+
   saveState();
 
   if (nameInp) nameInp.value = '';
 
   updateHeaderUserBadge();
   updateAuthorFilterDropdown();
+  updateMasterIngredientsDatalist();
+  updateHeaderBadges();
   closeUserProfileModal();
 
   if (currentTab === 'matcher') renderSmartMatcher();
   if (currentTab === 'recetas') renderRecipesView();
+  if (currentTab === 'alacena') renderPantryView();
+  if (currentTab === 'compras') renderShoppingView();
 
-  showToast(`🎉 ¡${name} se unió a la familia Hell's Kitchen!`, 'success');
-}
-
-function updateMasterIngredientsDatalist() {
-  const dl = document.getElementById('masterIngredientsList');
-  if (!dl || !appState.pantry) return;
-
-  const sorted = [...appState.pantry].sort((a, b) => a.name.localeCompare(b.name, 'es'));
-  dl.innerHTML = sorted.map(item => `
-    <option value="${escapeAttr(item.name)}">${item.icon || '📦'} ${escapeAttr(item.name)} (${getCategoryName(item.category)}) - Unidad: ${escapeAttr(item.unit)}</option>
-  `).join('');
-}
-
-function saveState() {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
-    if (typeof window !== 'undefined') window.appState = appState;
-  } catch (e) {
-    console.error("Error al guardar estado:", e);
-  }
-}
-
-// Variables de vista activa y modo cocina
-let currentTab = 'matcher'; // 'matcher' | 'recetas' | 'alacena' | 'compras'
-let currentPortionMultiplier = 1;
-let currentActiveRecipeForCooking = null;
-let activeTimers = {}; // { timerId: { interval, remainingSeconds, isRunning } }
-let wakeLockSentinel = null;
-
-// =========================================================
-// 2. SMART MATCHING ENGINE ("¿QUÉ COCINO HOY?")
-// =========================================================
-function calculateRecipeMatch(recipe) {
-  if (!recipe.ingredients || recipe.ingredients.length === 0) return { pct: 100, missing: [], available: [] };
-
-  const pantryMap = {};
-  appState.pantry.forEach(p => {
-    pantryMap[p.id] = p;
-  });
-
-  let totalItems = recipe.ingredients.length;
-  let availableItems = 0;
-  const missing = [];
-  const available = [];
-
-  recipe.ingredients.forEach(req => {
-    let inPantry = null;
-    if (req.requiredId && pantryMap[req.requiredId]) {
-      inPantry = pantryMap[req.requiredId];
-    } else {
-      // Búsqueda por similitud de nombre
-      inPantry = appState.pantry.find(p => p.name.toLowerCase().includes(req.name.toLowerCase()) || req.name.toLowerCase().includes(p.name.toLowerCase()));
-    }
-
-    if (inPantry && parseFloat(inPantry.qty) > 0) {
-      availableItems++;
-      available.push({ required: req, pantry: inPantry });
-    } else {
-      missing.push(req);
-    }
-  });
-
-  const pct = Math.round((availableItems / totalItems) * 100);
-  return { pct, missing, available, availableItems, totalItems };
+  showToast(`🎉 ¡${name} se unió con su propia Alacena y Lista de Compras!`, 'success');
 }
 
 // =========================================================
-// 3. RENDERIZADO DE VISTAS
-// =========================================================
-
-function switchTab(tabName) {
-  currentTab = tabName;
-  
-  // Actualizar botones del dock
-  document.querySelectorAll('.nav-item').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.tab === tabName);
-  });
-
-  // Mostrar la solapa correspondiente
-  document.querySelectorAll('.tab-view').forEach(view => {
-    view.style.display = 'none';
-  });
-
-  const target = document.getElementById(`view-${tabName}`);
-  if (target) target.style.display = 'block';
-
-  // Renderizar contenido
-  if (tabName === 'matcher') renderSmartMatcher();
-  if (tabName === 'recetas') renderRecipesView();
-  if (tabName === 'alacena') renderPantryView();
-  if (tabName === 'compras') renderShoppingView();
-
-  updateHeaderBadges();
-}
-
-function updateHeaderBadges() {
-  const pantryCountEl = document.getElementById('badgePantryCount');
-  const recipesCountEl = document.getElementById('badgeRecipesCount');
-  const shopCountEl = document.getElementById('badgeShopCount');
-
-  if (pantryCountEl) pantryCountEl.innerText = appState.pantry.length;
-  if (recipesCountEl) recipesCountEl.innerText = appState.recipes.length;
-  
-  const pendingShop = appState.shoppingList.filter(s => !s.checked).length;
-  if (shopCountEl) {
-    shopCountEl.innerText = pendingShop;
-    shopCountEl.style.display = pendingShop > 0 ? 'inline-block' : 'none';
-  }
-
-  // Hero Stats
-  const statReadyEl = document.getElementById('heroStatReady');
-  if (statReadyEl) {
-    const readyCount = appState.recipes.filter(r => calculateRecipeMatch(r).pct === 100).length;
-    statReadyEl.innerText = readyCount;
-  }
-}
-
-// =========================================================
-// 1.2 VISIBILIDAD, AUTORÍA Y PERMISOS DE RECETAS
+// 1.4 VISIBILIDAD, AUTORÍA Y PERMISOS DE RECETAS
 // =========================================================
 
 function canUserModifyRecipe(recipe) {
@@ -333,9 +399,9 @@ function canUserModifyRecipe(recipe) {
 }
 
 function getVisibleRecipes() {
-  const currentUserId = appState.currentUser || 'user-pato';
+  const currentUserId = getCurrentUserId();
   return (appState.recipes || []).filter(r => {
-    // Si la receta no es privada, es pública para toda la familia
+    // Si la receta no es privada, es pública para toda la comunidad
     if (!r.isPrivate) return true;
     // Si es privada, solo la ve quien la creó
     return r.authorId === currentUserId;
@@ -404,6 +470,106 @@ function setEditRecipeVisibility(isPrivate) {
   if (lblPriv) lblPriv.classList.toggle('selected', isPrivate);
 }
 
+// Variables de vista activa y modo cocina
+let currentTab = 'matcher'; // 'matcher' | 'recetas' | 'alacena' | 'compras'
+let currentPortionMultiplier = 1;
+let currentActiveRecipeForCooking = null;
+let activeTimers = {}; // { timerId: { interval, remainingSeconds, isRunning } }
+let wakeLockSentinel = null;
+
+// =========================================================
+// 2. SMART MATCHING ENGINE ("¿QUÉ COCINO HOY?")
+// =========================================================
+function calculateRecipeMatch(recipe) {
+  if (!recipe.ingredients || recipe.ingredients.length === 0) return { pct: 100, missing: [], available: [] };
+
+  const pantry = getCurrentPantry();
+  const pantryMap = {};
+  pantry.forEach(p => {
+    pantryMap[p.id] = p;
+  });
+
+  let totalItems = recipe.ingredients.length;
+  let availableItems = 0;
+  const missing = [];
+  const available = [];
+
+  recipe.ingredients.forEach(req => {
+    let inPantry = null;
+    if (req.requiredId && pantryMap[req.requiredId]) {
+      inPantry = pantryMap[req.requiredId];
+    } else {
+      // Búsqueda por similitud de nombre
+      inPantry = pantry.find(p => p.name.toLowerCase().includes(req.name.toLowerCase()) || req.name.toLowerCase().includes(p.name.toLowerCase()));
+    }
+
+    if (inPantry && parseFloat(inPantry.qty) > 0) {
+      availableItems++;
+      available.push({ required: req, pantry: inPantry });
+    } else {
+      missing.push(req);
+    }
+  });
+
+  const pct = Math.round((availableItems / totalItems) * 100);
+  return { pct, missing, available, availableItems, totalItems };
+}
+
+// =========================================================
+// 3. RENDERIZADO DE VISTAS
+// =========================================================
+
+function switchTab(tabName) {
+  currentTab = tabName;
+  
+  // Actualizar botones del dock
+  document.querySelectorAll('.nav-item').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabName);
+  });
+
+  // Mostrar la solapa correspondiente
+  document.querySelectorAll('.tab-view').forEach(view => {
+    view.style.display = 'none';
+  });
+
+  const target = document.getElementById(`view-${tabName}`);
+  if (target) target.style.display = 'block';
+
+  // Renderizar contenido
+  if (tabName === 'matcher') renderSmartMatcher();
+  if (tabName === 'recetas') renderRecipesView();
+  if (tabName === 'alacena') renderPantryView();
+  if (tabName === 'compras') renderShoppingView();
+
+  updateHeaderBadges();
+}
+
+function updateHeaderBadges() {
+  const pantry = getCurrentPantry();
+  const shoppingList = getCurrentShoppingList();
+
+  const pantryCountEl = document.getElementById('badgePantryCount');
+  const recipesCountEl = document.getElementById('badgeRecipesCount');
+  const shopCountEl = document.getElementById('badgeShopCount');
+
+  const inStockCount = pantry.filter(p => parseFloat(p.qty) > 0).length;
+  if (pantryCountEl) pantryCountEl.innerText = inStockCount;
+  if (recipesCountEl) recipesCountEl.innerText = getVisibleRecipes().length;
+  
+  const pendingShop = shoppingList.filter(s => !s.checked).length;
+  if (shopCountEl) {
+    shopCountEl.innerText = pendingShop;
+    shopCountEl.style.display = pendingShop > 0 ? 'inline-block' : 'none';
+  }
+
+  // Hero Stats
+  const statReadyEl = document.getElementById('heroStatReady');
+  if (statReadyEl) {
+    const readyCount = getVisibleRecipes().filter(r => calculateRecipeMatch(r).pct === 100).length;
+    statReadyEl.innerText = readyCount;
+  }
+}
+
 // =========================================================
 // 4. VISTA: GENERADOR "¿QUÉ COCINO HOY?"
 // =========================================================
@@ -414,10 +580,10 @@ function renderSmartMatcher() {
   const filterTime = document.getElementById('matcherFilterTime')?.value || 'all';
   const filterCat = document.getElementById('matcherFilterCat')?.value || 'all';
 
-  // Obtener solo las recetas visibles para el usuario actual (públicas de familia + privadas del usuario)
+  // Obtener solo las recetas visibles para el usuario actual (públicas + privadas del usuario)
   const visibleRecipes = getVisibleRecipes();
 
-  // Calcular score de cada receta
+  // Calcular score de cada receta contra la alacena personal del usuario
   const scored = visibleRecipes.map(rec => {
     const match = calculateRecipeMatch(rec);
     return { ...rec, match };
@@ -461,6 +627,7 @@ function renderSmartMatcher() {
     }
 
     const canEdit = canUserModifyRecipe(r);
+    const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -477,7 +644,7 @@ function renderSmartMatcher() {
           <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;">
             <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
             <div style="display:flex; gap:4px; align-items:center;">
-              ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Familia</span>'}
+              ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
               <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
             </div>
           </div>
@@ -493,9 +660,10 @@ function renderSmartMatcher() {
           ` : ''}
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted);">
+            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
               <span>⭐ ${r.difficulty}</span>
+              ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
               ${canEdit ? `
@@ -512,13 +680,13 @@ function renderSmartMatcher() {
 }
 
 // =========================================================
-// 5. VISTA: RECETARIO FAMILIAR & DE AUTOR
+// 5. VISTA: RECETARIO PÚBLICO & DE AUTOR
 // =========================================================
 function renderRecipesView() {
   const container = document.getElementById('recipesGridContainer');
   if (!container) return;
 
-  const currentUserId = appState.currentUser || 'user-pato';
+  const currentUserId = getCurrentUserId();
   const visibleRecipes = getVisibleRecipes();
 
   const filtered = visibleRecipes.filter(r => {
@@ -533,7 +701,7 @@ function renderRecipesView() {
       (r.authorName && r.authorName.toLowerCase().includes(q))
     );
 
-    // Filtro por Scope (Toda la familia, Mis recetas, Solo privadas)
+    // Filtro por Scope (Toda la comunidad, Mis recetas, Solo privadas)
     let matchScope = true;
     if (currentRecipeScope === 'mine') {
       matchScope = (r.authorId === currentUserId);
@@ -563,6 +731,7 @@ function renderRecipesView() {
   container.innerHTML = filtered.map(r => {
     const match = calculateRecipeMatch(r);
     const canEdit = canUserModifyRecipe(r);
+    const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -575,7 +744,7 @@ function renderRecipesView() {
           <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;">
             <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
             <div style="display:flex; gap:4px; align-items:center;">
-              ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Familia</span>'}
+              ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
               <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
             </div>
           </div>
@@ -584,11 +753,12 @@ function renderRecipesView() {
           <p class="recipe-desc">${escapeAttr(r.description)}</p>
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted);">
+            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
               <span style="color:${match.pct === 100 ? '#34d399' : '#fbbf24'}; font-weight:700;">
                 ${match.pct === 100 ? '✅ 100%' : `⚠️ ${match.pct}%`}
               </span>
+              ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
               ${canEdit ? `
@@ -617,7 +787,7 @@ function handleRecipeSearch(query) {
 }
 
 // =========================================================
-// 6. VISTA: MI ALACENA & HELADERA (INVENTARIO EN VIVO)
+// 6. VISTA: MI ALACENA & HELADERA (POR USUARIO)
 // =========================================================
 let currentPantryCategory = 'all';
 let currentPantryStockFilter = 'all'; // 'all' | 'in_stock' | 'out_of_stock'
@@ -626,6 +796,8 @@ let currentPantrySearch = '';
 function renderPantryView() {
   const container = document.getElementById('pantrySectionsContainer');
   if (!container) return;
+
+  const pantry = getCurrentPantry();
 
   const categories = [
     { id: 'carnes', title: '🥩 Carnes & Pescados', icon: '🥩' },
@@ -640,7 +812,7 @@ function renderPantryView() {
   categories.forEach(cat => {
     if (currentPantryCategory !== 'all' && currentPantryCategory !== cat.id) return;
 
-    let items = appState.pantry.filter(p => p.category === cat.id);
+    let items = pantry.filter(p => p.category === cat.id);
 
     // Filtro por búsqueda
     if (currentPantrySearch) {
@@ -729,7 +901,8 @@ function filterPantryByStock(stockFilter, btnEl) {
 }
 
 function adjustPantryQty(id, delta) {
-  const item = appState.pantry.find(p => p.id === id);
+  const pantry = getCurrentPantry();
+  const item = pantry.find(p => p.id === id);
   if (!item) return;
 
   const current = parseFloat(item.qty) || 0;
@@ -740,14 +913,22 @@ function adjustPantryQty(id, delta) {
   saveState();
   renderPantryView();
   updateHeaderBadges();
+
+  if (currentTab === 'matcher') renderSmartMatcher();
 }
 
 function deletePantryItem(id) {
-  if (confirm("¿Deseas eliminar este insumo de tu alacena?")) {
-    appState.pantry = appState.pantry.filter(p => p.id !== id);
+  const pantry = getCurrentPantry();
+  const item = pantry.find(p => p.id === id);
+  if (!item) return;
+
+  if (confirm(`¿Deseas eliminar "${item.name}" de tu alacena?`)) {
+    const uid = getCurrentUserId();
+    appState.pantries[uid] = pantry.filter(p => p.id !== id);
     saveState();
     renderPantryView();
     updateHeaderBadges();
+    showToast(`🗑️ Eliminado de tu alacena: ${item.name}`, 'info');
   }
 }
 
@@ -756,7 +937,7 @@ function deletePantryItem(id) {
 // =========================================================
 
 const UNIT_CONVERSION_TABLE = {
-  // Dimension: Masa / Peso (Base: gramos 'g')
+  // Masa / Peso (Base: gramos 'g')
   kg: { dim: 'weight', factor: 1000, base: 'g' },
   kilo: { dim: 'weight', factor: 1000, base: 'g' },
   kilos: { dim: 'weight', factor: 1000, base: 'g' },
@@ -770,7 +951,7 @@ const UNIT_CONVERSION_TABLE = {
   libra: { dim: 'weight', factor: 453.59, base: 'g' },
   libras: { dim: 'weight', factor: 453.59, base: 'g' },
 
-  // Dimension: Volumen / Líquidos (Base: mililitros 'ml')
+  // Volumen / Líquidos (Base: mililitros 'ml')
   l: { dim: 'volume', factor: 1000, base: 'ml' },
   lt: { dim: 'volume', factor: 1000, base: 'ml' },
   lts: { dim: 'volume', factor: 1000, base: 'ml' },
@@ -792,7 +973,7 @@ const UNIT_CONVERSION_TABLE = {
   cucharadita: { dim: 'volume', factor: 5, base: 'ml' },
   cucharaditas: { dim: 'volume', factor: 5, base: 'ml' },
 
-  // Dimension: Conteo / Unidades (Base: unidades 'un')
+  // Conteo / Unidades (Base: unidades 'un')
   un: { dim: 'count', factor: 1, base: 'un' },
   u: { dim: 'count', factor: 1, base: 'un' },
   unidad: { dim: 'count', factor: 1, base: 'un' },
@@ -800,178 +981,167 @@ const UNIT_CONVERSION_TABLE = {
   uni: { dim: 'count', factor: 1, base: 'un' },
   docena: { dim: 'count', factor: 12, base: 'un' },
   docenas: { dim: 'count', factor: 12, base: 'un' },
-  maple: { dim: 'count', factor: 30, base: 'un' },
+  media_docena: { dim: 'count', factor: 6, base: 'un' },
+  par: { dim: 'count', factor: 2, base: 'un' },
+  pares: { dim: 'count', factor: 2, base: 'un' },
 
-  // Dimension: Insumos específicos / envases
-  diente: { dim: 'dientes', factor: 1, base: 'dientes' },
-  dientes: { dim: 'dientes', factor: 1, base: 'dientes' },
-  cabeza: { dim: 'dientes', factor: 8, base: 'dientes' },
-  cabezas: { dim: 'dientes', factor: 8, base: 'dientes' },
-  lata: { dim: 'latas', factor: 1, base: 'latas' },
-  latas: { dim: 'latas', factor: 1, base: 'latas' },
-  atado: { dim: 'atados', factor: 1, base: 'atados' },
-  atados: { dim: 'atados', factor: 1, base: 'atados' },
-  planta: { dim: 'atados', factor: 1, base: 'atados' },
-  plantas: { dim: 'atados', factor: 1, base: 'atados' },
-  ramita: { dim: 'atados', factor: 1, base: 'atados' },
-  ramitas: { dim: 'atados', factor: 1, base: 'atados' },
-  botella: { dim: 'botellas', factor: 1, base: 'botellas' },
-  botellas: { dim: 'botellas', factor: 1, base: 'botellas' },
-  sobre: { dim: 'sobres', factor: 1, base: 'sobres' },
-  sobres: { dim: 'sobres', factor: 1, base: 'sobres' },
-  pizca: { dim: 'pizca', factor: 1, base: 'pizca' },
-  pizcas: { dim: 'pizca', factor: 1, base: 'pizca' }
+  // Envases / Paquetes
+  lata: { dim: 'package', factor: 1, base: 'latas' },
+  latas: { dim: 'package', factor: 1, base: 'latas' },
+  paquete: { dim: 'package', factor: 1, base: 'paquetes' },
+  paquetes: { dim: 'package', factor: 1, base: 'paquetes' },
+  pqt: { dim: 'package', factor: 1, base: 'paquetes' },
+  diente: { dim: 'package', factor: 1, base: 'dientes' },
+  dientes: { dim: 'package', factor: 1, base: 'dientes' },
+  cabeza: { dim: 'package', factor: 1, base: 'cabezas' },
+  cabezas: { dim: 'package', factor: 1, base: 'cabezas' },
+  botella: { dim: 'package', factor: 1, base: 'botellas' },
+  botellas: { dim: 'package', factor: 1, base: 'botellas' },
+  atado: { dim: 'package', factor: 1, base: 'atados' },
+  atados: { dim: 'package', factor: 1, base: 'atados' },
+  pote: { dim: 'package', factor: 1, base: 'potes' },
+  potes: { dim: 'package', factor: 1, base: 'potes' },
+  sobre: { dim: 'package', factor: 1, base: 'sobres' },
+  sobres: { dim: 'package', factor: 1, base: 'sobres' }
 };
 
 function parseQuantityAndUnit(rawQty, rawUnit = '') {
-  let combined = `${rawQty !== undefined && rawQty !== null ? rawQty : ''} ${rawUnit || ''}`.trim().toLowerCase();
-  combined = combined.replace(/,/g, '.');
-
-  // Evaluar fracciones simples como "1/2", "1/4", "3/4"
-  const fractionMatch = combined.match(/^(\d+)?\s*(\d+)\/(\d+)\s*(.*)$/);
-  let numVal = 0;
-  let unitText = '';
-
-  if (fractionMatch) {
-    const whole = fractionMatch[1] ? parseFloat(fractionMatch[1]) : 0;
-    const num = parseFloat(fractionMatch[2]);
-    const den = parseFloat(fractionMatch[3]) || 1;
-    numVal = whole + (num / den);
-    unitText = fractionMatch[4].trim();
-  } else {
-    const numMatch = combined.match(/^([0-9]*\.?[0-9]+)\s*(.*)$/);
-    if (numMatch) {
-      numVal = parseFloat(numMatch[1]);
-      unitText = numMatch[2].trim();
-    } else {
-      numVal = typeof rawQty === 'number' ? rawQty : 1;
-      unitText = (rawUnit || combined).trim();
+  if (typeof rawQty === 'number') {
+    const cleanU = (rawUnit || '').trim().toLowerCase();
+    const info = UNIT_CONVERSION_TABLE[cleanU];
+    if (info) {
+      return {
+        numericQty: rawQty,
+        baseQty: rawQty * info.factor,
+        unitCategory: info.dim,
+        baseUnit: info.base,
+        unitName: cleanU
+      };
     }
+    return {
+      numericQty: rawQty,
+      baseQty: rawQty,
+      unitCategory: 'count',
+      baseUnit: cleanU || 'un',
+      unitName: cleanU || 'un'
+    };
   }
 
-  // Quitar notas entre paréntesis (ej: "g (fría en cubos)" -> "g")
-  unitText = unitText.replace(/\(.*?\)/g, '').trim();
-
-  // Buscar en la tabla de conversión
-  const lookupKey = unitText.toLowerCase();
-  const conv = UNIT_CONVERSION_TABLE[lookupKey];
-
-  if (conv) {
+  const str = String(rawQty || '').trim().toLowerCase();
+  const match = str.match(/^([\d.,]+)\s*([a-zA-ZáéíóúÁÉÍÓÚ3_]*)/);
+  if (!match) {
     return {
-      isValid: true,
-      rawQty: numVal,
-      dim: conv.dim,
-      baseQty: numVal * conv.factor,
-      baseUnit: conv.base,
-      originalUnit: unitText
+      numericQty: 1,
+      baseQty: 1,
+      unitCategory: 'unknown',
+      baseUnit: str || 'un',
+      unitName: str || 'un'
+    };
+  }
+
+  let numStr = match[1].replace(',', '.');
+  let num = parseFloat(numStr);
+  if (isNaN(num)) num = 1;
+
+  let unitStr = match[2] ? match[2].trim() : (rawUnit ? rawUnit.trim().toLowerCase() : '');
+  if (!unitStr && str.includes('/')) {
+    unitStr = 'un';
+  }
+
+  const info = UNIT_CONVERSION_TABLE[unitStr];
+  if (info) {
+    return {
+      numericQty: num,
+      baseQty: num * info.factor,
+      unitCategory: info.dim,
+      baseUnit: info.base,
+      unitName: unitStr
     };
   }
 
   return {
-    isValid: true,
-    rawQty: numVal,
-    dim: unitText || 'un',
-    baseQty: numVal,
-    baseUnit: unitText || 'un',
-    originalUnit: unitText || 'un'
+    numericQty: num,
+    baseQty: num,
+    unitCategory: 'count',
+    baseUnit: unitStr || 'un',
+    unitName: unitStr || 'un'
   };
 }
 
-function formatBaseQuantity(baseQty, dim, baseUnit) {
-  if (dim === 'weight') {
+function formatBaseQuantity(baseQty, category, preferredUnit = '') {
+  if (category === 'weight') {
     if (baseQty >= 1000) {
-      const kg = +(baseQty / 1000).toFixed(2);
-      return `${kg} kg`;
+      const kg = Math.round((baseQty / 1000) * 100) / 100;
+      return { qty: kg, unit: 'kg' };
     }
-    return `${Math.round(baseQty)} g`;
+    return { qty: Math.round(baseQty * 10) / 10, unit: 'g' };
   }
 
-  if (dim === 'volume') {
+  if (category === 'volume') {
     if (baseQty >= 1000) {
-      const l = +(baseQty / 1000).toFixed(2);
-      return `${l} L`;
+      const l = Math.round((baseQty / 1000) * 100) / 100;
+      return { qty: l, unit: 'l' };
     }
-    return `${Math.round(baseQty)} ml`;
+    return { qty: Math.round(baseQty), unit: 'ml' };
   }
 
-  if (dim === 'count') {
-    const val = +(baseQty).toFixed(1).replace(/\.0$/, '');
-    return `${val} un`;
-  }
-
-  const cleanVal = +(baseQty).toFixed(1).replace(/\.0$/, '');
-  if (cleanVal === 1) {
-    const singularMap = {
-      dientes: 'diente',
-      latas: 'lata',
-      atados: 'atado',
-      botellas: 'botella',
-      sobres: 'sobre',
-      pizca: 'pizca'
-    };
-    return `1 ${singularMap[baseUnit] || baseUnit}`;
-  }
-  return `${cleanVal} ${baseUnit}`;
+  return {
+    qty: Math.round(baseQty * 100) / 100,
+    unit: preferredUnit || 'un'
+  };
 }
 
-function addOrMergeShoppingItem({ name, qty, unit = '', note = '', canonicalId = null }) {
-  const parsed = parseQuantityAndUnit(qty, unit);
-  const cleanName = name.trim();
-  const lowerName = cleanName.toLowerCase();
+function addOrMergeShoppingItem(itemData) {
+  const shoppingList = getCurrentShoppingList();
+  const parsed = parseQuantityAndUnit(itemData.qty, itemData.unit);
+  const normalizedName = itemData.name.trim().toLowerCase();
 
-  // Buscar si ya existe un elemento sin tachar para este ingrediente
-  const existing = appState.shoppingList.find(item => {
-    if (item.checked) return false;
-    if (canonicalId && item.canonicalId && item.canonicalId === canonicalId) return true;
-    return item.name.toLowerCase() === lowerName;
+  // Buscar si ya existe
+  const existing = shoppingList.find(item => {
+    if (itemData.canonicalId && item.canonicalId && item.canonicalId === itemData.canonicalId) return true;
+    return item.name.trim().toLowerCase() === normalizedName;
   });
 
   if (existing) {
-    const existingParsed = parseQuantityAndUnit(existing.qty || '1', '');
-    
-    // Si tienen la misma dimensión, sumamos matemáticamente
-    if (existingParsed.dim === parsed.dim) {
-      const totalBase = existingParsed.baseQty + parsed.baseQty;
-      existing.qty = formatBaseQuantity(totalBase, parsed.dim, parsed.baseUnit);
-      
-      if (note && (!existing.note || !existing.note.includes(note))) {
-        existing.note = existing.note ? `${existing.note} + ${note}` : note;
-      }
-      return { merged: true, item: existing };
-    } else {
-      // Dimensiones distintas pero mismo producto (ej: 2 latas + 500g)
-      existing.qty = `${existing.qty} + ${formatBaseQuantity(parsed.baseQty, parsed.dim, parsed.baseUnit)}`;
-      if (note && (!existing.note || !existing.note.includes(note))) {
-        existing.note = existing.note ? `${existing.note} + ${note}` : note;
+    const existingParsed = parseQuantityAndUnit(existing.qty, existing.unit);
+    if (parsed.unitCategory && existingParsed.unitCategory && parsed.unitCategory === existingParsed.unitCategory) {
+      const sumBase = existingParsed.baseQty + parsed.baseQty;
+      const formatted = formatBaseQuantity(sumBase, parsed.unitCategory, parsed.unitName);
+      existing.qty = `${formatted.qty} ${formatted.unit}`.trim();
+      existing.unit = formatted.unit;
+      if (itemData.note && (!existing.note || !existing.note.includes(itemData.note))) {
+        existing.note = existing.note ? `${existing.note} + ${itemData.note}` : itemData.note;
       }
       return { merged: true, item: existing };
     }
   }
 
-  // Si no existe, crear nuevo item
   const newItem = {
     id: `shop-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
-    name: cleanName,
-    canonicalId: canonicalId,
-    qty: formatBaseQuantity(parsed.baseQty, parsed.dim, parsed.baseUnit),
+    name: itemData.name.trim(),
+    qty: itemData.qty ? (typeof itemData.qty === 'number' ? `${itemData.qty} ${itemData.unit || ''}`.trim() : itemData.qty.trim()) : '1 un',
+    unit: itemData.unit || '',
     checked: false,
-    note: note || ''
+    note: itemData.note || '',
+    canonicalId: itemData.canonicalId || ''
   };
-  appState.shoppingList.push(newItem);
+
+  shoppingList.push(newItem);
   return { merged: false, item: newItem };
 }
 
 function consolidateShoppingList() {
-  if (!appState.shoppingList || appState.shoppingList.length === 0) {
+  const uid = getCurrentUserId();
+  const oldList = [...getCurrentShoppingList()];
+  if (oldList.length === 0) {
     showToast('La lista de compras está vacía.', 'info');
     return;
   }
 
-  const oldList = [...appState.shoppingList];
   const checkedItems = oldList.filter(item => item.checked);
   const unCheckedItems = oldList.filter(item => !item.checked);
 
-  appState.shoppingList = [];
+  appState.shoppingLists[uid] = [];
 
   unCheckedItems.forEach(item => {
     addOrMergeShoppingItem({
@@ -983,7 +1153,7 @@ function consolidateShoppingList() {
     });
   });
 
-  checkedItems.forEach(item => appState.shoppingList.push(item));
+  checkedItems.forEach(item => appState.shoppingLists[uid].push(item));
 
   saveState();
   renderShoppingView();
@@ -993,7 +1163,7 @@ function consolidateShoppingList() {
 }
 
 function addPantryToShoppingList(pantryId) {
-  const p = appState.pantry.find(item => item.id === pantryId);
+  const p = getCurrentPantry().find(item => item.id === pantryId);
   if (!p) return;
 
   const res = addOrMergeShoppingItem({
@@ -1034,7 +1204,9 @@ function renderShoppingView() {
   const container = document.getElementById('shoppingListContainer');
   if (!container) return;
 
-  if (appState.shoppingList.length === 0) {
+  const shoppingList = getCurrentShoppingList();
+
+  if (shoppingList.length === 0) {
     container.innerHTML = `
       <div style="text-align:center; padding:50px 20px; background:var(--bg-card); border-radius:var(--radius-lg);">
         <span style="font-size:3rem;">🛒</span>
@@ -1045,7 +1217,7 @@ function renderShoppingView() {
     return;
   }
 
-  container.innerHTML = appState.shoppingList.map((item, idx) => `
+  container.innerHTML = shoppingList.map((item, idx) => `
     <div class="shopping-card ${item.checked ? 'checked' : ''}">
       <div style="display:flex; align-items:center; gap:12px; flex:1;">
         <button class="custom-checkbox ${item.checked ? 'active' : ''}" onclick="toggleShoppingItem(${idx})">
@@ -1065,8 +1237,9 @@ function renderShoppingView() {
 }
 
 function toggleShoppingItem(idx) {
-  if (appState.shoppingList[idx]) {
-    appState.shoppingList[idx].checked = !appState.shoppingList[idx].checked;
+  const list = getCurrentShoppingList();
+  if (list[idx]) {
+    list[idx].checked = !list[idx].checked;
     saveState();
     renderShoppingView();
     updateHeaderBadges();
@@ -1074,7 +1247,8 @@ function toggleShoppingItem(idx) {
 }
 
 function deleteShoppingItem(idx) {
-  appState.shoppingList.splice(idx, 1);
+  const list = getCurrentShoppingList();
+  list.splice(idx, 1);
   saveState();
   renderShoppingView();
   updateHeaderBadges();
@@ -1096,37 +1270,39 @@ function addShoppingItemManual() {
   saveState();
   renderShoppingView();
   updateHeaderBadges();
-  showToast(`🛒 Agregado a la lista: ${name.trim()}`, 'success');
+  showToast(`🛒 Agregado a tu lista: ${name.trim()}`, 'success');
 }
 
 function compartirListaComprasWhatsApp() {
-  const pendientes = appState.shoppingList.filter(s => !s.checked);
+  const user = getCurrentUser();
+  const pendientes = getCurrentShoppingList().filter(s => !s.checked);
   if (pendientes.length === 0) {
-    return alert("No hay productos pendientes en la lista de compras.");
+    return alert(`No hay productos pendientes en la lista de compras de ${user.name}.`);
   }
 
-  let msg = `🛒 *LISTA DE COMPRAS - PATO'S KITCHEN*\n`;
+  let msg = `🛒 *LISTA DE COMPRAS DE ${user.name.toUpperCase()} - HELL'S KITCHEN*\n`;
   msg += `📅 Fecha: ${new Date().toLocaleDateString('es-AR')}\n\n`;
 
   pendientes.forEach(item => {
     msg += `• *${item.name}* ${item.qty ? `(${item.qty})` : ''} ${item.note ? `_${item.note}_` : ''}\n`;
   });
 
-  msg += `\n¡Gracias! 👨‍🍳`;
+  msg += `\n¡Gracias! 🔥👨‍🍳`;
 
   const url = `https://wa.me/?text=${encodeURIComponent(msg)}`;
   window.open(url, '_blank');
 }
 
 function clearCheckedShopping() {
-  appState.shoppingList = appState.shoppingList.filter(s => !s.checked);
+  const uid = getCurrentUserId();
+  appState.shoppingLists[uid] = (appState.shoppingLists[uid] || []).filter(s => !s.checked);
   saveState();
   renderShoppingView();
   updateHeaderBadges();
 }
 
 // =========================================================
-// 8. MODAL DE DETALLE DE RECETA & ESCALADO DE PORCIONES
+// 8. MODAL DE DETALLE DE RECETA, PORCIONES & COMENTARIOS
 // =========================================================
 let currentDetailRecipe = null;
 
@@ -1161,8 +1337,8 @@ function renderRecipeDetailModalContent() {
   const mult = currentPortionMultiplier;
   const scaledPortions = Math.round(r.portions * mult);
   const match = calculateRecipeMatch(r);
-
   const canEdit = canUserModifyRecipe(r);
+  const pantry = getCurrentPantry();
 
   document.getElementById('modalRecipeTitle').innerText = r.title;
   document.getElementById('modalRecipeImg').src = r.image;
@@ -1173,7 +1349,7 @@ function renderRecipeDetailModalContent() {
       <span>${getCategoryName(r.category)}</span>
       <span style="opacity:0.6;">•</span>
       <span>${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
-      ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.4); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🔒 Privada</span>' : '<span style="background:rgba(16,185,129,0.3); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🌐 Familiar</span>'}
+      ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.4); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🔒 Privada</span>' : '<span style="background:rgba(16,185,129,0.3); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🌐 Pública</span>'}
     `;
   }
 
@@ -1191,12 +1367,12 @@ function renderRecipeDetailModalContent() {
     `).join('');
   }
 
-  // Renderizar Ingredientes Escalados
+  // Renderizar Ingredientes Escalados contra la alacena del usuario activo
   const ingsContainer = document.getElementById('modalRecipeIngredientsList');
   if (ingsContainer) {
     ingsContainer.innerHTML = r.ingredients.map(ing => {
       const scaledQty = typeof ing.qty === 'number' ? (ing.qty * mult) : ing.qty;
-      const inPantry = appState.pantry.find(p => p.id === ing.requiredId || p.name.toLowerCase().includes(ing.name.toLowerCase()));
+      const inPantry = pantry.find(p => p.id === ing.requiredId || p.name.toLowerCase().includes(ing.name.toLowerCase()));
       const hasStock = inPantry && parseFloat(inPantry.qty) > 0;
 
       return `
@@ -1243,12 +1419,21 @@ function renderRecipeDetailModalContent() {
   const addToCartBtn = document.getElementById('modalBtnAddToCart');
   if (addToCartBtn) {
     if (match.missing.length > 0) {
-      addToCartBtn.innerHTML = `🛒 Agregar Faltantes (${match.missing.length}) al Carrito`;
+      addToCartBtn.innerHTML = `🛒 Agregar Faltantes (${match.missing.length}) a mi Carrito`;
     } else {
-      addToCartBtn.innerHTML = `🛒 Agregar Ingredientes (${scaledPortions}p) al Carrito`;
+      addToCartBtn.innerHTML = `🛒 Agregar Ingredientes (${scaledPortions}p) a mi Carrito`;
     }
     addToCartBtn.onclick = () => addCurrentRecipeToCart();
   }
+
+  // Controlar visibilidad de botones de edición y borrado (solo autor/admin)
+  const btnEdit = document.getElementById('modalBtnEditRecipe');
+  const btnDelete = document.getElementById('modalBtnDeleteRecipe');
+  if (btnEdit) btnEdit.style.display = canEdit ? 'flex' : 'none';
+  if (btnDelete) btnDelete.style.display = canEdit ? 'flex' : 'none';
+
+  // Renderizar sección de comentarios y respuestas
+  renderRecipeComments(r);
 }
 
 // Agregar ingredientes de la receta abierta al carrito
@@ -1300,7 +1485,7 @@ function addCurrentRecipeToCart(onlyMissing = null) {
   if (mergedCount > 0) {
     showToast(`🛒 ¡${count} insumos procesados (${mergedCount} sumados y unificados con tu lista)!`, 'success');
   } else {
-    showToast(`🛒 Se agregaron ${count} ingrediente${count > 1 ? 's' : ''} al carrito`, 'success');
+    showToast(`🛒 Se agregaron ${count} ingrediente${count > 1 ? 's' : ''} a tu lista`, 'success');
   }
 }
 
@@ -1324,29 +1509,20 @@ function addRecipeToCartQuick(recipeId) {
     isMissingOnly = false;
   }
 
-  let mergedCount = 0;
   itemsToProcess.forEach(ing => {
-    const qty = typeof ing.qty === 'number' ? ing.qty : (ing.qty || 1);
-    const res = addOrMergeShoppingItem({
+    addOrMergeShoppingItem({
       name: ing.name,
-      qty: qty,
+      qty: ing.qty || 1,
       unit: ing.unit || '',
       note: isMissingOnly ? `Faltante para ${r.title}` : `Para ${r.title}`,
       canonicalId: ing.requiredId || null
     });
-    if (res.merged) mergedCount++;
   });
 
   saveState();
   updateHeaderBadges();
   if (currentTab === 'compras') renderShoppingView();
-
-  const count = itemsToProcess.length;
-  if (mergedCount > 0) {
-    showToast(`🛒 ¡${count} insumos de "${r.title}" sumados y unificados a tu carrito!`, 'success');
-  } else {
-    showToast(`🛒 ¡${count} ingredientes de "${r.title}" agregados al carrito!`, 'success');
-  }
+  showToast(`🛒 ${itemsToProcess.length} ingrediente(s) sumados a tu lista de compras`, 'success');
 }
 
 function addMissingToShopping(name, qty) {
@@ -1360,32 +1536,205 @@ function addMissingToShopping(name, qty) {
   saveState();
   updateHeaderBadges();
   if (currentTab === 'compras') renderShoppingView();
-  showToast(`🛒 ${res.merged ? 'Sumado a la lista existente' : 'Agregado a la lista'}: ${name} (${res.item.qty})`, 'success');
+  showToast(`🛒 ${res.merged ? 'Sumado a tu lista' : 'Agregado a compras'}: ${name} (${res.item.qty})`, 'success');
 }
 
-// Sistema de Notificaciones Toast Moderno
-function showToast(message, type = 'success') {
-  const container = document.getElementById('toastContainer');
-  if (!container) {
-    alert(message);
+// =========================================================
+// 8.1 SISTEMA DE COMENTARIOS & RESPUESTAS DEL AUTOR
+// =========================================================
+
+let currentOpenReplyCommentId = null;
+
+function renderRecipeComments(recipe) {
+  const container = document.getElementById('modalCommentsList');
+  const countEl = document.getElementById('modalCommentsCount');
+  const avatarEl = document.getElementById('commentCurrentUserAvatar');
+  const curUser = getCurrentUser();
+
+  if (avatarEl) avatarEl.innerText = curUser.avatar || '👨‍🍳';
+
+  if (!recipe) return;
+  if (!Array.isArray(recipe.comments)) {
+    recipe.comments = [];
+  }
+
+  // Contar total comentarios + respuestas
+  let totalCommentsCount = recipe.comments.length;
+  recipe.comments.forEach(c => {
+    if (Array.isArray(c.replies)) totalCommentsCount += c.replies.length;
+  });
+
+  if (countEl) countEl.innerText = totalCommentsCount;
+
+  if (!container) return;
+
+  if (recipe.comments.length === 0) {
+    container.innerHTML = `
+      <div style="text-align:center; padding:20px; background:var(--bg-card); border-radius:var(--radius-sm); border:1px dashed var(--border);">
+        <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">
+          Sé el primero en dejar un tip, reseña o pregunta para <strong>${escapeAttr(recipe.authorName || 'el Chef')}</strong>.
+        </p>
+      </div>
+    `;
     return;
   }
 
-  const toast = document.createElement('div');
-  toast.className = `toast ${type === 'success' ? 'toast-success' : ''}`;
-  toast.innerHTML = `
-    <span>${type === 'success' ? '🛒' : type === 'info' ? 'ℹ️' : '🔔'}</span>
-    <span>${escapeAttr(message)}</span>
-  `;
+  container.innerHTML = recipe.comments.map(comment => {
+    const isCommentAuthor = (comment.userId === recipe.authorId);
+    const replies = Array.isArray(comment.replies) ? comment.replies : [];
+    const isReplying = currentOpenReplyCommentId === comment.id;
 
-  container.appendChild(toast);
+    return `
+      <div class="comment-item" id="comment-${comment.id}">
+        <div class="comment-header">
+          <div class="comment-user-info">
+            <span class="comment-avatar">${comment.userAvatar || '👨‍🍳'}</span>
+            <span class="comment-author-name">${escapeAttr(comment.userName || 'Chef')}</span>
+            ${isCommentAuthor ? '<span class="comment-author-badge">👨‍🍳 Autor de la Receta</span>' : ''}
+          </div>
+          <span class="comment-date">${escapeAttr(comment.date || '')}</span>
+        </div>
 
-  setTimeout(() => {
-    if (toast && toast.classList) toast.classList.add('toast-fadeout');
+        <div class="comment-text">${escapeAttr(comment.text || '')}</div>
+
+        <div class="comment-actions">
+          <button class="comment-reply-btn" onclick="toggleReplyInput('${comment.id}')">
+            ${isReplying ? '✕ Cancelar' : '↩ Responder'}
+          </button>
+        </div>
+
+        ${replies.length > 0 ? `
+          <div class="replies-thread-list">
+            ${replies.map(reply => {
+              const isReplyAuthor = (reply.userId === recipe.authorId || reply.isAuthor);
+              return `
+                <div class="reply-item ${isReplyAuthor ? 'author-reply' : ''}">
+                  <div class="comment-header" style="margin-bottom:4px;">
+                    <div class="comment-user-info">
+                      <span class="comment-avatar" style="font-size:1.1rem;">${reply.userAvatar || '👨‍🍳'}</span>
+                      <span class="comment-author-name" style="font-size:0.84rem;">${escapeAttr(reply.userName || 'Chef')}</span>
+                      ${isReplyAuthor ? '<span class="comment-author-badge">👑 Autor de la Receta</span>' : ''}
+                    </div>
+                    <span class="comment-date">${escapeAttr(reply.date || '')}</span>
+                  </div>
+                  <div class="comment-text" style="font-size:0.86rem;">${escapeAttr(reply.text || '')}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        ` : ''}
+
+        ${isReplying ? `
+          <div class="reply-box-wrapper">
+            <div style="display:flex; gap:8px; align-items:flex-start;">
+              <span style="font-size:1.2rem;">${curUser.avatar || '👨‍🍳'}</span>
+              <div style="flex:1;">
+                <textarea id="inpReplyText-${comment.id}" rows="2" placeholder="Escribí tu respuesta como ${escapeAttr(curUser.name)}..." style="width:100%; background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-sm); padding:8px 10px; color:#fff; font-size:0.85rem; resize:vertical;"></textarea>
+                <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:6px;">
+                  <button type="button" class="btn btn-secondary btn-sm" onclick="toggleReplyInput('${comment.id}')">Cancelar</button>
+                  <button type="button" class="btn btn-primary btn-sm" onclick="handleSendReply('${comment.id}')">Enviar Respuesta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+function handleAddRecipeComment() {
+  if (!currentDetailRecipe) return;
+
+  const inp = document.getElementById('inpNewCommentText');
+  const text = inp?.value.trim();
+  if (!text) {
+    showToast('Por favor escribí un comentario.', 'info');
+    return;
+  }
+
+  const curUser = getCurrentUser();
+  const newComment = {
+    id: `comm-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+    userId: curUser.id,
+    userName: curUser.name,
+    userAvatar: curUser.avatar,
+    text,
+    date: new Date().toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+    replies: []
+  };
+
+  if (!Array.isArray(currentDetailRecipe.comments)) {
+    currentDetailRecipe.comments = [];
+  }
+  currentDetailRecipe.comments.push(newComment);
+
+  // Guardar en la receta en appState
+  const idx = appState.recipes.findIndex(r => r.id === currentDetailRecipe.id);
+  if (idx !== -1) {
+    appState.recipes[idx] = currentDetailRecipe;
+  }
+
+  saveState();
+  if (inp) inp.value = '';
+  renderRecipeComments(currentDetailRecipe);
+  showToast('💬 ¡Comentario publicado!', 'success');
+}
+
+function toggleReplyInput(commentId) {
+  if (currentOpenReplyCommentId === commentId) {
+    currentOpenReplyCommentId = null;
+  } else {
+    currentOpenReplyCommentId = commentId;
+  }
+  renderRecipeComments(currentDetailRecipe);
+  if (currentOpenReplyCommentId) {
     setTimeout(() => {
-      if (toast && toast.parentNode) toast.parentNode.removeChild(toast);
-    }, 260);
-  }, 3000);
+      document.getElementById(`inpReplyText-${commentId}`)?.focus();
+    }, 50);
+  }
+}
+
+function handleSendReply(commentId) {
+  if (!currentDetailRecipe) return;
+
+  const inp = document.getElementById(`inpReplyText-${commentId}`);
+  const text = inp?.value.trim();
+  if (!text) {
+    showToast('Por favor escribí una respuesta.', 'info');
+    return;
+  }
+
+  const comment = (currentDetailRecipe.comments || []).find(c => c.id === commentId);
+  if (!comment) return;
+
+  const curUser = getCurrentUser();
+  const isAuthor = (curUser.id === currentDetailRecipe.authorId);
+
+  const newReply = {
+    id: `rep-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+    userId: curUser.id,
+    userName: curUser.name,
+    userAvatar: curUser.avatar,
+    isAuthor,
+    text,
+    date: new Date().toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+  };
+
+  if (!Array.isArray(comment.replies)) {
+    comment.replies = [];
+  }
+  comment.replies.push(newReply);
+
+  const idx = appState.recipes.findIndex(r => r.id === currentDetailRecipe.id);
+  if (idx !== -1) {
+    appState.recipes[idx] = currentDetailRecipe;
+  }
+
+  saveState();
+  currentOpenReplyCommentId = null;
+  renderRecipeComments(currentDetailRecipe);
+  showToast(isAuthor ? '👑 ¡Respuesta del autor publicada!' : '💬 ¡Respuesta publicada!', 'success');
 }
 
 // =========================================================
@@ -1399,7 +1748,7 @@ function startCookingMode(recipeId) {
   const overlay = document.getElementById('cookingModeOverlay');
   if (!overlay) return;
 
-  // Activar Wake Lock (para que la pantalla no se apague en la cocina)
+  // Activar Wake Lock
   requestWakeLock();
 
   document.getElementById('cookingRecipeTitle').innerText = recipe.title;
@@ -1421,18 +1770,17 @@ function startCookingMode(recipeId) {
           <p class="step-card-text">${escapeAttr(step.text)}</p>
 
           ${step.timerMinutes ? `
-            <div class="step-timer-box">
-              <div style="display:flex; align-items:center; gap:8px;">
-                <span style="font-size:1.4rem;">⏱️</span>
-                <div>
-                  <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase;">Temporizador de Paso:</div>
-                  <div class="timer-countdown" id="timerDisplay-${step.stepNumber}">${formatTimer(step.timerMinutes * 60)}</div>
-                </div>
-              </div>
-
+            <div class="timer-widget">
+              <span class="timer-display" id="timerDisplay-${step.stepNumber}">
+                ${formatTimer(step.timerMinutes * 60)}
+              </span>
               <div style="display:flex; gap:8px;">
-                <button class="btn btn-primary btn-sm" id="btnTimerStart-${step.stepNumber}" onclick="startStepTimer(${step.stepNumber}, ${step.timerMinutes * 60})">▶ Iniciar</button>
-                <button class="btn btn-secondary btn-sm" onclick="resetStepTimer(${step.stepNumber}, ${step.timerMinutes * 60})">↺ Reiniciar</button>
+                <button class="btn btn-primary btn-sm" id="btnTimerStart-${step.stepNumber}" onclick="startStepTimer(${step.stepNumber}, ${step.timerMinutes * 60})">
+                  ▶ Iniciar
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="resetStepTimer(${step.stepNumber}, ${step.timerMinutes * 60})">
+                  ↺ Reset
+                </button>
               </div>
             </div>
           ` : ''}
@@ -1441,20 +1789,19 @@ function startCookingMode(recipeId) {
     }).join('');
   }
 
-  overlay.style.display = 'flex';
+  overlay.style.display = 'block';
 }
 
 function closeCookingMode() {
   const overlay = document.getElementById('cookingModeOverlay');
   if (overlay) overlay.style.display = 'none';
 
-  // Detener todos los timers
-  Object.keys(activeTimers).forEach(tId => {
-    if (activeTimers[tId].interval) clearInterval(activeTimers[tId].interval);
+  // Limpiar temporizadores activos
+  Object.keys(activeTimers).forEach(id => {
+    if (activeTimers[id].interval) clearInterval(activeTimers[id].interval);
   });
   activeTimers = {};
 
-  // Liberar WakeLock
   releaseWakeLock();
 }
 
@@ -1532,14 +1879,14 @@ function formatTimer(sec) {
   return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 }
 
-// Alarma Sonora con Web Audio API (Sin archivos externos)
+// Alarma Sonora
 function playBeepAlarm() {
   try {
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
     osc.type = 'sine';
-    osc.frequency.setValueAtTime(880, ctx.currentTime); // Nota La
+    osc.frequency.setValueAtTime(880, ctx.currentTime);
     gain.gain.setValueAtTime(0.3, ctx.currentTime);
     osc.connect(gain);
     gain.connect(ctx.destination);
@@ -1548,12 +1895,11 @@ function playBeepAlarm() {
   } catch(e) {}
 }
 
-// Wake Lock API para mantener pantalla encendida
+// Wake Lock API
 async function requestWakeLock() {
   try {
     if ('wakeLock' in navigator) {
       wakeLockSentinel = await navigator.wakeLock.request('screen');
-      console.log('✅ Pantalla bloqueada contra apagado automático (WakeLock activo)');
     }
   } catch(e) {}
 }
@@ -1611,21 +1957,21 @@ function handleAddPantrySubmit(e) {
 
   if (!name) return alert("Por favor ingresá el nombre del ingrediente.");
 
-  appState.pantry.push({
-    id: `ing-${Date.now()}`,
+  // Registrar insumo en el catálogo global y sumarlo a la alacena del usuario activo
+  registerGlobalIngredient({
     name,
     category,
-    qty,
     unit,
-    minQty: Math.round(qty * 0.3),
-    icon
+    minQty: Math.round(qty * 0.3) || 1,
+    icon,
+    initialQtyForCurrent: qty
   });
 
   saveState();
   closeAddPantryModal();
   renderPantryView();
   updateHeaderBadges();
-  showToast(`✅ ¡Ingrediente agregado a tu alacena: ${name}!`, 'success');
+  showToast(`✅ ¡Insumo registrado para todos y cargado a tu alacena: ${name}!`, 'success');
 }
 
 // =========================================================
@@ -1684,7 +2030,7 @@ function openAddRecipeModal() {
   const tipEl = document.getElementById('inpRecChefTip');
   if (tipEl) tipEl.value = '';
 
-  // Por defecto, nueva receta es pública para la familia
+  // Por defecto, nueva receta es pública para la comunidad
   setAddRecipeVisibility(false);
 
   // Reset ingredients container with 2 default rows
@@ -1718,8 +2064,9 @@ function addRecipeIngredientRow(name = '', qty = '', unit = '') {
 
   let matchedUnit = unit;
   let matchedId = '';
+  const pantry = getCurrentPantry();
   if (name) {
-    const found = appState.pantry.find(p => p.name.toLowerCase() === name.toLowerCase());
+    const found = pantry.find(p => p.name.toLowerCase() === name.toLowerCase());
     if (found) {
       matchedUnit = matchedUnit || found.unit;
       matchedId = found.id;
@@ -1744,11 +2091,11 @@ function handleIngredientSelection(inputEl) {
   const val = inputEl.value.trim().toLowerCase();
   if (!val) return;
 
-  // Buscar si coincide exactamente o comienza igual
-  const match = appState.pantry.find(p => p.name.toLowerCase() === val) || appState.pantry.find(p => p.name.toLowerCase().startsWith(val));
+  const pantry = getCurrentPantry();
+  const match = pantry.find(p => p.name.toLowerCase() === val) || pantry.find(p => p.name.toLowerCase().startsWith(val));
   if (match) {
     inputEl.setAttribute('data-ing-id', match.id);
-    const row = inputEl.closest('.new-recipe-ing-row');
+    const row = inputEl.closest('.new-recipe-ing-row, .edit-recipe-ing-row');
     if (row) {
       const unitInp = row.querySelector('.rec-ing-unit');
       if (unitInp && (!unitInp.value || unitInp.value === 'g' || unitInp.value === 'un')) {
@@ -1809,7 +2156,6 @@ function handleAddRecipeSubmit(e) {
     return;
   }
 
-  // Si no hay imagen, asignar una imagen según la categoría
   if (!image) {
     const defaultImgs = {
       carnes: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80',
@@ -1830,38 +2176,20 @@ function handleAddRecipeSubmit(e) {
     const unit = row.querySelector('.rec-ing-unit')?.value.trim() || 'un';
 
     if (name) {
-      let linkedId = nameInp?.getAttribute('data-ing-id');
-      let inPantry = null;
-
-      if (linkedId) {
-        inPantry = appState.pantry.find(p => p.id === linkedId);
-      }
-      if (!inPantry) {
-        inPantry = appState.pantry.find(p => p.name.toLowerCase() === name.toLowerCase());
-      }
-      if (!inPantry) {
-        inPantry = appState.pantry.find(p => p.name.toLowerCase().includes(name.toLowerCase()) || name.toLowerCase().includes(p.name.toLowerCase()));
-      }
-
-      // Si es un ingrediente nuevo que no existía en el catálogo ni en la alacena, crearlo con stock 0
-      if (!inPantry) {
-        inPantry = {
-          id: `ing-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
-          name,
-          category: 'alacena',
-          qty: 0,
-          unit,
-          minQty: 1,
-          icon: '🥘'
-        };
-        appState.pantry.push(inPantry);
-      }
+      // Registrar ingrediente globalmente si no existía
+      const registered = registerGlobalIngredient({
+        name,
+        category: 'alacena',
+        unit,
+        minQty: 1,
+        initialQtyForCurrent: 0
+      });
 
       ingredients.push({
-        name: inPantry.name,
+        name: registered.name,
         qty: isNaN(qtyVal) ? 1 : qtyVal,
-        unit: unit || inPantry.unit,
-        requiredId: inPantry.id
+        unit: unit || registered.unit,
+        requiredId: registered.id
       });
     }
   });
@@ -1913,7 +2241,8 @@ function handleAddRecipeSubmit(e) {
     pairing,
     chefTip,
     ingredients,
-    steps
+    steps,
+    comments: []
   };
 
   appState.recipes.unshift(newRecipe);
@@ -1925,7 +2254,7 @@ function handleAddRecipeSubmit(e) {
   if (currentTab === 'recetas') renderRecipesView();
   if (currentTab === 'matcher') renderSmartMatcher();
 
-  showToast(`🎉 ¡Receta "${title}" (${isPrivate ? '🔒 Privada' : '🌐 Pública familiar'}) guardada con éxito!`, 'success');
+  showToast(`🎉 ¡Receta "${title}" (${isPrivate ? '🔒 Privada' : '🌐 Pública'}) guardada con éxito!`, 'success');
 }
 
 // =========================================================
@@ -2027,8 +2356,9 @@ function addEditRecipeIngredientRow(name = '', qty = '', unit = '', linkedId = '
 
   let matchedUnit = unit;
   let matchedId = linkedId;
+  const pantry = getCurrentPantry();
   if (name) {
-    const found = appState.pantry.find(p => p.name.toLowerCase() === name.toLowerCase());
+    const found = pantry.find(p => p.name.toLowerCase() === name.toLowerCase());
     if (found) {
       matchedUnit = matchedUnit || found.unit;
       matchedId = matchedId || found.id;
@@ -2130,37 +2460,19 @@ function handleEditRecipeSubmit(e) {
     const unit = row.querySelector('.rec-ing-unit')?.value.trim() || 'un';
 
     if (name) {
-      let linkedId = nameInp?.getAttribute('data-ing-id');
-      let inPantry = null;
-
-      if (linkedId) {
-        inPantry = appState.pantry.find(p => p.id === linkedId);
-      }
-      if (!inPantry) {
-        inPantry = appState.pantry.find(p => p.name.toLowerCase() === name.toLowerCase());
-      }
-      if (!inPantry) {
-        inPantry = appState.pantry.find(p => p.name.toLowerCase().includes(name.toLowerCase()) || name.toLowerCase().includes(p.name.toLowerCase()));
-      }
-
-      if (!inPantry) {
-        inPantry = {
-          id: `ing-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
-          name,
-          category: 'alacena',
-          qty: 0,
-          unit,
-          minQty: 1,
-          icon: '🥘'
-        };
-        appState.pantry.push(inPantry);
-      }
+      const registered = registerGlobalIngredient({
+        name,
+        category: 'alacena',
+        unit,
+        minQty: 1,
+        initialQtyForCurrent: 0
+      });
 
       ingredients.push({
-        name: inPantry.name,
+        name: registered.name,
         qty: isNaN(qtyVal) ? 1 : qtyVal,
-        unit: unit || inPantry.unit,
-        requiredId: inPantry.id
+        unit: unit || registered.unit,
+        requiredId: registered.id
       });
     }
   });
@@ -2247,8 +2559,37 @@ function escapeAttr(str) {
   return String(str).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+// Sistema de Notificaciones Toast Moderno
+function showToast(message, type = 'success') {
+  const container = document.getElementById('toastContainer');
+  if (!container) {
+    alert(message);
+    return;
+  }
+
+  const toast = document.createElement('div');
+  toast.className = `toast ${type === 'success' ? 'toast-success' : ''}`;
+  toast.innerHTML = `
+    <span>${type === 'success' ? '🛒' : type === 'info' ? 'ℹ️' : '🔔'}</span>
+    <span>${escapeAttr(message)}</span>
+  `;
+
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    if (toast && toast.classList) toast.classList.add('toast-fadeout');
+    setTimeout(() => {
+      if (toast && toast.parentNode) toast.parentNode.removeChild(toast);
+    }, 260);
+  }, 3000);
+}
+
 // Exponer explícitamente en el objeto global window
 window.getCurrentUser = getCurrentUser;
+window.getCurrentUserId = getCurrentUserId;
+window.getCurrentPantry = getCurrentPantry;
+window.getCurrentShoppingList = getCurrentShoppingList;
+window.registerGlobalIngredient = registerGlobalIngredient;
 window.updateHeaderUserBadge = updateHeaderUserBadge;
 window.openUserProfileModal = openUserProfileModal;
 window.closeUserProfileModal = closeUserProfileModal;
@@ -2311,11 +2652,17 @@ window.addOrMergeShoppingItem = addOrMergeShoppingItem;
 window.parseQuantityAndUnit = parseQuantityAndUnit;
 window.formatBaseQuantity = formatBaseQuantity;
 window.updateMasterIngredientsDatalist = updateMasterIngredientsDatalist;
+window.renderRecipeComments = renderRecipeComments;
+window.handleAddRecipeComment = handleAddRecipeComment;
+window.toggleReplyInput = toggleReplyInput;
+window.handleSendReply = handleSendReply;
 window.loadState = loadState;
 window.saveState = saveState;
 
 // Inicialización de la Aplicación
-document.addEventListener('DOMContentLoaded', () => {
-  loadState();
-  switchTab('matcher');
-});
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    loadState();
+    switchTab('matcher');
+  });
+}

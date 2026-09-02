@@ -157,9 +157,14 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- VISTA 3: MI ALACENA & HELADERA                            -->
+    <!-- VISTA 3: MI ALACENA & HELADERA (POR CHEF)                 -->
     <!-- ========================================================= -->
     <section id="view-alacena" class="tab-view" style="display:none;">
+      <div style="margin-bottom:14px;">
+        <h2 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;" id="pantrySectionTitle">🥫 Alacena de Chef Pato</h2>
+        <p style="font-size:0.85rem; color:var(--text-muted);" id="pantrySectionSubtitle">Tu inventario personal de heladera, carnes y secos en Hell's Kitchen.</p>
+      </div>
+
       <div class="toolbar-row">
         <div class="search-input-wrapper">
           <span class="search-icon-pos">🔍</span>
@@ -192,13 +197,13 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- VISTA 4: LISTA DE COMPRAS INTELIGENTE                     -->
+    <!-- VISTA 4: LISTA DE COMPRAS INTELIGENTE (POR CHEF)          -->
     <!-- ========================================================= -->
     <section id="view-compras" class="tab-view" style="display:none;">
       <div class="toolbar-row">
         <div>
-          <h2 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">🛒 Lista de Compras</h2>
-          <p style="font-size:0.85rem; color:var(--text-muted);">Los insumos faltantes de tus recetas se suman automáticamente acá.</p>
+          <h2 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;" id="shoppingSectionTitle">🛒 Lista de Compras de Chef Pato</h2>
+          <p style="font-size:0.85rem; color:var(--text-muted);" id="shoppingSectionSubtitle">Tu lista personalizada para el supermercado y faltantes de recetas.</p>
         </div>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -312,12 +317,41 @@
       </div>
 
       <div style="margin-top:14px; border-top:1px solid var(--border); padding-top:14px; display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-        <button class="btn btn-secondary btn-sm" onclick="openEditCurrentRecipeModal()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
+        <button class="btn btn-secondary btn-sm" id="modalBtnEditRecipe" onclick="openEditCurrentRecipeModal()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
           ✏️ Editar Receta
         </button>
-        <button class="btn btn-danger btn-sm" onclick="deleteCurrentRecipe()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
+        <button class="btn btn-danger btn-sm" id="modalBtnDeleteRecipe" onclick="deleteCurrentRecipe()" style="padding:10px; font-size:0.88rem; display:flex; align-items:center; justify-content:center; gap:6px;">
           🗑️ Eliminar Receta
         </button>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- SECCIÓN DE COMENTARIOS & RESPUESTAS DEL AUTOR             -->
+      <!-- ========================================================= -->
+      <div id="modalCommentsContainer" style="margin-top:24px; border-top:1px solid var(--border); padding-top:18px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <h3 style="font-size:1.15rem; color:#ffffff; display:flex; align-items:center; gap:8px;">
+            💬 Comentarios & Respuestas (<span id="modalCommentsCount">0</span>)
+          </h3>
+        </div>
+
+        <!-- Formulario para agregar comentario nuevo -->
+        <div class="comment-input-card" id="modalCommentInputBox">
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <span class="user-avatar-chip" id="commentCurrentUserAvatar" style="font-size:1.4rem;">👨‍🍳</span>
+            <div style="flex:1;">
+              <textarea id="inpNewCommentText" rows="2" placeholder="Escribí un comentario, pregunta o tip sobre esta receta..." style="width:100%; background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px; color:#fff; font-size:0.88rem; resize:vertical;"></textarea>
+              <div style="display:flex; justify-content:flex-end; margin-top:6px;">
+                <button type="button" class="btn btn-primary btn-sm" onclick="handleAddRecipeComment()">💬 Enviar Comentario</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lista de Comentarios y Respuestas de la Receta -->
+        <div id="modalCommentsList" style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+          <!-- Renderizado dinámico de comentarios -->
+        </div>
       </div>
     </div>
   </div>
