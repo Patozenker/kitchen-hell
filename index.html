@@ -133,7 +133,7 @@
 
         <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
           <!-- Filtro por Usuario / Autor -->
-          <select id="recipeAuthorFilter" class="form-group" style="margin:0; width:auto; padding:8px 12px;" onchange="filterRecipesByAuthor(this.value)">
+          <select id="recipeAuthorFilter" class="filter-select-pill" onchange="filterRecipesByAuthor(this.value)">
             <option value="all">👥 Todos los Chefs</option>
           </select>
 
@@ -1156,14 +1156,6 @@
         <button type="button" class="btn btn-danger btn-sm" onclick="logoutUser()" style="width:100%; justify-content:center; gap:8px; margin-top:6px;">
           🚪 Cerrar Sesión
         </button>
-      </div>
-
-      <!-- Otros Usuarios Registrados -->
-      <div style="border-top:1px solid var(--border); padding-top:14px;">
-        <h4 style="color:var(--text-muted); font-size:0.85rem; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.5px;">Cambiar a otro perfil registrado:</h4>
-        <div class="family-grid" id="familyMembersGrid">
-          <!-- Renderizado dinámico de tarjetas de miembros -->
-        </div>
       </div>
     </div>
   </div>

@@ -656,25 +656,6 @@ function openUserProfileModal() {
     `;
   }
 
-  if (grid) {
-    const otherUsers = (appState.users || []).filter(u => u.id !== curUser.id);
-    if (otherUsers.length === 0) {
-      grid.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align:center; padding:12px; color:var(--text-muted); font-size:0.82rem;">
-          No hay otros usuarios registrados en este dispositivo.
-        </div>
-      `;
-    } else {
-      grid.innerHTML = otherUsers.map(u => `
-        <div class="family-member-card" onclick="switchUser('${u.id}')">
-          <span class="family-card-avatar">${u.avatar || '👨‍🍳'}</span>
-          <div class="family-card-name">${escapeAttr(u.name)}</div>
-          <div style="font-size:0.72rem; color:var(--text-muted); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${escapeAttr(u.profession || 'Chef')}</div>
-        </div>
-      `).join('');
-    }
-  }
-
   modal.style.display = 'flex';
 }
 

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-02T19:27:06.774Z",
+  "project": "Hell's Kitchen / Pato's Kitchen",
+  "version": "2.1.0",
+  "features": [
+    "201 Master Catalog Ingredients (Carnes, Heladera, Alacena, Freezer, Especias, Cava, Limpieza)",
+    "Weekly Family Menu (4 Meals: Desayuno, Almuerzo, Merienda, Cena)",
+    "Multi-member Family Choices & Passwords (Joaco, Lucila, Chef Pato)",
+    "Mercado Libre Style Cart with Direct Numeric Stock & Custom Units (kg, g, l, ml)",
+    "Automatic Unit Conversion & Math Integration into Pantry",
+    "Supabase Cloud Sync & Realtime Auth"
+  ]
+}
