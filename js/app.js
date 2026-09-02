@@ -31,10 +31,8 @@ function getCurrentUserId() {
 }
 
 function getCurrentUser() {
-  if (!appState.users || appState.users.length === 0) {
-    return { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' };
-  }
-  return appState.users.find(u => u.id === appState.currentUser) || appState.users[0];
+  if (!appState.currentUser) return null;
+  return (appState.users || []).find(u => u.id === appState.currentUser) || null;
 }
 
 function getCurrentPantry() {
@@ -128,8 +126,11 @@ function loadState() {
         }
       });
 
-      if (!appState.currentUser || !appState.users.some(u => u.id === appState.currentUser)) {
-        appState.currentUser = appState.users[0]?.id || 'user-pato';
+      const activeSession = localStorage.getItem(AUTH_SESSION_KEY);
+      if (activeSession && appState.users.some(u => u.id === activeSession)) {
+        appState.currentUser = activeSession;
+      } else {
+        appState.currentUser = null;
       }
 
       // Migración si existía 'pantry' o 'shoppingList' planos
@@ -318,17 +319,10 @@ function initAuth() {
     }
   }
 
-  // Si no hay sesión o el usuario activo no existe, verificar si existe Chef Pato o pedir login
-  if (!appState.currentUser || !getCurrentUser()) {
-    const defaultChef = (appState.users || []).find(u => u.id === 'user-pato');
-    if (defaultChef) {
-      appState.currentUser = defaultChef.id;
-      localStorage.setItem(AUTH_SESSION_KEY, defaultChef.id);
-      updateHeaderUserBadge();
-    } else {
-      openAuthModal('login');
-    }
-  }
+  // Si no hay sesión activa guardada, dejar currentUser en null y abrir modal de login
+  appState.currentUser = null;
+  updateHeaderUserBadge();
+  openAuthModal('login');
 }
 
 function canCloseAuthModal() {
@@ -543,6 +537,7 @@ function logoutUser() {
   appState.currentUser = null;
   saveState();
   closeUserProfileModal();
+  updateHeaderUserBadge();
   openAuthModal('login');
   showToast('🚪 Has cerrado sesión.', 'info');
 }
@@ -552,6 +547,14 @@ function updateHeaderUserBadge() {
   const avatarEl = document.getElementById('headerUserAvatar');
   const nameEl = document.getElementById('headerUserName');
   const greetingEl = document.getElementById('heroGreeting');
+
+  if (!user) {
+    if (avatarEl) avatarEl.innerText = '👤';
+    if (nameEl) nameEl.innerHTML = `<span>Iniciar Sesión</span>`;
+    if (greetingEl) greetingEl.innerText = `¿Qué cocinamos hoy? 🔥`;
+    updateDynamicUserTitles();
+    return;
+  }
 
   if (avatarEl) avatarEl.innerText = user.avatar || '👨‍🍳';
   if (nameEl) {
@@ -568,19 +571,26 @@ function updateDynamicUserTitles() {
   const shoppingTitleEl = document.getElementById('shoppingSectionTitle');
   const shoppingSubtitleEl = document.getElementById('shoppingSectionSubtitle');
 
-  if (pantryTitleEl) pantryTitleEl.innerText = `🥫 Alacena de ${user.name}`;
+  const userName = user ? user.name : 'tu Cocina';
+  if (pantryTitleEl) pantryTitleEl.innerText = `🥫 Alacena de ${userName}`;
   if (pantrySubtitleEl) pantrySubtitleEl.innerText = `Tu inventario personal de heladera, carnes y secos en Hell's Kitchen.`;
-  if (shoppingTitleEl) shoppingTitleEl.innerText = `🛒 Lista de Compras de ${user.name}`;
+  if (shoppingTitleEl) shoppingTitleEl.innerText = `🛒 Lista de Compras de ${userName}`;
   if (shoppingSubtitleEl) shoppingSubtitleEl.innerText = `Tu lista personalizada para el supermercado y faltantes de recetas.`;
 }
 
 function openUserProfileModal() {
+  const user = getCurrentUser();
+  if (!user) {
+    openAuthModal('login');
+    return;
+  }
+
   const modal = document.getElementById('userProfileModal');
   const card = document.getElementById('currentUserProfileCard');
   const grid = document.getElementById('familyMembersGrid');
   if (!modal) return;
 
-  const curUser = getCurrentUser();
+  const curUser = user;
 
   if (card) {
     card.innerHTML = `
