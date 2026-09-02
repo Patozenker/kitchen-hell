@@ -758,10 +758,23 @@ body {
   box-shadow: 0 0 8px var(--primary-glow);
 }
 
-.pantry-input-unit {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+.pantry-unit-select {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--primary-light);
+  font-size: 0.76rem;
   font-weight: 700;
+  padding: 2px 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.pantry-unit-select:hover, .pantry-unit-select:focus {
+  border-color: var(--primary);
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 0 6px var(--primary-glow);
 }
 
 .pantry-card-bottom-actions {

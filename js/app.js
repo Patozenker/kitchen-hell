@@ -1421,7 +1421,20 @@ function renderPantryView() {
                            onchange="setDirectPantryQty('${item.id}', this.value)"
                            onkeydown="if(event.key==='Enter') this.blur();"
                            title="Escribí directamente la cantidad con el teclado">
-                    <span class="pantry-input-unit">${escapeAttr(item.unit || '')}</span>
+                    <select class="pantry-unit-select" onchange="changePantryItemUnit('${item.id}', this.value)" title="Cambiar unidad de medida">
+                      <option value="g" ${item.unit === 'g' ? 'selected' : ''}>g</option>
+                      <option value="kg" ${item.unit === 'kg' ? 'selected' : ''}>kg</option>
+                      <option value="un" ${item.unit === 'un' ? 'selected' : ''}>un</option>
+                      <option value="ml" ${item.unit === 'ml' ? 'selected' : ''}>ml</option>
+                      <option value="l" ${item.unit === 'l' ? 'selected' : ''}>l</option>
+                      <option value="paquete" ${item.unit === 'paquete' ? 'selected' : ''}>pqt</option>
+                      <option value="lata" ${item.unit === 'lata' ? 'selected' : ''}>lata</option>
+                      <option value="botella" ${item.unit === 'botella' ? 'selected' : ''}>bot</option>
+                      <option value="docena" ${item.unit === 'docena' ? 'selected' : ''}>doc</option>
+                      <option value="atado" ${item.unit === 'atado' ? 'selected' : ''}>atd</option>
+                      <option value="pote" ${item.unit === 'pote' ? 'selected' : ''}>pote</option>
+                      <option value="caja" ${item.unit === 'caja' ? 'selected' : ''}>caja</option>
+                    </select>
                   </div>
                   <button class="qty-control-btn" onclick="stepPantryQty('${item.id}', 1)" title="Sumar stock">+</button>
                 </div>
@@ -1555,6 +1568,40 @@ function setDirectPantryQty(id, rawVal) {
   showToast(`🥫 Stock actualizado: ${item.name} (${item.qty} ${item.unit})`, 'info');
 }
 
+function changePantryItemUnit(id, newUnit) {
+  const pantry = getCurrentPantry();
+  const item = pantry.find(p => p.id === id);
+  if (!item) return;
+
+  const oldUnit = (item.unit || '').toLowerCase();
+  let currentQty = parseFloat(item.qty) || 0;
+
+  // Conversión matemática inteligente si cambia entre unidades dimensionales compatibles
+  if ((oldUnit === 'g' || oldUnit === 'gr' || oldUnit === 'gramos') && newUnit === 'kg') {
+    currentQty = Math.round((currentQty / 1000) * 1000) / 1000;
+  } else if (oldUnit === 'kg' && newUnit === 'g') {
+    currentQty = Math.round(currentQty * 1000);
+  } else if ((oldUnit === 'ml' || oldUnit === 'cm3' || oldUnit === 'cc') && newUnit === 'l') {
+    currentQty = Math.round((currentQty / 1000) * 1000) / 1000;
+  } else if (oldUnit === 'l' && newUnit === 'ml') {
+    currentQty = Math.round(currentQty * 1000);
+  } else if (oldUnit === 'un' && newUnit === 'docena') {
+    currentQty = Math.round((currentQty / 12) * 100) / 100;
+  } else if (oldUnit === 'docena' && newUnit === 'un') {
+    currentQty = Math.round(currentQty * 12);
+  }
+
+  item.qty = currentQty;
+  item.unit = newUnit;
+
+  saveState();
+  renderPantryView();
+  updateHeaderBadges();
+  if (currentTab === 'matcher') renderSmartMatcher();
+  if (typeof pushUserPantryToSupabase === 'function') pushUserPantryToSupabase();
+  showToast(`⚖️ ${item.name}: ahora se mide en ${newUnit} (Stock: ${item.qty} ${newUnit})`, 'info');
+}
+
 function openAddToCartModal(pantryId) {
   const pantry = getCurrentPantry();
   const item = pantry.find(i => i.id === pantryId);
@@ -1570,8 +1617,17 @@ function openAddToCartModal(pantryId) {
 
   if (inpId) inpId.value = item.id;
   if (inpName) inpName.value = item.name;
-  if (inpQty) inpQty.value = item.minQty || (item.unit === 'g' || item.unit === 'ml' ? 500 : 1);
-  if (inpUnit) inpUnit.value = item.unit || 'un';
+
+  const u = (item.unit || '').toLowerCase();
+  if (inpUnit) {
+    if (u === 'g' && (item.category === 'carnes' || item.category === 'heladera')) {
+      inpUnit.value = 'kg';
+      if (inpQty) inpQty.value = '1';
+    } else {
+      inpUnit.value = item.unit || 'un';
+      if (inpQty) inpQty.value = item.minQty || (u === 'g' || u === 'ml' ? 500 : 1);
+    }
+  }
   if (inpNote) inpNote.value = '';
 
   if (info) {
@@ -2038,10 +2094,24 @@ function finishShoppingAndAddToPantry() {
       addedCount++;
     } else {
       const pParsed = parseQuantityAndUnit(pantryItem.qty, pantryItem.unit);
-      if (parsed.unitCategory === pParsed.unitCategory) {
+      if (parsed.unitCategory && pParsed.unitCategory && parsed.unitCategory === pParsed.unitCategory) {
         const newBase = pParsed.baseQty + parsed.baseQty;
-        const formatted = formatBaseQuantity(newBase, parsed.unitCategory, pantryItem.unit);
-        pantryItem.qty = formatted.qty;
+        const pUnit = (pantryItem.unit || '').toLowerCase();
+        let targetQty = newBase;
+        if (pUnit === 'kg' || pUnit === 'kilo' || pUnit === 'kilos') {
+          targetQty = Math.round((newBase / 1000) * 1000) / 1000;
+        } else if (pUnit === 'g' || pUnit === 'gr' || pUnit === 'gramos') {
+          targetQty = Math.round(newBase);
+        } else if (pUnit === 'l' || pUnit === 'lt' || pUnit === 'litro' || pUnit === 'litros') {
+          targetQty = Math.round((newBase / 1000) * 1000) / 1000;
+        } else if (pUnit === 'ml' || pUnit === 'cm3' || pUnit === 'cc' || pUnit === 'mililitros') {
+          targetQty = Math.round(newBase);
+        } else if (pUnit === 'docena' || pUnit === 'docenas') {
+          targetQty = Math.round((newBase / 12) * 100) / 100;
+        } else {
+          targetQty = Math.round(newBase * 100) / 100;
+        }
+        pantryItem.qty = targetQty;
       } else {
         pantryItem.qty = Math.round(((parseFloat(pantryItem.qty) || 0) + parsed.numericQty) * 100) / 100;
       }

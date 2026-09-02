@@ -550,8 +550,21 @@
             <input type="number" id="inpCartQty" value="1" min="0.1" step="any" required autofocus>
           </div>
           <div class="form-group" style="margin:0;">
-            <label>Unidad de Medida</label>
-            <input type="text" id="inpCartUnit" placeholder="kg, g, un, lata..." required>
+            <label>Unidad de Compra</label>
+            <select id="inpCartUnit" style="font-weight:700;">
+              <option value="kg">kg (Kilos)</option>
+              <option value="g">g (Gramos)</option>
+              <option value="un">un (Unidades)</option>
+              <option value="l">l (Litros)</option>
+              <option value="ml">ml (Mililitros / cm³)</option>
+              <option value="paquete">paquete</option>
+              <option value="lata">lata</option>
+              <option value="botella">botella</option>
+              <option value="docena">docena</option>
+              <option value="atado">atado</option>
+              <option value="pote">pote</option>
+              <option value="caja">caja</option>
+            </select>
           </div>
         </div>
 
