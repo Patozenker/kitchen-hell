@@ -1128,15 +1128,14 @@ function renderSmartMatcher() {
             </div>
           ` : ''}
 
-          <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
-            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+          <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:12px; border-top:1px solid var(--border);">
+            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center; flex-wrap:wrap;">
               <span>👥 ${r.portions}p</span>
-              <span>⭐ ${r.difficulty}</span>
+              <span>⭐ ${r.difficulty || 'Media'}</span>
               <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
-            <div style="display:flex; gap:6px;">
+            <div style="display:flex; gap:6px; align-items:center;">
               ${canEdit ? `
                 <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
               ` : ''}
@@ -1224,9 +1223,8 @@ function renderRecipesView() {
           <h3 class="recipe-card-title">${escapeAttr(r.title)}</h3>
           <p class="recipe-desc">${escapeAttr(r.description)}</p>
 
-          <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-            <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
-            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+          <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:12px; border-top:1px solid var(--border);">
+            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center; flex-wrap:wrap;">
               <span>👥 ${r.portions}p</span>
               <span style="color:${match.pct === 100 ? '#34d399' : '#fbbf24'}; font-weight:700;">
                 ${match.pct === 100 ? '✅ 100%' : `⚠️ ${match.pct}%`}
@@ -1234,7 +1232,7 @@ function renderRecipesView() {
               <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
-            <div style="display:flex; gap:6px;">
+            <div style="display:flex; gap:6px; align-items:center;">
               ${canEdit ? `
                 <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openEditRecipeModal('${r.id}')" title="Editar receta" style="padding:4px 8px;">✏️</button>
               ` : ''}

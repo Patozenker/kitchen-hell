@@ -32,6 +32,11 @@
     </div>
 
     <div class="header-actions">
+      <!-- Botón Directo Base de Datos de Leads & Profesiones -->
+      <button class="btn btn-outline btn-sm" onclick="openUserLeadsModal()" title="Ver base de datos de usuarios, profesiones y descargar CSV" style="border-color:rgba(245,158,11,0.6); color:#fcd34d; font-weight:700; display:flex; align-items:center; gap:6px; background:rgba(245,158,11,0.08);">
+        👥 Base de Datos
+      </button>
+
       <!-- Chip Perfil de Usuario / Switcher -->
       <button class="user-profile-btn" id="btnUserHeader" onclick="openUserProfileModal()" title="Mi cuenta y cerrar sesión">
         <span class="user-profile-avatar" id="headerUserAvatar">👨‍🍳</span>
@@ -863,6 +868,9 @@
 
       <!-- Acciones de Usuario -->
       <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:18px;">
+        <button type="button" class="btn btn-secondary" id="btnAdminLeadsDirectory" onclick="closeUserProfileModal(); openUserLeadsModal();" style="width:100%; justify-content:center; gap:8px; display:none;">
+          👥 Base de Datos & Segmentación por Profesión (CSV)
+        </button>
         <button type="button" class="btn btn-outline" onclick="closeUserProfileModal(); openAuthModal('register');" style="width:100%; justify-content:center; gap:8px;">
           ✨ Registrar Otra Cuenta / Nuevo Chef
         </button>
@@ -878,6 +886,75 @@
           <!-- Renderizado dinámico de tarjetas de miembros -->
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11. MODAL: BASE DE DATOS DE USUARIOS & LEADS (MARKETING)  -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="userLeadsModal" style="display:none;" onclick="if(event.target===this) closeUserLeadsModal()">
+    <div class="modal-content" style="max-width:880px; width:95vw; max-height:90vh; overflow-y:auto;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);">
+        <div>
+          <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff; margin:0; display:flex; align-items:center; gap:8px;">
+            👥 Base de Datos de Usuarios & Profesiones (<span id="leadsUsersCount">0</span>)
+          </h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); margin-top:4px;">
+            Filtrá por profesión (ej: Arquitectos, Abogados, Chefs) para descargar bases de datos y enviar campañas segmentadas.
+          </p>
+        </div>
+        <button class="btn-icon btn-secondary" onclick="closeUserLeadsModal()">✕</button>
+      </div>
+
+      <!-- Barra de Búsqueda y Filtros de Segmentación -->
+      <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:10px; margin-bottom:14px;">
+        <div>
+          <label style="font-size:0.82rem; color:var(--text-muted); font-weight:600; display:block; margin-bottom:4px;">🔍 Búsqueda rápida por Profesión o Nombre:</label>
+          <input type="text" id="inpLeadsSearch" placeholder="Escribí: arquitecto, abogado, médico, etc..." oninput="renderLeadsTable()" style="width:100%; padding:8px 12px; font-size:0.88rem; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:var(--radius-sm);">
+        </div>
+        <div>
+          <label style="font-size:0.82rem; color:var(--text-muted); font-weight:600; display:block; margin-bottom:4px;">🎯 Filtrar por Profesión:</label>
+          <select id="selLeadsFilterProfession" onchange="renderLeadsTable()" style="width:100%; padding:8px 10px; font-size:0.88rem; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:var(--radius-sm);">
+            <option value="all">Todas las Profesiones</option>
+            <!-- Opciones dinámicas de profesiones registradas -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Barra de Acciones de Marketing -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px; padding:10px 14px; background:var(--bg-card); border-radius:var(--radius-sm); border:1px solid var(--border);">
+        <div style="font-size:0.84rem; color:var(--text-muted);" id="leadsActiveFilterSummary">
+          Mostrando todos los usuarios registrados
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button type="button" class="btn btn-outline btn-sm" id="btnCopyFilteredEmails" onclick="copyAllEmailsToClipboard()" title="Copiar mails de los usuarios filtrados">
+            📋 Copiar Mails del Segmento
+          </button>
+          <button type="button" class="btn btn-primary btn-sm" id="btnExportFilteredCSV" onclick="exportUsersToCSV()" title="Descargar archivo Excel / CSV para Mailchimp, SendGrid o campañas">
+            📥 Descargar CSV de este Segmento
+          </button>
+        </div>
+      </div>
+
+      <!-- Tabla de Usuarios -->
+      <div class="leads-table-wrapper">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th>Chef / Usuario</th>
+              <th>Email</th>
+              <th>Profesión / Ocupación</th>
+              <th>Fecha de Registro</th>
+              <th>Rol</th>
+            </tr>
+          </thead>
+          <tbody id="leadsTableBody">
+            <!-- Filas dinámicas -->
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
 
