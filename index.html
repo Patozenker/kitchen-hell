@@ -147,10 +147,20 @@
 
       <div class="filter-pills" id="recipesFilterPills" style="margin-bottom:16px;">
         <button class="filter-pill active" onclick="filterRecipesByCat('all', this)">Todas</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('carnes', this)">🥩 Carnes</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('pastas', this)">🍝 Pastas</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('rapidas', this)">⚡ Rápidas</button>
-        <button class="filter-pill" onclick="filterRecipesByCat('postres', this)">🍫 Postres</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('carnes', this)">🥩 Carnes & Fuegos</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('pastas', this)">🍝 Pastas & Risottos</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('rapidas', this)">⚡ Rápidas de Semana</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('postres', this)">🍫 Postres & Dulces</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('ensaladas', this)">🥗 Ensaladas & Frescos</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('pizzas', this)">🍕 Pizzas, Tartas & Empanadas</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('guisos', this)">🍲 Guisos, Sopas & Ollas</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('sandwiches', this)">🥪 Sandwiches & Burgers</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('pescados', this)">🐟 Pescados & Mariscos</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('veggie', this)">🥑 Veggie & Saludable</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('panaderia', this)">🥐 Panadería & Desayunos</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('internacional', this)">🌮 Comida Internacional</button>
+        <button class="filter-pill" onclick="filterRecipesByCat('tragos', this)">🍹 Tragos & Coctelería</button>
+        <button class="filter-pill" onclick="openAddCategoryModal()" style="border:1px dashed var(--primary); color:var(--primary-light); font-weight:700; background:rgba(234,88,12,0.08);">+ Nueva Categoría</button>
       </div>
 
       <div class="recipes-grid" id="recipesGridContainer">
@@ -846,12 +856,25 @@
 
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
           <div class="form-group">
-            <label>Categoría</label>
-            <select id="inpRecCategory">
-              <option value="rapidas">⚡ Rápidas de Semana</option>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <label style="margin:0;">Categoría de Plato *</label>
+              <button type="button" onclick="openAddCategoryModal()" style="background:none; border:none; color:var(--primary-light); font-size:0.75rem; font-weight:700; cursor:pointer;">+ Nueva Categoría</button>
+            </div>
+            <select id="inpRecCategory" onchange="if(this.value==='__new__'){ openAddCategoryModal(); this.value='rapidas'; }">
               <option value="carnes">🥩 Carnes & Fuegos</option>
               <option value="pastas">🍝 Pastas & Risottos</option>
-              <option value="postres">🍫 Postres de Autor</option>
+              <option value="rapidas" selected>⚡ Rápidas de Semana</option>
+              <option value="postres">🍫 Postres & Dulces</option>
+              <option value="ensaladas">🥗 Ensaladas & Frescos</option>
+              <option value="pizzas">🍕 Pizzas, Tartas & Empanadas</option>
+              <option value="guisos">🍲 Guisos, Sopas & Ollas</option>
+              <option value="sandwiches">🥪 Sandwiches & Burgers</option>
+              <option value="pescados">🐟 Pescados & Mariscos</option>
+              <option value="veggie">🥑 Veggie & Saludable</option>
+              <option value="panaderia">🥐 Panadería & Desayunos</option>
+              <option value="internacional">🌮 Comida Internacional</option>
+              <option value="tragos">🍹 Tragos & Coctelería</option>
+              <option value="__new__">✨ + Crear nueva categoría...</option>
             </select>
           </div>
           <div class="form-group">
@@ -962,12 +985,25 @@
 
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
           <div class="form-group">
-            <label>Categoría</label>
-            <select id="inpEditRecCategory">
-              <option value="rapidas">⚡ Rápidas de Semana</option>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <label style="margin:0;">Categoría de Plato *</label>
+              <button type="button" onclick="openAddCategoryModal()" style="background:none; border:none; color:var(--primary-light); font-size:0.75rem; font-weight:700; cursor:pointer;">+ Nueva Categoría</button>
+            </div>
+            <select id="inpEditRecCategory" onchange="if(this.value==='__new__'){ openAddCategoryModal(); this.value='rapidas'; }">
               <option value="carnes">🥩 Carnes & Fuegos</option>
               <option value="pastas">🍝 Pastas & Risottos</option>
-              <option value="postres">🍫 Postres de Autor</option>
+              <option value="rapidas" selected>⚡ Rápidas de Semana</option>
+              <option value="postres">🍫 Postres & Dulces</option>
+              <option value="ensaladas">🥗 Ensaladas & Frescos</option>
+              <option value="pizzas">🍕 Pizzas, Tartas & Empanadas</option>
+              <option value="guisos">🍲 Guisos, Sopas & Ollas</option>
+              <option value="sandwiches">🥪 Sandwiches & Burgers</option>
+              <option value="pescados">🐟 Pescados & Mariscos</option>
+              <option value="veggie">🥑 Veggie & Saludable</option>
+              <option value="panaderia">🥐 Panadería & Desayunos</option>
+              <option value="internacional">🌮 Comida Internacional</option>
+              <option value="tragos">🍹 Tragos & Coctelería</option>
+              <option value="__new__">✨ + Crear nueva categoría...</option>
             </select>
           </div>
           <div class="form-group">

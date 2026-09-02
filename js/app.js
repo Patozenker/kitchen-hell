@@ -1343,12 +1343,21 @@ function populateRecipeCategoryDropdowns() {
   const addSel = document.getElementById('inpRecCategory');
   const editSel = document.getElementById('inpEditRecCategory');
 
-  const optionsHtml = categories.map(c => `
+  let optionsHtml = categories.map(c => `
     <option value="${c.id}">${c.icon || '🍽️'} ${escapeAttr(c.name)}</option>
   `).join('');
+  optionsHtml += `<option value="__new__">✨ + Crear nueva categoría...</option>`;
 
-  if (addSel) addSel.innerHTML = optionsHtml;
-  if (editSel) editSel.innerHTML = optionsHtml;
+  if (addSel) {
+    const curVal = addSel.value;
+    addSel.innerHTML = optionsHtml;
+    if (curVal && curVal !== '__new__') addSel.value = curVal;
+  }
+  if (editSel) {
+    const curVal = editSel.value;
+    editSel.innerHTML = optionsHtml;
+    if (curVal && curVal !== '__new__') editSel.value = curVal;
+  }
 }
 
 function openAddCategoryModal() {
@@ -3696,6 +3705,8 @@ function openAddRecipeModal() {
   const modal = document.getElementById('addRecipeModal');
   if (!modal) return;
 
+  populateRecipeCategoryDropdowns();
+
   // Reset form fields
   const titleEl = document.getElementById('inpRecTitle');
   if (titleEl) titleEl.value = '';
@@ -3969,6 +3980,8 @@ function openEditRecipeModal(recipeId) {
 
   const modal = document.getElementById('editRecipeModal');
   if (!modal) return;
+
+  populateRecipeCategoryDropdowns();
 
   // Llenar campos con los valores actuales de la receta
   const idEl = document.getElementById('inpEditRecId');
