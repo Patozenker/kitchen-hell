@@ -1394,7 +1394,6 @@ function renderPantryView() {
       <div class="pantry-category-section">
         <div class="category-header">
           <h2 class="category-title">${cat.title} <span style="font-size:0.85rem; color:var(--text-dim); font-family:var(--font-mono);">(${items.length})</span></h2>
-          <button class="btn btn-secondary btn-sm" onclick="openAddPantryModal('${cat.id}')">+ Nuevo Insumo</button>
         </div>
 
         <div class="pantry-grid">
@@ -1404,35 +1403,37 @@ function renderPantryView() {
             const isLow = !isZero && item.minQty && (qty <= parseFloat(item.minQty));
 
             return `
-              <div class="pantry-card ${isZero ? 'out-of-stock-card' : ''}" style="${isZero ? 'opacity:0.85; border-color:rgba(239,68,68,0.25);' : ''}">
+              <div class="pantry-card ${isZero ? 'out-of-stock-card' : ''}" style="${isZero ? 'opacity:0.88; border-color:rgba(239,68,68,0.3);' : ''}">
                 <div class="pantry-card-top">
                   <span class="pantry-card-icon">${item.icon || '📦'}</span>
                   <div style="flex:1; min-width:0;">
                     <div class="pantry-item-name" style="font-weight:700; color:${isZero ? 'var(--text-muted)' : '#ffffff'};">${escapeAttr(item.name)}</div>
                     <div class="pantry-item-unit" style="font-size:0.75rem; color:var(--text-dim);">${escapeAttr(item.unit || '')}</div>
                   </div>
-                  <button class="btn-icon btn-danger btn-sm" onclick="deletePantryItem('${item.id}')" title="Eliminar" style="width:28px; height:28px; font-size:0.75rem;">🗑️</button>
+                  <button class="btn-icon btn-danger btn-sm" onclick="deletePantryItem('${item.id}')" title="Eliminar insumo" style="width:28px; height:28px; font-size:0.75rem;">🗑️</button>
                 </div>
 
+                <!-- Control Numérico Directo & Flechas +/- -->
                 <div class="pantry-stock-row">
-                  <button class="qty-control-btn" onclick="adjustPantryQty('${item.id}', -1)">-</button>
-                  <span class="pantry-qty-display ${isZero ? 'low-stock' : isLow ? 'low-stock' : ''}" style="${isZero ? 'color:#f87171;' : ''}">
-                    ${qty} <small style="font-size:0.7rem; color:var(--text-muted);">${item.unit}</small>
-                  </span>
-                  <button class="qty-control-btn" onclick="adjustPantryQty('${item.id}', 1)">+</button>
+                  <button class="qty-control-btn" onclick="stepPantryQty('${item.id}', -1)" title="Restar stock">-</button>
+                  <div class="pantry-input-wrapper">
+                    <input type="number" class="pantry-direct-input" value="${qty}" min="0" step="any"
+                           onchange="setDirectPantryQty('${item.id}', this.value)"
+                           onkeydown="if(event.key==='Enter') this.blur();"
+                           title="Escribí directamente la cantidad con el teclado">
+                    <span class="pantry-input-unit">${escapeAttr(item.unit || '')}</span>
+                  </div>
+                  <button class="qty-control-btn" onclick="stepPantryQty('${item.id}', 1)" title="Sumar stock">+</button>
                 </div>
 
-                <div style="margin-top:8px; display:flex; justify-content:space-between; align-items:center;">
-                  ${isZero ? `
-                    <span style="font-size:0.72rem; color:#f87171; font-weight:700;">🔴 Sin Stock (0)</span>
-                    <button class="btn btn-primary btn-sm" style="padding:3px 8px; font-size:0.72rem;" onclick="addPantryToShoppingList('${item.id}')">+ Comprar</button>
-                  ` : isLow ? `
-                    <span style="font-size:0.72rem; color:#fbbf24; font-weight:700;">⚠️ Stock Bajo</span>
-                    <button class="btn btn-secondary btn-sm" style="padding:3px 8px; font-size:0.72rem;" onclick="addPantryToShoppingList('${item.id}')">+ Comprar</button>
-                  ` : `
-                    <span style="font-size:0.72rem; color:#34d399; font-weight:700;">🟢 En Stock</span>
-                    <button class="btn btn-secondary btn-sm" style="padding:2px 6px; font-size:0.68rem; opacity:0.8;" onclick="addPantryToShoppingList('${item.id}')">+ Lista</button>
-                  `}
+                <!-- Estado & Botón + Carrito Estilo Mercado Libre -->
+                <div class="pantry-card-bottom-actions">
+                  <div class="pantry-status-pill ${isZero ? 'status-zero' : isLow ? 'status-low' : 'status-ok'}">
+                    ${isZero ? '🔴 Sin Stock' : isLow ? '⚠️ Poco Stock' : '🟢 En Stock'}
+                  </div>
+                  <button class="btn-cart-action" onclick="openAddToCartModal('${item.id}')" title="Agregar a la Lista de Compras">
+                    🛒 + Carrito
+                  </button>
                 </div>
               </div>
             `;
@@ -1462,21 +1463,159 @@ function filterPantryByStock(stockFilter, btnEl) {
   renderPantryView();
 }
 
-function adjustPantryQty(id, delta) {
+function openAddPantryModal(defaultCategory = 'heladera') {
+  const modal = document.getElementById('addPantryModal');
+  const inpCat = document.getElementById('inpPantryCategory');
+  const inpName = document.getElementById('inpPantryName');
+  const inpQty = document.getElementById('inpPantryQty');
+  const inpUnit = document.getElementById('inpPantryUnit');
+  const inpIcon = document.getElementById('inpPantryIcon');
+
+  if (inpCat && defaultCategory) inpCat.value = defaultCategory;
+  if (inpName) inpName.value = '';
+  if (inpQty) inpQty.value = '1';
+  if (inpUnit) inpUnit.value = 'un';
+  if (inpIcon) inpIcon.value = '🥘';
+
+  updateMasterIngredientsDatalist();
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeAddPantryModal() {
+  const modal = document.getElementById('addPantryModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function handleAddPantrySubmit(e) {
+  if (e) e.preventDefault();
+  const name = document.getElementById('inpPantryName')?.value.trim();
+  const category = document.getElementById('inpPantryCategory')?.value || 'alacena';
+  const qty = parseFloat(document.getElementById('inpPantryQty')?.value) || 1;
+  const unit = document.getElementById('inpPantryUnit')?.value.trim() || 'un';
+  const icon = document.getElementById('inpPantryIcon')?.value.trim() || '🥘';
+
+  if (!name) return;
+
+  const item = registerGlobalIngredient({
+    name,
+    category,
+    unit,
+    icon,
+    initialQtyForCurrent: qty
+  });
+
+  saveState();
+  renderPantryView();
+  updateHeaderBadges();
+  closeAddPantryModal();
+
+  if (typeof pushUserPantryToSupabase === 'function') pushUserPantryToSupabase();
+  showToast(`✨ Insumo agregado y compartido con todos: ${name} (${qty} ${unit})`, 'success');
+}
+
+function stepPantryQty(id, delta) {
   const pantry = getCurrentPantry();
   const item = pantry.find(p => p.id === id);
   if (!item) return;
 
   const current = parseFloat(item.qty) || 0;
-  const isGrams = item.unit === 'g' || item.unit === 'ml';
-  const step = isGrams ? (delta * 50) : (delta * 1);
+  const u = (item.unit || '').toLowerCase();
+  let step = 1;
+  if (u === 'g' || u === 'gr' || u === 'gramos' || u === 'ml' || u === 'cm3' || u === 'cc') {
+    step = 50;
+  } else if (u === 'kg' || u === 'kilo' || u === 'kilos' || u === 'l' || u === 'lt' || u === 'litro' || u === 'litros') {
+    step = 0.5;
+  }
 
-  item.qty = Math.max(0, current + step);
+  item.qty = Math.max(0, Math.round((current + (delta * step)) * 100) / 100);
   saveState();
   renderPantryView();
   updateHeaderBadges();
-
   if (currentTab === 'matcher') renderSmartMatcher();
+  if (typeof pushUserPantryToSupabase === 'function') pushUserPantryToSupabase();
+}
+
+function adjustPantryQty(id, delta) {
+  stepPantryQty(id, delta);
+}
+
+function setDirectPantryQty(id, rawVal) {
+  const pantry = getCurrentPantry();
+  const item = pantry.find(p => p.id === id);
+  if (!item) return;
+
+  let val = parseFloat(rawVal);
+  if (isNaN(val) || val < 0) val = 0;
+  item.qty = Math.round(val * 100) / 100;
+  saveState();
+  renderPantryView();
+  updateHeaderBadges();
+  if (currentTab === 'matcher') renderSmartMatcher();
+  if (typeof pushUserPantryToSupabase === 'function') pushUserPantryToSupabase();
+  showToast(`🥫 Stock actualizado: ${item.name} (${item.qty} ${item.unit})`, 'info');
+}
+
+function openAddToCartModal(pantryId) {
+  const pantry = getCurrentPantry();
+  const item = pantry.find(i => i.id === pantryId);
+  if (!item) return;
+
+  const modal = document.getElementById('addToCartModal');
+  const info = document.getElementById('addToCartProductInfo');
+  const inpId = document.getElementById('inpCartPantryId');
+  const inpName = document.getElementById('inpCartProductName');
+  const inpQty = document.getElementById('inpCartQty');
+  const inpUnit = document.getElementById('inpCartUnit');
+  const inpNote = document.getElementById('inpCartNote');
+
+  if (inpId) inpId.value = item.id;
+  if (inpName) inpName.value = item.name;
+  if (inpQty) inpQty.value = item.minQty || (item.unit === 'g' || item.unit === 'ml' ? 500 : 1);
+  if (inpUnit) inpUnit.value = item.unit || 'un';
+  if (inpNote) inpNote.value = '';
+
+  if (info) {
+    info.innerHTML = `
+      <span style="font-size:2.2rem; line-height:1;">${item.icon || '📦'}</span>
+      <div style="flex:1;">
+        <h4 style="color:#ffffff; margin:0; font-size:1.1rem; font-family:var(--font-serif);">${escapeAttr(item.name)}</h4>
+        <span style="font-size:0.75rem; color:var(--text-muted);">${getCategoryName(item.category)} • Stock en casa: <strong>${item.qty} ${item.unit}</strong></span>
+      </div>
+    `;
+  }
+
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeAddToCartModal() {
+  const modal = document.getElementById('addToCartModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function handleConfirmAddToCart(e) {
+  if (e) e.preventDefault();
+  const id = document.getElementById('inpCartPantryId')?.value;
+  const name = document.getElementById('inpCartProductName')?.value;
+  const qty = parseFloat(document.getElementById('inpCartQty')?.value) || 1;
+  const unit = document.getElementById('inpCartUnit')?.value || 'un';
+  const note = document.getElementById('inpCartNote')?.value.trim() || '';
+
+  if (!name) return;
+
+  const res = addOrMergeShoppingItem({
+    name: name,
+    qty: qty,
+    unit: unit,
+    note: note,
+    canonicalId: id
+  });
+
+  saveState();
+  updateHeaderBadges();
+  closeAddToCartModal();
+
+  if (currentTab === 'compras') renderShoppingView();
+  showToast(`🛒 ¡Sumado a tu lista de compras: ${name} (${qty} ${unit})!`, 'success');
 }
 
 function deletePantryItem(id) {
@@ -1817,22 +1956,126 @@ function deleteShoppingItem(idx) {
 }
 
 function addShoppingItemManual() {
-  const name = prompt("Nombre del producto a comprar:");
-  if (!name || !name.trim()) return;
+  const modal = document.getElementById('addToCartModal');
+  const info = document.getElementById('addToCartProductInfo');
+  const inpId = document.getElementById('inpCartPantryId');
+  const inpName = document.getElementById('inpCartProductName');
+  const inpQty = document.getElementById('inpCartQty');
+  const inpUnit = document.getElementById('inpCartUnit');
+  const inpNote = document.getElementById('inpCartNote');
 
-  const qty = prompt("Cantidad estimada (ej: 500g, 1.5 kg, 2 paquetes, 1 botella):", "1 un");
+  if (inpId) inpId.value = '';
+  if (inpName) inpName.value = '';
+  if (inpQty) inpQty.value = '1';
+  if (inpUnit) inpUnit.value = 'un';
+  if (inpNote) inpNote.value = '';
 
-  addOrMergeShoppingItem({
-    name: name.trim(),
-    qty: qty ? qty.trim() : '1 un',
-    unit: '',
-    note: 'Carga manual'
+  if (info) {
+    info.innerHTML = `
+      <div style="flex:1;">
+        <label style="display:block; font-size:0.8rem; color:var(--text-muted); margin-bottom:6px;">Elegí o escribí cualquier producto del catálogo:</label>
+        <input type="text" id="inpManualCartSelector" list="masterIngredientsList" placeholder="Escribí ej: Leche, Asado, Tomates, Detergente..." style="width:100%; font-size:0.95rem; font-weight:700;" oninput="handleManualCartSelector(this.value)" autocomplete="off">
+      </div>
+    `;
+  }
+
+  updateMasterIngredientsDatalist();
+  if (modal) {
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      document.getElementById('inpManualCartSelector')?.focus();
+    }, 100);
+  }
+}
+
+function handleManualCartSelector(val) {
+  const pantry = getCurrentPantry();
+  const trimmed = val.trim();
+  const found = pantry.find(p => p.name.toLowerCase() === trimmed.toLowerCase());
+
+  const inpId = document.getElementById('inpCartPantryId');
+  const inpName = document.getElementById('inpCartProductName');
+  const inpQty = document.getElementById('inpCartQty');
+  const inpUnit = document.getElementById('inpCartUnit');
+
+  if (found) {
+    if (inpId) inpId.value = found.id;
+    if (inpName) inpName.value = found.name;
+    if (inpUnit) inpUnit.value = found.unit || 'un';
+    if (inpQty && (!inpQty.value || inpQty.value === '1')) {
+      inpQty.value = found.minQty || (found.unit === 'g' || found.unit === 'ml' ? 500 : 1);
+    }
+  } else {
+    if (inpId) inpId.value = '';
+    if (inpName) inpName.value = trimmed;
+  }
+}
+
+function finishShoppingAndAddToPantry() {
+  const uid = getCurrentUserId();
+  const shoppingList = getCurrentShoppingList();
+  const checkedItems = shoppingList.filter(item => item.checked);
+
+  if (checkedItems.length === 0) {
+    showToast('⚠️ No seleccionaste ningún producto tildado [✓] para sumar a la Alacena.', 'info');
+    return;
+  }
+
+  const pantry = getCurrentPantry();
+  let addedCount = 0;
+
+  checkedItems.forEach(cartItem => {
+    const parsed = parseQuantityAndUnit(cartItem.qty, cartItem.unit);
+    let pantryItem = pantry.find(p => (cartItem.canonicalId && p.id === cartItem.canonicalId) || p.name.toLowerCase() === cartItem.name.toLowerCase());
+
+    if (!pantryItem) {
+      pantryItem = registerGlobalIngredient({
+        name: cartItem.name,
+        category: 'alacena',
+        unit: parsed.baseUnit || 'un',
+        initialQtyForCurrent: parsed.numericQty
+      });
+      addedCount++;
+    } else {
+      const pParsed = parseQuantityAndUnit(pantryItem.qty, pantryItem.unit);
+      if (parsed.unitCategory === pParsed.unitCategory) {
+        const newBase = pParsed.baseQty + parsed.baseQty;
+        const formatted = formatBaseQuantity(newBase, parsed.unitCategory, pantryItem.unit);
+        pantryItem.qty = formatted.qty;
+      } else {
+        pantryItem.qty = Math.round(((parseFloat(pantryItem.qty) || 0) + parsed.numericQty) * 100) / 100;
+      }
+      addedCount++;
+    }
   });
 
+  // Eliminar los productos comprados de la lista de compras
+  appState.shoppingLists[uid] = shoppingList.filter(item => !item.checked);
+
   saveState();
-  renderShoppingView();
   updateHeaderBadges();
-  showToast(`🛒 Agregado a tu lista: ${name.trim()}`, 'success');
+  renderShoppingView();
+  if (currentTab === 'alacena') renderPantryView();
+  if (typeof pushUserPantryToSupabase === 'function') pushUserPantryToSupabase();
+
+  showToast(`🎉 ¡Excelente compra! Se sumaron ${addedCount} productos a tu Alacena.`, 'success');
+}
+
+function clearCheckedShopping() {
+  const uid = getCurrentUserId();
+  const list = getCurrentShoppingList();
+  const checked = list.filter(i => i.checked);
+  if (checked.length === 0) {
+    showToast('No hay productos marcados como comprados para limpiar.', 'info');
+    return;
+  }
+  if (confirm(`¿Limpiar ${checked.length} productos comprados de la lista?`)) {
+    appState.shoppingLists[uid] = list.filter(i => !i.checked);
+    saveState();
+    renderShoppingView();
+    updateHeaderBadges();
+    showToast(`🧹 Se limpiaron ${checked.length} productos comprados.`, 'info');
+  }
 }
 
 function compartirListaComprasWhatsApp() {

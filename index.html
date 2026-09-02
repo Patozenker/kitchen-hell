@@ -208,11 +208,14 @@
           <p style="font-size:0.85rem; color:var(--text-muted);" id="shoppingSectionSubtitle">Tu lista personalizada para el supermercado y faltantes de recetas.</p>
         </div>
 
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="btn btn-primary btn-sm" onclick="finishShoppingAndAddToPantry()" title="Sumar todos los productos tildados [✓] al stock de tu Alacena" style="font-weight:800; background:linear-gradient(135deg, #10b981, #059669); border:none; box-shadow:0 4px 12px rgba(16,185,129,0.3);">
+            ✅ Finalizar Compra y Sumar a Alacena
+          </button>
           <button class="btn btn-outline btn-sm" onclick="consolidateShoppingList()" title="Sumar y unificar ingredientes y unidades repetidas">⚡ Unificar y Sumar</button>
           <button class="btn btn-secondary btn-sm" onclick="addShoppingItemManual()">+ Agregar Manual</button>
           <button class="btn btn-success btn-sm" onclick="compartirListaComprasWhatsApp()">📲 WhatsApp</button>
-          <button class="btn btn-danger btn-sm" onclick="clearCheckedShopping()">🧹 Limpiar</button>
+          <button class="btn btn-danger btn-sm" onclick="clearCheckedShopping()">🧹 Limpiar Comprados</button>
         </div>
       </div>
 
@@ -479,22 +482,23 @@
   <!-- ========================================================= -->
   <div class="modal-overlay" id="addPantryModal" style="display:none;" onclick="if(event.target===this) closeAddPantryModal()">
     <div class="modal-content" style="max-width:460px;">
-      <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:#ffffff; margin-bottom:16px;">+ Nuevo Insumo en Alacena</h3>
+      <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:#ffffff; margin-bottom:16px;">+ Nuevo Insumo / Personalizado</h3>
       
       <form onsubmit="handleAddPantrySubmit(event)">
         <div class="form-group">
           <label>Nombre del Ingrediente *</label>
-          <input type="text" id="inpPantryName" placeholder="Ej: Arroz Carnaroli, Panceta, Pimentón Ahumado" required>
+          <input type="text" id="inpPantryName" list="masterIngredientsList" placeholder="Ej: Arroz Carnaroli, Detergente, Salmón..." required autocomplete="off">
+          <datalist id="masterIngredientsList"></datalist>
         </div>
 
         <div class="form-group">
           <label>Categoría</label>
           <select id="inpPantryCategory">
-            <option value="heladera">❄️ Heladera & Frescos</option>
-            <option value="carnes">🥩 Carnes & Pescados</option>
-            <option value="alacena">🥫 Alacena & Secos</option>
-            <option value="especias">🌿 Condimentos & Especias</option>
-            <option value="cava">🍷 Cava & Bebidas</option>
+            <option value="carnes">🥩 Carnes, Aves, Cerdo & Pescadería</option>
+            <option value="heladera" selected>🥦 Frescos, Verdulería, Frutas & Lácteos</option>
+            <option value="alacena">🥫 Despensa, Secos, Congelados & Limpieza</option>
+            <option value="especias">🌿 Condimentos, Especias, Aceites & Salsas</option>
+            <option value="cava">🍷 Bebidas, Cava & Refrescos</option>
           </select>
         </div>
 
@@ -517,6 +521,48 @@
         <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
           <button type="button" class="btn btn-secondary" onclick="closeAddPantryModal()">Cancelar</button>
           <button type="submit" class="btn btn-primary">Guardar en Alacena</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 6.1 MODAL: AGREGAR AL CARRITO (ESTILO MERCADO LIBRE)      -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="addToCartModal" style="display:none;" onclick="if(event.target===this) closeAddToCartModal()">
+    <div class="modal-content" style="max-width:440px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:#ffffff; margin:0;">🛒 Agregar a Compras</h3>
+        <button class="btn-icon btn-secondary" onclick="closeAddToCartModal()">✕</button>
+      </div>
+
+      <div id="addToCartProductInfo" style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-md); padding:14px; margin-bottom:18px; display:flex; align-items:center; gap:12px;">
+        <!-- Se llena dinámicamente con icono y nombre -->
+      </div>
+
+      <form onsubmit="handleConfirmAddToCart(event)">
+        <input type="hidden" id="inpCartPantryId">
+        <input type="hidden" id="inpCartProductName">
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:14px;">
+          <div class="form-group" style="margin:0;">
+            <label>Cantidad a Comprar *</label>
+            <input type="number" id="inpCartQty" value="1" min="0.1" step="any" required autofocus>
+          </div>
+          <div class="form-group" style="margin:0;">
+            <label>Unidad de Medida</label>
+            <input type="text" id="inpCartUnit" placeholder="kg, g, un, lata..." required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Nota o Marca Opcional</label>
+          <input type="text" id="inpCartNote" placeholder="Ej: Marca favorita o punto de maduración">
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+          <button type="button" class="btn btn-secondary" onclick="closeAddToCartModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" style="font-weight:800; background:linear-gradient(135deg, #ea580c, #f97316); box-shadow:0 4px 14px var(--primary-glow);">🛒 Agregar a Compras</button>
         </div>
       </form>
     </div>

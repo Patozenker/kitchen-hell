@@ -718,22 +718,108 @@ body {
 
 .pantry-stock-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 6px 10px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  gap: 6px;
 }
 
-.pantry-qty-display {
+.pantry-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.pantry-direct-input {
+  width: 70px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  color: #ffffff;
   font-family: var(--font-mono);
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--accent-emerald);
+  text-align: center;
+  padding: 2px 4px;
+  outline: none;
+  transition: all 0.2s ease;
 }
 
-.pantry-qty-display.low-stock {
+.pantry-direct-input:focus {
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background: rgba(234, 88, 12, 0.15);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+.pantry-input-unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.pantry-card-bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.pantry-status-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pantry-status-pill.status-zero {
+  background: rgba(239, 68, 68, 0.15);
   color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.pantry-status-pill.status-low {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pantry-status-pill.status-ok {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.btn-cart-action {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.35);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.btn-cart-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.55);
+  filter: brightness(1.1);
 }
 
 .qty-control-btn {
