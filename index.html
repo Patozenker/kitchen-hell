@@ -18,20 +18,20 @@
 <body>
 
   <!-- ========================================================= -->
-  <!-- 1. CABECERA PRINCIPAL (STICKY)                            -->
+  <!-- 1. HEADER / NAVEGACIÓN SUPERIOR                           -->
   <!-- ========================================================= -->
   <header class="app-header">
-    <div class="brand-wrapper" onclick="switchTab('matcher')">
+    <div class="header-brand" onclick="switchTab('matcher')" style="cursor:pointer;">
       <div class="brand-icon">🔥</div>
       <div>
         <h1 class="brand-title">HELL'S KITCHEN</h1>
-        <div class="brand-subtitle">Cocina Familiar & Alacena Viva</div>
+        <div class="brand-subtitle">Cocina de Autor & Alacena Viva</div>
       </div>
     </div>
 
     <div class="header-actions">
-      <!-- Chip Perfil Familiar / Switcher -->
-      <button class="user-profile-btn" id="btnUserHeader" onclick="openUserProfileModal()" title="Cambiar de miembro familiar">
+      <!-- Chip Perfil de Usuario / Switcher -->
+      <button class="user-profile-btn" id="btnUserHeader" onclick="openUserProfileModal()" title="Cambiar de usuario / chef">
         <span class="user-profile-avatar" id="headerUserAvatar">👨‍🍳</span>
         <span class="user-profile-name" id="headerUserName">Chef Pato</span>
         <span class="user-profile-arrow">▼</span>
@@ -55,7 +55,7 @@
     <section class="hero-card">
       <div class="hero-text">
         <h1 id="heroGreeting">¿Qué cocinamos hoy, Chef Pato? 🔥</h1>
-        <p>Tu asistente culinario familiar que cruza la alacena y la heladera para sugerirte los mejores platos sin desperdiciar nada.</p>
+        <p>Tu asistente culinario que cruza tu alacena y heladera para sugerirte los mejores platos sin desperdiciar nada.</p>
       </div>
 
       <div class="hero-stats">
@@ -75,11 +75,11 @@
           </div>
         </div>
 
-        <div class="stat-pill" onclick="switchTab('recetas')" style="cursor:pointer;" title="Ver todo el recetario familiar">
+        <div class="stat-pill" onclick="switchTab('recetas')" style="cursor:pointer;" title="Ver todo el recetario">
           <span class="stat-icon">📖</span>
           <div>
             <div class="stat-num" id="badgeRecipesCount">0</div>
-            <div class="stat-label">Recetas Familiares</div>
+            <div class="stat-label">Recetas</div>
           </div>
         </div>
       </div>
@@ -130,13 +130,13 @@
         </div>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-          <!-- Filtro por Miembro Familiar / Autor -->
+          <!-- Filtro por Usuario / Autor -->
           <select id="recipeAuthorFilter" class="form-group" style="margin:0; width:auto; padding:8px 12px;" onchange="filterRecipesByAuthor(this.value)">
             <option value="all">👥 Todos los Chefs</option>
           </select>
 
           <div class="filter-pills" id="recipesScopePills">
-            <button class="filter-pill active" onclick="filterRecipesByScope('all', this)">🌐 Toda la Familia</button>
+            <button class="filter-pill active" onclick="filterRecipesByScope('all', this)">🌐 Todas las Públicas</button>
             <button class="filter-pill" onclick="filterRecipesByScope('mine', this)">👤 Mis Recetas</button>
             <button class="filter-pill" onclick="filterRecipesByScope('private', this)">🔒 Privadas</button>
           </div>
@@ -442,17 +442,17 @@
           <input type="text" id="inpRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
         </div>
 
-        <!-- Visibilidad y Autoría Familiar -->
+        <!-- Visibilidad y Autoría -->
         <div class="form-group">
           <label>Visibilidad en Hell's Kitchen</label>
           <div class="visibility-selector">
             <label class="visibility-opt selected" id="lblAddPublic" onclick="setAddRecipeVisibility(false)">
               <input type="radio" name="radAddVisibility" id="radAddPublic" value="public" checked>
-              <span>🌐 Familiar (Pública)</span>
+              <span>🌐 Pública (Comunidad)</span>
             </label>
             <label class="visibility-opt" id="lblAddPrivate" onclick="setAddRecipeVisibility(true)">
               <input type="radio" name="radAddVisibility" id="radAddPrivate" value="private">
-              <span>🔒 Solo para mí (Privada)</span>
+              <span>🔒 Privada (Solo para mí)</span>
             </label>
           </div>
         </div>
@@ -558,17 +558,17 @@
           <input type="text" id="inpEditRecTitle" placeholder="Ej: Risotto de Hongos y Parmesano" required>
         </div>
 
-        <!-- Visibilidad y Autoría Familiar -->
+        <!-- Visibilidad y Autoría -->
         <div class="form-group">
           <label>Visibilidad en Hell's Kitchen</label>
           <div class="visibility-selector">
             <label class="visibility-opt selected" id="lblEditPublic" onclick="setEditRecipeVisibility(false)">
               <input type="radio" name="radEditVisibility" id="radEditPublic" value="public" checked>
-              <span>🌐 Familiar (Pública)</span>
+              <span>🌐 Pública (Comunidad)</span>
             </label>
             <label class="visibility-opt" id="lblEditPrivate" onclick="setEditRecipeVisibility(true)">
               <input type="radio" name="radEditVisibility" id="radEditPrivate" value="private">
-              <span>🔒 Solo para mí (Privada)</span>
+              <span>🔒 Privada (Solo para mí)</span>
             </label>
           </div>
         </div>
@@ -656,32 +656,32 @@
   </div>
 
   <!-- ========================================================= -->
-  <!-- 9. MODAL: LOGIN / PERFILES FAMILIARES                     -->
+  <!-- 9. MODAL: LOGIN / PERFILES DE USUARIOS Y CHEFS            -->
   <!-- ========================================================= -->
   <div class="modal-overlay" id="userProfileModal" style="display:none;" onclick="if(event.target===this) closeUserProfileModal()">
     <div class="modal-content" style="max-width:520px;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-        <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">👥 Chefs de la Familia</h3>
+        <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">👥 Usuarios & Chefs</h3>
         <button class="btn-icon btn-secondary" onclick="closeUserProfileModal()">✕</button>
       </div>
       
       <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:14px;">
-        Seleccioná quién está cocinando hoy para cargar y gestionar sus recetas privadas y de autor.
+        Seleccioná con qué perfil estás cocinando para gestionar tu alacena personal, compras y recetas.
       </p>
 
-      <!-- Lista de Miembros Familiares -->
+      <!-- Lista de Usuarios -->
       <div class="family-grid" id="familyMembersGrid">
         <!-- Renderizado dinámico de tarjetas de miembros -->
       </div>
 
-      <!-- Formulario para Agregar Nuevo Miembro Familiar -->
+      <!-- Formulario para Agregar Nuevo Usuario -->
       <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:14px;">
-        <h4 style="color:#ffffff; font-size:0.95rem; margin-bottom:10px;">+ Sumar un nuevo Chef a la Familia</h4>
+        <h4 style="color:#ffffff; font-size:0.95rem; margin-bottom:10px;">+ Crear Nuevo Usuario / Chef</h4>
         <form onsubmit="handleCreateFamilyMember(event)">
           <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px; align-items:end;">
             <div class="form-group" style="margin:0;">
-              <label>Nombre / Apodo *</label>
-              <input type="text" id="inpNewUserName" placeholder="Ej: Papá, Sofi, Abuela" required>
+              <label>Nombre de Usuario / Chef *</label>
+              <input type="text" id="inpNewUserName" placeholder="Ej: Gastón, Sofía, Martín" required>
             </div>
             <div class="form-group" style="margin:0;">
               <label>Avatar / Emoji</label>
@@ -699,7 +699,7 @@
             </div>
           </div>
           <button type="submit" class="btn btn-outline btn-sm" style="margin-top:12px; width:100%;">
-            ✨ Agregar a la Familia
+            ✨ Crear Usuario
           </button>
         </form>
       </div>
