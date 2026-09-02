@@ -178,6 +178,14 @@ function loadState() {
         }
       });
 
+      // Asegurar menú semanal y notas
+      if (!appState.weeklyMenu || typeof appState.weeklyMenu !== 'object' || Object.keys(appState.weeklyMenu).length === 0) {
+        appState.weeklyMenu = (typeof DEFAULT_WEEKLY_MENU !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_WEEKLY_MENU)) : {};
+      }
+      if (!appState.weeklyNotes || typeof appState.weeklyNotes !== 'object') {
+        appState.weeklyNotes = (typeof DEFAULT_WEEKLY_NOTES !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_WEEKLY_NOTES)) : {};
+      }
+
       // Asegurar autoría, comentarios y privacidad en todas las recetas
       if (Array.isArray(appState.recipes)) {
         appState.recipes.forEach(r => {
@@ -1096,6 +1104,7 @@ function switchTab(tabName) {
   // Renderizar contenido
   if (tabName === 'matcher') renderSmartMatcher();
   if (tabName === 'recetas') renderRecipesView();
+  if (tabName === 'menu') renderWeeklyMenuView();
   if (tabName === 'alacena') renderPantryView();
   if (tabName === 'compras') renderShoppingView();
 
@@ -1346,6 +1355,535 @@ function filterRecipesByCat(cat, btnEl) {
 function handleRecipeSearch(query) {
   currentRecipeSearch = query.trim();
   renderRecipesView();
+}
+
+// =========================================================
+// 5.5 VISTA: MENÚ SEMANAL DEL HOGAR (4 COMIDAS & MULTI-USUARIO)
+// =========================================================
+
+let currentMenuDayFilter = 'all'; // 'all' | 'lunes' | 'martes' | ...
+
+const DAYS_OF_WEEK = [
+  { key: 'lunes', name: 'Lunes', icon: '☀️' },
+  { key: 'martes', name: 'Martes', icon: '🍳' },
+  { key: 'miercoles', name: 'Miércoles', icon: '🍲' },
+  { key: 'jueves', name: 'Jueves', icon: '🍝' },
+  { key: 'viernes', name: 'Viernes', icon: '🍕' },
+  { key: 'sabado', name: 'Sábado', icon: '🍔' },
+  { key: 'domingo', name: 'Domingo', icon: '🥩' }
+];
+
+const MEALS_OF_DAY = [
+  { key: 'desayuno', name: 'Desayuno', icon: '☕' },
+  { key: 'almuerzo', name: 'Almuerzo', icon: '☀️' },
+  { key: 'merienda', name: 'Merienda', icon: '🥐' },
+  { key: 'cena', name: 'Cena', icon: '🌙' }
+];
+
+function renderWeeklyMenuView() {
+  const container = document.getElementById('weeklyMenuContainer');
+  if (!container) return;
+
+  if (!appState.weeklyMenu) appState.weeklyMenu = {};
+  if (!appState.weeklyNotes) appState.weeklyNotes = {};
+
+  const daysToShow = currentMenuDayFilter === 'all'
+    ? DAYS_OF_WEEK
+    : DAYS_OF_WEEK.filter(d => d.key === currentMenuDayFilter);
+
+  const curUser = getCurrentUser() || { name: 'Chef', avatar: '👨‍🍳' };
+
+  let html = '';
+
+  daysToShow.forEach(day => {
+    const dayMenu = appState.weeklyMenu[day.key] || {};
+    const dayNote = appState.weeklyNotes[day.key] || '';
+
+    html += `
+      <div class="menu-day-card" id="menuDayCard_${day.key}">
+        <div class="menu-day-header">
+          <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+            <div class="menu-day-title">
+              <span>${day.icon}</span>
+              <span>${day.name}</span>
+            </div>
+            ${dayNote ? `
+              <div class="menu-day-note-badge" onclick="openDayNoteModal('${day.key}')" title="Hacer click para editar nota">
+                <span>📝 ${escapeAttr(dayNote)}</span>
+              </div>
+            ` : ''}
+          </div>
+
+          <button class="btn btn-outline btn-sm" onclick="openDayNoteModal('${day.key}')" style="font-size:0.75rem; padding:3px 8px;">
+            ${dayNote ? '✏️ Editar Nota' : '📝 + Nota del Día'}
+          </button>
+        </div>
+
+        <div class="menu-meals-grid">
+          ${MEALS_OF_DAY.map(meal => {
+            const options = Array.isArray(dayMenu[meal.key]) ? dayMenu[meal.key] : [];
+
+            return `
+              <div class="menu-meal-block">
+                <div>
+                  <div class="menu-meal-header">
+                    <div class="menu-meal-title">
+                      <span>${meal.icon}</span>
+                      <span>${meal.name}</span>
+                    </div>
+                    <span style="font-size:0.75rem; color:var(--text-dim); font-weight:700;">${options.length} ${options.length === 1 ? 'opción' : 'opciones'}</span>
+                  </div>
+
+                  <div class="menu-options-list">
+                    ${options.length === 0 ? `
+                      <div style="font-size:0.78rem; color:var(--text-dim); padding:10px 0; text-align:center; font-style:italic;">
+                        Sin platos elegidos todavía
+                      </div>
+                    ` : options.map(opt => {
+                      const recipe = opt.recipeId ? (appState.recipes || []).find(r => r.id === opt.recipeId) : null;
+                      return `
+                        <div class="menu-option-card">
+                          <div style="flex:1; min-width:0;">
+                            <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px; flex-wrap:wrap;">
+                              <span class="menu-member-chip">${opt.userAvatar || '👨‍🍳'} ${escapeAttr(opt.userName || 'Familia')}</span>
+                              ${recipe ? `<span style="font-size:0.7rem; color:var(--accent-gold); font-weight:800; cursor:pointer;" onclick="openRecipeDetailModal('${recipe.id}')">📖 Ver Receta</span>` : ''}
+                            </div>
+                            <div class="menu-option-title">${escapeAttr(opt.title)}</div>
+                            ${opt.notes ? `<div class="menu-option-note">💬 ${escapeAttr(opt.notes)}</div>` : ''}
+                          </div>
+                          <button class="btn-icon btn-danger btn-sm" onclick="deleteMenuOption('${day.key}', '${meal.key}', '${opt.id}')" title="Eliminar opción" style="width:24px; height:24px; font-size:0.7rem;">🗑️</button>
+                        </div>
+                      `;
+                    }).join('')}
+                  </div>
+                </div>
+
+                <button class="menu-btn-add" onclick="openAddMenuOptionModal('${day.key}', '${meal.key}')">
+                  <span>+ Mi Opción (${escapeAttr(curUser.name.split(' ')[0])})</span>
+                </button>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+function filterMenuByDay(day, btnEl) {
+  currentMenuDayFilter = day;
+  document.querySelectorAll('#menuDayFilterPills .filter-pill').forEach(b => b.classList.remove('active'));
+  if (btnEl) btnEl.classList.add('active');
+  renderWeeklyMenuView();
+}
+
+function openAddMenuOptionModal(defaultDay = 'lunes', defaultMeal = 'almuerzo') {
+  const modal = document.getElementById('addMenuOptionModal');
+  const selDay = document.getElementById('inpMenuDay');
+  const selMeal = document.getElementById('inpMenuMeal');
+  const selMember = document.getElementById('inpMenuMember');
+  const selRecipe = document.getElementById('inpMenuRecipeId');
+  const inpCustomTitle = document.getElementById('inpMenuCustomTitle');
+  const inpCustomIngs = document.getElementById('inpMenuCustomIngredients');
+  const inpNotes = document.getElementById('inpMenuNotes');
+
+  if (selDay) selDay.value = defaultDay;
+  if (selMeal) selMeal.value = defaultMeal;
+
+  // Llenar selector de miembros
+  if (selMember) {
+    const curUid = getCurrentUserId();
+    const users = appState.users || [];
+    selMember.innerHTML = `
+      <option value="familia">👨‍🍳 Toda la Familia (Plato Compartido)</option>
+      ${users.map(u => `
+        <option value="${u.id}" ${u.id === curUid ? 'selected' : ''}>
+          ${u.avatar || '👨‍🍳'} ${escapeAttr(u.name)} (${escapeAttr(u.profession || 'Miembro')})
+        </option>
+      `).join('')}
+    `;
+  }
+
+  // Llenar selector de recetas
+  if (selRecipe) {
+    const recipes = appState.recipes || [];
+    selRecipe.innerHTML = recipes.map(r => `
+      <option value="${r.id}">
+        ${r.image ? '🥘' : '📖'} ${escapeAttr(r.title)} (${getCategoryName(r.category)} · ⏱️ ${r.time}m)
+      </option>
+    `).join('');
+  }
+
+  // Preseleccionar tipo según la comida
+  const isBreakfastOrSnack = defaultMeal === 'desayuno' || defaultMeal === 'merienda';
+  const radCustom = document.querySelector('input[name="menuOptionType"][value="custom"]');
+  const radRecipe = document.querySelector('input[name="menuOptionType"][value="recipe"]');
+  if (isBreakfastOrSnack) {
+    if (radCustom) radCustom.checked = true;
+    toggleMenuOptionType('custom');
+  } else {
+    if (radRecipe) radRecipe.checked = true;
+    toggleMenuOptionType('recipe');
+  }
+
+  if (inpCustomTitle) inpCustomTitle.value = '';
+  if (inpCustomIngs) inpCustomIngs.value = '';
+  if (inpNotes) inpNotes.value = '';
+
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeAddMenuOptionModal() {
+  const modal = document.getElementById('addMenuOptionModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function toggleMenuOptionType(type) {
+  const grpRecipe = document.getElementById('menuRecipeSelectGroup');
+  const grpCustom = document.getElementById('menuCustomSelectGroup');
+  if (type === 'recipe') {
+    if (grpRecipe) grpRecipe.style.display = 'block';
+    if (grpCustom) grpCustom.style.display = 'none';
+  } else {
+    if (grpRecipe) grpRecipe.style.display = 'none';
+    if (grpCustom) grpCustom.style.display = 'block';
+  }
+}
+
+function handleSaveMenuOptionSubmit(e) {
+  if (e) e.preventDefault();
+
+  const day = document.getElementById('inpMenuDay')?.value || 'lunes';
+  const meal = document.getElementById('inpMenuMeal')?.value || 'almuerzo';
+  const memberId = document.getElementById('inpMenuMember')?.value || 'familia';
+  const optionType = document.querySelector('input[name="menuOptionType"]:checked')?.value || 'recipe';
+  const notes = document.getElementById('inpMenuNotes')?.value.trim() || '';
+
+  let memberName = 'Familia';
+  let memberAvatar = '👨‍🍳';
+
+  if (memberId !== 'familia') {
+    const u = (appState.users || []).find(user => user.id === memberId);
+    if (u) {
+      memberName = u.name;
+      memberAvatar = u.avatar || '👨‍🍳';
+    }
+  }
+
+  let title = '';
+  let recipeId = null;
+  let ingredients = [];
+
+  if (optionType === 'recipe') {
+    recipeId = document.getElementById('inpMenuRecipeId')?.value;
+    const rec = (appState.recipes || []).find(r => r.id === recipeId);
+    if (!rec) {
+      showToast('Seleccioná una receta válida.', 'error');
+      return;
+    }
+    title = rec.title;
+    ingredients = rec.ingredients || [];
+  } else {
+    title = document.getElementById('inpMenuCustomTitle')?.value.trim();
+    if (!title) {
+      showToast('Ingresá el nombre del plato personalizado.', 'error');
+      return;
+    }
+    const rawIngs = document.getElementById('inpMenuCustomIngredients')?.value.trim();
+    if (rawIngs) {
+      ingredients = rawIngs.split(',').map(s => {
+        const trimmed = s.trim();
+        const parsed = parseQuantityAndUnit(trimmed);
+        return {
+          name: parsed.unitName ? trimmed.replace(new RegExp(`^${parsed.numericQty}\\s*`), '') : trimmed,
+          qty: parsed.numericQty || 1,
+          unit: parsed.baseUnit || 'un'
+        };
+      });
+    } else {
+      ingredients = [{ name: title, qty: 1, unit: 'un' }];
+    }
+  }
+
+  if (!appState.weeklyMenu) appState.weeklyMenu = {};
+  if (!appState.weeklyMenu[day]) appState.weeklyMenu[day] = {};
+  if (!Array.isArray(appState.weeklyMenu[day][meal])) appState.weeklyMenu[day][meal] = [];
+
+  const newOption = {
+    id: `opt-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+    userId: memberId,
+    userName: memberName,
+    userAvatar: memberAvatar,
+    recipeId: recipeId,
+    title: title,
+    notes: notes,
+    ingredients: ingredients
+  };
+
+  appState.weeklyMenu[day][meal].push(newOption);
+  saveState();
+  renderWeeklyMenuView();
+  closeAddMenuOptionModal();
+
+  showToast(`✨ Opción agregada para ${memberName} en ${day.toUpperCase()} (${meal})`, 'success');
+}
+
+function deleteMenuOption(day, meal, optionId) {
+  if (!appState.weeklyMenu || !appState.weeklyMenu[day] || !Array.isArray(appState.weeklyMenu[day][meal])) return;
+  appState.weeklyMenu[day][meal] = appState.weeklyMenu[day][meal].filter(o => o.id !== optionId);
+  saveState();
+  renderWeeklyMenuView();
+  showToast('🗑️ Opción eliminada del menú semanal.', 'info');
+}
+
+// Modal de Notas del Día
+function openDayNoteModal(dayKey) {
+  const modal = document.getElementById('dayNoteModal');
+  const titleEl = document.getElementById('dayNoteModalTitle');
+  const inpKey = document.getElementById('inpDayNoteKey');
+  const inpText = document.getElementById('inpDayNoteText');
+
+  const dayObj = DAYS_OF_WEEK.find(d => d.key === dayKey) || { name: dayKey };
+  if (titleEl) titleEl.innerText = `📝 Nota para el ${dayObj.name}`;
+  if (inpKey) inpKey.value = dayKey;
+  if (inpText) inpText.value = (appState.weeklyNotes && appState.weeklyNotes[dayKey]) || '';
+
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeDayNoteModal() {
+  const modal = document.getElementById('dayNoteModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function handleSaveDayNoteSubmit(e) {
+  if (e) e.preventDefault();
+  const key = document.getElementById('inpDayNoteKey')?.value;
+  const text = document.getElementById('inpDayNoteText')?.value.trim();
+
+  if (!key) return;
+  if (!appState.weeklyNotes) appState.weeklyNotes = {};
+
+  if (text) {
+    appState.weeklyNotes[key] = text;
+    showToast(`📝 Nota guardada para el ${key}.`, 'success');
+  } else {
+    delete appState.weeklyNotes[key];
+  }
+
+  saveState();
+  renderWeeklyMenuView();
+  closeDayNoteModal();
+}
+
+function handleDeleteDayNote() {
+  const key = document.getElementById('inpDayNoteKey')?.value;
+  if (key && appState.weeklyNotes && appState.weeklyNotes[key]) {
+    delete appState.weeklyNotes[key];
+    saveState();
+    renderWeeklyMenuView();
+    closeDayNoteModal();
+    showToast('🗑️ Nota eliminada.', 'info');
+  }
+}
+
+// Modal de Grupo Familiar & Creación de Miembros con Contraseña
+function openFamilyMembersModal() {
+  const modal = document.getElementById('familyMembersModal');
+  if (!modal) return;
+  renderFamilyMembersList();
+  modal.style.display = 'flex';
+}
+
+function closeFamilyMembersModal() {
+  const modal = document.getElementById('familyMembersModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function renderFamilyMembersList() {
+  const container = document.getElementById('familyMembersListContainer');
+  if (!container) return;
+
+  const users = appState.users || [];
+  const curUid = getCurrentUserId();
+
+  container.innerHTML = users.map(u => `
+    <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px 14px; display:flex; justify-content:space-between; align-items:center;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="font-size:1.6rem; line-height:1;">${u.avatar || '👨‍🍳'}</span>
+        <div>
+          <div style="font-weight:700; color:#ffffff; font-size:0.92rem;">
+            ${escapeAttr(u.name)} ${u.id === curUid ? '<span style="font-size:0.68rem; color:var(--primary-light); font-weight:800; background:rgba(234,88,12,0.15); padding:1px 6px; border-radius:10px;">(Sesión Activa)</span>' : ''}
+          </div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">
+            Usuario: <strong>${escapeAttr(u.email || u.id)}</strong> • Clave: <code>${escapeAttr(u.password || '***')}</code>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; gap:6px;">
+        ${u.id !== curUid ? `
+          <button class="btn btn-secondary btn-sm" style="padding:4px 8px; font-size:0.74rem;" onclick="switchUser('${u.id}'); closeFamilyMembersModal();">Ingresar como</button>
+        ` : ''}
+        ${u.id !== 'user-pato' && u.id !== curUid ? `
+          <button class="btn-icon btn-danger btn-sm" onclick="deleteFamilyMember('${u.id}')" title="Eliminar miembro">🗑️</button>
+        ` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function handleCreateFamilyMemberSubmit(e) {
+  if (e) e.preventDefault();
+  const name = document.getElementById('inpFamName')?.value.trim();
+  const avatar = document.getElementById('inpFamAvatar')?.value || '👨‍🍳';
+  const username = document.getElementById('inpFamUsername')?.value.trim();
+  const password = document.getElementById('inpFamPassword')?.value.trim();
+
+  if (!name || !username || !password) {
+    showToast('Completá todos los campos requeridos.', 'error');
+    return;
+  }
+
+  // Chequear si el usuario ya existe
+  const exists = (appState.users || []).some(u => (u.email && u.email.toLowerCase() === username.toLowerCase()) || u.id === `user-${username.toLowerCase()}`);
+  if (exists) {
+    showToast('Ese nombre de usuario ya está registrado en el hogar.', 'error');
+    return;
+  }
+
+  const newUserId = `user-${username.toLowerCase().replace(/\s+/g, '')}`;
+  const newUser = {
+    id: newUserId,
+    name: name,
+    email: username,
+    password: password,
+    avatar: avatar,
+    profession: 'Miembro del Hogar',
+    role: 'user',
+    marketing_opt_in: false,
+    createdAt: new Date().toISOString()
+  };
+
+  if (!Array.isArray(appState.users)) appState.users = [];
+  appState.users.push(newUser);
+
+  // Inicializar alacena y lista de compras
+  if (!appState.pantries) appState.pantries = {};
+  appState.pantries[newUserId] = (typeof createEmptyUserPantry === 'function') ? createEmptyUserPantry() : [];
+
+  if (!appState.shoppingLists) appState.shoppingLists = {};
+  appState.shoppingLists[newUserId] = [];
+
+  saveState();
+  if (typeof pushUserToSupabase === 'function') pushUserToSupabase(newUser);
+
+  // Limpiar campos
+  document.getElementById('inpFamName').value = '';
+  document.getElementById('inpFamUsername').value = '';
+  document.getElementById('inpFamPassword').value = '';
+
+  renderFamilyMembersList();
+  renderWeeklyMenuView();
+  showToast(`🎉 ¡Integrante "${name}" creado con éxito! Ya puede ingresar con clave "${password}".`, 'success');
+}
+
+function deleteFamilyMember(userId) {
+  if (userId === 'user-pato' || userId === getCurrentUserId()) {
+    showToast('No se puede eliminar la cuenta principal activa.', 'error');
+    return;
+  }
+  const u = (appState.users || []).find(user => user.id === userId);
+  if (confirm(`¿Eliminar a ${u ? u.name : 'este miembro'} del hogar?`)) {
+    appState.users = appState.users.filter(user => user.id !== userId);
+    saveState();
+    renderFamilyMembersList();
+    renderWeeklyMenuView();
+    showToast('🗑️ Miembro eliminado del hogar.', 'info');
+  }
+}
+
+// 🛒 CARGAR MENÚ SEMANAL A LA LISTA DE COMPRAS
+function loadMenuToShoppingList() {
+  const uid = getCurrentUserId();
+  if (!appState.weeklyMenu) {
+    showToast('No hay opciones cargadas en el menú semanal.', 'info');
+    return;
+  }
+
+  let totalAdded = 0;
+
+  DAYS_OF_WEEK.forEach(day => {
+    const dayMenu = appState.weeklyMenu[day.key] || {};
+    MEALS_OF_DAY.forEach(meal => {
+      const options = Array.isArray(dayMenu[meal.key]) ? dayMenu[meal.key] : [];
+      options.forEach(opt => {
+        if (opt.recipeId) {
+          const rec = (appState.recipes || []).find(r => r.id === opt.recipeId);
+          if (rec && Array.isArray(rec.ingredients)) {
+            rec.ingredients.forEach(ing => {
+              addOrMergeShoppingItem({
+                name: ing.name,
+                qty: ing.qty || 1,
+                unit: ing.unit || '',
+                note: `Menú ${day.name} (${meal.name})`,
+                canonicalId: ing.requiredId || ''
+              });
+              totalAdded++;
+            });
+          }
+        } else if (Array.isArray(opt.ingredients) && opt.ingredients.length > 0) {
+          opt.ingredients.forEach(ing => {
+            addOrMergeShoppingItem({
+              name: ing.name,
+              qty: ing.qty || 1,
+              unit: ing.unit || '',
+              note: `Menú ${day.name} (${meal.name}) - ${opt.userName}`
+            });
+            totalAdded++;
+          });
+        } else if (opt.title) {
+          addOrMergeShoppingItem({
+            name: opt.title,
+            qty: 1,
+            unit: 'un',
+            note: `Menú ${day.name} (${meal.name}) - ${opt.userName}`
+          });
+          totalAdded++;
+        }
+      });
+    });
+  });
+
+  if (totalAdded === 0) {
+    showToast('No se encontraron platos con ingredientes en el menú semanal.', 'info');
+    return;
+  }
+
+  saveState();
+  updateHeaderBadges();
+  if (currentTab === 'compras') renderShoppingView();
+
+  showToast(`🛒 ¡Se sumaron ${totalAdded} ingredientes del Menú Semanal a tu Lista de Compras!`, 'success');
+}
+
+function clearWeeklyMenu() {
+  if (confirm('¿Deseas reiniciar todas las comidas del Menú Semanal para arrancar una nueva semana?')) {
+    appState.weeklyMenu = {
+      lunes: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+      martes: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+      miercoles: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+      jueves: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+      viernes: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+      sabado: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+      domingo: { desayuno: [], almuerzo: [], merienda: [], cena: [] }
+    };
+    appState.weeklyNotes = {};
+    saveState();
+    renderWeeklyMenuView();
+    showToast('🔄 Menú semanal reiniciado.', 'info');
+  }
 }
 
 // =========================================================
@@ -3660,6 +4198,31 @@ window.addOrMergeShoppingItem = addOrMergeShoppingItem;
 window.parseQuantityAndUnit = parseQuantityAndUnit;
 window.formatBaseQuantity = formatBaseQuantity;
 window.updateMasterIngredientsDatalist = updateMasterIngredientsDatalist;
+window.renderWeeklyMenuView = renderWeeklyMenuView;
+window.filterMenuByDay = filterMenuByDay;
+window.openAddMenuOptionModal = openAddMenuOptionModal;
+window.closeAddMenuOptionModal = closeAddMenuOptionModal;
+window.toggleMenuOptionType = toggleMenuOptionType;
+window.handleSaveMenuOptionSubmit = handleSaveMenuOptionSubmit;
+window.deleteMenuOption = deleteMenuOption;
+window.openDayNoteModal = openDayNoteModal;
+window.closeDayNoteModal = closeDayNoteModal;
+window.handleSaveDayNoteSubmit = handleSaveDayNoteSubmit;
+window.handleDeleteDayNote = handleDeleteDayNote;
+window.openFamilyMembersModal = openFamilyMembersModal;
+window.closeFamilyMembersModal = closeFamilyMembersModal;
+window.renderFamilyMembersList = renderFamilyMembersList;
+window.handleCreateFamilyMemberSubmit = handleCreateFamilyMemberSubmit;
+window.deleteFamilyMember = deleteFamilyMember;
+window.loadMenuToShoppingList = loadMenuToShoppingList;
+window.clearWeeklyMenu = clearWeeklyMenu;
+window.stepPantryQty = stepPantryQty;
+window.setDirectPantryQty = setDirectPantryQty;
+window.changePantryItemUnit = changePantryItemUnit;
+window.openAddToCartModal = openAddToCartModal;
+window.closeAddToCartModal = closeAddToCartModal;
+window.handleConfirmAddToCart = handleConfirmAddToCart;
+window.finishShoppingAndAddToPantry = finishShoppingAndAddToPantry;
 window.setFormRating = setFormRating;
 window.calculateRecipeRatings = calculateRecipeRatings;
 window.renderRecipeComments = renderRecipeComments;

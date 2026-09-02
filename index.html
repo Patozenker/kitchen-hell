@@ -159,7 +159,51 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- VISTA 3: MI ALACENA & HELADERA (POR CHEF)                 -->
+    <!-- VISTA 3: MENÚ SEMANAL DEL HOGAR (4 COMIDAS & MULTI-USUARIO)-->
+    <!-- ========================================================= -->
+    <section id="view-menu" class="tab-view" style="display:none;">
+      <div class="toolbar-row" style="margin-bottom:18px;">
+        <div>
+          <h2 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;" id="weeklyMenuSectionTitle">📅 Menú Semanal del Hogar</h2>
+          <p style="font-size:0.85rem; color:var(--text-muted);" id="weeklyMenuSectionSubtitle">Planificá las 4 comidas para cada miembro de la familia y sincronizá con el supermercado.</p>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="btn btn-primary btn-sm btn-load-menu-shopping" onclick="loadMenuToShoppingList()" title="Cargar todos los ingredientes del menú semanal a la Lista de Compras">
+            🛒 Cargar Menú a Lista de Compras
+          </button>
+          <button class="btn btn-outline btn-sm" onclick="openFamilyMembersModal()" title="Administrar usuarios y contraseñas de la familia">
+            👥 Grupo Familiar
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="openAddMenuOptionModal()" title="Agregar plato o receta al menú">
+            + Agregar Plato
+          </button>
+          <button class="btn btn-danger btn-sm" onclick="clearWeeklyMenu()" title="Reiniciar menú de la semana">
+            🔄 Limpiar
+          </button>
+        </div>
+      </div>
+
+      <!-- Filtro de Días -->
+      <div class="filter-pills" id="menuDayFilterPills" style="margin-bottom:20px;">
+        <button class="filter-pill active" onclick="filterMenuByDay('all', this)">📋 Toda la Semana</button>
+        <button class="filter-pill" onclick="filterMenuByDay('lunes', this)">Lunes</button>
+        <button class="filter-pill" onclick="filterMenuByDay('martes', this)">Martes</button>
+        <button class="filter-pill" onclick="filterMenuByDay('miercoles', this)">Miércoles</button>
+        <button class="filter-pill" onclick="filterMenuByDay('jueves', this)">Jueves</button>
+        <button class="filter-pill" onclick="filterMenuByDay('viernes', this)">Viernes</button>
+        <button class="filter-pill" onclick="filterMenuByDay('sabado', this)">Sábado</button>
+        <button class="filter-pill" onclick="filterMenuByDay('domingo', this)">Domingo</button>
+      </div>
+
+      <!-- Contenedor del Menú Semanal -->
+      <div class="menu-week-grid" id="weeklyMenuContainer">
+        <!-- Renderizado dinámico de los 7 días y 4 comidas -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VISTA 4: MI ALACENA & HELADERA (POR CHEF)                 -->
     <!-- ========================================================= -->
     <section id="view-alacena" class="tab-view" style="display:none;">
       <div style="margin-bottom:14px;">
@@ -237,6 +281,10 @@
     <button class="nav-item" data-tab="recetas" onclick="switchTab('recetas')">
       <span class="nav-icon">📖</span>
       <span>Recetario</span>
+    </button>
+    <button class="nav-item" data-tab="menu" onclick="switchTab('menu')">
+      <span class="nav-icon">📅</span>
+      <span>Menú</span>
     </button>
     <button class="nav-item" data-tab="alacena" onclick="switchTab('alacena')">
       <span class="nav-icon">🧊</span>
@@ -578,6 +626,189 @@
           <button type="submit" class="btn btn-primary" style="font-weight:800; background:linear-gradient(135deg, #ea580c, #f97316); box-shadow:0 4px 14px var(--primary-glow);">🛒 Agregar a Compras</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 6.2 MODAL: AGREGAR OPCIÓN AL MENÚ SEMANAL                 -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="addMenuOptionModal" style="display:none;" onclick="if(event.target===this) closeAddMenuOptionModal()">
+    <div class="modal-content" style="max-width:540px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:#ffffff; margin:0;">📅 Agregar al Menú Semanal</h3>
+        <button class="btn-icon btn-secondary" onclick="closeAddMenuOptionModal()">✕</button>
+      </div>
+
+      <form onsubmit="handleSaveMenuOptionSubmit(event)">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:14px;">
+          <div class="form-group" style="margin:0;">
+            <label>Día de la Semana *</label>
+            <select id="inpMenuDay" required>
+              <option value="lunes">Lunes</option>
+              <option value="martes">Martes</option>
+              <option value="miercoles">Miércoles</option>
+              <option value="jueves">Jueves</option>
+              <option value="viernes">Viernes</option>
+              <option value="sabado">Sábado</option>
+              <option value="domingo">Domingo</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin:0;">
+            <label>Momento de Comida *</label>
+            <select id="inpMenuMeal" required>
+              <option value="desayuno">☕ Desayuno</option>
+              <option value="almuerzo" selected>☀️ Almuerzo</option>
+              <option value="merienda">🥐 Merienda</option>
+              <option value="cena">🌙 Cena</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>¿Para quién es este plato? (Miembro de la Familia) *</label>
+          <select id="inpMenuMember" required>
+            <!-- Se llena con los miembros de la familia -->
+          </select>
+        </div>
+
+        <!-- Tipo de Opción: Recetario vs Personalizado -->
+        <div class="form-group">
+          <label>Tipo de Plato</label>
+          <div style="display:flex; gap:16px; margin-top:4px;">
+            <label style="display:flex; align-items:center; gap:6px; cursor:pointer; color:#ffffff; font-weight:700;">
+              <input type="radio" name="menuOptionType" value="recipe" checked onchange="toggleMenuOptionType(this.value)">
+              <span>📖 Receta del Recetario</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:6px; cursor:pointer; color:#ffffff; font-weight:700;">
+              <input type="radio" name="menuOptionType" value="custom" onchange="toggleMenuOptionType(this.value)">
+              <span>✏️ Plato Personalizado</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Selector de Receta del Catálogo -->
+        <div class="form-group" id="menuRecipeSelectGroup">
+          <label>Seleccionar Receta *</label>
+          <select id="inpMenuRecipeId">
+            <!-- Se llena con las recetas del recetario -->
+          </select>
+        </div>
+
+        <!-- Inputs de Plato Personalizado -->
+        <div id="menuCustomSelectGroup" style="display:none;">
+          <div class="form-group">
+            <label>Nombre del Plato Personalizado *</label>
+            <input type="text" id="inpMenuCustomTitle" placeholder="Ej: Tostadas con huevo revuelto, Café con leche y galletitas...">
+          </div>
+          <div class="form-group">
+            <label>Ingredientes a comprar (separados por coma)</label>
+            <input type="text" id="inpMenuCustomIngredients" placeholder="Ej: 2 huevos, pan de molde, manteca">
+            <small style="color:var(--text-muted); font-size:0.75rem;">Se sumarán a la Lista de Compras al cargar el menú semanal.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Nota o Preferencia Opcional</label>
+          <input type="text" id="inpMenuNotes" placeholder="Ej: Sin sal, bien tostado, con edulcorante...">
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+          <button type="button" class="btn btn-secondary" onclick="closeAddMenuOptionModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" style="font-weight:800;">✨ Guardar en Menú</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 6.3 MODAL: NOTA DEL DÍA EN EL CALENDARIO                  -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="dayNoteModal" style="display:none;" onclick="if(event.target===this) closeDayNoteModal()">
+    <div class="modal-content" style="max-width:440px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.3rem; color:#ffffff; margin:0;" id="dayNoteModalTitle">📝 Nota del Día</h3>
+        <button class="btn-icon btn-secondary" onclick="closeDayNoteModal()">✕</button>
+      </div>
+
+      <form onsubmit="handleSaveDayNoteSubmit(event)">
+        <input type="hidden" id="inpDayNoteKey">
+        <div class="form-group">
+          <label>Escribí un recordatorio o evento para este día:</label>
+          <input type="text" id="inpDayNoteText" placeholder="Ej: Cena con amigos, Hoy cocina Sofía, Delivery de sushi..." required autofocus>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
+          <button type="button" class="btn btn-danger btn-sm" onclick="handleDeleteDayNote()">🗑️ Borrar</button>
+          <div style="display:flex; gap:10px;">
+            <button type="button" class="btn btn-secondary" onclick="closeDayNoteModal()">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 6.4 MODAL: GRUPO FAMILIAR & SUB-USUARIOS DEL HOGAR        -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="familyMembersModal" style="display:none;" onclick="if(event.target===this) closeFamilyMembersModal()">
+    <div class="modal-content" style="max-width:620px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:#ffffff; margin:0;">👥 Grupo Familiar / Hogar</h3>
+        <button class="btn-icon btn-secondary" onclick="closeFamilyMembersModal()">✕</button>
+      </div>
+
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:18px;">
+        Administrá los integrantes de la familia. Cada uno puede tener su usuario y contraseña para ingresar desde su celular y elegir sus platos.
+      </p>
+
+      <!-- Lista de Miembros Actuales -->
+      <div style="margin-bottom:20px;">
+        <h4 style="color:#ffffff; font-size:0.95rem; margin-bottom:10px;">Miembros del Hogar:</h4>
+        <div id="familyMembersListContainer" style="display:flex; flex-direction:column; gap:8px;">
+          <!-- Renderizado dinámico de miembros -->
+        </div>
+      </div>
+
+      <!-- Formulario para Crear / Agregar Nuevo Miembro -->
+      <div style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-md); padding:16px;">
+        <h4 style="color:var(--primary-light); font-size:0.95rem; margin-bottom:12px;">+ Crear Nuevo Integrante</h4>
+        <form onsubmit="handleCreateFamilyMemberSubmit(event)">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+            <div class="form-group" style="margin:0;">
+              <label>Nombre *</label>
+              <input type="text" id="inpFamName" placeholder="Ej: Joaco, Lucila, Mamá..." required>
+            </div>
+            <div class="form-group" style="margin:0;">
+              <label>Emoji / Avatar</label>
+              <select id="inpFamAvatar">
+                <option value="👦">👦 Joaco / Hijo</option>
+                <option value="👩">👩 Lucila / Hija / Pareja</option>
+                <option value="👨‍🍳" selected>👨‍🍳 Chef / Cocinero</option>
+                <option value="👧">👧 Niña</option>
+                <option value="👵">👵 Abuela</option>
+                <option value="👴">👴 Abuelo</option>
+                <option value="🧑">🧑 Persona</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+            <div class="form-group" style="margin:0;">
+              <label>Usuario para Login *</label>
+              <input type="text" id="inpFamUsername" placeholder="Ej: joaco" required>
+            </div>
+            <div class="form-group" style="margin:0;">
+              <label>Contraseña *</label>
+              <input type="text" id="inpFamPassword" placeholder="Ej: 123" required>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end;">
+            <button type="submit" class="btn btn-primary btn-sm" style="font-weight:800;">+ Agregar al Hogar</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 

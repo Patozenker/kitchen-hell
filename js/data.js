@@ -238,7 +238,7 @@ const MASTER_PANTRY_CATALOG = [
   { id: 'ing-211', name: 'Fósforos / Encendedor de cocina', category: 'alacena', qty: 0, unit: 'caja/un', minQty: 1, icon: '🔥' }
 ];
 
-// 👥 Usuarios por Defecto (Hell's Kitchen Community)
+// 👥 Usuarios por Defecto (Hell's Kitchen Community & Familia)
 const DEFAULT_USERS = [
   {
     id: 'user-pato',
@@ -248,9 +248,74 @@ const DEFAULT_USERS = [
     password: 'pato',
     avatar: '👨‍🍳',
     role: 'admin'
+  },
+  {
+    id: 'user-joaco',
+    name: 'Joaco',
+    email: 'joaco@familia.com',
+    profession: 'Hijo / Gourmet',
+    password: '123',
+    avatar: '👦',
+    role: 'user'
+  },
+  {
+    id: 'user-lucila',
+    name: 'Lucila',
+    email: 'lucila@familia.com',
+    profession: 'Pareja / Chef de Postres',
+    password: '123',
+    avatar: '👩',
+    role: 'user'
   }
 ];
 const DEFAULT_FAMILY_USERS = DEFAULT_USERS; // Alias de compatibilidad
+
+// 📅 Menú Semanal Inicial por Defecto (4 Comidas & Opciones por Miembro)
+const DEFAULT_WEEKLY_MENU = {
+  lunes: {
+    desayuno: [
+      { id: 'opt-l-d-1', userId: 'user-joaco', userName: 'Joaco', userAvatar: '👦', title: 'Tostadas con huevo revuelto y manteca', notes: 'Bien tostadas', ingredients: [{ name: 'Huevos de campo', qty: 2, unit: 'un' }, { name: 'Pan de Molde Blanco / Integral', qty: 2, unit: 'un' }, { name: 'Manteca de primera calidad', qty: 20, unit: 'g' }] },
+      { id: 'opt-l-d-2', userId: 'user-lucila', userName: 'Lucila', userAvatar: '👩', title: 'Café con leche y galletitas de agua', notes: 'Con edulcorante', ingredients: [{ name: 'Café Molido / en Grano / Instantáneo', qty: 1, unit: 'paquete' }, { name: 'Leche entera / descremada', qty: 1, unit: 'litro' }, { name: 'Tostadas / Galletitas de Agua', qty: 1, unit: 'paquete' }] },
+      { id: 'opt-l-d-3', userId: 'user-pato', userName: 'Chef Pato', userAvatar: '👨‍🍳', title: 'Omelette de queso y palta', notes: 'Con pimienta negra', ingredients: [{ name: 'Huevos de campo', qty: 3, unit: 'un' }, { name: 'Queso Mozzarella', qty: 100, unit: 'g' }, { name: 'Palta Hass', qty: 1, unit: 'un' }] }
+    ],
+    almuerzo: [
+      { id: 'opt-l-a-1', userId: 'user-pato', userName: 'Familia', userAvatar: '👨‍🍳', recipeId: 'rec-1', title: 'Supremas de Pollo al Limón con Papas Rústicas', notes: 'Almuerzo familiar', ingredients: [] }
+    ],
+    merienda: [
+      { id: 'opt-l-m-1', userId: 'user-joaco', userName: 'Joaco', userAvatar: '👦', title: 'Tostadas con dulce de leche y chocolatada', notes: '', ingredients: [{ name: 'Dulce de Leche Repostero / Colonial', qty: 1, unit: 'pote' }, { name: 'Pan de Molde Blanco / Integral', qty: 2, unit: 'un' }] },
+      { id: 'opt-l-m-2', userId: 'user-lucila', userName: 'Lucila', userAvatar: '👩', title: 'Té con tostadas y queso crema', notes: 'Merienda liviana', ingredients: [{ name: 'Té en saquitos / Hebras variadas', qty: 1, unit: 'caja' }, { name: 'Queso Crema / Untable (tipo Casancrem)', qty: 1, unit: 'pote' }] }
+    ],
+    cena: [
+      { id: 'opt-l-c-1', userId: 'user-pato', userName: 'Familia', userAvatar: '👨‍🍳', recipeId: 'rec-2', title: 'Ojo de Bife a la Manteca de Romero', notes: 'Cena a los fuegos', ingredients: [] }
+    ]
+  },
+  martes: {
+    desayuno: [
+      { id: 'opt-m-d-1', userId: 'user-joaco', userName: 'Joaco', userAvatar: '👦', title: 'Avena con leche y banana', notes: '', ingredients: [{ name: 'Avena Arrollada gruesa/fina', qty: 50, unit: 'g' }, { name: 'Banana', qty: 2, unit: 'un' }] },
+      { id: 'opt-m-d-2', userId: 'user-lucila', userName: 'Lucila', userAvatar: '👩', title: 'Yogur con arándanos y nueces', notes: 'Sin azúcar', ingredients: [{ name: 'Yogur Natural / Griego', qty: 1, unit: 'pote' }, { name: 'Arándanos frescos', qty: 125, unit: 'g' }, { name: 'Nueces, Almendras & Castañas', qty: 50, unit: 'g' }] }
+    ],
+    almuerzo: [
+      { id: 'opt-m-a-1', userId: 'user-pato', userName: 'Familia', userAvatar: '👨‍🍳', recipeId: 'rec-3', title: 'Risotto Cremoso de Hongos y Parmesano', notes: '', ingredients: [] }
+    ],
+    merienda: [
+      { id: 'opt-m-m-1', userId: 'user-joaco', userName: 'Joaco', userAvatar: '👦', title: 'Galletitas dulces para la tarde', notes: '', ingredients: [{ name: 'Galletitas dulces para merienda', qty: 1, unit: 'paquete' }] }
+    ],
+    cena: [
+      { id: 'opt-m-c-1', userId: 'user-pato', userName: 'Familia', userAvatar: '👨‍🍳', recipeId: 'rec-6', title: 'Salmón Rosado con Espinacas a la Crema', notes: '', ingredients: [] }
+    ]
+  },
+  miercoles: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+  jueves: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+  viernes: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+  sabado: { desayuno: [], almuerzo: [], merienda: [], cena: [] },
+  domingo: { desayuno: [], almuerzo: [], merienda: [], cena: [] }
+};
+
+const DEFAULT_WEEKLY_NOTES = {
+  lunes: '🔥 Arranque de semana organizado',
+  viernes: '🍕 ¡Viernes de pizzas caseras!',
+  domingo: '🥩 Asado familiar al mediodía'
+};
 
 // Helper para crear alacena vacía (stock 0) para nuevos usuarios
 function createEmptyUserPantry() {
