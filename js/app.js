@@ -424,7 +424,7 @@ async function handleLoginSubmit(e) {
   }
 
   if (!user) {
-    showToast('❌ Usuario o email no encontrado. Por favor registrate.', 'error');
+    showToast(`❌ El usuario o email "${emailOrUser}" no está registrado. Verificalo o creá tu cuenta.`, 'error');
     switchAuthTab('register');
     const regEmail = document.getElementById('inpRegEmail');
     if (regEmail && emailOrUser.includes('@')) regEmail.value = emailOrUser;
@@ -433,7 +433,7 @@ async function handleLoginSubmit(e) {
 
   // 4. Validar contraseña
   if (user.password && user.password !== password) {
-    showToast('❌ Contraseña incorrecta. Verificala e intentá nuevamente.', 'error');
+    showToast(`❌ Contraseña incorrecta para ${user.name}. Verificala e intentá nuevamente.`, 'error');
     return;
   }
 
