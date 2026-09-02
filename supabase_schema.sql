@@ -21,6 +21,8 @@ CREATE TABLE IF NOT EXISTS public.kitchen_users (
   id TEXT PRIMARY KEY,
   name TEXT NOT NULL,
   avatar TEXT DEFAULT '👨‍🍳',
+  role TEXT NOT NULL DEFAULT 'chef' CHECK (role IN ('admin', 'chef')),
+  email TEXT,
   role TEXT NOT NULL DEFAULT 'chef' CHECK (role IN ('admin', 'chef', 'user')),
   email TEXT UNIQUE,
   profession TEXT DEFAULT 'Cocinero/a Aficionado/a',

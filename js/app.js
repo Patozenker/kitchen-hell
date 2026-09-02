@@ -190,6 +190,7 @@ function loadState() {
   }
 
   // Semilla inicial
+  appState = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA));
   const defaultData = (typeof DEFAULT_KITCHEN_DATA !== 'undefined') ? DEFAULT_KITCHEN_DATA : (typeof window !== 'undefined' && window.DEFAULT_KITCHEN_DATA ? window.DEFAULT_KITCHEN_DATA : {});
   appState = JSON.parse(JSON.stringify(defaultData));
   saveState();
@@ -743,10 +744,10 @@ function exportUsersToCSV() {
   showToast(`📥 ¡Base de datos de ${users.length} usuarios exportada a CSV exitosamente!`, 'success');
 }
 
-// =========================================================
-// 1.4 VISIBILIDAD, AUTORÍA Y PERMISOS DE RECETAS
-// =========================================================
 
+// =========================================================
+// 1.5 VISIBILIDAD, AUTORÍA Y PERMISOS DE RECETAS
+// =========================================================
 function canUserModifyRecipe(recipe) {
   if (!recipe) return false;
   const user = getCurrentUser();

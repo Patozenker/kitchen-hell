@@ -82,6 +82,7 @@ async function syncFromSupabase() {
     // 1. Cargar Usuarios
     const { data: users, error: errU } = await supabaseClient.from('kitchen_users').select('*');
     if (!errU && users && users.length > 0) {
+      appState.users = users;
       appState.users = users.map(u => ({
         id: u.id,
         name: u.name,
