@@ -186,6 +186,18 @@ function loadState() {
         appState.weeklyNotes = (typeof DEFAULT_WEEKLY_NOTES !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_WEEKLY_NOTES)) : {};
       }
 
+      // Asegurar categorías completas de recetas
+      if (!Array.isArray(appState.recipeCategories) || appState.recipeCategories.length === 0) {
+        appState.recipeCategories = (typeof DEFAULT_RECIPE_CATEGORIES !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_RECIPE_CATEGORIES)) : [];
+      } else if (typeof DEFAULT_RECIPE_CATEGORIES !== 'undefined') {
+        // Asegurar que las nuevas categorías por defecto existan
+        DEFAULT_RECIPE_CATEGORIES.forEach(defCat => {
+          if (!appState.recipeCategories.some(c => c.id === defCat.id)) {
+            appState.recipeCategories.push(defCat);
+          }
+        });
+      }
+
       // Asegurar autoría, comentarios y privacidad en todas las recetas
       if (Array.isArray(appState.recipes)) {
         appState.recipes.forEach(r => {
@@ -633,7 +645,6 @@ function openUserProfileModal() {
 
   const modal = document.getElementById('userProfileModal');
   const card = document.getElementById('currentUserProfileCard');
-  const grid = document.getElementById('familyMembersGrid');
   if (!modal) return;
 
   const curUser = user;
@@ -656,7 +667,44 @@ function openUserProfileModal() {
     `;
   }
 
+  // Sincronizar estado de privacidad del usuario en el modal
+  const isAnonymous = curUser.isAnonymous === true;
+  const radPub = document.getElementById('radProfilePublic');
+  const radPriv = document.getElementById('radProfilePrivate');
+  const lblPub = document.getElementById('lblProfilePublic');
+  const lblPriv = document.getElementById('lblProfilePrivate');
+  if (radPub) radPub.checked = !isAnonymous;
+  if (radPriv) radPriv.checked = isAnonymous;
+  if (lblPub) lblPub.classList.toggle('active', !isAnonymous);
+  if (lblPriv) lblPriv.classList.toggle('active', isAnonymous);
+
   modal.style.display = 'flex';
+}
+
+function setUserProfilePrivacy(isAnonymous) {
+  const user = getCurrentUser();
+  if (!user) return;
+
+  user.isAnonymous = isAnonymous;
+  saveState();
+
+  const radPub = document.getElementById('radProfilePublic');
+  const radPriv = document.getElementById('radProfilePrivate');
+  const lblPub = document.getElementById('lblProfilePublic');
+  const lblPriv = document.getElementById('lblProfilePrivate');
+
+  if (radPub) radPub.checked = !isAnonymous;
+  if (radPriv) radPriv.checked = isAnonymous;
+  if (lblPub) lblPub.classList.toggle('active', !isAnonymous);
+  if (lblPriv) lblPriv.classList.toggle('active', isAnonymous);
+
+  if (typeof pushUserToSupabase === 'function') {
+    pushUserToSupabase(user);
+  }
+
+  if (currentTab === 'recetas') renderRecipesView();
+
+  showToast(`🔒 Visibilidad de perfil: ${isAnonymous ? 'Anónimo (Chef Anónimo en recetas)' : 'Público (Tu nombre es visible)'}`, 'info');
 }
 
 function closeUserProfileModal() {
@@ -1232,7 +1280,137 @@ function renderSmartMatcher() {
 // =========================================================
 // 5. VISTA: RECETARIO PÚBLICO & DE AUTOR
 // =========================================================
+
+function getRecipeAuthorDisplay(r) {
+  if (!r) return { name: 'Chef', avatar: '👨‍🍳', isAnonymous: false };
+  const author = (appState.users || []).find(u => u.id === r.authorId);
+  const isAnon = (r.isAnonymous === true) || (author && author.isAnonymous === true);
+  if (isAnon) {
+    return { name: 'Chef Anónimo', avatar: '👨‍🍳', isAnonymous: true };
+  }
+  return {
+    name: (author && author.name) || r.authorName || 'Chef',
+    avatar: (author && author.avatar) || r.authorAvatar || '👨‍🍳',
+    isAnonymous: false
+  };
+}
+
+function getCategoryName(catId) {
+  if (!catId) return 'General';
+  const categories = appState.recipeCategories || (typeof DEFAULT_RECIPE_CATEGORIES !== 'undefined' ? DEFAULT_RECIPE_CATEGORIES : []);
+  const found = categories.find(c => c.id === catId || c.id === catId.toLowerCase());
+  if (found) return `${found.icon ? found.icon + ' ' : ''}${found.name}`;
+
+  const map = {
+    heladera: '🥦 Frescos & Heladera',
+    carnes: '🥩 Carnes & Fuegos',
+    pastas: '🍝 Pastas & Risottos',
+    alacena: '🥫 Alacena & Secos',
+    especias: '🌿 Especias & Aromas',
+    cava: '🍷 Cava & Bebidas',
+    rapidas: '⚡ Rápidas de Semana',
+    postres: '🍫 Postres de Autor',
+    ensaladas: '🥗 Ensaladas & Frescos',
+    pizzas: '🍕 Pizzas & Empanadas',
+    guisos: '🍲 Guisos & Ollas',
+    sandwiches: '🥪 Sandwiches & Burgers',
+    pescados: '🐟 Pescados & Mariscos',
+    veggie: '🥑 Veggie & Saludable',
+    panaderia: '🥐 Panadería & Desayunos',
+    internacional: '🌮 Comida Internacional',
+    tragos: '🍹 Tragos & Coctelería'
+  };
+  return map[catId.toLowerCase()] || catId;
+}
+
+function renderRecipeFilterPills() {
+  const pillsContainer = document.getElementById('recipesFilterPills');
+  if (!pillsContainer) return;
+  const categories = appState.recipeCategories || (typeof DEFAULT_RECIPE_CATEGORIES !== 'undefined' ? DEFAULT_RECIPE_CATEGORIES : []);
+
+  let html = `<button class="filter-pill ${currentRecipeCategory === 'all' ? 'active' : ''}" onclick="filterRecipesByCat('all', this)">Todas</button>`;
+  categories.forEach(cat => {
+    const isActive = currentRecipeCategory === cat.id ? 'active' : '';
+    html += `<button class="filter-pill ${isActive}" onclick="filterRecipesByCat('${cat.id}', this)">${cat.icon || '🍽️'} ${escapeAttr(cat.name)}</button>`;
+  });
+  html += `<button class="filter-pill" onclick="openAddCategoryModal()" style="border:1px dashed var(--primary); color:var(--primary-light); font-weight:700; background:rgba(234,88,12,0.08);">+ Nueva Categoría</button>`;
+
+  pillsContainer.innerHTML = html;
+}
+
+function populateRecipeCategoryDropdowns() {
+  const categories = appState.recipeCategories || (typeof DEFAULT_RECIPE_CATEGORIES !== 'undefined' ? DEFAULT_RECIPE_CATEGORIES : []);
+  const addSel = document.getElementById('inpRecCategory');
+  const editSel = document.getElementById('inpEditRecCategory');
+
+  const optionsHtml = categories.map(c => `
+    <option value="${c.id}">${c.icon || '🍽️'} ${escapeAttr(c.name)}</option>
+  `).join('');
+
+  if (addSel) addSel.innerHTML = optionsHtml;
+  if (editSel) editSel.innerHTML = optionsHtml;
+}
+
+function openAddCategoryModal() {
+  const modal = document.getElementById('addCategoryModal');
+  const inpName = document.getElementById('inpCatName');
+  const inpIcon = document.getElementById('inpCatIcon');
+  if (inpName) inpName.value = '';
+  if (inpIcon) inpIcon.value = '🍽️';
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeAddCategoryModal() {
+  const modal = document.getElementById('addCategoryModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function handleAddCategorySubmit(e) {
+  if (e) e.preventDefault();
+  const name = document.getElementById('inpCatName')?.value.trim();
+  const icon = document.getElementById('inpCatIcon')?.value.trim() || '🍽️';
+
+  if (!name) {
+    showToast('Ingresá el nombre de la categoría.', 'error');
+    return;
+  }
+
+  const slug = name.toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  if (!Array.isArray(appState.recipeCategories)) {
+    appState.recipeCategories = (typeof DEFAULT_RECIPE_CATEGORIES !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_RECIPE_CATEGORIES)) : [];
+  }
+
+  const exists = appState.recipeCategories.some(c => c.id === slug || c.name.toLowerCase() === name.toLowerCase());
+  if (exists) {
+    showToast('Esta categoría ya existe.', 'info');
+    closeAddCategoryModal();
+    return;
+  }
+
+  const newCat = {
+    id: slug || `cat-${Date.now()}`,
+    name: name,
+    icon: icon
+  };
+
+  appState.recipeCategories.push(newCat);
+  saveState();
+
+  populateRecipeCategoryDropdowns();
+  renderRecipeFilterPills();
+  closeAddCategoryModal();
+
+  showToast(`✨ ¡Categoría "${icon} ${name}" creada con éxito!`, 'success');
+}
+
 function renderRecipesView() {
+  renderRecipeFilterPills();
+  populateRecipeCategoryDropdowns();
+
   const container = document.getElementById('recipesGridContainer');
   if (!container) return;
 
@@ -1283,6 +1461,7 @@ function renderRecipesView() {
     const canEdit = canUserModifyRecipe(r);
     const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
     const ratings = calculateRecipeRatings(r);
+    const authorDisplay = getRecipeAuthorDisplay(r);
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -1296,7 +1475,7 @@ function renderRecipesView() {
             <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
             <div style="display:flex; gap:4px; align-items:center;">
               ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
-              <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+              <span class="recipe-author-badge">${authorDisplay.avatar} ${escapeAttr(authorDisplay.name)}</span>
             </div>
           </div>
 
@@ -2737,12 +2916,13 @@ function renderRecipeDetailModalContent() {
   document.getElementById('modalRecipeTitle').innerText = r.title;
   document.getElementById('modalRecipeImg').src = r.image;
   
+  const authorDisplay = getRecipeAuthorDisplay(r);
   const catEl = document.getElementById('modalRecipeCategory');
   if (catEl) {
     catEl.innerHTML = `
       <span>${getCategoryName(r.category)}</span>
       <span style="opacity:0.6;">•</span>
-      <span>${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+      <span>${authorDisplay.avatar} ${escapeAttr(authorDisplay.name)}</span>
       ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.4); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🔒 Privada</span>' : '<span style="background:rgba(16,185,129,0.3); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🌐 Pública</span>'}
     `;
   }
@@ -4210,6 +4390,12 @@ window.renderRecipeComments = renderRecipeComments;
 window.handleAddRecipeComment = handleAddRecipeComment;
 window.toggleReplyInput = toggleReplyInput;
 window.handleSendReply = handleSendReply;
+window.setUserProfilePrivacy = setUserProfilePrivacy;
+window.openAddCategoryModal = openAddCategoryModal;
+window.closeAddCategoryModal = closeAddCategoryModal;
+window.handleAddCategorySubmit = handleAddCategorySubmit;
+window.renderRecipeFilterPills = renderRecipeFilterPills;
+window.populateRecipeCategoryDropdowns = populateRecipeCategoryDropdowns;
 window.loadState = loadState;
 window.saveState = saveState;
 

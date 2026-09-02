@@ -1131,6 +1131,47 @@
   </div>
 
   <!-- ========================================================= -->
+  <!-- 9.5 MODAL: AGREGAR NUEVA CATEGORÍA DE RECETAS             -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="addCategoryModal" style="display:none;" onclick="if(event.target===this) closeAddCategoryModal()">
+    <div class="modal-content" style="max-width:460px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:#ffffff; margin:0;">✨ Nueva Categoría de Plato</h3>
+        <button class="btn-icon btn-secondary" onclick="closeAddCategoryModal()">✕</button>
+      </div>
+
+      <form onsubmit="handleAddCategorySubmit(event)">
+        <div class="form-group">
+          <label>Nombre de la Categoría *</label>
+          <input type="text" id="inpCatName" placeholder="Ej: Sin TACC / Celíacos, Comida Mexicana, Parrilla..." required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label>Emoji / Ícono representativo *</label>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <input type="text" id="inpCatIcon" value="🍽️" maxlength="4" style="width:70px; text-align:center; font-size:1.4rem; padding:6px;" required>
+            <div style="display:flex; gap:6px; flex-wrap:wrap;">
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🥗'">🥗</button>
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🍕'">🍕</button>
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🌮'">🌮</button>
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🍣'">🍣</button>
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🌾'">🌾</button>
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🍹'">🍹</button>
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🥐'">🥐</button>
+              <button type="button" class="btn-icon btn-secondary btn-sm" onclick="document.getElementById('inpCatIcon').value='🔥'">🔥</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+          <button type="button" class="btn btn-secondary" onclick="closeAddCategoryModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" style="font-weight:800;">+ Crear Categoría</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
   <!-- 10. MODAL: PERFIL DE USUARIO & CAMBIO DE CUENTA           -->
   <!-- ========================================================= -->
   <div class="modal-overlay" id="userProfileModal" style="display:none;" onclick="if(event.target===this) closeUserProfileModal()">
@@ -1145,15 +1186,36 @@
         <!-- Renderizado dinámico -->
       </div>
 
+      <!-- Privacidad de Autoría en Recetas -->
+      <div style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-md); padding:14px; margin-bottom:18px;">
+        <div style="font-weight:700; color:#ffffff; font-size:0.88rem; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+          <span>🔒</span> Visibilidad de tu Nombre en Recetas
+        </div>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:12px;">
+          Si elegís "Anónimo", tus recetas se compartirán sin tu nombre real (aparecerá como "👨‍🍳 Chef Anónimo").
+        </p>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+          <label id="lblProfilePublic" class="filter-pill active" style="text-align:center; padding:10px; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:4px; border-radius:var(--radius-md);" onclick="setUserProfilePrivacy(false)">
+            <input type="radio" name="radUserPrivacy" id="radProfilePublic" value="public" checked style="display:none;">
+            <span style="font-size:1.3rem;">🌐</span>
+            <strong style="font-size:0.84rem;">Público</strong>
+            <small style="font-size:0.7rem; opacity:0.8;">Mostrar mi nombre</small>
+          </label>
+          <label id="lblProfilePrivate" class="filter-pill" style="text-align:center; padding:10px; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:4px; border-radius:var(--radius-md);" onclick="setUserProfilePrivacy(true)">
+            <input type="radio" name="radUserPrivacy" id="radProfilePrivate" value="private" style="display:none;">
+            <span style="font-size:1.3rem;">🔒</span>
+            <strong style="font-size:0.84rem;">Anónimo</strong>
+            <small style="font-size:0.7rem; opacity:0.8;">Chef Anónimo</small>
+          </label>
+        </div>
+      </div>
+
       <!-- Acciones de Usuario -->
-      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:18px;">
+      <div style="display:flex; flex-direction:column; gap:10px;">
         <button type="button" class="btn btn-secondary" id="btnAdminLeadsDirectory" onclick="closeUserProfileModal(); openUserLeadsModal();" style="width:100%; justify-content:center; gap:8px; display:none;">
           👥 Base de Datos & Segmentación por Profesión (CSV)
         </button>
-        <button type="button" class="btn btn-outline" onclick="closeUserProfileModal(); openAuthModal('register');" style="width:100%; justify-content:center; gap:8px;">
-          ✨ Registrar Otra Cuenta / Nuevo Chef
-        </button>
-        <button type="button" class="btn btn-danger btn-sm" onclick="logoutUser()" style="width:100%; justify-content:center; gap:8px; margin-top:6px;">
+        <button type="button" class="btn btn-danger btn-sm" onclick="logoutUser()" style="width:100%; justify-content:center; gap:8px; padding:10px; font-weight:800;">
           🚪 Cerrar Sesión
         </button>
       </div>

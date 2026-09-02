@@ -317,6 +317,22 @@ const DEFAULT_WEEKLY_NOTES = {
   domingo: '🥩 Asado familiar al mediodía'
 };
 
+const DEFAULT_RECIPE_CATEGORIES = [
+  { id: 'carnes', name: 'Carnes & Fuegos', icon: '🥩' },
+  { id: 'pastas', name: 'Pastas & Risottos', icon: '🍝' },
+  { id: 'rapidas', name: 'Rápidas de Semana', icon: '⚡' },
+  { id: 'postres', name: 'Postres & Dulces', icon: '🍫' },
+  { id: 'ensaladas', name: 'Ensaladas & Frescos', icon: '🥗' },
+  { id: 'pizzas', name: 'Pizzas, Tartas & Empanadas', icon: '🍕' },
+  { id: 'guisos', name: 'Guisos, Sopas & Ollas', icon: '🍲' },
+  { id: 'sandwiches', name: 'Sandwiches & Burgers', icon: '🥪' },
+  { id: 'pescados', name: 'Pescados & Mariscos', icon: '🐟' },
+  { id: 'veggie', name: 'Veggie & Saludable', icon: '🥑' },
+  { id: 'panaderia', name: 'Panadería & Desayunos', icon: '🥐' },
+  { id: 'internacional', name: 'Comida Internacional', icon: '🌮' },
+  { id: 'tragos', name: 'Tragos & Coctelería', icon: '🍹' }
+];
+
 // Helper para crear alacena vacía (stock 0) para nuevos usuarios
 function createEmptyUserPantry() {
   return MASTER_PANTRY_CATALOG.map(item => ({
@@ -329,6 +345,7 @@ const DEFAULT_KITCHEN_DATA = {
   // 0. USUARIOS & SESIÓN
   users: DEFAULT_USERS,
   currentUser: 'user-pato',
+  recipeCategories: DEFAULT_RECIPE_CATEGORIES,
 
   // 1. ALACENAS INDIVIDUALES POR USUARIO
   pantries: {
