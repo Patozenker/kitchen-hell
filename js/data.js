@@ -109,6 +109,15 @@ const MASTER_PANTRY_CATALOG = [
 
 // 👥 Usuarios por Defecto (Hell's Kitchen Community)
 const DEFAULT_USERS = [
+  {
+    id: 'user-pato',
+    name: 'Chef Pato',
+    email: 'pato@hellskitchen.com',
+    profession: 'Chef Ejecutivo / Creador',
+    password: 'pato',
+    avatar: '👨‍🍳',
+    role: 'admin'
+  }
 ];
 const DEFAULT_FAMILY_USERS = DEFAULT_USERS; // Alias de compatibilidad
 

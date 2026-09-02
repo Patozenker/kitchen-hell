@@ -349,43 +349,85 @@ function closeAuthModal() {
 }
 
 function switchAuthTab(tab) {
-  const btnLogin = document.getElementById('tabBtnLogin');
-  const btnRegister = document.getElementById('tabBtnRegister');
   const formLogin = document.getElementById('formLogin');
   const formRegister = document.getElementById('formRegister');
+  const subtitle = document.getElementById('authModalSubtitle');
 
   if (tab === 'login') {
-    btnLogin?.classList.add('active');
-    btnRegister?.classList.remove('active');
+    if (subtitle) subtitle.innerText = 'Ingresá con tu usuario y contraseña';
     if (formLogin) formLogin.style.display = 'block';
     if (formRegister) formRegister.style.display = 'none';
     setTimeout(() => document.getElementById('inpLoginEmail')?.focus(), 50);
   } else {
-    btnLogin?.classList.remove('active');
-    btnRegister?.classList.add('active');
+    if (subtitle) subtitle.innerText = 'Creá tu cuenta de Chef y guardá tu alacena';
     if (formLogin) formLogin.style.display = 'none';
     if (formRegister) formRegister.style.display = 'block';
     setTimeout(() => document.getElementById('inpRegName')?.focus(), 50);
   }
 }
 
-function handleLoginSubmit(e) {
+async function handleLoginSubmit(e) {
   if (e) e.preventDefault();
 
-  const emailOrUser = document.getElementById('inpLoginEmail')?.value.trim().toLowerCase();
-  const password = document.getElementById('inpLoginPassword')?.value.trim();
+  const emailOrUser = (document.getElementById('inpLoginEmail')?.value || '').trim().toLowerCase();
+  const password = (document.getElementById('inpLoginPassword')?.value || '').trim();
 
   if (!emailOrUser || !password) {
     showToast('Por favor completá usuario/email y contraseña.', 'info');
     return;
   }
 
-  // Buscar usuario por email o nombre
-  const user = (appState.users || []).find(u => 
+  // 1. Buscar usuario localmente por email, nombre o id
+  let user = (appState.users || []).find(u => 
     (u.email && u.email.toLowerCase() === emailOrUser) || 
     (u.name && u.name.toLowerCase() === emailOrUser) ||
-    u.id === emailOrUser
+    (u.id && u.id.toLowerCase() === emailOrUser) ||
+    (emailOrUser === 'pato' && (u.id === 'user-pato' || (u.name && u.name.toLowerCase().includes('pato'))))
   );
+
+  // 2. Si no se encontró localmente, buscar en Supabase en tiempo real
+  if (!user && typeof supabaseClient !== 'undefined' && supabaseClient && isSupabaseConnected) {
+    try {
+      const { data, error } = await supabaseClient
+        .from('kitchen_users')
+        .select('*')
+        .or(`email.ilike.${emailOrUser},name.ilike.${emailOrUser}`);
+
+      if (data && data.length > 0) {
+        const dbUser = data[0];
+        user = {
+          id: dbUser.id,
+          name: dbUser.name,
+          email: dbUser.email,
+          profession: dbUser.profession || 'Cocinero/a Aficionado/a',
+          password: dbUser.password || 'pato',
+          avatar: dbUser.avatar || '👨‍🍳',
+          role: dbUser.role || 'chef'
+        };
+        if (!appState.users.some(u => u.id === user.id)) {
+          appState.users.push(user);
+        }
+      }
+    } catch (err) {
+      console.warn("Error consultando usuario en Supabase:", err);
+    }
+  }
+
+  // 3. Fallback especial para Chef Pato (Administrador)
+  if (!user && (emailOrUser === 'pato' || emailOrUser === 'chef pato' || emailOrUser === 'pato@hellskitchen.com')) {
+    user = {
+      id: 'user-pato',
+      name: 'Chef Pato',
+      email: 'pato@hellskitchen.com',
+      profession: 'Chef Ejecutivo / Creador',
+      password: 'pato',
+      avatar: '👨‍🍳',
+      role: 'admin'
+    };
+    if (!appState.users.some(u => u.id === 'user-pato')) {
+      appState.users.push(user);
+    }
+  }
 
   if (!user) {
     showToast('❌ Usuario o email no encontrado. Por favor registrate.', 'error');
@@ -395,13 +437,13 @@ function handleLoginSubmit(e) {
     return;
   }
 
-  // Validar contraseña si está seteada en el usuario
+  // 4. Validar contraseña
   if (user.password && user.password !== password) {
     showToast('❌ Contraseña incorrecta. Verificala e intentá nuevamente.', 'error');
     return;
   }
 
-  // Login exitoso
+  // 5. Login exitoso
   appState.currentUser = user.id;
   localStorage.setItem(AUTH_SESSION_KEY, user.id);
   saveState();
