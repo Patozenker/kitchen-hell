@@ -1997,6 +1997,9 @@ function deleteRecipe(recipeId) {
 
   appState.recipes = appState.recipes.filter(r => r.id !== recipeId);
   saveState();
+  if (typeof window !== 'undefined' && typeof window.deleteRecipeFromSupabase === 'function') {
+    window.deleteRecipeFromSupabase(recipeId);
+  }
   closeRecipeDetailModal();
   updateHeaderBadges();
 
@@ -2247,6 +2250,9 @@ function handleAddRecipeSubmit(e) {
 
   appState.recipes.unshift(newRecipe);
   saveState();
+  if (typeof window !== 'undefined' && typeof window.pushRecipeToSupabase === 'function') {
+    window.pushRecipeToSupabase(newRecipe);
+  }
   closeAddRecipeModal();
   updateHeaderBadges();
   updateMasterIngredientsDatalist();
@@ -2523,6 +2529,9 @@ function handleEditRecipeSubmit(e) {
 
   appState.recipes[recipeIndex] = updatedRecipe;
   saveState();
+  if (typeof window !== 'undefined' && typeof window.pushRecipeToSupabase === 'function') {
+    window.pushRecipeToSupabase(updatedRecipe);
+  }
   closeEditRecipeModal();
   updateHeaderBadges();
   updateMasterIngredientsDatalist();

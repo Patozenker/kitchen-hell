@@ -113,7 +113,14 @@ const DEFAULT_USERS = [
   { id: 'user-gaston', name: 'Gastón', avatar: '🧑‍🍳', role: 'chef' },
   { id: 'user-sofia', name: 'Sofía', avatar: '👩‍🍳', role: 'chef' }
 ];
-const DEFAULT_FAMILY_USERS = DEFAULT_USERS; // Alias de compatibilidad
+
+// Helper para crear alacena vacía (stock 0) para nuevos usuarios
+function createEmptyUserPantry() {
+  return MASTER_PANTRY_CATALOG.map(item => ({
+    ...item,
+    qty: 0
+  }));
+}
 
 const DEFAULT_KITCHEN_DATA = {
   // 0. USUARIOS & SESIÓN
@@ -486,7 +493,8 @@ const DEFAULT_KITCHEN_DATA = {
 
 if (typeof window !== 'undefined') {
   window.MASTER_PANTRY_CATALOG = MASTER_PANTRY_CATALOG;
+  window.createEmptyUserPantry = createEmptyUserPantry;
   window.DEFAULT_USERS = DEFAULT_USERS;
-  window.DEFAULT_FAMILY_USERS = DEFAULT_FAMILY_USERS;
+  window.DEFAULT_FAMILY_USERS = DEFAULT_USERS;
   window.DEFAULT_KITCHEN_DATA = DEFAULT_KITCHEN_DATA;
 }

@@ -4,6 +4,8 @@
  */
 
 const SUPABASE_STORAGE_KEY = 'hells_kitchen_supabase_config';
+const DEFAULT_SUPABASE_URL = 'https://oqyqhhumceaglrykolsi.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xeXFoaHVtY2VhZ2xyeWtvbHNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc0NjI3MjcsImV4cCI6MjEwMzAzODcyN30.7gU8-ktjlAg6Uxr3MaP422fa_jcvyukQ92pkJcj08eo';
 
 let supabaseClient = null;
 let isSupabaseConnected = false;
@@ -14,9 +16,9 @@ function getSupabaseConfig() {
     if (raw) return JSON.parse(raw);
   } catch (e) {}
   return {
-    url: '',
-    anonKey: '',
-    enabled: false
+    url: DEFAULT_SUPABASE_URL,
+    anonKey: DEFAULT_SUPABASE_ANON_KEY,
+    enabled: true
   };
 }
 
@@ -294,6 +296,111 @@ function handleSaveSupabaseConfig(e) {
   showToast('🔄 Conectando y sincronizando con Supabase...', 'success');
 }
 
+// =========================================================
+// OPERACIONES DE ESCRITURA EN SUPABASE (PUSH TO CLOUD)
+// =========================================================
+
+async function pushUserToSupabase(user) {
+  if (!supabaseClient || !isSupabaseConnected) return;
+  try {
+    await supabaseClient.from('kitchen_users').upsert({
+      id: user.id,
+      name: user.name,
+      avatar: user.avatar || '👨‍🍳',
+      role: user.role || 'chef',
+      email: user.email || null
+    });
+  } catch (e) {
+    console.warn("Error pushUserToSupabase:", e);
+  }
+}
+
+async function pushMasterIngredientToSupabase(ing) {
+  if (!supabaseClient || !isSupabaseConnected) return;
+  try {
+    await supabaseClient.from('master_ingredients').upsert({
+      id: ing.id,
+      name: ing.name,
+      category: ing.category,
+      unit: ing.unit,
+      min_qty: ing.minQty || 1,
+      icon: ing.icon || '📦'
+    });
+  } catch (e) {
+    console.warn("Error pushMasterIngredientToSupabase:", e);
+  }
+}
+
+async function pushRecipeToSupabase(recipe) {
+  if (!supabaseClient || !isSupabaseConnected) return;
+  try {
+    await supabaseClient.from('recipes').upsert({
+      id: recipe.id,
+      title: recipe.title,
+      author_id: recipe.authorId,
+      author_name: recipe.authorName,
+      author_avatar: recipe.authorAvatar || '👨‍🍳',
+      is_private: recipe.isPrivate === true,
+      category: recipe.category,
+      time: recipe.time,
+      portions: recipe.portions,
+      difficulty: recipe.difficulty || 'Media',
+      rating: recipe.rating || 5,
+      image: recipe.image,
+      description: recipe.description,
+      pairing: recipe.pairing || '',
+      chef_tip: recipe.chefTip || '',
+      ingredients: recipe.ingredients || [],
+      steps: recipe.steps || [],
+      updated_at: new Date().toISOString()
+    });
+  } catch (e) {
+    console.warn("Error pushRecipeToSupabase:", e);
+  }
+}
+
+async function deleteRecipeFromSupabase(recipeId) {
+  if (!supabaseClient || !isSupabaseConnected) return;
+  try {
+    await supabaseClient.from('recipes').delete().eq('id', recipeId);
+  } catch (e) {
+    console.warn("Error deleteRecipeFromSupabase:", e);
+  }
+}
+
+async function pushCommentToSupabase(recipeId, comment) {
+  if (!supabaseClient || !isSupabaseConnected) return;
+  try {
+    await supabaseClient.from('recipe_comments').upsert({
+      id: comment.id,
+      recipe_id: recipeId,
+      user_id: comment.userId,
+      user_name: comment.userName,
+      user_avatar: comment.userAvatar || '👨‍🍳',
+      text: comment.text
+    });
+  } catch (e) {
+    console.warn("Error pushCommentToSupabase:", e);
+  }
+}
+
+async function pushReplyToSupabase(commentId, reply) {
+  if (!supabaseClient || !isSupabaseConnected) return;
+  try {
+    await supabaseClient.from('recipe_replies').upsert({
+      id: reply.id,
+      comment_id: commentId,
+      user_id: reply.userId,
+      user_name: reply.userName,
+      user_avatar: reply.userAvatar || '👨‍🍳',
+      is_author: reply.isAuthor === true,
+      text: reply.text
+    });
+  } catch (e) {
+    console.warn("Error pushReplyToSupabase:", e);
+  }
+}
+
 // Exponer en window
 window.getSupabaseConfig = getSupabaseConfig;
 window.saveSupabaseConfig = saveSupabaseConfig;
@@ -302,3 +409,9 @@ window.openSupabaseModal = openSupabaseModal;
 window.closeSupabaseModal = closeSupabaseModal;
 window.handleSaveSupabaseConfig = handleSaveSupabaseConfig;
 window.syncFromSupabase = syncFromSupabase;
+window.pushUserToSupabase = pushUserToSupabase;
+window.pushMasterIngredientToSupabase = pushMasterIngredientToSupabase;
+window.pushRecipeToSupabase = pushRecipeToSupabase;
+window.deleteRecipeFromSupabase = deleteRecipeFromSupabase;
+window.pushCommentToSupabase = pushCommentToSupabase;
+window.pushReplyToSupabase = pushReplyToSupabase;
