@@ -82,7 +82,16 @@ async function syncFromSupabase() {
     // 1. Cargar Usuarios
     const { data: users, error: errU } = await supabaseClient.from('kitchen_users').select('*');
     if (!errU && users && users.length > 0) {
-      appState.users = users;
+      appState.users = users.map(u => ({
+        id: u.id,
+        name: u.name,
+        avatar: u.avatar || '👨‍🍳',
+        role: u.role || 'chef',
+        email: u.email || '',
+        profession: u.profession || 'Cocinero/a Aficionado/a',
+        password: u.password || '',
+        createdAt: u.created_at || new Date().toISOString()
+      }));
     }
 
     // 2. Cargar Catálogo Maestro de Insumos
@@ -303,13 +312,17 @@ function handleSaveSupabaseConfig(e) {
 async function pushUserToSupabase(user) {
   if (!supabaseClient || !isSupabaseConnected) return;
   try {
-    await supabaseClient.from('kitchen_users').upsert({
+    const payload = {
       id: user.id,
       name: user.name,
       avatar: user.avatar || '👨‍🍳',
       role: user.role || 'chef',
-      email: user.email || null
-    });
+      email: user.email || null,
+      profession: user.profession || 'Cocinero/a Aficionado/a',
+      password: user.password || null,
+      marketing_opt_in: true
+    };
+    await supabaseClient.from('kitchen_users').upsert(payload);
   } catch (e) {
     console.warn("Error pushUserToSupabase:", e);
   }

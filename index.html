@@ -751,53 +751,210 @@
   </div>
 
   <!-- ========================================================= -->
-  <!-- 9. MODAL: LOGIN / PERFILES DE USUARIOS Y CHEFS            -->
+  <!-- 9. MODAL: AUTENTICACIÓN & REGISTRO DE USUARIOS (LEADS)   -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="authModal" style="display:none;" onclick="if(event.target===this && canCloseAuthModal()) closeAuthModal()">
+    <div class="modal-content" style="max-width:480px;">
+      
+      <!-- Brand Header -->
+      <div style="text-align:center; margin-bottom:18px;">
+        <div style="font-size:2.5rem; line-height:1; margin-bottom:6px;">🔥</div>
+        <h2 style="font-family:var(--font-serif); font-size:1.6rem; color:#ffffff; margin:0;">HELL'S KITCHEN</h2>
+        <p style="color:var(--text-muted); font-size:0.86rem; margin-top:4px;">Tu comunidad de recetas de autor y alacena viva</p>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab-btn active" id="tabBtnLogin" onclick="switchAuthTab('login')">🔑 Iniciar Sesión</button>
+        <button type="button" class="auth-tab-btn" id="tabBtnRegister" onclick="switchAuthTab('register')">✨ Registrarse</button>
+      </div>
+
+      <!-- Formulario de LOGIN -->
+      <form id="formLogin" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label>Email o Nombre de Usuario *</label>
+          <input type="text" id="inpLoginEmail" placeholder="ejemplo@correo.com o Chef Pato" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label>Contraseña *</label>
+          <input type="password" id="inpLoginPassword" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width:100%; padding:12px; font-weight:700; font-size:0.95rem; margin-top:10px;">
+          🔥 Ingresar a la Cocina
+        </button>
+
+        <div style="text-align:center; margin-top:14px; font-size:0.84rem; color:var(--text-muted);">
+          ¿Todavía no tenés cuenta? <a href="javascript:void(0)" onclick="switchAuthTab('register')" style="color:var(--primary-light); font-weight:700;">Registrate gratis acá</a>
+        </div>
+      </form>
+
+      <!-- Formulario de REGISTRO -->
+      <form id="formRegister" onsubmit="handleRegisterSubmit(event)" style="display:none;">
+        <div class="auth-promo-box">
+          <span>🎁</span>
+          <span>¡Registrate para acceder a recetas exclusivas, guardar tu stock y recibir promociones culinarias!</span>
+        </div>
+
+        <div class="form-group">
+          <label>Nombre y Apellido / Alias de Chef *</label>
+          <input type="text" id="inpRegName" placeholder="Ej: Patricio Zenker" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label>Email / Correo Electrónico *</label>
+          <input type="email" id="inpRegEmail" placeholder="tu-email@ejemplo.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label>Profesión u Ocupación *</label>
+          <select id="inpRegProfession" required>
+            <option value="Chef Profesional / Gastronómico">👨‍🍳 Chef Profesional / Gastronómico</option>
+            <option value="Cocinero/a Aficionado/a" selected>🍳 Cocinero/a Aficionado/a</option>
+            <option value="Estudiante de Gastronomía">🎓 Estudiante de Gastronomía</option>
+            <option value="Pastelero/a o Panadero/a">🥐 Pastelero/a / Panadero/a</option>
+            <option value="Nutricionista / Salud">🥗 Nutricionista / Dietista</option>
+            <option value="Sommelier / Bartender">🍷 Sommelier / Bartender</option>
+            <option value="Emprendedor/a Gastronómico">🏢 Emprendedor/a Gastronómico</option>
+            <option value="Foodie / Amante del Buen Comer">😋 Foodie / Amante del Buen Comer</option>
+            <option value="Otra profesión">💼 Otra profesión</option>
+          </select>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px;">
+          <div class="form-group">
+            <label>Contraseña *</label>
+            <input type="password" id="inpRegPassword" placeholder="Crea tu contraseña" required autocomplete="new-password">
+          </div>
+          <div class="form-group">
+            <label>Avatar</label>
+            <select id="inpRegAvatar">
+              <option value="👨‍🍳">👨‍🍳 Chef</option>
+              <option value="👩‍🍳">👩‍🍳 Chef Mujer</option>
+              <option value="🧑‍🍳">🧑‍🍳 Cocinero</option>
+              <option value="🔥">🔥 Fuego</option>
+              <option value="🥩">🥩 Carnes</option>
+              <option value="🍕">🍕 Pizza</option>
+              <option value="🍷">🍷 Vino</option>
+              <option value="🥑">🥑 Fresh</option>
+              <option value="🍰">🍰 Dulce</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; padding:12px; font-weight:700; font-size:0.95rem; margin-top:10px;">
+          ✨ Crear mi Cuenta & Entrar
+        </button>
+
+        <div style="text-align:center; margin-top:14px; font-size:0.84rem; color:var(--text-muted);">
+          ¿Ya tenés cuenta? <a href="javascript:void(0)" onclick="switchAuthTab('login')" style="color:var(--primary-light); font-weight:700;">Iniciá sesión acá</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 10. MODAL: PERFIL DE USUARIO & CAMBIO DE CUENTA           -->
   <!-- ========================================================= -->
   <div class="modal-overlay" id="userProfileModal" style="display:none;" onclick="if(event.target===this) closeUserProfileModal()">
     <div class="modal-content" style="max-width:520px;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-        <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">👥 Usuarios & Chefs</h3>
+        <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff;">👤 Mi Perfil & Sesión</h3>
         <button class="btn-icon btn-secondary" onclick="closeUserProfileModal()">✕</button>
       </div>
       
-      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:14px;">
-        Seleccioná con qué perfil estás cocinando para gestionar tu alacena personal, compras y recetas.
-      </p>
-
-      <!-- Lista de Usuarios -->
-      <div class="family-grid" id="familyMembersGrid">
-        <!-- Renderizado dinámico de tarjetas de miembros -->
+      <!-- Tarjeta del Usuario Activo -->
+      <div id="currentUserProfileCard" style="background:var(--bg-main); border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; margin-bottom:18px; display:flex; gap:14px; align-items:center;">
+        <!-- Renderizado dinámico -->
       </div>
 
-      <!-- Formulario para Agregar Nuevo Usuario -->
-      <div style="margin-top:18px; border-top:1px solid var(--border); padding-top:14px;">
-        <h4 style="color:#ffffff; font-size:0.95rem; margin-bottom:10px;">+ Crear Nuevo Usuario / Chef</h4>
-        <form onsubmit="handleCreateFamilyMember(event)">
-          <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px; align-items:end;">
-            <div class="form-group" style="margin:0;">
-              <label>Nombre de Usuario / Chef *</label>
-              <input type="text" id="inpNewUserName" placeholder="Ej: Gastón, Sofía, Martín" required>
-            </div>
-            <div class="form-group" style="margin:0;">
-              <label>Avatar / Emoji</label>
-              <select id="inpNewUserAvatar">
-                <option value="👨‍🍳">👨‍🍳 Chef</option>
-                <option value="👩‍🍳">👩‍🍳 Chef Mujer</option>
-                <option value="🧑‍🍳">🧑‍🍳 Cocinero/a</option>
-                <option value="🔥">🔥 Fuego</option>
-                <option value="🍕">🍕 Pizza</option>
-                <option value="🍔">🍔 Burger</option>
-                <option value="🌮">🌮 Taco</option>
-                <option value="🥘">🥘 Paella</option>
-                <option value="⭐">⭐ Master</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-outline btn-sm" style="margin-top:12px; width:100%;">
-            ✨ Crear Usuario
+      <!-- Acciones de Usuario -->
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:18px;">
+        <button type="button" class="btn btn-secondary" id="btnAdminLeadsDirectory" onclick="closeUserProfileModal(); openUserLeadsModal();" style="width:100%; justify-content:center; gap:8px; display:none;">
+          👥 Base de Datos & Leads de Usuarios (CSV)
+        </button>
+        <button type="button" class="btn btn-outline" onclick="closeUserProfileModal(); openAuthModal('register');" style="width:100%; justify-content:center; gap:8px;">
+          ✨ Registrar Otra Cuenta / Nuevo Chef
+        </button>
+        <button type="button" class="btn btn-danger btn-sm" onclick="logoutUser()" style="width:100%; justify-content:center; gap:8px; margin-top:6px;">
+          🚪 Cerrar Sesión
+        </button>
+      </div>
+
+      <!-- Otros Usuarios Registrados -->
+      <div style="border-top:1px solid var(--border); padding-top:14px;">
+        <h4 style="color:var(--text-muted); font-size:0.85rem; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.5px;">Cambiar a otro perfil registrado:</h4>
+        <div class="family-grid" id="familyMembersGrid">
+          <!-- Renderizado dinámico de tarjetas de miembros -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11. MODAL: BASE DE DATOS DE USUARIOS & LEADS (MARKETING)  -->
+  <!-- ========================================================= -->
+  <div class="modal-overlay" id="userLeadsModal" style="display:none;" onclick="if(event.target===this) closeUserLeadsModal()">
+    <div class="modal-content" style="max-width:850px; width:95vw; max-height:90vh; overflow-y:auto;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);">
+        <div>
+          <h3 style="font-family:var(--font-serif); font-size:1.45rem; color:#ffffff; margin:0; display:flex; align-items:center; gap:8px;">
+            👥 Base de Datos & Leads de Usuarios (<span id="leadsUsersCount">0</span>)
+          </h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); margin-top:4px;">
+            Directorio de todos los usuarios registrados con email y profesión para promociones y campañas.
+          </p>
+        </div>
+        <button class="btn-icon btn-secondary" onclick="closeUserLeadsModal()">✕</button>
+      </div>
+
+      <!-- Barra de Acciones y Filtro -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
+        <div style="display:flex; gap:8px; align-items:center;">
+          <label style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">Filtrar por Profesión:</label>
+          <select id="selLeadsFilterProfession" onchange="renderLeadsTable()" style="padding:6px 10px; font-size:0.84rem; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:var(--radius-sm);">
+            <option value="all">Todas las Profesiones</option>
+            <option value="Chef Profesional / Gastronómico">👨‍🍳 Chef Profesional</option>
+            <option value="Cocinero/a Aficionado/a">🍳 Aficionados</option>
+            <option value="Estudiante de Gastronomía">🎓 Estudiantes</option>
+            <option value="Pastelero/a o Panadero/a">🥐 Pasteleros/as</option>
+            <option value="Nutricionista / Salud">🥗 Nutricionistas</option>
+            <option value="Sommelier / Bartender">🍷 Sommeliers</option>
+            <option value="Emprendedor/a Gastronómico">🏢 Emprendedores</option>
+            <option value="Foodie / Amante del Buen Comer">😋 Foodies</option>
+            <option value="Otra profesión">💼 Otra profesión</option>
+          </select>
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button type="button" class="btn btn-outline btn-sm" onclick="copyAllEmailsToClipboard()" title="Copiar todos los mails para enviar newsletter o promociones">
+            📋 Copiar todos los Mails
           </button>
-        </form>
+          <button type="button" class="btn btn-primary btn-sm" onclick="exportUsersToCSV()" title="Descargar archivo Excel / CSV para Mailchimp o SendGrid">
+            📥 Descargar CSV / Excel
+          </button>
+        </div>
       </div>
+
+      <!-- Tabla de Usuarios -->
+      <div class="leads-table-wrapper">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th>Chef / Usuario</th>
+              <th>Email</th>
+              <th>Profesión</th>
+              <th>Fecha de Registro</th>
+              <th>Rol</th>
+            </tr>
+          </thead>
+          <tbody id="leadsTableBody">
+            <!-- Filas dinámicas -->
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
 

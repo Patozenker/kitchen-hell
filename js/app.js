@@ -190,7 +190,8 @@ function loadState() {
   }
 
   // Semilla inicial
-  appState = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA));
+  const defaultData = (typeof DEFAULT_KITCHEN_DATA !== 'undefined') ? DEFAULT_KITCHEN_DATA : (typeof window !== 'undefined' && window.DEFAULT_KITCHEN_DATA ? window.DEFAULT_KITCHEN_DATA : {});
+  appState = JSON.parse(JSON.stringify(defaultData));
   saveState();
   updateMasterIngredientsDatalist();
   updateHeaderUserBadge();
@@ -275,8 +276,208 @@ function updateMasterIngredientsDatalist() {
 }
 
 // =========================================================
-// 1.3 GESTIÓN DE USUARIOS Y SESIÓN
+// 1.3 GESTIÓN DE USUARIOS, AUTENTICACIÓN & LEADS (MARKETING)
 // =========================================================
+
+const AUTH_SESSION_KEY = 'hells_kitchen_session_user';
+
+function initAuth() {
+  const savedSessionId = localStorage.getItem(AUTH_SESSION_KEY);
+  if (savedSessionId) {
+    const user = (appState.users || []).find(u => u.id === savedSessionId || (u.email && u.email.toLowerCase() === savedSessionId.toLowerCase()));
+    if (user) {
+      appState.currentUser = user.id;
+      updateHeaderUserBadge();
+      return;
+    }
+  }
+
+  // Si no hay sesión o el usuario activo no existe, verificar si existe Chef Pato o pedir login
+  if (!appState.currentUser || !getCurrentUser()) {
+    const defaultChef = (appState.users || []).find(u => u.id === 'user-pato');
+    if (defaultChef) {
+      appState.currentUser = defaultChef.id;
+      localStorage.setItem(AUTH_SESSION_KEY, defaultChef.id);
+      updateHeaderUserBadge();
+    } else {
+      openAuthModal('login');
+    }
+  }
+}
+
+function canCloseAuthModal() {
+  const user = getCurrentUser();
+  return !!(user && user.id);
+}
+
+function openAuthModal(defaultTab = 'login') {
+  const modal = document.getElementById('authModal');
+  if (!modal) return;
+  switchAuthTab(defaultTab);
+  modal.style.display = 'flex';
+}
+
+function closeAuthModal() {
+  const modal = document.getElementById('authModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function switchAuthTab(tab) {
+  const btnLogin = document.getElementById('tabBtnLogin');
+  const btnRegister = document.getElementById('tabBtnRegister');
+  const formLogin = document.getElementById('formLogin');
+  const formRegister = document.getElementById('formRegister');
+
+  if (tab === 'login') {
+    btnLogin?.classList.add('active');
+    btnRegister?.classList.remove('active');
+    if (formLogin) formLogin.style.display = 'block';
+    if (formRegister) formRegister.style.display = 'none';
+    setTimeout(() => document.getElementById('inpLoginEmail')?.focus(), 50);
+  } else {
+    btnLogin?.classList.remove('active');
+    btnRegister?.classList.add('active');
+    if (formLogin) formLogin.style.display = 'none';
+    if (formRegister) formRegister.style.display = 'block';
+    setTimeout(() => document.getElementById('inpRegName')?.focus(), 50);
+  }
+}
+
+function handleLoginSubmit(e) {
+  if (e) e.preventDefault();
+
+  const emailOrUser = document.getElementById('inpLoginEmail')?.value.trim().toLowerCase();
+  const password = document.getElementById('inpLoginPassword')?.value.trim();
+
+  if (!emailOrUser || !password) {
+    showToast('Por favor completá usuario/email y contraseña.', 'info');
+    return;
+  }
+
+  // Buscar usuario por email o nombre
+  const user = (appState.users || []).find(u => 
+    (u.email && u.email.toLowerCase() === emailOrUser) || 
+    (u.name && u.name.toLowerCase() === emailOrUser) ||
+    u.id === emailOrUser
+  );
+
+  if (!user) {
+    showToast('❌ Usuario o email no encontrado. Por favor registrate.', 'error');
+    switchAuthTab('register');
+    const regEmail = document.getElementById('inpRegEmail');
+    if (regEmail && emailOrUser.includes('@')) regEmail.value = emailOrUser;
+    return;
+  }
+
+  // Validar contraseña si está seteada en el usuario
+  if (user.password && user.password !== password) {
+    showToast('❌ Contraseña incorrecta. Verificala e intentá nuevamente.', 'error');
+    return;
+  }
+
+  // Login exitoso
+  appState.currentUser = user.id;
+  localStorage.setItem(AUTH_SESSION_KEY, user.id);
+  saveState();
+
+  updateHeaderUserBadge();
+  updateMasterIngredientsDatalist();
+  updateHeaderBadges();
+  closeAuthModal();
+
+  if (currentTab === 'matcher') renderSmartMatcher();
+  if (currentTab === 'recetas') renderRecipesView();
+  if (currentTab === 'alacena') renderPantryView();
+  if (currentTab === 'compras') renderShoppingView();
+
+  showToast(`🔥 ¡Bienvenido/a de vuelta a la cocina, ${user.name}!`, 'success');
+}
+
+function handleRegisterSubmit(e) {
+  if (e) e.preventDefault();
+
+  const name = document.getElementById('inpRegName')?.value.trim();
+  const email = document.getElementById('inpRegEmail')?.value.trim().toLowerCase();
+  const profession = document.getElementById('inpRegProfession')?.value || 'Cocinero/a Aficionado/a';
+  const password = document.getElementById('inpRegPassword')?.value.trim();
+  const avatar = document.getElementById('inpRegAvatar')?.value || '👨‍🍳';
+
+  if (!name || !email || !password) {
+    showToast('Por favor completá todos los campos requeridos.', 'info');
+    return;
+  }
+
+  // Validar formato de email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    showToast('Por favor ingresá un correo electrónico válido.', 'error');
+    return;
+  }
+
+  // Verificar si el email ya está registrado
+  const existingUser = (appState.users || []).find(u => u.email && u.email.toLowerCase() === email);
+  if (existingUser) {
+    showToast(`⚠️ El email "${email}" ya está registrado. Por favor iniciá sesión.`, 'info');
+    switchAuthTab('login');
+    const loginInp = document.getElementById('inpLoginEmail');
+    if (loginInp) loginInp.value = email;
+    return;
+  }
+
+  const newUserId = `usr-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`;
+  const newUser = {
+    id: newUserId,
+    name,
+    email,
+    profession,
+    password,
+    avatar,
+    role: 'chef',
+    createdAt: new Date().toISOString()
+  };
+
+  if (!Array.isArray(appState.users)) appState.users = [];
+  appState.users.push(newUser);
+
+  // Inicializar alacena y compras individuales
+  if (!appState.pantries) appState.pantries = {};
+  if (!appState.shoppingLists) appState.shoppingLists = {};
+  appState.pantries[newUser.id] = (typeof createEmptyUserPantry === 'function')
+    ? createEmptyUserPantry()
+    : ((typeof MASTER_PANTRY_CATALOG !== 'undefined') ? MASTER_PANTRY_CATALOG.map(i => ({ ...i, qty: 0 })) : []);
+  appState.shoppingLists[newUser.id] = [];
+
+  appState.currentUser = newUser.id;
+  localStorage.setItem(AUTH_SESSION_KEY, newUser.id);
+  saveState();
+
+  // Sincronizar nuevo usuario registrado en Supabase
+  if (typeof window !== 'undefined' && typeof window.pushUserToSupabase === 'function') {
+    window.pushUserToSupabase(newUser);
+  }
+
+  updateHeaderUserBadge();
+  updateAuthorFilterDropdown();
+  updateMasterIngredientsDatalist();
+  updateHeaderBadges();
+  closeAuthModal();
+
+  if (currentTab === 'matcher') renderSmartMatcher();
+  if (currentTab === 'recetas') renderRecipesView();
+  if (currentTab === 'alacena') renderPantryView();
+  if (currentTab === 'compras') renderShoppingView();
+
+  showToast(`✨ ¡Cuenta creada con éxito! Bienvenido/a a Hell's Kitchen, ${newUser.name}.`, 'success');
+}
+
+function logoutUser() {
+  localStorage.removeItem(AUTH_SESSION_KEY);
+  appState.currentUser = null;
+  saveState();
+  closeUserProfileModal();
+  openAuthModal('login');
+  showToast('🚪 Has cerrado sesión.', 'info');
+}
 
 function updateHeaderUserBadge() {
   const user = getCurrentUser();
@@ -285,7 +486,9 @@ function updateHeaderUserBadge() {
   const greetingEl = document.getElementById('heroGreeting');
 
   if (avatarEl) avatarEl.innerText = user.avatar || '👨‍🍳';
-  if (nameEl) nameEl.innerText = user.name || 'Chef';
+  if (nameEl) {
+    nameEl.innerHTML = `<span>${escapeAttr(user.name || 'Chef')}</span>`;
+  }
   if (greetingEl) greetingEl.innerText = `¿Qué cocinamos hoy, ${user.name}? 🔥`;
   updateDynamicUserTitles();
 }
@@ -305,20 +508,54 @@ function updateDynamicUserTitles() {
 
 function openUserProfileModal() {
   const modal = document.getElementById('userProfileModal');
+  const card = document.getElementById('currentUserProfileCard');
   const grid = document.getElementById('familyMembersGrid');
-  if (!modal || !grid) return;
+  const adminBtn = document.getElementById('btnAdminLeadsDirectory');
+  if (!modal) return;
 
-  grid.innerHTML = (appState.users || []).map(u => {
-    const isActive = u.id === appState.currentUser;
-    return `
-      <div class="family-member-card ${isActive ? 'active' : ''}" onclick="switchUser('${u.id}')">
-        ${isActive ? '<span class="family-card-check">✓</span>' : ''}
-        <span class="family-card-avatar">${u.avatar || '👨‍🍳'}</span>
-        <div class="family-card-name">${escapeAttr(u.name)}</div>
-        <div class="family-card-role">${isActive ? '🟢 Sesión Activa' : '👤 Usuario'}</div>
+  const curUser = getCurrentUser();
+
+  if (card) {
+    card.innerHTML = `
+      <div style="font-size:2.8rem; line-height:1;">${curUser.avatar || '👨‍🍳'}</div>
+      <div style="flex:1;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <h4 style="color:#ffffff; margin:0; font-size:1.15rem; font-family:var(--font-serif);">${escapeAttr(curUser.name)}</h4>
+          <span style="background:rgba(234,88,12,0.2); color:var(--primary-light); font-size:0.7rem; font-weight:800; padding:2px 8px; border-radius:10px; text-transform:uppercase;">${curUser.role === 'admin' ? '👑 Admin' : '👨‍🍳 Chef'}</span>
+        </div>
+        <div style="font-size:0.86rem; color:var(--text-main); margin-top:3px; font-weight:600;">
+          💼 ${escapeAttr(curUser.profession || 'Cocinero/a Aficionado/a')}
+        </div>
+        <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
+          📧 ${escapeAttr(curUser.email || 'Sin correo asociado')}
+        </div>
       </div>
     `;
-  }).join('');
+  }
+
+  // Mostrar botón de Leads / Directorio para admin
+  if (adminBtn) {
+    adminBtn.style.display = 'flex';
+  }
+
+  if (grid) {
+    const otherUsers = (appState.users || []).filter(u => u.id !== curUser.id);
+    if (otherUsers.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align:center; padding:12px; color:var(--text-muted); font-size:0.82rem;">
+          No hay otros usuarios registrados en este dispositivo.
+        </div>
+      `;
+    } else {
+      grid.innerHTML = otherUsers.map(u => `
+        <div class="family-member-card" onclick="switchUser('${u.id}')">
+          <span class="family-card-avatar">${u.avatar || '👨‍🍳'}</span>
+          <div class="family-card-name">${escapeAttr(u.name)}</div>
+          <div style="font-size:0.72rem; color:var(--text-muted); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${escapeAttr(u.profession || 'Chef')}</div>
+        </div>
+      `).join('');
+    }
+  }
 
   modal.style.display = 'flex';
 }
@@ -333,7 +570,9 @@ function switchUser(userId) {
   if (!user) return;
 
   appState.currentUser = userId;
+  localStorage.setItem(AUTH_SESSION_KEY, userId);
   saveState();
+
   updateHeaderUserBadge();
   updateMasterIngredientsDatalist();
   updateHeaderBadges();
@@ -347,50 +586,161 @@ function switchUser(userId) {
   showToast(`👨‍🍳 Sesión activa: ¡Bienvenido/a, ${user.name}!`, 'success');
 }
 
-function handleCreateFamilyMember(e) {
-  if (e) e.preventDefault();
+// =========================================================
+// 1.4 PANEL DE BASE DE DATOS DE USUARIOS & LEADS (MARKETING)
+// =========================================================
 
-  const nameInp = document.getElementById('inpNewUserName');
-  const avatarInp = document.getElementById('inpNewUserAvatar');
-  const name = nameInp?.value.trim();
-  const avatar = avatarInp?.value || '👨‍🍳';
+function openUserLeadsModal() {
+  const modal = document.getElementById('userLeadsModal');
+  if (!modal) return;
+  renderLeadsTable();
+  modal.style.display = 'flex';
+}
 
-  if (!name) return;
+function closeUserLeadsModal() {
+  const modal = document.getElementById('userLeadsModal');
+  if (modal) modal.style.display = 'none';
+}
 
-  const newUser = {
-    id: `user-${Date.now()}`,
-    name,
-    avatar,
-    role: 'member'
-  };
+function renderLeadsTable() {
+  const tbody = document.getElementById('leadsTableBody');
+  const countEl = document.getElementById('leadsUsersCount');
+  const filterSel = document.getElementById('selLeadsFilterProfession');
+  const filterVal = filterSel?.value || 'all';
 
-  appState.users.push(newUser);
-  appState.currentUser = newUser.id;
+  if (!tbody) return;
 
-  // Inicializar alacena y compras individuales del nuevo miembro con catálogo maestro (qty 0)
-  if (!appState.pantries) appState.pantries = {};
-  if (!appState.shoppingLists) appState.shoppingLists = {};
-  appState.pantries[newUser.id] = (typeof createEmptyUserPantry === 'function')
-    ? createEmptyUserPantry()
-    : ((typeof MASTER_PANTRY_CATALOG !== 'undefined') ? MASTER_PANTRY_CATALOG.map(i => ({ ...i, qty: 0 })) : []);
-  appState.shoppingLists[newUser.id] = [];
+  let users = Array.isArray(appState.users) ? [...appState.users] : [];
 
-  saveState();
+  if (filterVal !== 'all') {
+    users = users.filter(u => u.profession === filterVal);
+  }
 
-  if (nameInp) nameInp.value = '';
+  if (countEl) countEl.innerText = users.length;
 
-  updateHeaderUserBadge();
-  updateAuthorFilterDropdown();
-  updateMasterIngredientsDatalist();
-  updateHeaderBadges();
-  closeUserProfileModal();
+  if (users.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="5" style="text-align:center; padding:24px; color:var(--text-muted);">
+          No se encontraron usuarios con la profesión seleccionada.
+        </td>
+      </tr>
+    `;
+    return;
+  }
 
-  if (currentTab === 'matcher') renderSmartMatcher();
-  if (currentTab === 'recetas') renderRecipesView();
-  if (currentTab === 'alacena') renderPantryView();
-  if (currentTab === 'compras') renderShoppingView();
+  tbody.innerHTML = users.map(u => {
+    const userRecipesCount = (appState.recipes || []).filter(r => r.authorId === u.id).length;
+    const dateFormatted = u.createdAt ? new Date(u.createdAt).toLocaleDateString('es-AR') : 'Reciente';
+    const profClass = (u.profession || '').toLowerCase().includes('chef') ? 'chef' : 
+                      (u.profession || '').toLowerCase().includes('estudiante') ? 'estudiante' : 'aficionado';
 
-  showToast(`🎉 ¡${name} se unió con su propia Alacena y Lista de Compras!`, 'success');
+    return `
+      <tr>
+        <td>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">${u.avatar || '👨‍🍳'}</span>
+            <div>
+              <strong style="color:#ffffff; display:block;">${escapeAttr(u.name)}</strong>
+              <small style="color:var(--text-dim); font-size:0.75rem;">${userRecipesCount} receta(s)</small>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span style="font-family:var(--font-mono); font-size:0.84rem; color:var(--text-main);">${escapeAttr(u.email || 'Sin email')}</span>
+            ${u.email ? `<button type="button" class="copy-email-btn" onclick="copySingleEmail('${escapeAttr(u.email)}')" title="Copiar email">📋</button>` : ''}
+          </div>
+        </td>
+        <td>
+          <span class="profession-pill ${profClass}">
+            💼 ${escapeAttr(u.profession || 'Cocinero/a')}
+          </span>
+        </td>
+        <td style="color:var(--text-muted); font-size:0.82rem;">
+          📅 ${dateFormatted}
+        </td>
+        <td>
+          <span style="font-size:0.75rem; padding:2px 8px; border-radius:var(--radius-full); font-weight:700; ${u.role === 'admin' ? 'background:rgba(245,158,11,0.2); color:#fcd34d;' : 'background:rgba(107,114,128,0.2); color:#9ca3af;'}">
+            ${u.role === 'admin' ? '👑 Admin' : '👤 Chef'}
+          </span>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function copySingleEmail(email) {
+  if (!email) return;
+  if (typeof navigator !== 'undefined' && navigator.clipboard) {
+    navigator.clipboard.writeText(email).then(() => {
+      showToast(`📋 Email copiado: ${email}`, 'success');
+    }).catch(() => {
+      showToast(`Email: ${email}`, 'info');
+    });
+  } else {
+    showToast(`Email: ${email}`, 'info');
+  }
+}
+
+function copyAllEmailsToClipboard() {
+  const filterSel = document.getElementById('selLeadsFilterProfession');
+  const filterVal = filterSel?.value || 'all';
+
+  let users = Array.isArray(appState.users) ? [...appState.users] : [];
+  if (filterVal !== 'all') {
+    users = users.filter(u => u.profession === filterVal);
+  }
+
+  const emails = users.map(u => u.email).filter(e => e && e.includes('@'));
+  if (emails.length === 0) {
+    showToast('No hay emails registrados para copiar.', 'info');
+    return;
+  }
+
+  const emailsString = emails.join(', ');
+  if (typeof navigator !== 'undefined' && navigator.clipboard) {
+    navigator.clipboard.writeText(emailsString).then(() => {
+      showToast(`📋 ¡${emails.length} emails copiados al portapapeles listos para enviar promociones!`, 'success');
+    }).catch(() => {
+      prompt('Copiá los emails para tu campaña:', emailsString);
+    });
+  } else {
+    prompt('Copiá los emails para tu campaña:', emailsString);
+  }
+}
+
+function exportUsersToCSV() {
+  const users = Array.isArray(appState.users) ? appState.users : [];
+  if (users.length === 0) {
+    showToast('No hay usuarios registrados para exportar.', 'info');
+    return;
+  }
+
+  let csvContent = "\uFEFF"; // UTF-8 BOM para Excel
+  csvContent += "ID,Nombre,Email,Profesion,Rol,Fecha_Registro,Recetas_Publicadas\n";
+
+  users.forEach(u => {
+    const userRecipesCount = (appState.recipes || []).filter(r => r.authorId === u.id).length;
+    const dateFormatted = u.createdAt ? new Date(u.createdAt).toLocaleDateString('es-AR') : '';
+    const safeName = `"${(u.name || '').replace(/"/g, '""')}"`;
+    const safeEmail = `"${(u.email || '').replace(/"/g, '""')}"`;
+    const safeProf = `"${(u.profession || 'Cocinero/a Aficionado/a').replace(/"/g, '""')}"`;
+    const safeRole = `"${(u.role || 'chef').replace(/"/g, '""')}"`;
+
+    csvContent += `${u.id},${safeName},${safeEmail},${safeProf},${safeRole},"${dateFormatted}",${userRecipesCount}\n`;
+  });
+
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.setAttribute('href', url);
+  link.setAttribute('download', `hells_kitchen_leads_usuarios_${new Date().toISOString().split('T')[0]}.csv`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  showToast(`📥 ¡Base de datos de ${users.length} usuarios exportada a CSV exitosamente!`, 'success');
 }
 
 // =========================================================
@@ -634,6 +984,7 @@ function renderSmartMatcher() {
 
     const canEdit = canUserModifyRecipe(r);
     const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
+    const ratings = calculateRecipeRatings(r);
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -651,7 +1002,7 @@ function renderSmartMatcher() {
             <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
             <div style="display:flex; gap:4px; align-items:center;">
               ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
-              <span class="recipe-author-badge" title="Subida por este Chef">${r.authorAvatar || '👨‍🍳'} Subida por <strong>${escapeAttr(r.authorName || 'Chef Pato')}</strong></span>
+              <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
             </div>
           </div>
 
@@ -667,8 +1018,10 @@ function renderSmartMatcher() {
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
             <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
               <span>⭐ ${r.difficulty}</span>
+              <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
@@ -738,6 +1091,7 @@ function renderRecipesView() {
     const match = calculateRecipeMatch(r);
     const canEdit = canUserModifyRecipe(r);
     const commentsCount = Array.isArray(r.comments) ? r.comments.length : 0;
+    const ratings = calculateRecipeRatings(r);
 
     return `
       <div class="recipe-card" onclick="openRecipeDetailModal('${r.id}')">
@@ -751,7 +1105,7 @@ function renderRecipesView() {
             <div class="recipe-category-tag">${getCategoryName(r.category)}</div>
             <div style="display:flex; gap:4px; align-items:center;">
               ${r.isPrivate ? '<span class="recipe-private-badge">🔒 Privada</span>' : '<span class="recipe-public-badge">🌐 Pública</span>'}
-              <span class="recipe-author-badge" title="Subida por este Chef">${r.authorAvatar || '👨‍🍳'} Subida por <strong>${escapeAttr(r.authorName || 'Chef Pato')}</strong></span>
+              <span class="recipe-author-badge">${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
             </div>
           </div>
 
@@ -760,10 +1114,12 @@ function renderRecipesView() {
 
           <div class="recipe-meta-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
             <div style="display:flex; gap:10px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
+            <div style="display:flex; gap:8px; font-size:0.82rem; color:var(--text-muted); align-items:center;">
               <span>👥 ${r.portions}p</span>
               <span style="color:${match.pct === 100 ? '#34d399' : '#fbbf24'}; font-weight:700;">
                 ${match.pct === 100 ? '✅ 100%' : `⚠️ ${match.pct}%`}
               </span>
+              <span style="color:var(--accent-gold); font-weight:700;">⭐ ${ratings.general} <span style="font-size:0.73rem; opacity:0.85;">(😋 ${ratings.taste} · ⚡ ${ratings.ease})</span></span>
               ${commentsCount > 0 ? `<span>💬 ${commentsCount}</span>` : ''}
             </div>
             <div style="display:flex; gap:6px;">
@@ -1353,18 +1709,9 @@ function renderRecipeDetailModalContent() {
   if (catEl) {
     catEl.innerHTML = `
       <span>${getCategoryName(r.category)}</span>
-    `;
-  }
-
-  const authorLineEl = document.getElementById('modalRecipeAuthorLine');
-  if (authorLineEl) {
-    authorLineEl.innerHTML = `
-      <span style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">👨‍🍳 Subida por:</span>
-      <span style="background:rgba(234,88,12,0.15); border:1px solid rgba(234,88,12,0.4); border-radius:var(--radius-full); padding:3px 10px; font-weight:700; color:#fdba74; font-size:0.88rem; display:inline-flex; align-items:center; gap:5px;">
-        <span>${r.authorAvatar || '👨‍🍳'}</span>
-        <span>${escapeAttr(r.authorName || 'Chef Pato')}</span>
-      </span>
-      ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.2); border:1px solid rgba(239,68,68,0.4); border-radius:var(--radius-full); padding:3px 8px; font-size:0.75rem; color:#fca5a5; font-weight:700;">🔒 Solo visible para vos</span>' : '<span style="background:rgba(16,185,129,0.2); border:1px solid rgba(16,185,129,0.4); border-radius:var(--radius-full); padding:3px 8px; font-size:0.75rem; color:#6ee7b7; font-weight:700;">🌐 Receta Pública</span>'}
+      <span style="opacity:0.6;">•</span>
+      <span>${r.authorAvatar || '👨‍🍳'} ${escapeAttr(r.authorName || 'Chef')}</span>
+      ${r.isPrivate ? '<span style="background:rgba(239,68,68,0.4); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🔒 Privada</span>' : '<span style="background:rgba(16,185,129,0.3); padding:1px 6px; border-radius:10px; font-size:0.7rem; color:#fff; font-weight:700;">🌐 Pública</span>'}
     `;
   }
 
@@ -2727,7 +3074,20 @@ window.updateHeaderUserBadge = updateHeaderUserBadge;
 window.openUserProfileModal = openUserProfileModal;
 window.closeUserProfileModal = closeUserProfileModal;
 window.switchUser = switchUser;
-window.handleCreateFamilyMember = handleCreateFamilyMember;
+window.initAuth = initAuth;
+window.canCloseAuthModal = canCloseAuthModal;
+window.openAuthModal = openAuthModal;
+window.closeAuthModal = closeAuthModal;
+window.switchAuthTab = switchAuthTab;
+window.handleLoginSubmit = handleLoginSubmit;
+window.handleRegisterSubmit = handleRegisterSubmit;
+window.logoutUser = logoutUser;
+window.openUserLeadsModal = openUserLeadsModal;
+window.closeUserLeadsModal = closeUserLeadsModal;
+window.renderLeadsTable = renderLeadsTable;
+window.copySingleEmail = copySingleEmail;
+window.copyAllEmailsToClipboard = copyAllEmailsToClipboard;
+window.exportUsersToCSV = exportUsersToCSV;
 window.canUserModifyRecipe = canUserModifyRecipe;
 window.getVisibleRecipes = getVisibleRecipes;
 window.filterRecipesByScope = filterRecipesByScope;
@@ -2785,6 +3145,8 @@ window.addOrMergeShoppingItem = addOrMergeShoppingItem;
 window.parseQuantityAndUnit = parseQuantityAndUnit;
 window.formatBaseQuantity = formatBaseQuantity;
 window.updateMasterIngredientsDatalist = updateMasterIngredientsDatalist;
+window.setFormRating = setFormRating;
+window.calculateRecipeRatings = calculateRecipeRatings;
 window.renderRecipeComments = renderRecipeComments;
 window.handleAddRecipeComment = handleAddRecipeComment;
 window.toggleReplyInput = toggleReplyInput;
@@ -2796,9 +3158,7 @@ window.saveState = saveState;
 if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
     loadState();
+    initAuth();
     switchTab('matcher');
   });
 }
-
-window.setFormRating = setFormRating;
-window.calculateRecipeRatings = calculateRecipeRatings;
