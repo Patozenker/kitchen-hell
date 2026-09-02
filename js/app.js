@@ -71,21 +71,15 @@ function loadState() {
         const legacyParsed = JSON.parse(legacyRaw);
         if (legacyParsed) {
           parsed = {
-            users: (typeof DEFAULT_FAMILY_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_FAMILY_USERS)) : [
-              { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' },
-              { id: 'user-mama', name: 'Mamá', avatar: '👩‍🍳', role: 'member' },
-              { id: 'user-hermano', name: 'Hermano', avatar: '🧑‍🍳', role: 'member' }
+            users: (typeof DEFAULT_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_USERS)) : [
+              { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'user' }
             ],
             currentUser: 'user-pato',
             pantries: {
-              'user-pato': legacyParsed.pantry || (typeof MASTER_PANTRY_CATALOG !== 'undefined' ? JSON.parse(JSON.stringify(MASTER_PANTRY_CATALOG)) : []),
-              'user-mama': (typeof createEmptyUserPantry === 'function') ? createEmptyUserPantry() : [],
-              'user-hermano': (typeof createEmptyUserPantry === 'function') ? createEmptyUserPantry() : []
+              'user-pato': legacyParsed.pantry || (typeof MASTER_PANTRY_CATALOG !== 'undefined' ? JSON.parse(JSON.stringify(MASTER_PANTRY_CATALOG)) : [])
             },
             shoppingLists: {
-              'user-pato': legacyParsed.shoppingList || [],
-              'user-mama': [],
-              'user-hermano': []
+              'user-pato': legacyParsed.shoppingList || []
             },
             recipes: (legacyParsed.recipes || []).map(r => ({
               ...r,
@@ -104,10 +98,22 @@ function loadState() {
     if (parsed) {
       appState = parsed;
 
-      // Asegurar usuarios mínimos
+      // Asegurar usuarios mínimos y purgar usuarios legacy
+      if (Array.isArray(appState.users)) {
+        appState.users = appState.users.filter(u => u.id !== 'user-mama' && u.id !== 'user-hermano');
+      }
+      if (appState.pantries) {
+        delete appState.pantries['user-mama'];
+        delete appState.pantries['user-hermano'];
+      }
+      if (appState.shoppingLists) {
+        delete appState.shoppingLists['user-mama'];
+        delete appState.shoppingLists['user-hermano'];
+      }
+
       if (!Array.isArray(appState.users) || appState.users.length === 0) {
-        appState.users = (typeof DEFAULT_FAMILY_USERS !== 'undefined') ? JSON.parse(JSON.stringify(DEFAULT_FAMILY_USERS)) : [
-          { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' }
+        appState.users = [
+          { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'user' }
         ];
       }
       if (!appState.currentUser || !appState.users.some(u => u.id === appState.currentUser)) {
@@ -309,7 +315,7 @@ function openUserProfileModal() {
         ${isActive ? '<span class="family-card-check">✓</span>' : ''}
         <span class="family-card-avatar">${u.avatar || '👨‍🍳'}</span>
         <div class="family-card-name">${escapeAttr(u.name)}</div>
-        <div class="family-card-role">${u.role === 'admin' ? '👑 Chef Principal' : '👨‍🍳 Chef'}</div>
+        <div class="family-card-role">${isActive ? '🟢 Sesión Activa' : '👤 Usuario'}</div>
       </div>
     `;
   }).join('');

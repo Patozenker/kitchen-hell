@@ -107,12 +107,11 @@ const MASTER_PANTRY_CATALOG = [
   { id: 'ing-90', name: 'Cerveza Rubia / IPA', category: 'cava', qty: 0, unit: 'latas', minQty: 2, icon: '🍺' }
 ];
 
-// 👥 Usuarios / Chefs por Defecto (Hell's Kitchen Community)
+// 👥 Usuarios por Defecto (Hell's Kitchen Community)
 const DEFAULT_USERS = [
-  { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'admin' },
-  { id: 'user-gaston', name: 'Gastón', avatar: '🧑‍🍳', role: 'chef' },
-  { id: 'user-sofia', name: 'Sofía', avatar: '👩‍🍳', role: 'chef' }
+  { id: 'user-pato', name: 'Chef Pato', avatar: '👨‍🍳', role: 'user' }
 ];
+const DEFAULT_FAMILY_USERS = DEFAULT_USERS; // Alias de compatibilidad
 
 // Helper para crear alacena vacía (stock 0) para nuevos usuarios
 function createEmptyUserPantry() {
@@ -129,16 +128,12 @@ const DEFAULT_KITCHEN_DATA = {
 
   // 1. ALACENAS INDIVIDUALES POR USUARIO
   pantries: {
-    'user-pato': JSON.parse(JSON.stringify(MASTER_PANTRY_CATALOG)),
-    'user-gaston': createEmptyUserPantry(),
-    'user-sofia': createEmptyUserPantry()
+    'user-pato': JSON.parse(JSON.stringify(MASTER_PANTRY_CATALOG))
   },
 
   // 2. LISTAS DE COMPRAS INDIVIDUALES POR USUARIO
   shoppingLists: {
-    'user-pato': [],
-    'user-gaston': [],
-    'user-sofia': []
+    'user-pato': []
   },
 
   // 3. RECETARIO (PÚBLICAS Y PRIVADAS)
@@ -263,9 +258,9 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-3',
       title: 'Risotto Cremoso de Hongos de Pino, Verdeo & Parmesano',
-      authorId: 'user-mama',
-      authorName: 'Mamá',
-      authorAvatar: '👩‍🍳',
+      authorId: 'user-pato',
+      authorName: 'Chef Pato',
+      authorAvatar: '👨‍🍳',
       isPrivate: false,
       category: 'pastas',
       time: 30,
@@ -372,9 +367,9 @@ const DEFAULT_KITCHEN_DATA = {
     {
       id: 'rec-5',
       title: 'Volcán de Chocolate Fondant con Centro Líquido',
-      authorId: 'user-hermano',
-      authorName: 'Hermano',
-      authorAvatar: '🧑‍🍳',
+      authorId: 'user-pato',
+      authorName: 'Chef Pato',
+      authorAvatar: '👨‍🍳',
       isPrivate: false,
       category: 'postres',
       time: 20,
