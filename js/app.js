@@ -371,7 +371,37 @@ async function handleLoginSubmit(e) {
     return;
   }
 
-  // 1. Buscar usuario localmente por email, nombre o id
+  // 1. Consultar a Supabase en tiempo real si está conectado
+  if (typeof supabaseClient !== 'undefined' && supabaseClient && isSupabaseConnected) {
+    try {
+      const { data: remoteUsers, error } = await supabaseClient.from('kitchen_users').select('*');
+      if (!error && remoteUsers && remoteUsers.length > 0) {
+        if (!Array.isArray(appState.users)) appState.users = [];
+        remoteUsers.forEach(ru => {
+          const idx = appState.users.findIndex(u => u.id === ru.id);
+          const mapped = {
+            id: ru.id,
+            name: ru.name,
+            email: ru.email,
+            profession: ru.profession || 'Cocinero/a Aficionado/a',
+            password: ru.password,
+            avatar: ru.avatar || '👨‍🍳',
+            role: ru.role || 'chef',
+            marketing_opt_in: ru.marketing_opt_in !== false
+          };
+          if (idx !== -1) {
+            appState.users[idx] = { ...appState.users[idx], ...mapped };
+          } else {
+            appState.users.push(mapped);
+          }
+        });
+      }
+    } catch (err) {
+      console.warn("Error consultando Supabase en login:", err);
+    }
+  }
+
+  // 2. Buscar usuario por email, nombre o id
   let user = (appState.users || []).find(u => 
     (u.email && u.email.toLowerCase() === emailOrUser) || 
     (u.name && u.name.toLowerCase() === emailOrUser) ||
@@ -379,35 +409,7 @@ async function handleLoginSubmit(e) {
     (emailOrUser === 'pato' && (u.id === 'user-pato' || (u.name && u.name.toLowerCase().includes('pato'))))
   );
 
-  // 2. Si no se encontró localmente, buscar en Supabase en tiempo real
-  if (!user && typeof supabaseClient !== 'undefined' && supabaseClient && isSupabaseConnected) {
-    try {
-      const { data, error } = await supabaseClient
-        .from('kitchen_users')
-        .select('*')
-        .or(`email.ilike.${emailOrUser},name.ilike.${emailOrUser}`);
-
-      if (data && data.length > 0) {
-        const dbUser = data[0];
-        user = {
-          id: dbUser.id,
-          name: dbUser.name,
-          email: dbUser.email,
-          profession: dbUser.profession || 'Cocinero/a Aficionado/a',
-          password: dbUser.password || 'pato',
-          avatar: dbUser.avatar || '👨‍🍳',
-          role: dbUser.role || 'chef'
-        };
-        if (!appState.users.some(u => u.id === user.id)) {
-          appState.users.push(user);
-        }
-      }
-    } catch (err) {
-      console.warn("Error consultando usuario en Supabase:", err);
-    }
-  }
-
-  // 3. Fallback especial para Chef Pato (Administrador)
+  // 3. Fallback para Chef Pato si es primera vez
   if (!user && (emailOrUser === 'pato' || emailOrUser === 'chef pato' || emailOrUser === 'pato@hellskitchen.com')) {
     user = {
       id: 'user-pato',
@@ -455,7 +457,7 @@ async function handleLoginSubmit(e) {
   showToast(`🔥 ¡Bienvenido/a de vuelta a la cocina, ${user.name}!`, 'success');
 }
 
-function handleRegisterSubmit(e) {
+async function handleRegisterSubmit(e) {
   if (e) e.preventDefault();
 
   const name = document.getElementById('inpRegName')?.value.trim();
@@ -476,7 +478,7 @@ function handleRegisterSubmit(e) {
     return;
   }
 
-  // Verificar si el email ya está registrado
+  // Verificar si el email ya está registrado localmente o en Supabase
   const existingUser = (appState.users || []).find(u => u.email && u.email.toLowerCase() === email);
   if (existingUser) {
     showToast(`⚠️ El email "${email}" ya está registrado. Por favor iniciá sesión.`, 'info');
@@ -484,6 +486,21 @@ function handleRegisterSubmit(e) {
     const loginInp = document.getElementById('inpLoginEmail');
     if (loginInp) loginInp.value = email;
     return;
+  }
+
+  if (typeof supabaseClient !== 'undefined' && supabaseClient && isSupabaseConnected) {
+    try {
+      const { data: dbExisting } = await supabaseClient.from('kitchen_users').select('id').eq('email', email);
+      if (dbExisting && dbExisting.length > 0) {
+        showToast(`⚠️ El email "${email}" ya está registrado en Supabase. Por favor iniciá sesión.`, 'info');
+        switchAuthTab('login');
+        const loginInp = document.getElementById('inpLoginEmail');
+        if (loginInp) loginInp.value = email;
+        return;
+      }
+    } catch (err) {
+      console.warn("Error verificando email duplicado en Supabase:", err);
+    }
   }
 
   const newUserId = `usr-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`;
@@ -495,6 +512,7 @@ function handleRegisterSubmit(e) {
     password,
     avatar,
     role: 'chef',
+    marketing_opt_in: true,
     createdAt: new Date().toISOString()
   };
 
@@ -514,8 +532,10 @@ function handleRegisterSubmit(e) {
   saveState();
 
   // Sincronizar nuevo usuario registrado en Supabase
-  if (typeof window !== 'undefined' && typeof window.pushUserToSupabase === 'function') {
-    window.pushUserToSupabase(newUser);
+  if (typeof pushUserToSupabase === 'function') {
+    await pushUserToSupabase(newUser);
+  } else if (typeof window !== 'undefined' && typeof window.pushUserToSupabase === 'function') {
+    await window.pushUserToSupabase(newUser);
   }
 
   updateHeaderUserBadge();

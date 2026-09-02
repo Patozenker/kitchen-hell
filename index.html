@@ -755,7 +755,7 @@
   <!-- ========================================================= -->
   <!-- 9. MODAL: AUTENTICACIÓN & REGISTRO DE USUARIOS (LEADS)   -->
   <!-- ========================================================= -->
-  <div class="modal-overlay" id="authModal" style="display:none;" onclick="if(event.target===this && canCloseAuthModal()) closeAuthModal()">
+  <div class="modal-overlay" id="authModal" style="display:none;">
     <div class="modal-content" style="max-width:480px;">
       
       <!-- Brand Header -->
@@ -975,8 +975,10 @@
   <datalist id="masterIngredientsList"></datalist>
 
   <!-- Scripts -->
-  <script src="js/data.js?v=10"></script>
-  <script src="js/app.js?v=10"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js?v=12"></script>
+  <script src="js/supabase.js?v=12"></script>
+  <script src="js/app.js?v=12"></script>
   <script>
     // Limpiar Service Worker antiguo para asegurar recarga en vivo de scripts
     if ('serviceWorker' in navigator) {
