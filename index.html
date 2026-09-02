@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Hell's Kitchen - Chef Personal & Alacena Familiar</title>
   
-  <!-- PWA & Iconos -->
+  <!-- PWA, Iconos & Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/favicon.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#090d16">
   <meta name="mobile-web-app-capable" content="yes">
@@ -21,8 +23,8 @@
   <!-- 1. HEADER / NAVEGACIÓN SUPERIOR                           -->
   <!-- ========================================================= -->
   <header class="app-header">
-    <div class="header-brand" onclick="switchTab('matcher')" style="cursor:pointer;">
-      <div class="brand-icon">🔥</div>
+    <div class="header-brand" onclick="switchTab('matcher')" style="cursor:pointer; display:flex; align-items:center; gap:12px;">
+      <img src="img/logo.png" alt="Hell's Kitchen" class="brand-logo-img" onerror="this.onerror=null; this.src='img/favicon.png';">
       <div>
         <h1 class="brand-title">HELL'S KITCHEN</h1>
         <div class="brand-subtitle">Cocina de Autor & Alacena Viva</div>
@@ -758,7 +760,7 @@
       
       <!-- Brand Header -->
       <div style="text-align:center; margin-bottom:18px;">
-        <div style="font-size:2.5rem; line-height:1; margin-bottom:6px;">🔥</div>
+        <img src="img/logo.png" alt="Hell's Kitchen" style="width:72px; height:72px; border-radius:12px; object-fit:cover; margin-bottom:10px; box-shadow:0 4px 16px var(--primary-glow);" onerror="this.style.display='none'">
         <h2 style="font-family:var(--font-serif); font-size:1.6rem; color:#ffffff; margin:0;">HELL'S KITCHEN</h2>
         <p style="color:var(--text-muted); font-size:0.86rem; margin-top:4px;">Tu comunidad de recetas de autor y alacena viva</p>
       </div>

@@ -104,6 +104,17 @@ body {
   box-shadow: 0 4px 14px var(--primary-glow);
 }
 
+.brand-logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  box-shadow: 0 4px 14px var(--primary-glow);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: block;
+}
+
 .brand-title {
   font-family: var(--font-serif);
   font-size: 1.35rem;
