@@ -198,16 +198,17 @@ function loadState() {
         });
       }
 
-      // Sincronizar catálogo maestro nativo en español y conservar recetas creadas por usuarios
-      const userCustomRecipes = (Array.isArray(appState.recipes)) 
-        ? appState.recipes.filter(r => r.authorId && r.authorId !== 'user-anon')
-        : [];
-
-      const masterRecipes = (typeof DEFAULT_KITCHEN_DATA !== 'undefined' && Array.isArray(DEFAULT_KITCHEN_DATA.recipes))
-        ? JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes))
-        : [];
-
-      appState.recipes = [...masterRecipes, ...userCustomRecipes];
+      // Asegurar catálogo completo de 1.000+ recetas mundiales
+      if (!Array.isArray(appState.recipes) || appState.recipes.length === 0) {
+        appState.recipes = JSON.parse(JSON.stringify(DEFAULT_KITCHEN_DATA.recipes));
+      } else if (typeof DEFAULT_KITCHEN_DATA !== 'undefined' && Array.isArray(DEFAULT_KITCHEN_DATA.recipes)) {
+        const existingIds = new Set(appState.recipes.map(r => r.id));
+        DEFAULT_KITCHEN_DATA.recipes.forEach(defRec => {
+          if (!existingIds.has(defRec.id)) {
+            appState.recipes.push(JSON.parse(JSON.stringify(defRec)));
+          }
+        });
+      }
 
       // Asegurar autoría, comentarios y privacidad en todas las recetas
       appState.recipes.forEach(r => {
@@ -1654,11 +1655,7 @@ function renderSidebarFacetTree() {
   if (catTreeContainer) {
     let catHtml = '';
     categories.forEach(cat => {
-      const catRecipes = visibleRecipes.filter(r => 
-        r.category === cat.id || 
-        (Array.isArray(r.categories) && r.categories.includes(cat.id)) ||
-        (Array.isArray(r.extraCategories) && r.extraCategories.includes(cat.id))
-      );
+      const catRecipes = visibleRecipes.filter(r => r.category === cat.id);
       const isSelectedCat = (recipeFilterState.category === cat.id);
       
       // Obtener subcategorías únicas de esta categoría
@@ -1748,12 +1745,9 @@ function renderRecipesView(resetOffset = true) {
       if (!inTitle && !inDesc && !inCuisine && !inSub && !inAuthor && !inIng) return false;
     }
 
-    // Categoría (Multicategoría)
+    // Categoría
     if (recipeFilterState.category !== 'all') {
-      const inCat = r.category === recipeFilterState.category ||
-                    (Array.isArray(r.categories) && r.categories.includes(recipeFilterState.category)) ||
-                    (Array.isArray(r.extraCategories) && r.extraCategories.includes(recipeFilterState.category));
-      if (!inCat) return false;
+      if (r.category !== recipeFilterState.category) return false;
     }
 
     // Subcategorías
@@ -3350,39 +3344,6 @@ function setPortionMultiplier(multiplier) {
   renderRecipeDetailModalContent();
 }
 
-function formatScaledQuantity(rawQty, rawUnit, multiplier) {
-  if (multiplier === undefined || Math.abs(multiplier - 1) < 0.001) {
-    return `${rawQty || ''} ${rawUnit || ''}`.trim();
-  }
-  if (typeof rawQty === 'number') {
-    let val = +(rawQty * multiplier).toFixed(1);
-    if (val >= 10) val = Math.round(val);
-    return `${val} ${rawUnit || ''}`.trim();
-  }
-  const str = String(rawQty || '').trim();
-  if (!str) return `${rawUnit || ''}`.trim();
-
-  // Match leading number, decimal, or fraction (e.g. "800g", "2.5 cdas", "1/2 taza", "500 ml")
-  const match = str.match(/^([\d.,\/]+)\s*(.*)$/);
-  if (match) {
-    let numStr = match[1].replace(',', '.');
-    let num = 0;
-    if (numStr.includes('/')) {
-      const parts = numStr.split('/');
-      num = (parseFloat(parts[0]) || 0) / (parseFloat(parts[1]) || 1);
-    } else {
-      num = parseFloat(numStr);
-    }
-    if (!isNaN(num) && num > 0) {
-      let scaled = +(num * multiplier).toFixed(1);
-      if (scaled >= 10) scaled = Math.round(scaled);
-      const unit = match[2] || rawUnit || '';
-      return `${scaled} ${unit}`.trim();
-    }
-  }
-  return `${str} (x${multiplier.toFixed(1)})`;
-}
-
 function renderRecipeDetailModalContent() {
   const r = currentDetailRecipe;
   if (!r) return;
@@ -3440,7 +3401,7 @@ function renderRecipeDetailModalContent() {
   const ingsContainer = document.getElementById('modalRecipeIngredientsList');
   if (ingsContainer) {
     ingsContainer.innerHTML = r.ingredients.map(ing => {
-      const scaledDisplay = formatScaledQuantity(ing.qty, ing.unit, mult);
+      const scaledQty = typeof ing.qty === 'number' ? (ing.qty * mult) : ing.qty;
       const inPantry = pantry.find(p => p.id === ing.requiredId || p.name.toLowerCase().includes(ing.name.toLowerCase()));
       const hasStock = inPantry && parseFloat(inPantry.qty) > 0;
 
@@ -3451,9 +3412,9 @@ function renderRecipeDetailModalContent() {
             <span style="color:#ffffff; font-weight:600;">${escapeAttr(ing.name)}</span>
           </div>
           <div style="display:flex; align-items:center; gap:10px;">
-            <strong style="font-family:var(--font-mono); color:var(--primary-light);">${escapeAttr(scaledDisplay)}</strong>
+            <strong style="font-family:var(--font-mono); color:var(--primary-light);">${scaledQty} ${escapeAttr(ing.unit || '')}</strong>
             ${!hasStock ? `
-              <button class="btn btn-outline btn-sm" style="padding:2px 6px; font-size:0.7rem; border-color:var(--border);" onclick="addMissingToShopping('${escapeAttr(ing.name)}', '${escapeAttr(scaledDisplay)}')">+ Comprar</button>
+              <button class="btn btn-outline btn-sm" style="padding:2px 6px; font-size:0.7rem; border-color:var(--border);" onclick="addMissingToShopping('${escapeAttr(ing.name)}', '${scaledQty} ${escapeAttr(ing.unit)}')">+ Comprar</button>
             ` : ''}
           </div>
         </div>

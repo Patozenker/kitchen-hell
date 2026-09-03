@@ -1,5 +1,5 @@
 // DATASET MAESTRO DE PATOS KITCHEN - HELL'S KITCHEN
-// Catálogo Maestro 100% en Español Nativo con Soporte Multicategoría y Escalado Dinámico de Porciones
+// Gran Compendio Internacional, Centroamericano y Latinoamericano 100% en Español Nativo con Soporte Multicategoría y Escalado Dinámico de Porciones
 
 const MASTER_PANTRY_CATALOG = [
   {
@@ -4607,7 +4607,1067 @@ const DEFAULT_KITCHEN_DATA = {
   shoppingList: [],
   recipes: [
   {
-    "id": "rec-es-1",
+    "id": "rec-world-1",
+    "title": "Arepas Reina Pepiada con Pollo y Palta Hass",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "sandwiches",
+    "categories": [
+      "sandwiches",
+      "internacional"
+    ],
+    "subcategory": "Venezuela",
+    "cuisine": "Venezuela",
+    "mealTypes": [
+      "desayuno",
+      "almuerzo",
+      "cena"
+    ],
+    "time": 30,
+    "portions": 4,
+    "difficulty": "Fácil",
+    "rating": 5,
+    "timesCooked": 650,
+    "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&auto=format&fit=crop&q=80",
+    "description": "Masa crujiente de maíz blanco rellena con pechuga de pollo desmechada, palta madura en cubos, mayonesa casera y cilantro.",
+    "pairing": "Papelón con Limón o Jugo de Maracuyá",
+    "chefTip": "Pisar la palta dejando trocitos enteros y mezclar con el pollo tibio.",
+    "ingredients": [
+      {
+        "name": "Harina de Maíz Blanco Precristalina",
+        "qty": "300g",
+        "unit": "",
+        "requiredId": "ing-1"
+      },
+      {
+        "name": "Pechuga de Pollo Cocida y Desmechada",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-2"
+      },
+      {
+        "name": "Palta Hass Madura",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-3"
+      },
+      {
+        "name": "Mayonesa Casera",
+        "qty": "3 cdas",
+        "unit": "",
+        "requiredId": "ing-4"
+      },
+      {
+        "name": "Cebolla Morada y Cilantro",
+        "qty": "1 un",
+        "unit": "",
+        "requiredId": "ing-5"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Masa de Arepas",
+        "text": "Mezclar harina de maíz con agua tibia y sal hasta obtener una masa suave sin grietas.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 2,
+        "title": "Cocción al Budafe / Sartén",
+        "text": "Cocinar discos de 1.5cm en sartén aceitada a fuego medio 5 minutos por lado hasta que formen costra.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 3,
+        "title": "Relleno Cremoso",
+        "text": "Pisar la palta con sal, sumar pollo desmechado, cebolla morada, mayonesa y cilantro.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 4,
+        "title": "Armado & Servicio",
+        "text": "Abrir las arepas calientes, untar con manteca y rellenar en abundancia.",
+        "timerMinutes": 2
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-2",
+    "title": "Tequeños Tradicionales de Queso Llanero",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "pizzas",
+    "categories": [
+      "pizzas",
+      "internacional",
+      "rapidas"
+    ],
+    "subcategory": "Venezuela",
+    "cuisine": "Venezuela",
+    "mealTypes": [
+      "merienda",
+      "cena",
+      "rapidas"
+    ],
+    "time": 35,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 675,
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=800&auto=format&fit=crop&q=80",
+    "description": "Bastones de queso blanco firme envueltos en masa hojaldrada semidulce, fritos hasta inflar con queso derretido dentro.",
+    "pairing": "Salsa Tártara o Guasacaca",
+    "chefTip": "Sellar bien las puntas de masa para que el queso no se escape al freír.",
+    "ingredients": [
+      {
+        "name": "Harina de Trigo 0000",
+        "qty": "350g",
+        "unit": "",
+        "requiredId": "ing-6"
+      },
+      {
+        "name": "Manteca Pomada",
+        "qty": "80g",
+        "unit": "",
+        "requiredId": "ing-7"
+      },
+      {
+        "name": "Queso Blanco Semiduro",
+        "qty": "350g",
+        "unit": "",
+        "requiredId": "ing-8"
+      },
+      {
+        "name": "Huevo de Campo",
+        "qty": "1 un",
+        "unit": "",
+        "requiredId": "ing-9"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Masa Elástica",
+        "text": "Amasar harina con manteca, huevo, pizca de azúcar y agua tibia 8 minutos. Reposar 20 min.",
+        "timerMinutes": 20
+      },
+      {
+        "stepNumber": 2,
+        "title": "Tiras & Bastones",
+        "text": "Estirar masa fina a 1.5mm y cortar tiras. Cortar el queso en bastones de 7x1 cm.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 3,
+        "title": "Enrollado Cruzado",
+        "text": "Envolver cada queso superponiendo los bordes de la tira en espiral sellando puntas.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 4,
+        "title": "Fritura Dorada",
+        "text": "Freír en aceite a 175°C 3 minutos hasta que doren e inflen. Servir calientes.",
+        "timerMinutes": 5
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-3",
+    "title": "Pabellón Criollo con Carne Mechada y Caraotas",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "guisos",
+    "categories": [
+      "guisos",
+      "carnes",
+      "internacional"
+    ],
+    "subcategory": "Venezuela",
+    "cuisine": "Venezuela",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 60,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 700,
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop&q=80",
+    "description": "Carne vacuna mechada en sofrito criollo, caraotas negras guisadas, arroz blanco graneado y tajadas de plátano maduro frito.",
+    "pairing": "Papelón con Limón o Cerveza Fría",
+    "chefTip": "Usar plátano bien maduro con cáscara negra para tajadas dulces y caramelizadas.",
+    "ingredients": [
+      {
+        "name": "Carne Vacuna para Mechar (Falda)",
+        "qty": "600g",
+        "unit": "",
+        "requiredId": "ing-11"
+      },
+      {
+        "name": "Porotos Negros Cocidos (Caraotas)",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-12"
+      },
+      {
+        "name": "Arroz Blanco Largo Fino",
+        "qty": "300g",
+        "unit": "",
+        "requiredId": "ing-13"
+      },
+      {
+        "name": "Plátanos Machos Maduros",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-14"
+      },
+      {
+        "name": "Cebolla, Pimiento y Ajo",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-15"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Carne Mechada",
+        "text": "Hervir carne 45 minutos, desmechar y saltear en sofrito de cebolla, morrón y comino.",
+        "timerMinutes": 45
+      },
+      {
+        "stepNumber": 2,
+        "title": "Caraotas Guisadas",
+        "text": "Cocinar las caraotas con ajo, cebolla y comino hasta lograr caldo espeso.",
+        "timerMinutes": 15
+      },
+      {
+        "stepNumber": 3,
+        "title": "Arroz Graneado",
+        "text": "Preparar arroz blanco al ajo con caldo de la carne.",
+        "timerMinutes": 15
+      },
+      {
+        "stepNumber": 4,
+        "title": "Tajadas & Montaje",
+        "text": "Freír las tajadas de plátano maduro al bies y servir en 4 cuadrantes tradicionales.",
+        "timerMinutes": 10
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-4",
+    "title": "Cachapas de Choclo Tierno con Queso de Mano",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "panaderia",
+    "categories": [
+      "panaderia",
+      "internacional"
+    ],
+    "subcategory": "Venezuela",
+    "cuisine": "Venezuela",
+    "mealTypes": [
+      "desayuno",
+      "merienda",
+      "cena"
+    ],
+    "time": 25,
+    "portions": 4,
+    "difficulty": "Fácil",
+    "rating": 5,
+    "timesCooked": 725,
+    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&auto=format&fit=crop&q=80",
+    "description": "Tortillas dulces y suaves de choclo tierno a la plancha con manteca y dobladas con una gruesa rueda de queso de mano.",
+    "pairing": "Café con Leche o Jugo Natural",
+    "chefTip": "Procesar el choclo fresco dejando granitos enteros para textura tradicional.",
+    "ingredients": [
+      {
+        "name": "Granos de Choclo Dulce Fresco",
+        "qty": "500g",
+        "unit": "",
+        "requiredId": "ing-16"
+      },
+      {
+        "name": "Leche Entera",
+        "qty": "80ml",
+        "unit": "",
+        "requiredId": "ing-17"
+      },
+      {
+        "name": "Huevo de Campo",
+        "qty": "1 un",
+        "unit": "",
+        "requiredId": "ing-18"
+      },
+      {
+        "name": "Queso Mozzarella / De Mano",
+        "qty": "300g",
+        "unit": "",
+        "requiredId": "ing-19"
+      },
+      {
+        "name": "Manteca Derretida",
+        "qty": "40g",
+        "unit": "",
+        "requiredId": "ing-20"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Licuado del Maíz",
+        "text": "Procesar choclo con huevo, leche, azúcar, sal y manteca dejando textura rústica.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 2,
+        "title": "Cocción en Plancha",
+        "text": "Verter un cucharón en sartén enmantecada formando un círculo de 15cm a fuego medio.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 3,
+        "title": "Dorado & Giro",
+        "text": "Cocinar 4 minutos hasta ver burbujas, dar vuelta y dorar 3 minutos más.",
+        "timerMinutes": 7
+      },
+      {
+        "stepNumber": 4,
+        "title": "Queso & Doblado",
+        "text": "Pincelar con manteca caliente, colocar queso de mano y doblar por la mitad.",
+        "timerMinutes": 2
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-5",
+    "title": "Bandeja Paisa con Chicharrón Crocante y Frijoles",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "carnes",
+    "categories": [
+      "carnes",
+      "guisos",
+      "internacional"
+    ],
+    "subcategory": "Colombia",
+    "cuisine": "Colombia",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 60,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 750,
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "description": "Plato emblemático con chicharrón de cerdo crujiente, frijoles rojos al hogao, carne molida, huevo frito, arroz blanco y palta.",
+    "pairing": "Refajo Colombiano o Aguapanela con Limón",
+    "chefTip": "Hacer cortes en la piel de la panceta para lograr un chicharrón inflado y ultra crocante.",
+    "ingredients": [
+      {
+        "name": "Panceta de Cerdo / Tocino Grueso",
+        "qty": "600g",
+        "unit": "",
+        "requiredId": "ing-21"
+      },
+      {
+        "name": "Frijoles Rojos Cocidos",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-22"
+      },
+      {
+        "name": "Carne Molida Especial",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-23"
+      },
+      {
+        "name": "Chorizos Criollos",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-24"
+      },
+      {
+        "name": "Huevos de Campo para Freír",
+        "qty": "4 un",
+        "unit": "",
+        "requiredId": "ing-25"
+      },
+      {
+        "name": "Hogao Casero (Tomate y Cebolla)",
+        "qty": "150g",
+        "unit": "",
+        "requiredId": "ing-26"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Chicharrón Crocante",
+        "text": "Hervir panceta 15 min con sal y bicarbonato; freír en su grasa hasta tostar.",
+        "timerMinutes": 25
+      },
+      {
+        "stepNumber": 2,
+        "title": "Frijoles al Hogao",
+        "text": "Cocinar los frijoles con hogao de tomate y cebolla hasta que espesen.",
+        "timerMinutes": 15
+      },
+      {
+        "stepNumber": 3,
+        "title": "Carne Molida & Chorizo",
+        "text": "Saltear la carne molida con comino y dorar los chorizos a la plancha.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 4,
+        "title": "Montaje de Bandeja",
+        "text": "Freír huevos y tajadas de plátano. Servir en bandeja con arroz, frijoles y palta.",
+        "timerMinutes": 10
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-6",
+    "title": "Ajiaco Santafereño de Pollo con Mazorca y Alcaparras",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "guisos",
+    "categories": [
+      "guisos",
+      "internacional"
+    ],
+    "subcategory": "Colombia",
+    "cuisine": "Colombia",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 50,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 775,
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop&q=80",
+    "description": "Sopa bogotana espesa a base de tres papas cocinadas en caldo de pollo con mazorca de choclo, crema de leche, alcaparras y palta.",
+    "pairing": "Jugo de Lulo o Cerveza Rubia",
+    "chefTip": "Cocinar las papas hasta que se desarmen por completo para lograr la consistencia sedosa.",
+    "ingredients": [
+      {
+        "name": "Presas de Pollo (Pechuga y Muslo)",
+        "qty": "800g",
+        "unit": "",
+        "requiredId": "ing-26"
+      },
+      {
+        "name": "Papas Variadas (Blancas y Coloradas)",
+        "qty": "600g",
+        "unit": "",
+        "requiredId": "ing-27"
+      },
+      {
+        "name": "Mazorcas de Choclo en Ruedas",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-28"
+      },
+      {
+        "name": "Crema de Leche Fresca",
+        "qty": "150ml",
+        "unit": "",
+        "requiredId": "ing-29"
+      },
+      {
+        "name": "Alcaparras en Salmuera",
+        "qty": "50g",
+        "unit": "",
+        "requiredId": "ing-30"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Caldo de Pollo & Mazorca",
+        "text": "Cocinar pollo y mazorcas en agua con cebolla y sal 25 minutos.",
+        "timerMinutes": 25
+      },
+      {
+        "stepNumber": 2,
+        "title": "Deshacer las Papas",
+        "text": "Retirar pollo y desmechar. Sumar rodajas de papas al caldo hasta que espesen.",
+        "timerMinutes": 20
+      },
+      {
+        "stepNumber": 3,
+        "title": "Integración del Pollo",
+        "text": "Reincorporar el pollo desmechado y cocinar 5 minutos a fuego bajo.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 4,
+        "title": "Servicio Bogotano",
+        "text": "Servir humeante en cazuela con crema de leche en hilo, alcaparras y palta.",
+        "timerMinutes": 3
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-7",
+    "title": "Tacos al Pastor con Piña Asada y Cilantro",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "carnes",
+    "categories": [
+      "carnes",
+      "internacional",
+      "sandwiches"
+    ],
+    "subcategory": "México",
+    "cuisine": "México",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 35,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 800,
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=800&auto=format&fit=crop&q=80",
+    "description": "Carne de cerdo marinada en achiote, jugo de naranja y especias, sellada a la plancha con piña asada, cebolla y lima.",
+    "pairing": "Margarita Clásica o Cerveza Mexicana",
+    "chefTip": "Asar la piña en la misma sartén de la carne para absorber todos los jugos.",
+    "ingredients": [
+      {
+        "name": "Carne de Cerdo en Tiras Finas",
+        "qty": "600g",
+        "unit": "",
+        "requiredId": "ing-31"
+      },
+      {
+        "name": "Tortillas de Maíz Taqueras",
+        "qty": "12 un",
+        "unit": "",
+        "requiredId": "ing-32"
+      },
+      {
+        "name": "Pasta de Achiote y Comino",
+        "qty": "2 cdas",
+        "unit": "",
+        "requiredId": "ing-33"
+      },
+      {
+        "name": "Jugo de Naranja Natural",
+        "qty": "100ml",
+        "unit": "",
+        "requiredId": "ing-34"
+      },
+      {
+        "name": "Rodajas de Piña Fresca Asada",
+        "qty": "150g",
+        "unit": "",
+        "requiredId": "ing-35"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Marinado",
+        "text": "Marinar cerdo con achiote, naranja, ajo y orégano durante 20 minutos.",
+        "timerMinutes": 20
+      },
+      {
+        "stepNumber": 2,
+        "title": "Sellado al Sartén",
+        "text": "Dorar la carne en sartén a fuego alto hasta que tome costra crocante.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 3,
+        "title": "Piña Asada",
+        "text": "Dorar la piña en la plancha caliente hasta marcar marcas doradas.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 4,
+        "title": "Armado",
+        "text": "Calentar tortillas, rellenar con cerdo al pastor, piña, cebolla, cilantro y lima.",
+        "timerMinutes": 5
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-8",
+    "title": "Pupusas Salvadoreñas de Queso y Chicharrón",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "pizzas",
+    "categories": [
+      "pizzas",
+      "internacional"
+    ],
+    "subcategory": "México",
+    "cuisine": "México",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 35,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 825,
+    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=800&auto=format&fit=crop&q=80",
+    "description": "Tortillas gruesas de maíz rellenas de queso fundido y chicharrón molido, asadas al comal con curtido de repollo.",
+    "pairing": "Horchata Natural o Cerveza Rubia",
+    "chefTip": "Aceitarse las palmas de las manos para sellar y aplanar la masa sin grietas.",
+    "ingredients": [
+      {
+        "name": "Harina de Maíz Nixtamalizado",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-36"
+      },
+      {
+        "name": "Queso Muzzarella Rallado",
+        "qty": "300g",
+        "unit": "",
+        "requiredId": "ing-37"
+      },
+      {
+        "name": "Chicharrón de Cerdo en Pasta",
+        "qty": "200g",
+        "unit": "",
+        "requiredId": "ing-38"
+      },
+      {
+        "name": "Curtido de Repollo y Zanahoria",
+        "qty": "200g",
+        "unit": "",
+        "requiredId": "ing-39"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Masa Húmeda",
+        "text": "Mezclar harina de maíz con agua tibia y sal hasta que quede maleable.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 2,
+        "title": "Boleado & Relleno",
+        "text": "Hacer hueco en bola de masa, rellenar con queso y chicharrón, cerrar y aplanar.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 3,
+        "title": "Cocción al Comal",
+        "text": "Cocinar 4 minutos por lado en plancha engrasada hasta dorar e inflar.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 4,
+        "title": "Servicio",
+        "text": "Servir calientes con abundante curtido fermentado y salsa de tomate.",
+        "timerMinutes": 3
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-9",
+    "title": "Ceviche Clásico Peruano con Leche de Tigre y Camote",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "pescados",
+    "categories": [
+      "pescados",
+      "internacional"
+    ],
+    "subcategory": "Perú",
+    "cuisine": "Perú",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 20,
+    "portions": 4,
+    "difficulty": "Fácil",
+    "rating": 5,
+    "timesCooked": 850,
+    "image": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?w=800&auto=format&fit=crop&q=80",
+    "description": "Cubos de pescado blanco curados en jugo de limón recién exprimido, ají limo, cebolla morada crocante, cilantro, camote y choclo.",
+    "pairing": "Pisco Sour Clásico o Cerveza Cusqueña",
+    "chefTip": "Exprimir limones a mano solo hasta la mitad para evitar amargor en la leche de tigre.",
+    "ingredients": [
+      {
+        "name": "Filet de Pescado Blanco Fresco",
+        "qty": "600g",
+        "unit": "",
+        "requiredId": "ing-41"
+      },
+      {
+        "name": "Jugo de Limón Fresco",
+        "qty": "150ml",
+        "unit": "",
+        "requiredId": "ing-42"
+      },
+      {
+        "name": "Cebolla Morada en Pluma Fina",
+        "qty": "1 un",
+        "unit": "",
+        "requiredId": "ing-43"
+      },
+      {
+        "name": "Ají Limo o Chile Picado",
+        "qty": "1 un",
+        "unit": "",
+        "requiredId": "ing-44"
+      },
+      {
+        "name": "Camote Dulce Cocido en Rodajas",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-45"
+      },
+      {
+        "name": "Granos de Choclo Cocido",
+        "qty": "150g",
+        "unit": "",
+        "requiredId": "ing-46"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Corte de Pescado en Frío",
+        "text": "Cortar pescado en cubos de 2cm en un bowl sobre hielo.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 2,
+        "title": "Curado con Limón & Ají",
+        "text": "Salar pescado, añadir ají limo picado, cilantro y verter el jugo de limón.",
+        "timerMinutes": 3
+      },
+      {
+        "stepNumber": 3,
+        "title": "Cebolla Morada",
+        "text": "Sumar cebolla morada enjuagada en agua helada para mantener crocancia.",
+        "timerMinutes": 2
+      },
+      {
+        "stepNumber": 4,
+        "title": "Emplatado",
+        "text": "Servir con leche de tigre, rodajas de camote dulce y choclo desgranado.",
+        "timerMinutes": 2
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-10",
+    "title": "Lomo Saltado Criollo al Wok con Papas Fritas",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "carnes",
+    "categories": [
+      "carnes",
+      "internacional",
+      "rapidas"
+    ],
+    "subcategory": "Perú",
+    "cuisine": "Perú",
+    "mealTypes": [
+      "almuerzo",
+      "cena",
+      "rapidas"
+    ],
+    "time": 25,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 875,
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "description": "Tiras de lomo salteadas a fuego vivo en wok con cebolla morada, tomate en gajos, salsa de soja, vinagre y cilantro con papas fritas y arroz.",
+    "pairing": "Vino Tinto Malbec o Syrah",
+    "chefTip": "Saltear a fuego máximo para lograr el característico aroma ahumado.",
+    "ingredients": [
+      {
+        "name": "Lomo Vacuno Tierno en Tiras",
+        "qty": "600g",
+        "unit": "",
+        "requiredId": "ing-46"
+      },
+      {
+        "name": "Cebolla Morada en Gajos",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-47"
+      },
+      {
+        "name": "Tomates Perita en Cuñas",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-48"
+      },
+      {
+        "name": "Papas Fritas Bastón Crujientes",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-49"
+      },
+      {
+        "name": "Salsa de Soja y Vinagre Tinto",
+        "qty": "3 cdas",
+        "unit": "",
+        "requiredId": "ing-50"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Sellado en Wok",
+        "text": "Dorar lomo 2 minutos a fuego máximo con aceite hasta humear. Reservar.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 2,
+        "title": "Salteado de Vegetales",
+        "text": "Saltear cebolla morada y ají amarillo 1 minuto crujiente.",
+        "timerMinutes": 3
+      },
+      {
+        "stepNumber": 3,
+        "title": "Flameado & Salsa",
+        "text": "Reincorporar carne, añadir vinagre y soja flameando. Sumar tomate y cilantro.",
+        "timerMinutes": 3
+      },
+      {
+        "stepNumber": 4,
+        "title": "Servicio",
+        "text": "Mezclar con papas fritas recién hechas y servir con arroz blanco.",
+        "timerMinutes": 3
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-11",
+    "title": "Picanha a la Espada con Farofa y Vinagrete",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "carnes",
+    "categories": [
+      "carnes",
+      "internacional"
+    ],
+    "subcategory": "Brasil",
+    "cuisine": "Brasil",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 40,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 900,
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop&q=80",
+    "description": "Medallones gruesos de picanha ensartados en espada con su capa de grasa hacia afuera, asados con sal gruesa y servidos con farofa crujiente.",
+    "pairing": "Caipirinha Clásica o Cerveza Helada",
+    "chefTip": "Cortar medallones de 4cm y doblar en U con grasa hacia afuera para que bañe la carne.",
+    "ingredients": [
+      {
+        "name": "Picanha Vacuna (Tapa de Cuadril)",
+        "qty": "1200g",
+        "unit": "",
+        "requiredId": "ing-51"
+      },
+      {
+        "name": "Sal Gruesa Marina",
+        "qty": "2 cdas",
+        "unit": "",
+        "requiredId": "ing-52"
+      },
+      {
+        "name": "Harina de Mandioca para Farofa",
+        "qty": "200g",
+        "unit": "",
+        "requiredId": "ing-53"
+      },
+      {
+        "name": "Panceta en Cubos y Manteca",
+        "qty": "100g",
+        "unit": "",
+        "requiredId": "ing-54"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Espada",
+        "text": "Cortar en 3 medallones gruesos, doblar en U con grasa afuera y ensartar.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 2,
+        "title": "Asado a Fuego Fuerte",
+        "text": "Cubrir con sal gruesa y asar a 30cm de las brasas 25 min girando.",
+        "timerMinutes": 25
+      },
+      {
+        "stepNumber": 3,
+        "title": "Farofa Dorada",
+        "text": "Dorar panceta en manteca, sumar harina de mandioca y tostar crujiente.",
+        "timerMinutes": 8
+      },
+      {
+        "stepNumber": 4,
+        "title": "Laminado en Mesa",
+        "text": "Cortar láminas finas doradas sobre el plato y acompañar con farofa.",
+        "timerMinutes": 5
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-12",
+    "title": "Feijoada Completa con Arroz y Rodajas de Naranja",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "guisos",
+    "categories": [
+      "guisos",
+      "carnes",
+      "internacional"
+    ],
+    "subcategory": "Brasil",
+    "cuisine": "Brasil",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 90,
+    "portions": 6,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 925,
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop&q=80",
+    "description": "Porotos negros cocidos lentamente con cortes de cerdo ahumado, costillitas, chorizo y rodajas de naranja fresca.",
+    "pairing": "Caipirinha de Lima",
+    "chefTip": "Acompañar con rodajas de naranja para cortar la untuosidad de los ahumados.",
+    "ingredients": [
+      {
+        "name": "Porotos Negros Secos",
+        "qty": "500g",
+        "unit": "",
+        "requiredId": "ing-56"
+      },
+      {
+        "name": "Costillitas de Cerdo",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-57"
+      },
+      {
+        "name": "Panceta Ahumada en Tiras",
+        "qty": "200g",
+        "unit": "",
+        "requiredId": "ing-58"
+      },
+      {
+        "name": "Chorizo Ahumado",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-59"
+      },
+      {
+        "name": "Naranjas Frescas en Rodajas",
+        "qty": "2 un",
+        "unit": "",
+        "requiredId": "ing-60"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Remojo & Hervor",
+        "text": "Remojar porotos 12 horas. Hervir en olla con laurel 40 minutos.",
+        "timerMinutes": 40
+      },
+      {
+        "stepNumber": 2,
+        "title": "Carnes Ahumadas",
+        "text": "Dorar panceta, costillitas y chorizo; agregarlos a los porotos.",
+        "timerMinutes": 15
+      },
+      {
+        "stepNumber": 3,
+        "title": "Sofrito al Ajo",
+        "text": "Saltear ajo y cebolla, pisar porotos para espesar el caldo.",
+        "timerMinutes": 15
+      },
+      {
+        "stepNumber": 4,
+        "title": "Servicio con Naranja",
+        "text": "Cocinar 20 minutos más. Servir con arroz blanco y rodajas de naranja.",
+        "timerMinutes": 10
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-13",
     "title": "Matambre a la Pizza al Horno con Papas Rústicas",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
@@ -4629,79 +5689,67 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 4,
     "difficulty": "Media",
     "rating": 5,
-    "timesCooked": 520,
+    "timesCooked": 950,
     "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
-    "description": "Tierno matambre vacuno tiernizado en leche, dorado a la chapa y gratinado con abundante muzzarella, salsa de tomate y orégano.",
+    "description": "Matambre vacuno tiernizado en leche, dorado a la chapa y gratinado con abundante muzzarella, salsa de tomate y orégano.",
     "pairing": "Vino Tinto Malbec Clásico",
-    "chefTip": "Hervir el matambre con laurel y pimienta durante 1 hora antes de armar para que se corte con tenedor.",
+    "chefTip": "Hervir 1 hora antes de armar para que se corte con tenedor.",
     "ingredients": [
       {
         "name": "Matambre Vacuno",
         "qty": "1200g",
         "unit": "",
-        "requiredId": "ing-107"
+        "requiredId": "ing-61"
       },
       {
         "name": "Queso Muzzarella en Barra",
         "qty": "400g",
         "unit": "",
-        "requiredId": "ing-16"
+        "requiredId": "ing-62"
       },
       {
         "name": "Salsa de Tomate Casera",
         "qty": "250g",
         "unit": "",
-        "requiredId": "ing-41"
+        "requiredId": "ing-63"
       },
       {
         "name": "Aceitunas Verdes",
         "qty": "100g",
         "unit": "",
-        "requiredId": "ing-19"
-      },
-      {
-        "name": "Orégano Seco",
-        "qty": "1 cda",
-        "unit": "",
-        "requiredId": "ing-25"
-      },
-      {
-        "name": "Aceite de Oliva Extra Virgen",
-        "qty": "2 cdas",
-        "unit": "",
-        "requiredId": "ing-3"
+        "requiredId": "ing-64"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Tiernizado del Matambre",
-        "text": "Hervir el matambre en agua o leche con laurel y sal durante 60 minutos a fuego medio.",
+        "title": "Tiernizado",
+        "text": "Hervir matambre en agua/leche con laurel 60 minutos.",
         "timerMinutes": 60
       },
       {
         "stepNumber": 2,
-        "title": "Sellado en Placa",
-        "text": "Disponer con la grasa hacia abajo en placa aceitada y dorar a 200°C 10 minutos.",
+        "title": "Sellado",
+        "text": "Disponer con grasa abajo en placa aceitada a 200°C 10 min.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
-        "title": "Armado a la Pizza",
-        "text": "Girar la pieza, cubrir con salsa de tomate, abundante muzzarella y espolvorear orégano.",
+        "title": "Armado",
+        "text": "Girar, cubrir con salsa de tomate y abundante muzzarella.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 4,
-        "title": "Gratinado & Servicio",
-        "text": "Hornear a 220°C hasta fundir y dorar el queso. Decorar con aceitunas y servir caliente.",
+        "title": "Gratinado",
+        "text": "Hornear a 220°C hasta dorar el queso. Decorar con aceitunas.",
         "timerMinutes": 10
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-2",
+    "id": "rec-world-14",
     "title": "Asado de Tira Criollo a las Brasas con Chimichurri",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
@@ -4722,219 +5770,61 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 4,
     "difficulty": "Media",
     "rating": 5,
-    "timesCooked": 535,
+    "timesCooked": 975,
     "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop&q=80",
-    "description": "Corte tradicional de asado de tira a fuego lento de leña de quebracho con costra crujiente y jugo en su punto medio.",
-    "pairing": "Vino Cabernet Sauvignon con paso por roble",
-    "chefTip": "Comenzar con el hueso hacia el fuego durante el 70% del tiempo para transmitir calor parejo.",
+    "description": "Asado de tira a fuego lento de quebracho con costra crujiente y centro jugoso en su punto medio.",
+    "pairing": "Vino Cabernet Sauvignon",
+    "chefTip": "Comenzar con el hueso hacia el fuego durante el 70% del tiempo.",
     "ingredients": [
       {
         "name": "Asado de Tira",
         "qty": "1500g",
         "unit": "",
-        "requiredId": "ing-105"
+        "requiredId": "ing-66"
       },
       {
         "name": "Sal Gruesa Marina",
         "qty": "2 cdas",
         "unit": "",
-        "requiredId": "ing-2"
+        "requiredId": "ing-67"
       },
       {
         "name": "Chimichurri Casero",
         "qty": "100g",
         "unit": "",
-        "requiredId": "ing-46"
+        "requiredId": "ing-68"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Encendido de Brasas",
-        "text": "Hacer fuego de leña o carbón hasta obtener brasas rojas sin llama directa.",
+        "title": "Brasas",
+        "text": "Hacer fuego hasta tener brasas rojas sin llama directa.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 2,
-        "title": "Salado & Colocación",
-        "text": "Salar la tira con sal gruesa por ambos lados y colocar con los huesos hacia abajo a fuego moderado.",
+        "title": "Salado",
+        "text": "Salar la tira con sal gruesa y poner huesos abajo a fuego moderado.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 3,
-        "title": "Cocción Lenta del Lado Hueso",
-        "text": "Cocinar 45 minutos manteniendo calor constante hasta que los huesos asomen.",
+        "title": "Cocción Lado Hueso",
+        "text": "Cocinar 45 minutos manteniendo calor constante.",
         "timerMinutes": 45
       },
       {
         "stepNumber": 4,
         "title": "Sellado Final",
-        "text": "Dar vuelta la carne y dorar 15 minutos. Dejar reposar 3 minutos y servir con chimichurri.",
+        "text": "Girar y dorar 15 minutos. Reposar 3 minutos y servir.",
         "timerMinutes": 15
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-3",
-    "title": "Vacío a la Parrilla con Cuerito Crocante y Criolla",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "carnes",
-    "categories": [
-      "carnes"
-    ],
-    "subcategory": "Asado & Parrilla",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 75,
-    "portions": 4,
-    "difficulty": "Media",
-    "rating": 5,
-    "timesCooked": 550,
-    "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&auto=format&fit=crop&q=80",
-    "description": "Vacío vacuno entero con su cuerito crujiente, asado pacientemente a las brasas para conservar toda su terneza.",
-    "pairing": "Vino Malbec Gran Reserva",
-    "chefTip": "No retirar el cuerito: al tostarse a fuego medio crea una capa crocante exquisita.",
-    "ingredients": [
-      {
-        "name": "Vacío Vacuno",
-        "qty": "1400g",
-        "unit": "",
-        "requiredId": "ing-104"
-      },
-      {
-        "name": "Sal Entrefina",
-        "qty": "2 cdas",
-        "unit": "",
-        "requiredId": "ing-2"
-      },
-      {
-        "name": "Salsa Criolla Tradicional",
-        "qty": "120g",
-        "unit": "",
-        "requiredId": "ing-47"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Preparación de Parrilla",
-        "text": "Generar brasas a temperatura media constante.",
-        "timerMinutes": 15
-      },
-      {
-        "stepNumber": 2,
-        "title": "Cocción Lado Cuerito",
-        "text": "Colocar con el cuerito hacia las brasas durante 50 minutos sin pinchar la carne.",
-        "timerMinutes": 50
-      },
-      {
-        "stepNumber": 3,
-        "title": "Giro & Dorado",
-        "text": "Girar la pieza y dorar el lado opuesto 20 a 25 minutos.",
-        "timerMinutes": 25
-      },
-      {
-        "stepNumber": 4,
-        "title": "Corte al Bies & Servicio",
-        "text": "Reposar 5 minutos en tabla y cortar en tiras transversales. Servir con salsa criolla.",
-        "timerMinutes": 5
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-4",
-    "title": "Entraña Fina a la Chapa con Provenzal Fresca",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "carnes",
-    "categories": [
-      "carnes",
-      "rapidas"
-    ],
-    "subcategory": "Asado & Parrilla",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena",
-      "rapidas"
-    ],
-    "time": 20,
-    "portions": 2,
-    "difficulty": "Fácil",
-    "rating": 5,
-    "timesCooked": 565,
-    "image": "https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?w=800&auto=format&fit=crop&q=80",
-    "description": "Entraña jugosa dorada a fuego muy fuerte en plancha de hierro con provenzal casera de ajo y perejil.",
-    "pairing": "Vino Bonarda o Cerveza IPA",
-    "chefTip": "La entraña es delgada: requiere fuego máximo y solo 5 minutos por lado para mantenerse tierna.",
-    "ingredients": [
-      {
-        "name": "Entraña Fina",
-        "qty": "700g",
-        "unit": "",
-        "requiredId": "ing-106"
-      },
-      {
-        "name": "Ajo Picado",
-        "qty": "3 dientes",
-        "unit": "",
-        "requiredId": "ing-4"
-      },
-      {
-        "name": "Perejil Fresco Picado",
-        "qty": "2 cdas",
-        "unit": "",
-        "requiredId": "ing-23"
-      },
-      {
-        "name": "Aceite de Oliva Extra Virgen",
-        "qty": "2 cdas",
-        "unit": "",
-        "requiredId": "ing-3"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Limpieza & Adobo",
-        "text": "Retirar la membrana superficial y adobar con ajo picado, perejil y aceite de oliva.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 2,
-        "title": "Calentamiento de Chapa",
-        "text": "Calentar la plancha de hierro a fuego máximo.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 3,
-        "title": "Sellado Intenso",
-        "text": "Cocinar 5 minutos por lado sin mover para lograr costra dorada.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 4,
-        "title": "Corte & Servicio",
-        "text": "Cortar en trozos transversales y servir con papas fritas o ensalada.",
-        "timerMinutes": 2
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-5",
+    "id": "rec-world-15",
     "title": "Milanesas de Lomo a la Napolitana con Papas Fritas",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
@@ -4956,642 +5846,73 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 4,
     "difficulty": "Media",
     "rating": 5,
-    "timesCooked": 580,
+    "timesCooked": 1000,
     "image": "https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?w=800&auto=format&fit=crop&q=80",
-    "description": "Milanesas de lomo tiernas con rebozado crujiente, jamón cocido, salsa de tomate casera y muzzarella fundida.",
-    "pairing": "Vino Tinto Malbec o Cerveza Rubia helada",
-    "chefTip": "Batir los huevos con un chorrito de leche, mostaza y ajo para que el empanado quede esponjoso.",
+    "description": "Milanesas de lomo crujientes con jamón cocido, salsa de tomate casera y muzzarella gratinada.",
+    "pairing": "Cerveza Rubia helada o Vino Malbec",
+    "chefTip": "Batir huevos con un chorrito de leche y ajo para empanado tierno.",
     "ingredients": [
       {
         "name": "Nalga / Lomo Vacuno",
         "qty": "800g",
         "unit": "",
-        "requiredId": "ing-110"
+        "requiredId": "ing-71"
       },
       {
         "name": "Huevos de Campo",
         "qty": "3 un",
         "unit": "",
-        "requiredId": "ing-14"
+        "requiredId": "ing-72"
       },
       {
         "name": "Pan Rallado Casero",
         "qty": "300g",
         "unit": "",
-        "requiredId": "ing-12"
+        "requiredId": "ing-73"
       },
       {
-        "name": "Jamón Cocido Natural",
-        "qty": "200g",
+        "name": "Jamón Cocido y Muzzarella",
+        "qty": "400g",
         "unit": "",
-        "requiredId": "ing-18"
-      },
-      {
-        "name": "Queso Muzzarella en Barra",
-        "qty": "300g",
-        "unit": "",
-        "requiredId": "ing-16"
+        "requiredId": "ing-74"
       },
       {
         "name": "Salsa de Tomate",
         "qty": "150g",
         "unit": "",
-        "requiredId": "ing-41"
+        "requiredId": "ing-75"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Empanado Clásico",
-        "text": "Pasar la carne por huevo batido con ajo y perejil, y presionar en el pan rallado.",
+        "title": "Empanado",
+        "text": "Pasar carne por huevo batido y presionar en pan rallado.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 2,
-        "title": "Dorado en Sartén",
-        "text": "Freír u hornear con aceite caliente durante 3 minutos por lado hasta dorar.",
+        "title": "Dorado",
+        "text": "Freír u hornear con aceite caliente 3 min por lado.",
         "timerMinutes": 8
       },
       {
         "stepNumber": 3,
-        "title": "Montaje Napolitano",
-        "text": "Disponer en placa, colocar una cucharada de salsa, jamón y queso muzzarella.",
+        "title": "Montaje",
+        "text": "Colocar en placa con salsa, jamón y queso muzzarella.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 4,
-        "title": "Gratinado en Horno Fuerte",
-        "text": "Gratinar a 220°C 6 minutos hasta fundir el queso. Espolvorear orégano y servir.",
+        "title": "Gratinado",
+        "text": "Gratinar a 220°C 6 minutos. Espolvorear orégano.",
         "timerMinutes": 6
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-6",
-    "title": "Bondiola de Cerdo Braseada a la Cerveza Negra y Miel",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "carnes",
-    "categories": [
-      "carnes",
-      "guisos"
-    ],
-    "subcategory": "Cerdo & Bondiola",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 90,
-    "portions": 6,
-    "difficulty": "Media",
-    "rating": 5,
-    "timesCooked": 595,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
-    "description": "Bondiola de cerdo entera cocinada 2 horas a fuego lento en reducción de cerveza stout, miel y cebollas caramelizadas.",
-    "pairing": "Cerveza Negra Porter o Vino Malbec",
-    "chefTip": "Sellar la bondiola entera por los cuatro lados a fuego vivo antes de agregar los líquidos para concentrar todo el jugo.",
-    "ingredients": [
-      {
-        "name": "Bondiola de Cerdo Entera",
-        "qty": "1500g",
-        "unit": "",
-        "requiredId": "ing-35"
-      },
-      {
-        "name": "Cerveza Negra Stout",
-        "qty": "500ml",
-        "unit": "",
-        "requiredId": "ing-134"
-      },
-      {
-        "name": "Miel de Campo",
-        "qty": "3 cdas",
-        "unit": "",
-        "requiredId": "ing-49"
-      },
-      {
-        "name": "Cebollas Grandes en Juliana",
-        "qty": "3 un",
-        "unit": "",
-        "requiredId": "ing-5"
-      },
-      {
-        "name": "Mostaza Dijon",
-        "qty": "2 cdas",
-        "unit": "",
-        "requiredId": "ing-44"
-      },
-      {
-        "name": "Caldo de Carne",
-        "qty": "300ml",
-        "unit": "",
-        "requiredId": "ing-43"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Sellado de la Pieza",
-        "text": "En una olla de hierro dorar la bondiola entera con aceite por todos sus lados durante 10 minutos.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 2,
-        "title": "Sofrito de Cebollas",
-        "text": "Retirar la carne, saltear las cebollas en el fondo de cocción y añadir la mostaza y la miel.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 3,
-        "title": "Braseado Lento Tapado",
-        "text": "Reincorporar la bondiola, verter la cerveza negra y el caldo. Cocinar tapado a fuego mínimo 70 minutos.",
-        "timerMinutes": 70
-      },
-      {
-        "stepNumber": 4,
-        "title": "Reducción de Salsa & Desmeche",
-        "text": "Retirar la carne tierna, reducir la salsa a fuego medio 10 minutos y servir con puré de batatas.",
-        "timerMinutes": 10
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-7",
-    "title": "Pollo al Disco con Papas, Morrón y Vino Blanco",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "carnes",
-    "categories": [
-      "carnes",
-      "guisos"
-    ],
-    "subcategory": "Pollo & Aves",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 50,
-    "portions": 6,
-    "difficulty": "Media",
-    "rating": 5,
-    "timesCooked": 610,
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop&q=80",
-    "description": "Clásico pollo al disco de campo con pata muslos doradas, rodajas de papas, pimientos rojos y reducción de vino blanco y verdeo.",
-    "pairing": "Vino Blanco Torrontés o Chardonnay",
-    "chefTip": "Cocinar con leña a fuego vivo en el centro del disco y desplazar las verduras hacia los bordes para regular la temperatura.",
-    "ingredients": [
-      {
-        "name": "Pata Muslos de Pollo",
-        "qty": "1200g",
-        "unit": "",
-        "requiredId": "ing-33"
-      },
-      {
-        "name": "Papas en Rodajas Gruesas",
-        "qty": "800g",
-        "unit": "",
-        "requiredId": "ing-6"
-      },
-      {
-        "name": "Morrón Rojo y Verde",
-        "qty": "2 un",
-        "unit": "",
-        "requiredId": "ing-20"
-      },
-      {
-        "name": "Cebolla de Verdeo",
-        "qty": "4 un",
-        "unit": "",
-        "requiredId": "ing-20"
-      },
-      {
-        "name": "Vino Blanco Seco",
-        "qty": "300ml",
-        "unit": "",
-        "requiredId": "ing-48"
-      },
-      {
-        "name": "Caldo de Pollo",
-        "qty": "300ml",
-        "unit": "",
-        "requiredId": "ing-42"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Sellado del Pollo en Disco",
-        "text": "Calentar el disco con aceite de girasol y dorar las presas de pollo salpimentadas 15 minutos.",
-        "timerMinutes": 15
-      },
-      {
-        "stepNumber": 2,
-        "title": "Incorporación de Verduras",
-        "text": "Mover el pollo hacia los bordes y en el centro dorar cebollas, morrones y ajo.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 3,
-        "title": "Desglasado & Papas",
-        "text": "Verter el vino blanco, dejar evaporar el alcohol y sumar las papas en rodajas y el caldo.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 4,
-        "title": "Cocción Final Tapado",
-        "text": "Cocinar tapado 20 minutos hasta que las papas estén tiernas y la salsa espese. Sumar verdeo y servir.",
-        "timerMinutes": 20
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-8",
-    "title": "Lasaña Tradicional a la Boloñesa y Parmesano",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "pastas",
-    "categories": [
-      "pastas",
-      "carnes"
-    ],
-    "subcategory": "Lasañas & Canelones",
-    "cuisine": "Italia",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 60,
-    "portions": 6,
-    "difficulty": "Media",
-    "rating": 5,
-    "timesCooked": 625,
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
-    "description": "Capas intercaladas de masa al huevo, abundante salsa boloñesa con carne vacuna, bechamel cremosa y queso parmesano gratinado.",
-    "pairing": "Vino Chianti o Sangiovese",
-    "chefTip": "Dejar reposar 10 minutos antes de cortar para lograr porciones firmes y estéticas.",
-    "ingredients": [
-      {
-        "name": "Masa de Lasaña al Huevo",
-        "qty": "400g",
-        "unit": "",
-        "requiredId": "ing-113"
-      },
-      {
-        "name": "Carne Picada Especial",
-        "qty": "600g",
-        "unit": "",
-        "requiredId": "ing-37"
-      },
-      {
-        "name": "Salsa de Tomate Natural",
-        "qty": "400g",
-        "unit": "",
-        "requiredId": "ing-41"
-      },
-      {
-        "name": "Leche Entera",
-        "qty": "500ml",
-        "unit": "",
-        "requiredId": "ing-15"
-      },
-      {
-        "name": "Manteca",
-        "qty": "50g",
-        "unit": "",
-        "requiredId": "ing-9"
-      },
-      {
-        "name": "Harina de Trigo 000",
-        "qty": "50g",
-        "unit": "",
-        "requiredId": "ing-10"
-      },
-      {
-        "name": "Queso Parmesano Rallado",
-        "qty": "150g",
-        "unit": "",
-        "requiredId": "ing-17"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Preparación del Ragù Boloñés",
-        "text": "Sofreír cebolla y ajo, dorar la carne picada, sumar salsa de tomate y cocinar 25 minutos.",
-        "timerMinutes": 25
-      },
-      {
-        "stepNumber": 2,
-        "title": "Elaboración de Bechamel",
-        "text": "Derretir manteca con harina, verter leche tibia batiendo hasta espesar con nuez moscada.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 3,
-        "title": "Armado de Capas",
-        "text": "En fuente intercalar: bechamel, masa, salsa boloñesa y queso parmesano en 4 niveles.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 4,
-        "title": "Horneado & Gratinado",
-        "text": "Hornear a 190°C durante 25 minutos y dorar la superficie.",
-        "timerMinutes": 30
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-9",
-    "title": "Sorrentinos de Jamón y Muzzarella con Filetto y Albahaca",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "pastas",
-    "categories": [
-      "pastas"
-    ],
-    "subcategory": "Pastas Rellenas",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 40,
-    "portions": 4,
-    "difficulty": "Media",
-    "rating": 5,
-    "timesCooked": 640,
-    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281699?w=800&auto=format&fit=crop&q=80",
-    "description": "Grandes sorrentinos caseros rellenos de muzzarella hilada y jamón cocido con salsa suave de tomates y albahaca fresca.",
-    "pairing": "Vino Chardonnay o Pinot Noir",
-    "chefTip": "Hervir en abundante agua con sal y retirar con espumadera suavemente apenas floten.",
-    "ingredients": [
-      {
-        "name": "Masa para Sorrentinos Casera",
-        "qty": "500g",
-        "unit": "",
-        "requiredId": "ing-114"
-      },
-      {
-        "name": "Queso Muzzarella en Cubos",
-        "qty": "300g",
-        "unit": "",
-        "requiredId": "ing-16"
-      },
-      {
-        "name": "Jamón Cocido Picado",
-        "qty": "200g",
-        "unit": "",
-        "requiredId": "ing-18"
-      },
-      {
-        "name": "Tomates Perita Triturados",
-        "qty": "400g",
-        "unit": "",
-        "requiredId": "ing-41"
-      },
-      {
-        "name": "Hojas de Albahaca Fresca",
-        "qty": "10 un",
-        "unit": "",
-        "requiredId": "ing-24"
-      },
-      {
-        "name": "Queso Parmesano Rallado",
-        "qty": "80g",
-        "unit": "",
-        "requiredId": "ing-17"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Armado de Sorrentinos",
-        "text": "Disponer masa en el molde, colocar relleno de jamón y queso, pincelar con agua y sellar con la tapa.",
-        "timerMinutes": 15
-      },
-      {
-        "stepNumber": 2,
-        "title": "Salsa Filetto",
-        "text": "Dorar ajo en oliva, verter tomates triturados y cocinar 15 minutos. Sumar albahaca al final.",
-        "timerMinutes": 15
-      },
-      {
-        "stepNumber": 3,
-        "title": "Hervor de la Pasta",
-        "text": "Cocinar en agua hirviendo con sal durante 5 a 6 minutos hasta que suban a la superficie.",
-        "timerMinutes": 6
-      },
-      {
-        "stepNumber": 4,
-        "title": "Emplatado & Parmesano",
-        "text": "Retirar con espumadera, salsear en plato hondo y coronar con queso parmesano.",
-        "timerMinutes": 4
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-10",
-    "title": "Ñoquis de Papa Caseros con Tuco Criollo y Carne",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "pastas",
-    "categories": [
-      "pastas",
-      "carnes"
-    ],
-    "subcategory": "Pastas Cortas",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 50,
-    "portions": 4,
-    "difficulty": "Media",
-    "rating": 5,
-    "timesCooked": 655,
-    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&auto=format&fit=crop&q=80",
-    "description": "Los tradicionales ñoquis del 29 elaborados con papas asadas al horno para que queden suaves como nubes con tuco criollo.",
-    "pairing": "Vino Malbec Joven",
-    "chefTip": "Hornear las papas con cáscara para que no absorban agua y requieran menos harina.",
-    "ingredients": [
-      {
-        "name": "Papas Medianas",
-        "qty": "1000g",
-        "unit": "",
-        "requiredId": "ing-6"
-      },
-      {
-        "name": "Harina de Trigo 0000",
-        "qty": "250g",
-        "unit": "",
-        "requiredId": "ing-10"
-      },
-      {
-        "name": "Huevo de Campo",
-        "qty": "1 un",
-        "unit": "",
-        "requiredId": "ing-14"
-      },
-      {
-        "name": "Carne para Estofado",
-        "qty": "400g",
-        "unit": "",
-        "requiredId": "ing-34"
-      },
-      {
-        "name": "Salsa de Tomate",
-        "qty": "350g",
-        "unit": "",
-        "requiredId": "ing-41"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Puré de Papas Seco",
-        "text": "Hornear las papas 40 minutos, pelar en caliente y pisar bien fino.",
-        "timerMinutes": 40
-      },
-      {
-        "stepNumber": 2,
-        "title": "Amasado Liviano",
-        "text": "Mezclar con huevo, sal, nuez moscada y harina. Cortar cilindros y pasar por ñoquera.",
-        "timerMinutes": 15
-      },
-      {
-        "stepNumber": 3,
-        "title": "Cocción del Tuco",
-        "text": "Dorar la carne con cebolla y tomate durante 30 minutos.",
-        "timerMinutes": 30
-      },
-      {
-        "stepNumber": 4,
-        "title": "Hervor & Emplatado del 29",
-        "text": "Hervir 1 minuto cuando floten, servir con el tuco caliente y queso rallado.",
-        "timerMinutes": 5
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-11",
-    "title": "Risotto de Hongos Portobello y Parmesano Reggiano",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "pastas",
-    "categories": [
-      "pastas",
-      "veggie"
-    ],
-    "subcategory": "Risottos Cremosos",
-    "cuisine": "Italia",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 35,
-    "portions": 4,
-    "difficulty": "Media",
-    "rating": 5,
-    "timesCooked": 670,
-    "image": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?w=800&auto=format&fit=crop&q=80",
-    "description": "Arroz carnaroli al dente cocinado con caldo caliente, hongos frescos salteados en manteca, vino blanco y mantecatura perfecta.",
-    "pairing": "Vino Blanco Chardonnay",
-    "chefTip": "La mantecatura se realiza fuera del fuego batiendo con manteca fría y parmesano.",
-    "ingredients": [
-      {
-        "name": "Arroz Carnaroli / Doble Carolina",
-        "qty": "350g",
-        "unit": "",
-        "requiredId": "ing-115"
-      },
-      {
-        "name": "Hongos Portobello / Champiñones",
-        "qty": "300g",
-        "unit": "",
-        "requiredId": "ing-21"
-      },
-      {
-        "name": "Caldo de Verduras Caliente",
-        "qty": "1000ml",
-        "unit": "",
-        "requiredId": "ing-42"
-      },
-      {
-        "name": "Vino Blanco Seco",
-        "qty": "150ml",
-        "unit": "",
-        "requiredId": "ing-48"
-      },
-      {
-        "name": "Manteca Fría en Cubos",
-        "qty": "60g",
-        "unit": "",
-        "requiredId": "ing-9"
-      },
-      {
-        "name": "Queso Parmesano Rallado",
-        "qty": "100g",
-        "unit": "",
-        "requiredId": "ing-17"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Sofrito & Nacarado",
-        "text": "Saltear cebolla con manteca, agregar el arroz y tostar 2 minutos.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 2,
-        "title": "Desglasado",
-        "text": "Verter vino blanco y dejar evaporar el alcohol a fuego medio.",
-        "timerMinutes": 3
-      },
-      {
-        "stepNumber": 3,
-        "title": "Cocción Gradual con Caldo",
-        "text": "Sumar hongos e incorporar caldo caliente de a cucharones durante 18 minutos.",
-        "timerMinutes": 18
-      },
-      {
-        "stepNumber": 4,
-        "title": "Mantecatura Fuera del Fuego",
-        "text": "Apagar el fuego, añadir manteca fría y parmesano batiendo enérgicamente.",
-        "timerMinutes": 4
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-12",
+    "id": "rec-world-16",
     "title": "Pizza Fugazzeta Rellena Porteña con Provolone",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
@@ -5612,73 +5933,73 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 6,
     "difficulty": "Media",
     "rating": 5,
-    "timesCooked": 685,
+    "timesCooked": 1025,
     "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&auto=format&fit=crop&q=80",
     "description": "Doble masa al molde rellena con 500g de muzzarella y cubierta con cebolla marinada en oliva, provolone y orégano.",
-    "pairing": "Cerveza Rubia helada o Vino Malbec con Soda",
-    "chefTip": "Marinar las cebollas cortadas en pluma con sal y oliva 30 minutos antes para que caramelicen.",
+    "pairing": "Cerveza Rubia o Vino Malbec con Soda",
+    "chefTip": "Marinar cebollas con oliva y sal 30 minutos antes de hornear.",
     "ingredients": [
       {
         "name": "Harina de Trigo 000",
         "qty": "500g",
         "unit": "",
-        "requiredId": "ing-10"
+        "requiredId": "ing-76"
       },
       {
         "name": "Levadura Fresca",
         "qty": "25g",
         "unit": "",
-        "requiredId": "ing-11"
+        "requiredId": "ing-77"
       },
       {
         "name": "Queso Muzzarella en Barra",
         "qty": "500g",
         "unit": "",
-        "requiredId": "ing-16"
+        "requiredId": "ing-78"
       },
       {
         "name": "Queso Provolone Rallado",
         "qty": "100g",
         "unit": "",
-        "requiredId": "ing-116"
+        "requiredId": "ing-79"
       },
       {
         "name": "Cebollas Grandes",
         "qty": "3 un",
         "unit": "",
-        "requiredId": "ing-5"
+        "requiredId": "ing-80"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Amasado & Leudado",
-        "text": "Hacer masa con harina, levadura, agua y sal. Dejar leudar hasta duplicar.",
+        "title": "Masa Leudada",
+        "text": "Amasar harina, levadura, agua y sal. Dejar duplicar volumen.",
         "timerMinutes": 30
       },
       {
         "stepNumber": 2,
-        "title": "Armado en Molde",
-        "text": "Estirar masa base en pizzera, rellenar con muzzarella y tapar con la segunda masa.",
+        "title": "Armado",
+        "text": "Estirar masa en pizzera, rellenar con muzzarella y tapar con segunda masa.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 3,
-        "title": "Cubierta de Cebolla",
-        "text": "Disponer las cebollas marinadas sobre la masa y espolvorear provolone y orégano.",
+        "title": "Cebollas",
+        "text": "Disponer cebollas marinadas arriba y espolvorear provolone.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 4,
         "title": "Horneado al Piso",
-        "text": "Hornear a 230°C 20 minutos hasta que el piso esté crocante y el queso funda.",
+        "text": "Hornear a 230°C 20 min hasta piso crocante y queso derretido.",
         "timerMinutes": 20
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-13",
+    "id": "rec-world-17",
     "title": "Empanadas Tucumanas de Carne a Cuchillo",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
@@ -5700,162 +6021,68 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 4,
     "difficulty": "Media",
     "rating": 5,
-    "timesCooked": 700,
+    "timesCooked": 1050,
     "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&auto=format&fit=crop&q=80",
     "description": "Empanadas norteñas tradicionales con carne tierna cortada a mano, verdeo fresco, huevo duro y comino.",
     "pairing": "Vino Torrontés Salteño",
-    "chefTip": "Enfriar el relleno en la heladera 3 horas antes para armar sin que se escape el jugo.",
+    "chefTip": "Enfriar el pino 3 horas antes para que cuaje el jugo.",
     "ingredients": [
       {
         "name": "Tapas de Empanadas Caseras",
         "qty": "12 un",
         "unit": "",
-        "requiredId": "ing-117"
+        "requiredId": "ing-81"
       },
       {
         "name": "Matambre o Nalga Vacuna",
         "qty": "600g",
         "unit": "",
-        "requiredId": "ing-107"
+        "requiredId": "ing-82"
       },
       {
         "name": "Cebolla Blanca Picada",
         "qty": "500g",
         "unit": "",
-        "requiredId": "ing-5"
+        "requiredId": "ing-83"
       },
       {
-        "name": "Cebolla de Verdeo",
+        "name": "Cebolla de Verdeo y Huevo Duro",
         "qty": "3 un",
         "unit": "",
-        "requiredId": "ing-20"
-      },
-      {
-        "name": "Huevos Duros Picados",
-        "qty": "3 un",
-        "unit": "",
-        "requiredId": "ing-14"
+        "requiredId": "ing-84"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Corte de Carne a Cuchillo",
-        "text": "Hervir la carne 40 minutos en caldo y cortar en cubitos de 5mm.",
+        "title": "Corte a Cuchillo",
+        "text": "Hervir carne 40 min y cortar a mano en cubitos de 5mm.",
         "timerMinutes": 40
       },
       {
         "stepNumber": 2,
         "title": "Sofrito del Pino",
-        "text": "Dorar la cebolla en grasa, sumar carne, pimentón y comino. Enfriar.",
+        "text": "Dorar cebolla en grasa, sumar carne, pimentón y comino. Enfriar.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 3,
-        "title": "Armado & Repulgue",
-        "text": "Rellenar discos agregando verdeo fresco y huevo duro. Hacer repulgue de 13 vueltas.",
+        "title": "Repulgue de 13 Vueltas",
+        "text": "Rellenar con verdeo fresco y huevo duro. Repulgar.",
         "timerMinutes": 15
       },
       {
         "stepNumber": 4,
         "title": "Horno Fuerte",
-        "text": "Hornear a 240°C durante 12 minutos hasta dorar la masa.",
+        "text": "Hornear a 240°C 12 minutos hasta dorar.",
         "timerMinutes": 12
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-14",
-    "title": "Tarta Pascualina Tradicional de Espinacas y Ricota",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "pizzas",
-    "categories": [
-      "pizzas",
-      "veggie"
-    ],
-    "subcategory": "Tartas Saladas",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 45,
-    "portions": 6,
-    "difficulty": "Fácil",
-    "rating": 5,
-    "timesCooked": 715,
-    "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=800&auto=format&fit=crop&q=80",
-    "description": "Tarta casera con masa hojaldrada, relleno cremoso de espinacas, ricota, parmesano y huevos enteros cocidos dentro.",
-    "pairing": "Vino Blanco Sauvignon Blanc",
-    "chefTip": "Escurrir muy bien la espinaca para evitar humedecer la masa inferior.",
-    "ingredients": [
-      {
-        "name": "Masa de Tarta Criolla",
-        "qty": "2 tapas",
-        "unit": "",
-        "requiredId": "ing-117"
-      },
-      {
-        "name": "Espinacas Frescas",
-        "qty": "800g",
-        "unit": "",
-        "requiredId": "ing-22"
-      },
-      {
-        "name": "Queso Ricota Fresca",
-        "qty": "300g",
-        "unit": "",
-        "requiredId": "ing-119"
-      },
-      {
-        "name": "Huevos de Campo",
-        "qty": "5 un",
-        "unit": "",
-        "requiredId": "ing-14"
-      },
-      {
-        "name": "Queso Parmesano Rallado",
-        "qty": "80g",
-        "unit": "",
-        "requiredId": "ing-17"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Relleno de Espinaca & Ricota",
-        "text": "Saltear cebolla y espinaca, escurrir y procesar con ricota, 1 huevo y parmesano.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 2,
-        "title": "Colocación en Molde",
-        "text": "Forrar tartera con masa base y volcar el relleno alisando.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 3,
-        "title": "Huevos Enteros & Tapa",
-        "text": "Hacer 4 huecos, colocar huevos crudos y tapar con la segunda masa sellando bordes.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 4,
-        "title": "Horneado Dorado",
-        "text": "Hornear a 190°C 35 minutos hasta dorar la superficie.",
-        "timerMinutes": 35
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-15",
-    "title": "Locro Criollo Tradicional del 25 de Mayo",
+    "id": "rec-world-18",
+    "title": "Locro Criollo Tradicional con Panceta y Chorizo",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
     "authorAvatar": "👨‍🍳",
@@ -5876,167 +6103,73 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 6,
     "difficulty": "Media",
     "rating": 5,
-    "timesCooked": 730,
+    "timesCooked": 1075,
     "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop&q=80",
-    "description": "El clásico guiso patriótico: maíz blanco, porotos, zapallo deshecho, pechito de cerdo, panceta y salsa picante quiquirimichi.",
-    "pairing": "Vino Tinto Malbec con Cuerpo",
-    "chefTip": "Incorporar zapallo en cubos pequeños para que se disuelva solo y logre una textura cremosa inigualable.",
+    "description": "Guiso patriótico a base de maíz blanco, porotos, zapallo deshecho, pechito de cerdo, panceta y salsa picante.",
+    "pairing": "Vino Tinto Malbec",
+    "chefTip": "El zapallo plomo en cubitos pequeños se deshace solo para textura cremosa.",
     "ingredients": [
       {
         "name": "Maíz Blanco Partido",
         "qty": "400g",
         "unit": "",
-        "requiredId": "ing-120"
+        "requiredId": "ing-86"
       },
       {
         "name": "Porotos Alubia Secos",
         "qty": "250g",
         "unit": "",
-        "requiredId": "ing-121"
+        "requiredId": "ing-87"
       },
       {
-        "name": "Pechito de Cerdo en Cubos",
-        "qty": "500g",
+        "name": "Pechito de Cerdo y Panceta",
+        "qty": "700g",
         "unit": "",
-        "requiredId": "ing-35"
-      },
-      {
-        "name": "Panceta Ahumada",
-        "qty": "200g",
-        "unit": "",
-        "requiredId": "ing-36"
+        "requiredId": "ing-88"
       },
       {
         "name": "Chorizo Colorado",
         "qty": "1 un",
         "unit": "",
-        "requiredId": "ing-122"
+        "requiredId": "ing-89"
       },
       {
         "name": "Zapallo Plomo",
         "qty": "800g",
         "unit": "",
-        "requiredId": "ing-123"
+        "requiredId": "ing-90"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
         "title": "Remojo & Hervor",
-        "text": "Remojar maíz y porotos 12 horas. Hervir en olla con agua fría 30 minutos.",
+        "text": "Remojar maíz y porotos 12 horas. Hervir en olla 30 min.",
         "timerMinutes": 30
       },
       {
         "stepNumber": 2,
-        "title": "Incorporación de Carnes",
+        "title": "Carnes",
         "text": "Sumar pechito de cerdo, panceta y chorizo en rodajas.",
         "timerMinutes": 20
       },
       {
         "stepNumber": 3,
-        "title": "Cocción Lenta con Zapallo",
-        "text": "Añadir el zapallo en cubos y cocinar a fuego bajo 45 minutos revolviendo.",
+        "title": "Zapallo & Espesor",
+        "text": "Añadir zapallo y cocinar a fuego bajo 45 min revolviendo.",
         "timerMinutes": 45
       },
       {
         "stepNumber": 4,
-        "title": "Salsita Quiquirimichi & Servicio",
-        "text": "Freír verdeo con ají molido y pimentón. Servir el locro con la salsa encima.",
+        "title": "Salsita Quiquirimichi",
+        "text": "Freír verdeo con ají molido y servir el locro con la salsa.",
         "timerMinutes": 10
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-16",
-    "title": "Guiso de Lentejas Criollo con Panceta y Chorizo",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "guisos",
-    "categories": [
-      "guisos",
-      "carnes"
-    ],
-    "subcategory": "Guisos Criollos",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "almuerzo",
-      "cena"
-    ],
-    "time": 45,
-    "portions": 4,
-    "difficulty": "Fácil",
-    "rating": 5,
-    "timesCooked": 745,
-    "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=800&auto=format&fit=crop&q=80",
-    "description": "Reconfortante guiso con lentejas seleccionadas, carne tierna, panceta crujiente, chorizo y vegetales en salsa espesa.",
-    "pairing": "Vino Tinto Bonarda",
-    "chefTip": "No remojar las lentejas si son de calidad: se cocinan en el caldo en 25 minutos.",
-    "ingredients": [
-      {
-        "name": "Lentejas Secas Seleccionadas",
-        "qty": "400g",
-        "unit": "",
-        "requiredId": "ing-124"
-      },
-      {
-        "name": "Carne Vacuna",
-        "qty": "400g",
-        "unit": "",
-        "requiredId": "ing-34"
-      },
-      {
-        "name": "Panceta Ahumada",
-        "qty": "150g",
-        "unit": "",
-        "requiredId": "ing-36"
-      },
-      {
-        "name": "Papas y Zanahorias",
-        "qty": "2 un",
-        "unit": "",
-        "requiredId": "ing-6"
-      },
-      {
-        "name": "Puré de Tomates",
-        "qty": "300g",
-        "unit": "",
-        "requiredId": "ing-41"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Dorado de Carnes",
-        "text": "En olla grande dorar panceta, carne vacuna en cubos, cebolla y morrón.",
-        "timerMinutes": 10
-      },
-      {
-        "stepNumber": 2,
-        "title": "Vegetales & Tomate",
-        "text": "Sumar papas, zanahorias y puré de tomates con pimentón y laurel.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 3,
-        "title": "Cocción de Lentejas",
-        "text": "Añadir lentejas y cubrir con caldo caliente. Cocinar tapado 25 minutos.",
-        "timerMinutes": 25
-      },
-      {
-        "stepNumber": 4,
-        "title": "Reposo & Servicio",
-        "text": "Reposar 5 minutos fuera del fuego y servir con pan casero.",
-        "timerMinutes": 5
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-17",
+    "id": "rec-world-19",
     "title": "Chocotorta Tradicional con Dulce de Leche y Café",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
@@ -6057,160 +6190,67 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 8,
     "difficulty": "Fácil",
     "rating": 5,
-    "timesCooked": 760,
+    "timesCooked": 1100,
     "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&auto=format&fit=crop&q=80",
-    "description": "El postre favorito: capas de galletitas Chocolinas embebidas en café y crema suave de dulce de leche con queso crema.",
+    "description": "Capas de galletitas Chocolinas embebidas en café con crema suave de dulce de leche repostero y queso crema.",
     "pairing": "Café Espresso recién molido",
-    "chefTip": "Mezclar dulce de leche repostero y queso crema en partes iguales para una textura firme.",
+    "chefTip": "Mezclar dulce de leche y queso crema en partes iguales para corte firme.",
     "ingredients": [
       {
         "name": "Galletitas de Chocolate Chocolinas",
         "qty": "500g",
         "unit": "",
-        "requiredId": "ing-125"
+        "requiredId": "ing-91"
       },
       {
         "name": "Dulce de Leche Repostero",
         "qty": "400g",
         "unit": "",
-        "requiredId": "ing-49"
+        "requiredId": "ing-92"
       },
       {
         "name": "Queso Crema Firme",
         "qty": "400g",
         "unit": "",
-        "requiredId": "ing-126"
+        "requiredId": "ing-93"
       },
       {
         "name": "Café Espresso Fuerte",
         "qty": "200ml",
         "unit": "",
-        "requiredId": "ing-127"
+        "requiredId": "ing-94"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Crema de Chocotorta",
-        "text": "Batir dulce de leche y queso crema hasta lograr una crema homogénea.",
+        "title": "Crema",
+        "text": "Batir dulce de leche y queso crema hasta integrar.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 2,
-        "title": "Remojo Rápido",
-        "text": "Pasar las galletitas 1 segundo por el café templado.",
+        "title": "Embeber",
+        "text": "Pasar galletitas 1 segundo por café templado.",
         "timerMinutes": 5
       },
       {
         "stepNumber": 3,
-        "title": "Montaje de Capas",
-        "text": "En fuente intercalar capas de galletitas y crema 4 a 5 veces.",
+        "title": "Capas",
+        "text": "Intercalar capas de galletitas y crema 4 veces.",
         "timerMinutes": 10
       },
       {
         "stepNumber": 4,
-        "title": "Refrigeración",
-        "text": "Enfriar mínimo 4 horas en heladera. Decorar con chocolate rallado.",
+        "title": "Heladera",
+        "text": "Enfriar mínimo 4 horas en heladera. Decorar con cacao.",
         "timerMinutes": 5
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-18",
-    "title": "Flan Casero Tradicional con Dulce de Leche y Crema",
-    "authorId": "user-anon",
-    "authorName": "Chef Anónimo",
-    "authorAvatar": "👨‍🍳",
-    "isAnonymous": true,
-    "isPrivate": false,
-    "category": "postres",
-    "categories": [
-      "postres"
-    ],
-    "subcategory": "Flanes & Cremas",
-    "cuisine": "Argentina",
-    "mealTypes": [
-      "merienda",
-      "cena"
-    ],
-    "time": 60,
-    "portions": 6,
-    "difficulty": "Fácil",
-    "rating": 5,
-    "timesCooked": 775,
-    "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&auto=format&fit=crop&q=80",
-    "description": "Flan clásico de bodegón con 8 huevos, leche entera y caramelo rubio, servido mixto con dulce de leche y crema chantilly.",
-    "pairing": "Vino Dulce Cosecha Tardía",
-    "chefTip": "Hornear a baño María a 150°C tapado con papel aluminio para evitar que se formen agujeros.",
-    "ingredients": [
-      {
-        "name": "Huevos de Campo Enteros",
-        "qty": "6 un",
-        "unit": "",
-        "requiredId": "ing-14"
-      },
-      {
-        "name": "Yemas de Huevo",
-        "qty": "2 un",
-        "unit": "",
-        "requiredId": "ing-14"
-      },
-      {
-        "name": "Leche Entera",
-        "qty": "750ml",
-        "unit": "",
-        "requiredId": "ing-15"
-      },
-      {
-        "name": "Azúcar Blanco",
-        "qty": "200g",
-        "unit": "",
-        "requiredId": "ing-8"
-      },
-      {
-        "name": "Esencia de Vainilla",
-        "qty": "1 cda",
-        "unit": "",
-        "requiredId": "ing-32"
-      },
-      {
-        "name": "Dulce de Leche y Crema",
-        "qty": "200g",
-        "unit": "",
-        "requiredId": "ing-49"
-      }
-    ],
-    "steps": [
-      {
-        "stepNumber": 1,
-        "title": "Caramelo Rubio",
-        "text": "Derretir 150g de azúcar en la flanera hasta dorar y cubrir paredes.",
-        "timerMinutes": 8
-      },
-      {
-        "stepNumber": 2,
-        "title": "Mezcla sin Espuma",
-        "text": "Batir huevos, yemas y azúcar con vainilla. Verter leche tibia despacio.",
-        "timerMinutes": 7
-      },
-      {
-        "stepNumber": 3,
-        "title": "Colado & Baño María",
-        "text": "Colar la mezcla y verter en la flanera dentro de fuente con agua caliente.",
-        "timerMinutes": 5
-      },
-      {
-        "stepNumber": 4,
-        "title": "Horneado Suave",
-        "text": "Hornear a 150°C 50 minutos. Enfriar 6 horas antes de desmoldar.",
-        "timerMinutes": 50
-      }
-    ],
-    "comments": []
-  },
-  {
-    "id": "rec-es-19",
+    "id": "rec-world-20",
     "title": "Revuelto Gramajo Porteño con Papas Pay Crocantes",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
@@ -6233,9 +6273,9 @@ const DEFAULT_KITCHEN_DATA = {
     "portions": 2,
     "difficulty": "Fácil",
     "rating": 5,
-    "timesCooked": 790,
+    "timesCooked": 1125,
     "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&auto=format&fit=crop&q=80",
-    "description": "Minuta porteña tradicional con papas pay bien crujientes, jamón cocido en tiras y huevos babé salteados al momento.",
+    "description": "Minuta tradicional con papas pay crujientes, jamón cocido en tiras y huevos babé salteados al momento.",
     "pairing": "Cerveza Rubia helada",
     "chefTip": "Apagar el fuego cuando el huevo aún esté cremoso para que no se seque.",
     "ingredients": [
@@ -6243,121 +6283,489 @@ const DEFAULT_KITCHEN_DATA = {
         "name": "Papas Pay Crocantes",
         "qty": "150g",
         "unit": "",
-        "requiredId": "ing-129"
+        "requiredId": "ing-96"
       },
       {
         "name": "Huevos de Campo",
         "qty": "4 un",
         "unit": "",
-        "requiredId": "ing-14"
+        "requiredId": "ing-97"
       },
       {
         "name": "Jamón Cocido en Tiras",
         "qty": "150g",
         "unit": "",
-        "requiredId": "ing-18"
+        "requiredId": "ing-98"
       },
       {
         "name": "Manteca",
         "qty": "20g",
         "unit": "",
-        "requiredId": "ing-9"
+        "requiredId": "ing-99"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Dorado del Jamón",
-        "text": "Saltear las tiras de jamón en manteca caliente 1 minuto.",
+        "title": "Jamón",
+        "text": "Saltear tiras de jamón en manteca caliente 1 minuto.",
         "timerMinutes": 2
       },
       {
         "stepNumber": 2,
-        "title": "Huevos Batidos",
-        "text": "Verter los huevos batidos con sal y pimienta sobre el jamón.",
+        "title": "Huevos",
+        "text": "Verter huevos batidos con sal y pimienta sobre el jamón.",
         "timerMinutes": 2
       },
       {
         "stepNumber": 3,
-        "title": "Cocción Babé & Papas",
-        "text": "Revolver suavemente; cuando esté cremoso apagar el fuego y sumar las papas pay.",
+        "title": "Babé & Papas",
+        "text": "Revolver; cuando esté cremoso apagar fuego y sumar papas.",
         "timerMinutes": 2
       },
       {
         "stepNumber": 4,
-        "title": "Servicio Inmediato",
-        "text": "Mezclar con cuidado para mantener la crocancia y servir caliente.",
+        "title": "Servicio",
+        "text": "Mezclar con cuidado para mantener crocancia y servir.",
         "timerMinutes": 1
       }
     ],
     "comments": []
   },
   {
-    "id": "rec-es-20",
-    "title": "Fernet Clásico 70/30 con Coca y Mucho Hielo",
+    "id": "rec-world-21",
+    "title": "Lasaña Casera Boloñesa Gratinada con Parmesano",
     "authorId": "user-anon",
     "authorName": "Chef Anónimo",
     "authorAvatar": "👨‍🍳",
     "isAnonymous": true,
     "isPrivate": false,
-    "category": "tragos",
+    "category": "pastas",
     "categories": [
-      "tragos",
-      "rapidas"
+      "pastas",
+      "carnes",
+      "internacional"
     ],
-    "subcategory": "Aperitivos & Vermut",
-    "cuisine": "Argentina",
+    "subcategory": "Italia",
+    "cuisine": "Italia",
     "mealTypes": [
-      "cena",
-      "rapidas"
+      "almuerzo",
+      "cena"
     ],
-    "time": 3,
-    "portions": 1,
-    "difficulty": "Fácil",
+    "time": 60,
+    "portions": 6,
+    "difficulty": "Media",
     "rating": 5,
-    "timesCooked": 805,
-    "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&auto=format&fit=crop&q=80",
-    "description": "El trago nacional en proporción 70/30 con hielo de roca cristalino y corona de espuma densa.",
-    "pairing": "Asado o Picada",
-    "chefTip": "Inclinar el vaso y verter la cola despacio para controlar la espuma.",
+    "timesCooked": 1150,
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+    "description": "Masa al huevo con salsa boloñesa casera, bechamel cremosa con nuez moscada y parmesano gratinado.",
+    "pairing": "Vino Chianti Italiano",
+    "chefTip": "Reposar 10 minutos antes de cortar para porciones firmes.",
     "ingredients": [
       {
-        "name": "Fernet Branca",
-        "qty": "60ml",
+        "name": "Masa de Lasaña al Huevo",
+        "qty": "400g",
         "unit": "",
-        "requiredId": "ing-131"
+        "requiredId": "ing-101"
       },
       {
-        "name": "Gaseosa Cola",
-        "qty": "180ml",
+        "name": "Carne Picada Especial",
+        "qty": "600g",
         "unit": "",
-        "requiredId": "ing-132"
+        "requiredId": "ing-102"
       },
       {
-        "name": "Hielo en Cubos",
-        "qty": "4 cubos",
+        "name": "Salsa de Tomate Natural",
+        "qty": "400g",
         "unit": "",
-        "requiredId": "ing-133"
+        "requiredId": "ing-103"
+      },
+      {
+        "name": "Leche Entera y Manteca",
+        "qty": "500ml",
+        "unit": "",
+        "requiredId": "ing-104"
+      },
+      {
+        "name": "Queso Parmesano Rallado",
+        "qty": "150g",
+        "unit": "",
+        "requiredId": "ing-105"
       }
     ],
     "steps": [
       {
         "stepNumber": 1,
-        "title": "Hielo Abundante",
-        "text": "Llenar un vaso alto con hielo de roca.",
-        "timerMinutes": 1
+        "title": "Ragù Boloñés",
+        "text": "Sofreír cebolla, dorar carne, sumar tomate y cocinar 25 min.",
+        "timerMinutes": 25
       },
       {
         "stepNumber": 2,
-        "title": "Medida de Fernet",
-        "text": "Verter 60ml de Fernet en el vaso.",
-        "timerMinutes": 1
+        "title": "Bechamel",
+        "text": "Derretir manteca con harina, verter leche tibia batiendo hasta espesar.",
+        "timerMinutes": 10
       },
       {
         "stepNumber": 3,
-        "title": "Cola & Espuma",
-        "text": "Completar con gaseosa cola inclinando el vaso lentamente.",
-        "timerMinutes": 1
+        "title": "Capas",
+        "text": "Intercalar bechamel, masa, boloñesa y parmesano en 4 niveles.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 4,
+        "title": "Horneado",
+        "text": "Hornear a 190°C 25 minutos y dorar la superficie.",
+        "timerMinutes": 30
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-22",
+    "title": "Spaghetti a la Carbonara Clásica Romana",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "pastas",
+    "categories": [
+      "pastas",
+      "internacional",
+      "rapidas"
+    ],
+    "subcategory": "Italia",
+    "cuisine": "Italia",
+    "mealTypes": [
+      "almuerzo",
+      "cena",
+      "rapidas"
+    ],
+    "time": 20,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 1175,
+    "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281699?w=800&auto=format&fit=crop&q=80",
+    "description": "Pasta al dente con panceta crujiente, crema de yemas batidas con pecorino y abundante pimienta negra.",
+    "pairing": "Vino Blanco Pinot Grigio",
+    "chefTip": "Nunca usar crema: emulsionar con agua de cocción fuera del fuego.",
+    "ingredients": [
+      {
+        "name": "Spaghetti al Huevo",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-106"
+      },
+      {
+        "name": "Panceta Ahumada en Cubos",
+        "qty": "200g",
+        "unit": "",
+        "requiredId": "ing-107"
+      },
+      {
+        "name": "Yemas de Huevo de Campo",
+        "qty": "4 un",
+        "unit": "",
+        "requiredId": "ing-108"
+      },
+      {
+        "name": "Queso Parmesano / Pecorino",
+        "qty": "100g",
+        "unit": "",
+        "requiredId": "ing-109"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Panceta",
+        "text": "Dorar panceta a fuego medio en sartén sin aceite hasta tostar.",
+        "timerMinutes": 6
+      },
+      {
+        "stepNumber": 2,
+        "title": "Pasta al Dente",
+        "text": "Cocinar spaghetti en agua hirviendo con sal 8 minutos.",
+        "timerMinutes": 8
+      },
+      {
+        "stepNumber": 3,
+        "title": "Yemas & Queso",
+        "text": "Batir 4 yemas con queso rallado y pimienta negra.",
+        "timerMinutes": 3
+      },
+      {
+        "stepNumber": 4,
+        "title": "Emulsión",
+        "text": "Apagar fuego, mezclar pasta con panceta, yemas y agua de cocción.",
+        "timerMinutes": 2
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-23",
+    "title": "Paella Valenciana de Mariscos con Socarrat",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "pescados",
+    "categories": [
+      "pescados",
+      "internacional"
+    ],
+    "subcategory": "España",
+    "cuisine": "España",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 50,
+    "portions": 6,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 1200,
+    "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&auto=format&fit=crop&q=80",
+    "description": "Arroz bomba con azafrán español, langostinos frescos, calamares, mejillones y base crocante de socarrat.",
+    "pairing": "Vino Blanco Albariño o Cava",
+    "chefTip": "Dejar tostar 2 minutos al final a fuego vivo sin revolver para lograr el socarrat crujiente.",
+    "ingredients": [
+      {
+        "name": "Arroz Bomba para Paella",
+        "qty": "500g",
+        "unit": "",
+        "requiredId": "ing-111"
+      },
+      {
+        "name": "Langostinos y Calamares Frescos",
+        "qty": "500g",
+        "unit": "",
+        "requiredId": "ing-112"
+      },
+      {
+        "name": "Mejillones en Valva",
+        "qty": "300g",
+        "unit": "",
+        "requiredId": "ing-113"
+      },
+      {
+        "name": "Caldo de Pescado Caliente",
+        "qty": "1200ml",
+        "unit": "",
+        "requiredId": "ing-114"
+      },
+      {
+        "name": "Azafrán Español y Pimentón",
+        "qty": "1 cdita",
+        "unit": "",
+        "requiredId": "ing-115"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Sofrito de Mariscos",
+        "text": "En paellera dorar langostinos en oliva 2 min y reservar. Saltear calamares con ajo y tomate.",
+        "timerMinutes": 10
+      },
+      {
+        "stepNumber": 2,
+        "title": "Nacarado del Arroz",
+        "text": "Añadir arroz bomba, pimentón y azafrán tostando 2 minutos.",
+        "timerMinutes": 5
+      },
+      {
+        "stepNumber": 3,
+        "title": "Cocción con Caldo",
+        "text": "Verter caldo caliente hirviendo y cocinar 15 min sin revolver.",
+        "timerMinutes": 15
+      },
+      {
+        "stepNumber": 4,
+        "title": "Socarrat Final",
+        "text": "Acomodar langostinos y mejillones. Subir fuego 2 min para crear socarrat.",
+        "timerMinutes": 5
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-24",
+    "title": "Ramen Japonés de Cerdo con Panceta Chashu y Huevo",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "internacional",
+    "categories": [
+      "internacional",
+      "guisos"
+    ],
+    "subcategory": "Japón",
+    "cuisine": "Japón",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 45,
+    "portions": 4,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 1225,
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop&q=80",
+    "description": "Bowl de fideos ramen en caldo concentrado de cerdo y pollo con fetas de panceta chashu, huevo mollet marinado y alga nori.",
+    "pairing": "Té Verde Japonés o Cerveza Asahi",
+    "chefTip": "Cocinar huevos 6 minutos exactos para yema líquida y cremosa.",
+    "ingredients": [
+      {
+        "name": "Fideos Ramen Frescos",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-116"
+      },
+      {
+        "name": "Panceta de Cerdo Chashu",
+        "qty": "400g",
+        "unit": "",
+        "requiredId": "ing-117"
+      },
+      {
+        "name": "Huevos de Campo Mollet Marinados",
+        "qty": "4 un",
+        "unit": "",
+        "requiredId": "ing-118"
+      },
+      {
+        "name": "Caldo Concentrado de Carne y Pollo",
+        "qty": "1200ml",
+        "unit": "",
+        "requiredId": "ing-119"
+      },
+      {
+        "name": "Salsa de Soja y Aceite de Sésamo",
+        "qty": "3 cdas",
+        "unit": "",
+        "requiredId": "ing-120"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Huevos Marinados",
+        "text": "Hervir huevos 6 min, pelar y marinar en soja y agua.",
+        "timerMinutes": 6
+      },
+      {
+        "stepNumber": 2,
+        "title": "Caldo Caliente",
+        "text": "Calentar caldo con soja, jengibre, ajo y aceite de sésamo.",
+        "timerMinutes": 15
+      },
+      {
+        "stepNumber": 3,
+        "title": "Fideos",
+        "text": "Hervir fideos en agua aparte 3 minutos y escurrir.",
+        "timerMinutes": 3
+      },
+      {
+        "stepNumber": 4,
+        "title": "Bowl",
+        "text": "Disponer fideos en bowl, verter caldo hirviendo, panceta, huevo y nori.",
+        "timerMinutes": 3
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "rec-world-25",
+    "title": "Boeuf Bourguignon de Ternera al Vino Borgoña",
+    "authorId": "user-anon",
+    "authorName": "Chef Anónimo",
+    "authorAvatar": "👨‍🍳",
+    "isAnonymous": true,
+    "isPrivate": false,
+    "category": "guisos",
+    "categories": [
+      "guisos",
+      "carnes",
+      "internacional"
+    ],
+    "subcategory": "Francia",
+    "cuisine": "Francia",
+    "mealTypes": [
+      "almuerzo",
+      "cena"
+    ],
+    "time": 90,
+    "portions": 6,
+    "difficulty": "Media",
+    "rating": 5,
+    "timesCooked": 1250,
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop&q=80",
+    "description": "Estofado francés de ternera tiernizada en reducción de vino tinto con champiñones salteados en manteca y panceta dorada.",
+    "pairing": "Vino Pinot Noir Francés",
+    "chefTip": "Enharinar la carne antes de dorar para ligar la salsa naturalmente.",
+    "ingredients": [
+      {
+        "name": "Carne Vacuna para Guisar (Roast Beef)",
+        "qty": "1000g",
+        "unit": "",
+        "requiredId": "ing-121"
+      },
+      {
+        "name": "Panceta Ahumada en Cubos",
+        "qty": "150g",
+        "unit": "",
+        "requiredId": "ing-122"
+      },
+      {
+        "name": "Champiñones Frescos Enteros",
+        "qty": "300g",
+        "unit": "",
+        "requiredId": "ing-123"
+      },
+      {
+        "name": "Vino Tinto Borgoña / Malbec",
+        "qty": "500ml",
+        "unit": "",
+        "requiredId": "ing-124"
+      },
+      {
+        "name": "Caldo de Carne y Tomillo",
+        "qty": "400ml",
+        "unit": "",
+        "requiredId": "ing-125"
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Sellado",
+        "text": "Dorar panceta y carne enharinada en olla de hierro con manteca.",
+        "timerMinutes": 12
+      },
+      {
+        "stepNumber": 2,
+        "title": "Desglasado",
+        "text": "Agregar zanahorias y cebollas. Verter vino tinto y caldo con tomillo.",
+        "timerMinutes": 8
+      },
+      {
+        "stepNumber": 3,
+        "title": "Estofado",
+        "text": "Cocinar tapado a fuego mínimo 70 min hasta carne muy tierna.",
+        "timerMinutes": 70
+      },
+      {
+        "stepNumber": 4,
+        "title": "Champiñones",
+        "text": "Saltear champiñones en manteca, sumar al estofado y servir con puré.",
+        "timerMinutes": 10
       }
     ],
     "comments": []
